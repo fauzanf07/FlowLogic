@@ -1,0 +1,175 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	margin:0;
+	padding: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: url(../../images/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#wrapper{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.black-wrapper{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 1;
+	
+}
+#content{
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	padding-top: 10px; 
+	color: #fff
+}
+.form{
+	padding-left: 10px; 
+	padding-top: 20px
+}
+
+.link{
+	margin-top: 10px;
+	text-decoration: none;
+	float: right;
+}
+
+h1{
+	color: #fff;
+	font-family: 'Roboto Slab', serif;
+	opacity: 1;
+	font-size: 50px;
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-top: 20px;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+  	white-space: nowrap; /* Keeps the content on a single line */
+  	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  	letter-spacing: .0em; /* Adjust as needed */
+  	animation: 
+    	typing 3.5s steps(40, end) ,
+   		blink-caret .75s step-end infinite;
+}
+
+p{
+	color: #fff;
+	font-family: 'Roboto Slab', serif;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+@keyframes typing {
+  from { opacity: 1; width: 0; }
+  to { opacity: 1; width: 100% }
+}
+ .f-right{
+ 	float: right;
+ }
+.btn-sign{
+	background-color: none;
+	border: 2px solid #fff;
+	color: #fff;
+}
+.btn-sign:hover{
+	background-color: #fff;
+	border: 2px solid #fff;
+	color: #000;
+}
+.navbar{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.navbar-brand{
+	color: #fff;
+	font-size: 22px;
+}
+
+
+.input-group-text{
+	background-color: #fff;
+	color: #000;
+	border:3px solid #fff;
+	width: 100px;
+}
+
+
+.input-group .input-sign-up{
+	background-color: transparent;
+	color: #fff;
+	border:3px solid #fff;
+}
+
+.input-group{
+	margin-bottom: 20px;
+}
+
+
+.input-group ::-webkit-input-placeholder {
+    color:    #fff;
+}
+.input-group :-moz-placeholder {
+   color:    #fff;
+   opacity:  1;
+}
+.input-group ::-moz-placeholder {
+   color:    #fff;
+   opacity:  1;
+}
+.input-group :-ms-input-placeholder {
+   color:    #fff;
+}
+.input-group ::-ms-input-placeholder {
+   color:    #fff;
+}
+
+.input-group ::placeholder {
+   color:    #fff;
+}
+
+.sign-in-pop-up{
+	z-index: 3;
+	display: none;
+}
+.w-40{
+	width: 40%;
+}
+.mt-20{
+	margin-top: 20px;
+}
+.c-black{
+	color: #000;
+}
+#close{
+	float: right;
+	font-size: 23px;
+}
+#close:hover{
+	cursor: pointer;
+}
+.card-sign-in{
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+

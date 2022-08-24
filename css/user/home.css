@@ -1,0 +1,60 @@
+.navbar{
+	padding: 20px;
+}
+.navbar-nav .nav-item{
+	margin-right: 20px;
+}
+
+#sign-out{
+	color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.post{
+	width: 100%;
+	padding: 20px 30px;
+	background-color: #f3f4f6;
+	border-radius: 20px;
+	margin-top: 30px;
+}
+.ranks{
+	width: 100%;
+	padding-top: 20px;
+}
+.container{
+	padding-top: 30px;
+}
+
+.avatar{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.top{
+	width: 100%;
+	display: inline-block;
+}
+.top-photo{
+	width: 10%;
+	display: inline-block;
+	float: left;
+}
+.top-name{
+	width: 90%;
+	display: inline-block;
+	float: right;
+	padding-left: 10px;
+}
+.content-post{
+	padding-top: 20px;
+}
+.badges{
+	width: 200px;
+	height: auto;
+}
+.header{
+	display: inline-block;
+}
+#refresh{
+	float: right;
+}

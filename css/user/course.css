@@ -1,0 +1,121 @@
+html {
+	scroll-behavior: smooth;
+}
+
+.navbar{
+	padding: 20px;
+}
+.navbar-nav .nav-item{
+	margin-right: 20px;
+}
+
+#sign-out{
+	color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.header-page{
+	padding: 60px;
+	background-color: #f3f3f4;
+}
+.img-class{
+	width: 220px;
+	height: 220px;
+	background-color: #ff0;
+	border-radius: 20px;
+}
+#class-desc{
+	margin-top: 30px;
+}
+.card .card-body{
+	padding: 20px 30px;
+}
+
+.btn-class{
+	background-color: #0d2f4b;
+	color: #fff;
+	width: 100%;
+	margin-top: 15px;
+}
+.btn-info-class{
+	background-color: #f3f3f4;
+	color: #000;
+	width: 100%;
+}
+.mt-15{
+	margin-top: 15px;
+}
+
+.info-class-page{
+	width: 100%;
+	padding: 50px;
+}
+
+.silabus-page{
+	width: 100%;
+	padding: 20px 170px;
+}
+.materials{
+	margin-top: 30px;
+}
+.card-flex{
+	border: 2px solid #f3f3f4;
+	padding: 10px;
+	border-radius: 5px;
+	display: inline-block;
+}
+.material-titles{
+	display: inline-block;
+}
+#arrow{
+	display: inline-block;
+	float: right;
+	font-size: 20px;
+}
+#up{
+	display: none;
+}
+
+.materials .card-body{
+	padding: 25px;
+}
+
+.materials .card-body:hover{
+	cursor: pointer;
+}
+.collapse-materials ul {
+    padding: 0;
+    list-style-type: none;
+}
+.collapse-materials ul li{
+	width: 100%;
+	padding: 10px 30px;
+	background-color:  #f3f3f4;
+	text-decoration: none;
+	list-style: none;
+}
+
+.checklist{
+	width: 20px;
+	height: 20px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: text-bottom;
+}
+.material-name{
+	display: inline-block;
+	margin-left: 20px;
+}
+.check{
+	color: #00f46e;
+	font-size: 10px;
+	text-align: center;
+	font-weight: bold;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #00f46e;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: text-bottom;
+}
