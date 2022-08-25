@@ -56,7 +56,7 @@
 						<span class="info-item"><i class="bi bi-star-fill"></i>&nbsp;&nbsp; 1000 XP</span>
 					</div>
 				</div>
-				<div class="col-lg-9">
+				<div class="col-lg-9 nav-info-user">
 					<nav>
 					  <div class="nav nav-tabs" id="nav-tab" role="tablist">
 					    <button class="nav-link active" id="nav-feed-tab" data-bs-toggle="tab" data-bs-target="#nav-feed" type="button" role="tab" aria-controls="nav-feed" aria-selected="true"><i class="bi bi-chat-square-text-fill"></i>&nbsp;&nbsp;Feed</button>

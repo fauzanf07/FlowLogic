@@ -22,29 +22,31 @@
 			    <button type="button" class="btn btn-sign f-right" onclick="signIn()">Sign In</button>
 			  </div>
 			</nav>
-			<h1>Improve Your Programming Skills Here</h1>
-			<p>Be the best programmer and make yourself stand out from others at your work • <b><span>Join Us!</span></b></p>
-			<div class="container-fluid">
-				<div class="col-lg-7 col-md-12 col-sm-12 form">
-					<form method="post" id="signUpForm">
-						<div class="input-group flex-nowrap">
-						  <span class="input-group-text" id="addon-wrapping">Email</span>
-						  <input type="email" id="inputEmail" class="form-control input-sign-up" placeholder="Input your Email" aria-label="Email" aria-describedby="addon-wrapping" required="required">
-						</div>
-						<div class="input-group flex-nowrap">
-						  <span class="input-group-text" id="addon-wrapping">Name</span>
-						  <input type="text"  id="inputName" class="form-control input-sign-up" placeholder="Input your Name" aria-label="Name" aria-describedby="addon-wrapping" required="required">
-						</div>
-						<div class="input-group flex-nowrap">
-						  <span class="input-group-text" id="addon-wrapping">Username</span>
-						  <input type="text" id="inputUsername" class="form-control input-sign-up" placeholder="Input your Userame" aria-label="Username" aria-describedby="addon-wrapping" required="required">
-						</div>
-						<div class="input-group flex-nowrap">
-						  <span class="input-group-text" id="addon-wrapping">Password</span>
-						  <input type="password" id="inputPassword" class="form-control input-sign-up" placeholder="Input your Password" aria-label="Password" aria-describedby="addon-wrapping" required="required">
-						</div>
-						<button type="button" id="submit" class="btn btn-sign">Sign Up Now</button>
-					</form>
+			<div class="form-section">
+				<h1>Improve Your Programming Skills Here</h1>
+				<p>Be the best programmer and make yourself stand out from others at your work • <b><span>Join Us!</span></b></p>
+				<div class="container-fluid">
+					<div class="col-lg-7 col-sm-12 form">
+						<form method="post" id="signUpForm">
+							<div class="input-group flex-nowrap">
+							  <span class="input-group-text" id="addon-wrapping">Email</span>
+							  <input type="email" id="inputEmail" class="form-control input-sign-up" placeholder="Input your Email" aria-label="Email" aria-describedby="addon-wrapping" required="required">
+							</div>
+							<div class="input-group flex-nowrap">
+							  <span class="input-group-text" id="addon-wrapping">Name</span>
+							  <input type="text"  id="inputName" class="form-control input-sign-up" placeholder="Input your Name" aria-label="Name" aria-describedby="addon-wrapping" required="required">
+							</div>
+							<div class="input-group flex-nowrap">
+							  <span class="input-group-text" id="addon-wrapping">Username</span>
+							  <input type="text" id="inputUsername" class="form-control input-sign-up" placeholder="Input your Userame" aria-label="Username" aria-describedby="addon-wrapping" required="required">
+							</div>
+							<div class="input-group flex-nowrap">
+							  <span class="input-group-text" id="addon-wrapping">Password</span>
+							  <input type="password" id="inputPassword" class="form-control input-sign-up" placeholder="Input your Password" aria-label="Password" aria-describedby="addon-wrapping" required="required">
+							</div>
+							<button type="button" id="submit" class="btn btn-sign">Sign Up Now</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

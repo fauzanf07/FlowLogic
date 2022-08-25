@@ -1,3 +1,4 @@
+
 $('#material1').click(function(){
 	var myCollapse = document.getElementById('materialCollapse1');
 	const bsCollapse = new bootstrap.Collapse(myCollapse, {

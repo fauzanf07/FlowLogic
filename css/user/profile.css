@@ -172,3 +172,9 @@ body{
 #change-img-form{
 	margin-top: 30px;
 }
+
+@media only screen and (max-width: 991px) {
+	.container .row-profile .nav-info-user{
+		padding-top: 40px;
+	}
+}

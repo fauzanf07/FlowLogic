@@ -15,6 +15,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg bg-light sticky-top" style="top: 0; bottom: 0;">
@@ -45,15 +46,15 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3">
-					<img src="../images/img-class.png" class="img-class">
+					<img src="../images/img-class.png" class="img-class" data-aos="zoom-in">
 				</div>
 				<div class="col-lg-6" style="padding-top: 5px;">
-					<h3>Algorithm & Programming</h3>
-					<span><i class="bi bi-clock-fill"></i>&nbsp; 7 jam belajar&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-people-fill"></i>&nbsp; 52 siswa terdaftar</span>
+					<h3 id="class-title">Algorithm & Programming</h3>
+					<span id="info-class"><i class="bi bi-clock-fill"></i>&nbsp; 7 jam belajar&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-people-fill"></i>&nbsp; 52 siswa terdaftar</span>
 					<p id="class-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu. Maecenas convallis elit urna, at pretium leo tempus id. Praesent semper mi leo, et posuere tellus laoreet nec. Nulla vulputate est id augue imperdiet, et condimentum nulla posuere.</p>
 				</div>
-				<div class="col-lg-3">
-					<div class="card" style="width: 18rem;">
+				<div class="col-lg-3 card-class">
+					<div class="card">
 						<div class="card-body">
 						    <div class="progress" style="height: 30px;">
 								 <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
@@ -72,24 +73,24 @@
 		<div class="container-fluid">
 			<center><h2>Informasi Kelas</h2></center>
 			<div class="row" style="padding: 50px 0px 60px 0px; border-bottom: 3px solid #f3f3f4;">
-				<div class="col-lg-4" style="">
-					<div class="card" style="width: 100%;">
+				<div class="col-lg-4 col-card-info">
+					<div class="card" style="width: 100%;" data-aos="zoom-in">
 					  	<div class="card-body">
 						    <h5 class="card-title">Lorem Ipsum :</h5>
 						    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu. Maecenas convallis elit urna, at pretium leo tempus id. Praesent semper mi leo, et posuere tellus laoreet nec. Nulla vulputate est id augue imperdiet, et condimentum nulla posuere. Fusce nec ultrices ex, a faucibus purus. Maecenas scelerisque dolor ut lacinia tincidunt. Aliquam ultrices neque ac tellus accumsan auctor. Integer vel lorem leo. Aliquam tincidunt sapien nec eros lobortis, dapibus vestibulum enim porta. Quisque at bibendum arcu.</p>
 					  	</div>
 					</div>
 				</div>
-				<div class="col-lg-4" style="">
-					<div class="card" style="width: 100%;">
+				<div class="col-lg-4 col-card-info">
+					<div class="card" style="width: 100%;" data-aos="zoom-in">
 					  	<div class="card-body">
 						    <h5 class="card-title">Lorem Ipsum :</h5>
 						    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu. Maecenas convallis elit urna, at pretium leo tempus id. Praesent semper mi leo, et posuere tellus laoreet nec. Nulla vulputate est id augue imperdiet, et condimentum nulla posuere. Fusce nec ultrices ex, a faucibus purus. Maecenas scelerisque dolor ut lacinia tincidunt. Aliquam ultrices neque ac tellus accumsan auctor. Integer vel lorem leo. Aliquam tincidunt sapien nec eros lobortis, dapibus vestibulum enim porta. Quisque at bibendum arcu.</p>
 					  	</div>
 					</div>
 				</div>
-				<div class="col-lg-4" style="">
-					<div class="card" style="width: 100%;">
+				<div class="col-lg-4 col-card-info">
+					<div class="card" style="width: 100%;" data-aos="zoom-in">
 					  	<div class="card-body">
 						    <h5 class="card-title">Lorem Ipsum :</h5>
 						    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu. Maecenas convallis elit urna, at pretium leo tempus id. Praesent semper mi leo, et posuere tellus laoreet nec. Nulla vulputate est id augue imperdiet, et condimentum nulla posuere. Fusce nec ultrices ex, a faucibus purus. Maecenas scelerisque dolor ut lacinia tincidunt. Aliquam ultrices neque ac tellus accumsan auctor. Integer vel lorem leo. Aliquam tincidunt sapien nec eros lobortis, dapibus vestibulum enim porta. Quisque at bibendum arcu.</p>
@@ -102,7 +103,7 @@
 	<div class="silabus-page" id="silabus-section">
 		<center><h2>Silabus</h2></center>
 		<center><span style="font-size: 18px; margin-top: 10px; display: inline-block; ">Materi yang akan anda pelajari</span></center>
-		<div class="card materials">
+		<div class="card materials" data-aos="zoom-in">
 			<div class="card-body" id="material1">
 			    <h5 class="material-titles">Lorem Ipsum </h5>
 			    <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu.</p>
@@ -136,7 +137,7 @@
 			</div>
 			
 		</div>
-		<div class="card materials">
+		<div class="card materials" data-aos="zoom-in">
 			<div class="card-body" id="material2">
 			    <h5 class="material-titles">Lorem Ipsum </h5>
 			    <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu.</p>
@@ -170,7 +171,7 @@
 			</div>
 			
 		</div>
-		<div class="card materials">
+		<div class="card materials" data-aos="zoom-in">
 			<div class="card-body" id="material3">
 			    <h5 class="material-titles">Lorem Ipsum </h5>
 			    <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu.</p>
@@ -204,7 +205,7 @@
 			</div>
 			
 		</div>
-		<div class="card materials">
+		<div class="card materials" data-aos="zoom-in">
 			<div class="card-body" id="material4">
 			    <h5 class="material-titles">Lorem Ipsum </h5>
 			    <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu.</p>
@@ -238,7 +239,7 @@
 			</div>
 			
 		</div>
-		<div class="card materials">
+		<div class="card materials" data-aos="zoom-in">
 			<div class="card-body" id="material5">
 			    <h5 class="material-titles">Lorem Ipsum </h5>
 			    <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu.</p>
@@ -280,4 +281,8 @@
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 <script type="text/javascript" src="../js/user/course.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </html>

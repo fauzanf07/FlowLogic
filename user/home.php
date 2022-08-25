@@ -96,11 +96,11 @@
 					</div>
 					
 				</div>
-
+				<button type="button" class="btn btn-outline-secondary" id="loadPostMore">Load More</button>
 			</div>
 			<div class="col-lg-1">
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-4" id="curr-ranks">
 				<h3 class="header"><i class="bi bi-trophy-fill"></i>&nbsp;&nbsp;Current Rankings</h3>
 				<div class="ranks">
 					<table class="table">
@@ -163,6 +163,7 @@
 					    </tr>
 					  </tbody>
 					</table>
+					<button type="button" class="btn btn-outline-secondary" id="loadRanksMore">Load More</button>
 				</div>
 
 			</div>
@@ -175,4 +176,5 @@
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 <script type="text/javascript" src="../js/user/home.js"></script>
+
 </html>

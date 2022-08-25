@@ -58,3 +58,16 @@
 #refresh{
 	float: right;
 }
+#loadPostMore{
+	margin: 20px 0;
+	float: right;
+}
+#loadRanksMore{
+	margin: 10px 0;
+	float: right;
+}
+@media only screen and (max-width: 991px) {
+	#curr-ranks{
+		padding-top: 50px;
+	}
+}
