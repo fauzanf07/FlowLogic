@@ -59,7 +59,7 @@
 						    <div class="progress" style="height: 30px;">
 								 <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
 							</div>
-							<button type="button" class="btn btn-class">Lanjutkan Kelas</button>
+							<a href="../courses/course1.php" type="button" class="btn btn-class">Lanjutkan Kelas</a>
 							<hr>
 							<a href="#info-class-section" type="button" class="btn btn-info-class">Informasi Kelas</a>
 							<a href="#silabus-section" type="button" class="btn btn-info-class mt-15">Lihat Silabus</a>
