@@ -59,7 +59,7 @@
 						    <div class="progress" style="height: 30px;">
 								 <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
 							</div>
-							<a href="../courses/course1.php" type="button" class="btn btn-class">Lanjutkan Kelas</a>
+							<button type="button" class="btn btn-class" id="continueClass" data-course="<?php echo $_SESSION['curr_course'] ?>" data-username = "<?php echo $_SESSION['username'] ?>">Lanjutkan Kelas</button>
 							<hr>
 							<a href="#info-class-section" type="button" class="btn btn-info-class">Informasi Kelas</a>
 							<a href="#silabus-section" type="button" class="btn btn-info-class mt-15">Lihat Silabus</a>

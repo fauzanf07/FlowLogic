@@ -1,4 +1,21 @@
-
+$('#continueClass').click(function(){
+	const currCourse = $(this).data('course');
+	const username = $(this).data('username');
+	$.ajax({
+		url: "./user_trans/continue_class.php",
+		type: "POST",
+		data: {
+			currCourse: currCourse,
+			username: username		
+		},
+		cache: false,
+		success: function(dataResult){
+			var dataResult = JSON.parse(dataResult);
+			console.log(dataResult);
+			window.location.href = "../courses/"+dataResult.course+".php";
+		}
+	});
+});
 $('#material1').click(function(){
 	var myCollapse = document.getElementById('materialCollapse1');
 	const bsCollapse = new bootstrap.Collapse(myCollapse, {

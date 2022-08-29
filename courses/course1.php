@@ -2,6 +2,8 @@
 	session_start();
 	if(!isset($_SESSION['name'])){
 		header("Location: http://localhost/skripsi/");
+	}else{
+		$currCourse = $_SESSION['curr_course'];
 	}
  ?>
 <!DOCTYPE html>
@@ -98,7 +100,7 @@
 		    <div class="collapse navbar-collapse " id="navbarNav">
 			    <ul class="navbar-nav ms-auto">
 			    	<li class="nav-item">
-			        	<a class="nav-link active" aria-current="course" href="../user/course.php">Dashboard</a>
+			        	<a class="nav-link active" aria-current="course" href="../user/course.php" style="text-align: center;">Dashboard</a>
 			        </li>
 			        <div class="btn-group dropdown-center">
 						<button type="button" class="btn btn-light dropdown-toggle btn-nav" data-bs-toggle="dropdown" aria-expanded="false">
@@ -121,7 +123,7 @@
 	</nav>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4">
+			<div class="col-lg-4 order-lg-1 order-md-2">
 				<div class="side-nav">
 					<div class="side-progress">
 						<h5>Progress Kelas</h5>
@@ -146,57 +148,73 @@
 								    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 								      	<div class="accordion-body">
 								      		<ul class="list-group list-group-flush">
-											  	<li class="list-group-item" id="current-li">
+											  	<li class="list-group-item" <?php if($currCourse==1) echo 'id="current-li"'; ?>>
 											  		<div style="width: 100%;">
 											  			<div class="check-side ">
-											  				<span class="check">&#10003;</span>
+											  				<span class="checklist <?php if($currCourse>1) echo 'check'; ?>"><?php if($currCourse>1) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name">
 											  				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 											  			</div>
-											  			<div class="user-footprint" id="userFootprint">
-											  				<img src="<?php echo $_SESSION['photo_profile']; ?>" class="user-img-footprint">
-											  				<span class="user-total">20+</span>
+											  			<div class="user-footprint" id="userFootprintC1" data-course="1">
+											  				<img class="user-img-footprint" id='userImgFootprintC1'>
+											  				<span class="user-total" id="totalUserC1"></span>
 											  			</div>
 											  		</div>
 												</li>
-											  <li class="list-group-item">
+											  <li class="list-group-item" <?php if($currCourse==2) echo 'id="current-li"'; ?>>
 											  		<div style="width: 100%;">
 											  			<div class="check-side ">
-											  				<span class="checklist"></span>
+											  				<span class="checklist <?php if($currCourse>2) echo 'check'; ?>"><?php if($currCourse>2) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name">
 											  				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  			</div>
+											  			<div class="user-footprint" id="userFootprintC2" data-course="2">
+											  				<img  class="user-img-footprint" id='userImgFootprintC2'>
+											  				<span class="user-total" id="totalUserC2"></span>
 											  			</div>
 											  		</div>
 											  </li>
-											  <li class="list-group-item">
+											  <li class="list-group-item" <?php if($currCourse==3) echo 'id="current-li"'; ?>>
 											  		<div style="width: 100%;">
 											  			<div class="check-side ">
-											  				<span class="checklist"></span>
+											  				<span class="checklist <?php if($currCourse>3) echo 'check'; ?>"><?php if($currCourse>3) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name">
 											  				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  			</div>
+											  			<div class="user-footprint" id="userFootprintC3" data-course="3">
+											  				<img  class="user-img-footprint" id='userImgFootprintC3'>
+											  				<span class="user-total" id="totalUserC3"></span>
 											  			</div>
 											  		</div>
 											  </li>
-											  <li class="list-group-item">
+											  <li class="list-group-item" <?php if($currCourse==4) echo 'id="current-li"'; ?>>
 											  		<div style="width: 100%;">
 											  			<div class="check-side ">
-											  				<span class="checklist"></span>
+											  				<span class="checklist <?php if($currCourse>4) echo 'check'; ?>"><?php if($currCourse>4) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name">
 											  				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  			</div>
+											  			<div class="user-footprint" id="userFootprintC4" data-course="4">
+											  				<img  class="user-img-footprint" id='userImgFootprintC4'>
+											  				<span class="user-total" id="totalUserC4"></span>
 											  			</div>
 											  		</div>
 											  </li>
-											  <li class="list-group-item">
+											  <li class="list-group-item" <?php if($currCourse==5) echo 'id="current-li"'; ?>>
 											  		<div style="width: 100%;">
 											  			<div class="check-side ">
-											  				<span class="checklist"></span>
+											  				<span class="checklist <?php if($currCourse>5) echo 'check'; ?>"><?php if($currCourse>5) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name">
 											  				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  			</div>
+											  			<div class="user-footprint" id="userFootprintC5" data-course="5">
+											  				<img  class="user-img-footprint" id='userImgFootprintC5'>
+											  				<span class="user-total" id="totalUserC5"></span>
 											  			</div>
 											  		</div>
 											  </li>
@@ -249,7 +267,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-8 side-right">
+			<div class="col-lg-8 side-right order-lg-2 corder-md-1">
 				<div class="right-content">
 					<h1>Lorem Ipsum</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus est leo, sed lobortis lectus ultrices nec. Morbi eleifend varius aliquam. Suspendisse odio eros, scelerisque in eleifend vel, accumsan et lorem. Maecenas velit quam, pellentesque sed ultricies at, consectetur eget lectus. Nunc at ipsum eu orci sagittis convallis. Curabitur ultricies nunc vel laoreet convallis. Nam tempus risus lectus, eget pulvinar lectus dapibus quis. Aenean lectus sem, varius in metus a, pretium congue erat.</p>
@@ -273,6 +291,8 @@
 					<p>Integer facilisis dictum sodales. Sed nec est non velit dignissim vestibulum et at orci. Nulla tempus dignissim accumsan. Donec tempus pulvinar molestie. Etiam et sagittis lectus. Donec metus quam, auctor sed nisl et, consectetur feugiat tellus. Nam et tortor dapibus, ultricies lorem in, facilisis nibh. Ut blandit lacus enim, sed tincidunt lectus egestas eu. Suspendisse potenti.</p>
 					
 					<p>Nam imperdiet semper lacus, eu blandit dolor tincidunt at. Praesent non mauris luctus, congue dolor quis, accumsan urna. Suspendisse potenti. Nulla eu nulla pulvinar justo semper porta. Nunc aliquam in ante id elementum. Pellentesque viverra ut lectus at rhoncus. Curabitur in massa purus. Vivamus a mattis turpis, at maximus sem. Aliquam ultricies vitae felis ut mollis. Phasellus convallis dui justo, nec viverra purus consequat ut.</p>
+					<button class="btn btn-course ">Sebelumnya</button>
+					<button class="btn btn-course f-right">Berikutnya</button>
 				</div>
 			</div>
 		</div>
@@ -285,44 +305,8 @@
 		        		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		      	</div>
 		      	<div class="modal-body">
-			    	<table class="table">
+			    	<table class="table" id="usersOnTheCourse">
 						<tbody>
-							<tr>
-								<td><img src="<?php echo $_SESSION['photo_profile']; ?>" class="img-user"></td>
-								<td><?php echo $_SESSION['name']; ?></td>
-							</tr>
-							<tr>
-								<td><img src="../images/avatar.jpg" class="img-user"></td>
-								<td>Ahmad Wahyudin Suryono</td>
-							</tr>
-							<tr>
-								<td><img src="../images/avatar.jpg" class="img-user"></td>
-								<td>Ahmad Wahyudin Suryono</td>
-							</tr>
-							<tr>
-								<td><img src="../images/avatar.jpg" class="img-user"></td>
-								<td>Ahmad Wahyudin Suryono</td>
-							</tr>
-							<tr>
-								<td><img src="../images/avatar.jpg" class="img-user"></td>
-								<td>Ahmad Wahyudin Suryono</td>
-							</tr>
-							<tr>
-								<td><img src="../images/avatar.jpg" class="img-user"></td>
-								<td>Ahmad Wahyudin Suryono</td>
-							</tr>
-							<tr>
-								<td><img src="../images/avatar.jpg" class="img-user"></td>
-								<td>Ahmad Wahyudin Suryono</td>
-							</tr>
-							<tr>
-								<td><img src="../images/avatar.jpg" class="img-user"></td>
-								<td>Ahmad Wahyudin Suryono</td>
-							</tr>
-							<tr>
-								<td><img src="../images/avatar.jpg" class="img-user"></td>
-								<td>Ahmad Wahyudin Suryono</td>
-							</tr>
 						</tbody>
 					</table>
 		      	</div>
