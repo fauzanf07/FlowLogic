@@ -103,6 +103,10 @@ body{
 	text-decoration: none;
 	color: #000;
 }
+.material-name a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
 .check{
 	color: #00f46e;
 	font-size: 10px;
@@ -153,7 +157,7 @@ body{
 	margin-top: -3px;
 	font-weight: 500;
 }
-.invisiblw{
+.invisible{
 	position: relative;
 	opacity: 0;
 }
@@ -177,7 +181,9 @@ body{
 	margin-top: 10px;
 	display: inline-block;
 	position: relative;
+	clear: both;
 }
 .f-right{
 	float: right;
+
 }

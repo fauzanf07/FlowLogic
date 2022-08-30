@@ -4,8 +4,18 @@
 		header("Location: http://localhost/skripsi/");
 	}else{
 		$currCourse = $_SESSION['curr_course'];
+		$progress = intval(($_SESSION['curr_course']/5)*100);
+		$progressBg = "";
+		if($progress <=30){
+			$progressBg = "bg-danger";
+		}else if($progress<=60){
+			$progressBg = "bg-warning";
+		}else{
+			$progressBg = "bg-success";
+		}
 	}
  ?>
+ <!--COURSE 5 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -128,7 +138,7 @@
 					<div class="side-progress">
 						<h5>Progress Kelas</h5>
 						<div class="progress" style="height: 30px; margin-top: 10px;">
-							<div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+							<div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?></div>
 						</div>
 						<hr>
 						<a href="../user/course.php" class="btn btn-info-class">Kembali ke Dashboard</a>
@@ -148,13 +158,13 @@
 								    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 								      	<div class="accordion-body">
 								      		<ul class="list-group list-group-flush">
-											  	<li class="list-group-item" <?php if($currCourse==1) echo 'id="current-li"'; ?>>
+											  	<li class="list-group-item">
 											  		<div style="width: 100%;">
 											  			<div class="check-side ">
 											  				<span class="checklist <?php if($currCourse>1) echo 'check'; ?>"><?php if($currCourse>1) echo '&#10003;'; ?></span>
 											  			</div>
-											  			<div class="material-name">
-											  				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  			<div class="material-name" data-course="1" data-curr="<?php echo $currCourse ?>">
+											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC1" data-course="1">
 											  				<img class="user-img-footprint" id='userImgFootprintC1'>
@@ -162,13 +172,13 @@
 											  			</div>
 											  		</div>
 												</li>
-											  <li class="list-group-item" <?php if($currCourse==2) echo 'id="current-li"'; ?>>
+											  <li class="list-group-item">
 											  		<div style="width: 100%;">
 											  			<div class="check-side ">
 											  				<span class="checklist <?php if($currCourse>2) echo 'check'; ?>"><?php if($currCourse>2) echo '&#10003;'; ?></span>
 											  			</div>
-											  			<div class="material-name">
-											  				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  			<div class="material-name" data-course="2" data-curr="<?php echo $currCourse ?>">
+											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC2" data-course="2">
 											  				<img  class="user-img-footprint" id='userImgFootprintC2'>
@@ -176,13 +186,13 @@
 											  			</div>
 											  		</div>
 											  </li>
-											  <li class="list-group-item" <?php if($currCourse==3) echo 'id="current-li"'; ?>>
+											  <li class="list-group-item">
 											  		<div style="width: 100%;">
-											  			<div class="check-side ">
+											  			<div class="check-side">
 											  				<span class="checklist <?php if($currCourse>3) echo 'check'; ?>"><?php if($currCourse>3) echo '&#10003;'; ?></span>
 											  			</div>
-											  			<div class="material-name">
-											  				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  			<div class="material-name" data-course="3" data-curr="<?php echo $currCourse ?>">
+											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC3" data-course="3">
 											  				<img  class="user-img-footprint" id='userImgFootprintC3'>
@@ -190,13 +200,13 @@
 											  			</div>
 											  		</div>
 											  </li>
-											  <li class="list-group-item" <?php if($currCourse==4) echo 'id="current-li"'; ?>>
+											  <li class="list-group-item">
 											  		<div style="width: 100%;">
 											  			<div class="check-side ">
 											  				<span class="checklist <?php if($currCourse>4) echo 'check'; ?>"><?php if($currCourse>4) echo '&#10003;'; ?></span>
 											  			</div>
-											  			<div class="material-name">
-											  				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  			<div class="material-name" data-course="4" data-curr="<?php echo $currCourse ?>">
+											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC4" data-course="4">
 											  				<img  class="user-img-footprint" id='userImgFootprintC4'>
@@ -204,13 +214,13 @@
 											  			</div>
 											  		</div>
 											  </li>
-											  <li class="list-group-item" <?php if($currCourse==5) echo 'id="current-li"'; ?>>
+											  <li class="list-group-item" id="current-li">
 											  		<div style="width: 100%;">
 											  			<div class="check-side ">
 											  				<span class="checklist <?php if($currCourse>5) echo 'check'; ?>"><?php if($currCourse>5) echo '&#10003;'; ?></span>
 											  			</div>
-											  			<div class="material-name">
-											  				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  			<div class="material-name" data-course="5" data-curr="<?php echo $currCourse ?>">
+											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC5" data-course="5">
 											  				<img  class="user-img-footprint" id='userImgFootprintC5'>
@@ -291,8 +301,8 @@
 					<p>Integer facilisis dictum sodales. Sed nec est non velit dignissim vestibulum et at orci. Nulla tempus dignissim accumsan. Donec tempus pulvinar molestie. Etiam et sagittis lectus. Donec metus quam, auctor sed nisl et, consectetur feugiat tellus. Nam et tortor dapibus, ultricies lorem in, facilisis nibh. Ut blandit lacus enim, sed tincidunt lectus egestas eu. Suspendisse potenti.</p>
 					
 					<p>Nam imperdiet semper lacus, eu blandit dolor tincidunt at. Praesent non mauris luctus, congue dolor quis, accumsan urna. Suspendisse potenti. Nulla eu nulla pulvinar justo semper porta. Nunc aliquam in ante id elementum. Pellentesque viverra ut lectus at rhoncus. Curabitur in massa purus. Vivamus a mattis turpis, at maximus sem. Aliquam ultricies vitae felis ut mollis. Phasellus convallis dui justo, nec viverra purus consequat ut.</p>
-					<button class="btn btn-course ">Sebelumnya</button>
-					<button class="btn btn-course f-right">Berikutnya</button>
+					<button class="btn btn-course" id="previous" data-prev="4">Sebelumnya</button>
+					<button class="btn btn-course f-right" id="next" data-next="6" data-curr="<?php echo $currCourse ?>" data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
 				</div>
 			</div>
 		</div>
@@ -301,7 +311,7 @@
 		<div class="modal-dialog">
 		    <div class="modal-content">
 		      	<div class="modal-header">
-		        		<h5 class="modal-title" id="exampleModalLabel">Pengguna yang berada di modul ini</h5>
+		        		<h5 class="modal-title" id="exampleModalLabel">Pengguna yang sudah mencapai modul ini</h5>
 		        		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		      	</div>
 		      	<div class="modal-body">
@@ -312,6 +322,17 @@
 		      	</div>
 		    </div>
 		</div>
+	</div>
+	<div class="toast-container position-fixed bottom-0 end-0 p-3">
+	  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+	    <div class="toast-header">
+	      <i class="bi bi-code-square"></i>&nbsp;&nbsp;
+	      <strong class="me-auto">FunCode</strong>
+	      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	    </div>
+	    <div class="toast-body" id="msgToast">
+	    </div>
+	  </div>
 	</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

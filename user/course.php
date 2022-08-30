@@ -2,6 +2,17 @@
 	session_start();
 	if(!isset($_SESSION['name'])){
 		header("Location: http://localhost/skripsi/");
+	}else{
+		$currCourse = $_SESSION['curr_course'];
+		$progress = intval(($_SESSION['curr_course']/5)*100);
+		$progressBg = "";
+		if($progress<=30){
+			$progressBg = "bg-danger";
+		}else if($progress<=60){
+			$progressBg = "bg-warning";
+		}else{
+			$progressBg = "bg-success";
+		}
 	}
 ?>
 <!DOCTYPE html>
@@ -57,7 +68,7 @@
 					<div class="card">
 						<div class="card-body">
 						    <div class="progress" style="height: 30px;">
-								 <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+								 <div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?></div>
 							</div>
 							<button type="button" class="btn btn-class" id="continueClass" data-course="<?php echo $_SESSION['curr_course'] ?>" data-username = "<?php echo $_SESSION['username'] ?>">Lanjutkan Kelas</button>
 							<hr>
