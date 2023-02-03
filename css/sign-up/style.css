@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+.nav-parent{
+    padding: 20px;
+}
+
+.item-nav a{
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 16px;
+}
+
+.sign-in-btn{
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 20px;
+}
+
+.main-wrapper{
+    width: 100%;
+    padding: 30px 250px;
+}
+
+.signup-title{
+	margin-bottom: 40px;
+}
+
+.form-group{
+	margin-bottom: 30px;
+}
+
+.w-48{
+    width: 48%;
+}
+
+.fl-right{
+    float: right;
+}
+
+.submit-btn{
+	margin-top: 10px;
+	margin-bottom: 100px;
+	float: right;
+    background-color: #0680F9;
+}
+
+.background-footer{
+	height: 50px;
+	background-color: #0680F9;
+    opacity: 0.3;
+}
+
+.copyright{
+	text-align: center;
+}
+
+.g-signin{
+	float: right;
+}
+
+footer {
+	margin-top: auto;
+	font-family: 'Fredoka', sans-serif;
+}
+
+#spinner{
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+	.main-wrapper{
+        padding: 30px 150px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+	.main-wrapper{
+        padding: 30px 80px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .input-split{
+        float: none;
+        clear: both;
+        width: 100%;
+    }
+	.main-wrapper{
+        padding: 30px 30px;
+    }
+}

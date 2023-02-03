@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+.nav-parent{
+    padding: 20px;
+}
+
+.item-nav a{
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 16px;
+}
+
+.sign-in-btn{
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 20px;
+}
+
+.main-wrapper{
+    width: 100%;
+    padding: 30px 90px;
+}
+
+.img-ilustrasi{
+    
+    width: 80%;
+    height: auto;
+    right: 0;
+    left: 0;
+    position: relative;
+    margin: auto;
+}
+
+.login-wrapper{
+    width: 80%;
+    padding: 40px 40px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-box-shadow: 7px 7px 11px 0px rgba(94,94,94,0.66);
+    -moz-box-shadow: 7px 7px 11px 0px rgba(94,94,94,0.66);
+    box-shadow: 7px 7px 11px 0px rgba(94,94,94,0.66);
+}
+
+.login-wrapper h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.avatar{
+    margin-top: 10px;
+    width: 22%;
+    height: 22%;
+    border-radius: 50%;
+
+}
+
+.input-group-text{
+    background-color: #0680f9;
+    color: #fff;
+}
+
+.input-group{
+    margin-top: 20px;
+}
+
+.btn-signin{
+    margin-top: 10px;
+    background-color: #0680f9;
+}
+
+@media only screen and (max-width: 992px) {
+	.login-wrapper{
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+	.main-wrapper{
+        padding: 30px 70px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+	.main-wrapper{
+        padding: 30px 0px;
+    }
+}

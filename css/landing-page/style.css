@@ -1,209 +1,70 @@
-html {
-	width: 100%;
-	height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+.nav-parent{
+    padding: 20px;
 }
 
-body{
-	width: 100%;
-	height: 100%;
-	margin:0;
-	padding: 0;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: url(../../images/bg.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+.item-nav a{
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 16px;
 }
 
-#wrapper{
-	width: 100%;
-	height: 100%;
-	position: relative;
+.sign-in-btn{
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 20px;
 }
 
-.black-wrapper{
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-	opacity: 0.5;
-	position: absolute;
-	z-index: 1;
-	
-}
-#content{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: 2;
-	padding: 20px 30px; 
-	color: #fff;
+.main-wrapper{
+    width: 100%;
+    padding: 30px 40px;
 }
 
-.form-section{
-	margin-top: 0px;
-	position: relative;
-}
-.form{
-	padding-left: 10px; 
-	padding-top: 20px
+.img-ilustrasi{
+    width: 100%;
+    height: auto;
 }
 
-.link{
-	margin-top: 10px;
-	text-decoration: none;
-	float: right;
+.content h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 60px;
+}
+.content h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 45px;
 }
 
-h1{
-	color: #fff;
-	font-family: 'Roboto Slab', serif;
-	opacity: 1;
-	font-size: 50px;
-	padding-right: 20px;
-	padding-left: 20px;
-	
+.register-btn{
+    font-size: 30px;
+    margin-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 30px;
 }
 
-p{
-	color: #fff;
-	font-family: 'Roboto Slab', serif;
-	padding-right: 20px;
-	padding-left: 20px;
+@media only screen and (max-width: 768px) {
+	.img-ilustrasi{
+        margin-bottom: 20px;
+    }
 }
-@keyframes typing {
-  from { opacity: 1; width: 0; }
-  to { opacity: 1; width: 100% }
-}
- .f-right{
- 	float: right;
- }
-.btn-sign{
-	background-color: none;
-	border: 2px solid #fff;
-	color: #fff;
-}
-.btn-sign:hover{
-	background-color: #fff;
-	border: 2px solid #fff;
-	color: #000;
-}
-.navbar{
-	padding-right: 10px;
-	padding-left: 10px;
-}
-.navbar-brand{
-	color: #fff;
-	font-size: 22px;
+@media only screen and (max-width: 576px) {
+	.content h1{
+        font-size: 50px;
+        line-height: 40px;
+    }
+    .content h2{
+        font-size: 25px;
+    }
 }
 
-
-.input-group-text{
-	background-color: #fff;
-	color: #000;
-	border:3px solid #fff;
-	width: 100px;
-}
-
-
-.input-group .input-sign-up{
-	background-color: transparent;
-	color: #fff;
-	border:3px solid #fff;
-}
-
-.input-group{
-	margin-bottom: 20px;
-}
-
-
-.input-group ::-webkit-input-placeholder {
-    color:    #fff;
-}
-.input-group :-moz-placeholder {
-   color:    #fff;
-   opacity:  1;
-}
-.input-group ::-moz-placeholder {
-   color:    #fff;
-   opacity:  1;
-}
-.input-group :-ms-input-placeholder {
-   color:    #fff;
-}
-.input-group ::-ms-input-placeholder {
-   color:    #fff;
-}
-
-.input-group ::placeholder {
-   color:    #fff;
-}
-
-.sign-in-pop-up{
-	z-index: 3;
-	display: none;
-}
-.w-40{
-	width: 40%;
-}
-.mt-20{
-	margin-top: 20px;
-}
-.c-black{
-	color: #000;
-}
-#close{
-	float: right;
-	font-size: 23px;
-}
-#close:hover{
-	cursor: pointer;
-}
-.card-sign-in{
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	margin: auto;
-	position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-
-@media only screen and (min-width: 576px) {
-	.form-section{
-		margin-top:200px;
-	}
-}
-@media only screen and (min-width: 768px) {
-	.form-section{
-		margin-top:150px;
-	}
-}
-@media only screen and (min-width: 900px) {
-	.form-section{
-		margin-top:120px;
-	}
-}
-@media only screen and (min-width: 992px) {
-	.form-section{
-		margin-top:20px;
-	}
-}
-
-@media only screen and (min-width: 1032px) {
-	h1{
-		overflow: hidden; /* Ensures the content is not revealed until the animation */
-	  	white-space: nowrap; /* Keeps the content on a single line */
-	  	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-	  	letter-spacing: .0em; /* Adjust as needed */
-	  	margin-top: 20px;
-	  	animation: 
-	    	typing 3.5s steps(40, end) ,
-	   		blink-caret .75s step-end infinite;
-	}
+@media only screen and (max-width: 400px) {
+	.content h1{
+        font-size: 40px;
+    }
+    .content h2{
+        font-size: 20px;
+    }
 }

@@ -63,3 +63,8 @@ $("#change-pic").click(function(){
         alert("Please select a file.");
     }
 });
+$('#summernote').summernote({
+    placeholder: 'Bagikan pengetahuan anda mengenai materi yang telah dipelajari disini. Ini akan membantu teman anda yang mengalami kesulitan dalam memahami materi.',
+    tabsize: 2,
+    height: 100
+});

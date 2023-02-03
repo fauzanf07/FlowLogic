@@ -4,6 +4,7 @@ $con = mysqli_connect('localhost', 'root', '','db_gamifikasi');
 
 $txtEmail = $_POST['email'];
 $txtName = $_POST['name'];
+$txtKelas = $_POST['kelas'];
 $txtUsername = $_POST['username'];
 $txtPassword = base64_encode($_POST['password']);
 
@@ -15,7 +16,7 @@ $rsUser = mysqli_query($con, $userSql);
 if (mysqli_num_rows($rsUser) > 0) {
 	echo json_encode(array("statusCode"=>202));
 }else{
-	$sql = "INSERT INTO `tb_user` (`id`, `email`, `username`, `name`, `password`,`photo_profile`) VALUES ('0', '$txtEmail', '$txtUsername', '$txtName', '$txtPassword','../images/avatar.jpg')";
+	$sql = "INSERT INTO `tb_user` (`id`, `email`, `username`, `name`, `password`,`kelas`,`photo_profile`) VALUES ('0', '$txtEmail', '$txtUsername', '$txtName', '$txtPassword','$txtKelas','../images/avatar.jpg')";
 	$rs = mysqli_query($con, $sql);
 
 	if($rs)

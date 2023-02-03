@@ -15,6 +15,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 </head>
 <body>
 	<div id="wrapper">
@@ -66,19 +67,26 @@
 					</nav>
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="nav-feed" role="tabpanel" aria-labelledby="nav-feed-tab" tabindex="0">
-							<div class="post">
-								<div class="top">
-									<div class="top-photo">
-										<img src= "<?php echo $_SESSION['photo_profile']; ?>" class="avatar">
+							<div class="share-wrapper">
+								<h3>Share your knowledge</h3>
+								<div id="summernote"></div>
+								<center><button type="button" class="btn btn-primary mt-4">SHARE YOUR KNOWLEDGE&nbsp; <i class="bi bi-send-fill"></i></button></center>
+							</div>
+							<div class="your-post">
+								<div class="post">
+									<div class="top">
+										<div class="top-photo">
+											<img src= "<?php echo $_SESSION['photo_profile']; ?>" class="avatar">
+										</div>
+										<div class="top-name">
+											<b><span><?php echo $_SESSION['name']; ?></span></b><span>&nbsp;&nbsp;<?php echo $_SESSION['username']; ?></span><br>
+											<span>20-08-2022 18:30</span>
+										</div>
 									</div>
-									<div class="top-name">
-										<b><span><?php echo $_SESSION['name']; ?></span></b><span>&nbsp;&nbsp;<?php echo $_SESSION['username']; ?></span><br>
-										<span>20-08-2022 18:30</span>
+									<div class="content-post">
+										<p>I'm so happy that I have earned this badge! I can't wait to see you earn this badge too!</p>
+										<center><img src="../images/badges.png" class="badges"></center>
 									</div>
-								</div>
-								<div class="content-post">
-									<p>I'm so happy that I have earned this badge! I can't wait to see you earn this badge too!</p>
-									<center><img src="../images/badges.png" class="badges"></center>
 								</div>
 							</div>
 					  	</div>
@@ -155,7 +163,7 @@
 		<div class="card w-40 change-pic-pop-up card-change-pic">
 		  <div class="card-body">
 			<i class="bi bi-x" id="close"></i>
-			<center><img src=<?php echo $_SESSION['photo_profile']; ?> class="change-img" id="change-img"></center>
+			<center><img src='<?php echo $_SESSION['photo_profile']; ?>' class="change-img" id="change-img"></center>
 		    <form method="post" id="change-img-form">
 		    	<div class="input-group mb-3">
 				  <input type="file" class="form-control" id="inputGroupFile02">
@@ -168,6 +176,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
