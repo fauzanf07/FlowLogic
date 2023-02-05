@@ -117,10 +117,6 @@
 						    <img src="<?php echo $_SESSION['photo_profile']; ?>" class="photo_profile">
 						</button>
 						<ul class="dropdown-menu">
-						    <li><span class="dropdown-item"><i class="bi bi-diamond-fill"></i>&nbsp;&nbsp; 500 Points</span></li>
-						    <li><span class="dropdown-item"><i class="bi bi-star-fill"></i>&nbsp;&nbsp; 1000 XP</span></li>
-						    <li><span class="dropdown-item"><i class="bi bi-capslock-fill"></i>&nbsp;&nbsp; Level 3</span></li>
-						    <li><hr class="dropdown-divider"></li>
 						    <li><a class="dropdown-item" href="../user/home.php"><i class="bi bi-house-fill"></i>&nbsp;&nbsp; Home</a></li>
 						    <li><a class="dropdown-item" href="../user/profile.php"><i class="bi bi-person-fill"></i>&nbsp;&nbsp; Profile</a></li>
 						    <li><a class="dropdown-item" href="../user/logout.php"><i class="bi bi-box-arrow-right"></i>&nbsp;&nbsp; Logout</a></li>
@@ -139,6 +135,11 @@
 						<h5>Progress Kelas</h5>
 						<div class="progress" style="height: 30px; margin-top: 10px;">
 							<div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?></div>
+						</div>
+						<div class="element-game">
+							<span><i class="bi bi-diamond-fill"></i> 500 Points</span>
+							<span><i class="bi bi-star-fill"></i> 1000 XP &nbsp;&nbsp;</span>
+							<span><i class="bi bi-capslock-fill"></i> Level 3 &nbsp;&nbsp;</span>
 						</div>
 						<hr>
 						<a href="../user/course.php" class="btn btn-info-class">Kembali ke Dashboard</a>
@@ -165,6 +166,10 @@
 											  			</div>
 											  			<div class="material-name" data-course="1" data-curr="<?php echo $currCourse ?>">
 											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+															<div class="get-item">
+																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +1000</span>
+															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC1" data-course="1">
 											  				<img class="user-img-footprint" id='userImgFootprintC1'>
@@ -179,6 +184,10 @@
 											  			</div>
 											  			<div class="material-name" data-course="2" data-curr="<?php echo $currCourse ?>">
 											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+															<div class="get-item">
+																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +1000</span>
+															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC2" data-course="2">
 											  				<img  class="user-img-footprint" id='userImgFootprintC2'>
@@ -193,6 +202,10 @@
 											  			</div>
 											  			<div class="material-name" data-course="3" data-curr="<?php echo $currCourse ?>">
 											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+															<div class="get-item">
+																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +1000</span>
+															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC3" data-course="3">
 											  				<img  class="user-img-footprint" id='userImgFootprintC3'>
@@ -207,6 +220,10 @@
 											  			</div>
 											  			<div class="material-name" data-course="4" data-curr="<?php echo $currCourse ?>">
 											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+															<div class="get-item">
+																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +1000</span>
+															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC4" data-course="4">
 											  				<img  class="user-img-footprint" id='userImgFootprintC4'>
@@ -221,6 +238,10 @@
 											  			</div>
 											  			<div class="material-name" data-course="5" data-curr="<?php echo $currCourse ?>">
 											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+															<div class="get-item">
+																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +1000</span>
+															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC5" data-course="5">
 											  				<img  class="user-img-footprint" id='userImgFootprintC5'>

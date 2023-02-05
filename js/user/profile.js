@@ -63,8 +63,52 @@ $("#change-pic").click(function(){
         alert("Please select a file.");
     }
 });
-$('#summernote').summernote({
-    placeholder: 'Bagikan pengetahuan anda mengenai materi yang telah dipelajari disini. Ini akan membantu teman anda yang mengalami kesulitan dalam memahami materi.',
-    tabsize: 2,
-    height: 100
+var editor = new FroalaEditor('textarea',{ 
+    imageUploadURL: 'user_trans/upload_image.php',
+    
+    imageUploadParams: {
+        id: 'my_editor'
+    },
+    imageTextNear: false
 });
+
+function share(id){
+    var content = editor.html.get();
+    var username = $(id).data('username');
+    $.ajax({
+        url: "user_trans/post_status.php",
+        type: "POST",
+        data: {
+            content: content,
+            username: username	
+        },
+        cache: false,
+        success: function(dataResult){
+            var dataResult = JSON.parse(dataResult);
+            console.log(dataResult);
+            if(dataResult.statusCode==200){
+                Swal.fire({
+                    title: 'Good job!',
+                    text: 'Berhasil dibagikan!',
+                    icon: 'success',
+                    confirmButtonColor: '#23fa5c',
+                }).then((result) =>{
+                    if(result.isConfirmed){
+                        location.reload();
+                    }
+                });	
+            }
+            else if(dataResult.statusCode==201){
+                Swal.fire({
+                  title: 'Error!',
+                  text: 'There is something wrong with server',
+                  icon: 'error',
+                  confirmButtonText: 'Ok',
+                  confirmButtonColor: "#d63630"
+                })
+            }
+            
+        }
+    });
+    
+}

@@ -120,6 +120,9 @@ body{
 	vertical-align: middle;
 	content: '&#10003;';
 }
+.get-item{
+	margin-top: 10px;
+}
 .user-footprint{
 	display: none;
 	float: right;
@@ -186,4 +189,12 @@ body{
 .f-right{
 	float: right;
 
+}
+
+.element-game{
+	padding: 20px 0;
+}
+.element-game span{
+	display: inline-block;
+	float: right;
 }

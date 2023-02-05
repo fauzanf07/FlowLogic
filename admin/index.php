@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	$con = mysqli_connect('localhost', 'root', '','db_gamifikasi');
+	include("../../db.php");
 	$sql = "SELECT * FROM tb_user" ;
 	$result = mysqli_query($con,$sql);
 	if(!isset($_SESSION['name'])){

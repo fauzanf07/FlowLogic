@@ -1,6 +1,6 @@
 <?php 
 
-$con = mysqli_connect('localhost', 'root', '','db_gamifikasi');
+include("../../db.php");
 
 $txtEmail = $_POST['email'];
 $txtName = $_POST['name'];
