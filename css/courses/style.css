@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 html {
 	scroll-behavior: smooth;
 }
@@ -40,10 +41,14 @@ body{
 }
 
 .btn-info-class{
-	background-color: #0d2f4b;
+	background-color: #009bfc;
 	color: #fff;
 	width: 100%;
 	margin-bottom: 10px;
+}
+
+.main-bg-color{
+	background-color: #009bfc;
 }
 
 .side-modules{
@@ -177,7 +182,7 @@ body{
 }
 
 .btn-course{
-	background-color: #0d2f4b;
+	background-color: #009bfc;
 	color: #fff;
 	margin-bottom: 10px;
 	width: 20%;
@@ -189,6 +194,21 @@ body{
 .f-right{
 	float: right;
 
+}
+
+.modal-bg-custom{
+	background-color: #fcfaf8;
+	font-family: 'Poppins', sans-serif;
+}
+
+.levelUp-desc{
+	font-weight: 700;
+	color: #009bfc;
+	margin-top: 10px;
+}
+
+.body-levelUp{
+	padding: 0 20px;
 }
 
 .element-game{

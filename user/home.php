@@ -3,6 +3,7 @@
 	if(!isset($_SESSION['name'])){
 		header("Location: http://localhost/skripsi/");
 	}
+	include("../db.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,6 +16,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.0.17/css/froala_style.min.css" integrity="sha512-7LA92qqMxQg1dy0GXIaceecW4zpFq/pu2inmPOd/IaCjDnjzDP1luaG9NTYU8BeaUmBw73jHCGRJjQ3xDpdDlg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/plugins/image.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg sticky-top bg-light">
@@ -46,56 +50,33 @@
 			<div class="col-lg-7">
 				<h3 class="header">What's new?</h3>
 				<button type="button" class="btn btn-light" id="refresh">Refresh</button>
-				<div class="post">
-					<div class="top">
-						<div class="top-photo">
-							<img src="../images/avatar.jpg" class="avatar">
-						</div>
-						<div class="top-name">
-							<b><span>Ahmad Wahyudin Suryono</span></b><span>&nbsp;&nbsp;@ahmadwhyd</span><br>
-							<span>20-08-2022 18:30</span>
-						</div>
-					</div>
-					<div class="content-post">
-						<p>I'm so happy that I have earned this badge! I can't wait to see you earn this badge too!</p>
-						<center><img src="../images/badges.png" class="badges"></center>
-					</div>
-					
-				</div>
+				<?php
 
-				<div class="post">
-					<div class="top">
-						<div class="top-photo">
-							<img src="../images/avatar.jpg" class="avatar">
-						</div>
-						<div class="top-name">
-							<b><span>Ahmad Wahyudin Suryono</span></b><span>&nbsp;&nbsp;@ahmadwhyd</span><br>
-							<span>20-08-2022 18:30</span>
-						</div>
-					</div>
-					<div class="content-post">
-						<p>I'm so happy that I have earned this badge! I can't wait to see you earn this badge too!</p>
-						<center><img src="../images/badges.png" class="badges"></center>
-					</div>
-					
-				</div>
-
-				<div class="post">
-					<div class="top">
-						<div class="top-photo">
-							<img src="../images/avatar.jpg" class="avatar">
-						</div>
-						<div class="top-name">
-							<b><span>Ahmad Wahyudin Suryono</span></b><span>&nbsp;&nbsp;@ahmadwhyd</span><br>
-							<span>20-08-2022 18:30</span>
-						</div>
-					</div>
-					<div class="content-post">
-						<p>I'm so happy that I have earned this badge! I can't wait to see you earn this badge too!</p>
-						<center><img src="../images/badges.png" class="badges"></center>
-					</div>
-					
-				</div>
+					$sql = "SELECT * FROM tb_post ORDER BY created_at DESC";
+					$result = mysqli_query($con, $sql);
+					while($r_post = mysqli_fetch_assoc($result)){
+						$id = $r_post['id_user'];
+						$query = "SELECT * FROM tb_user WHERE id='$id'";
+						$hasil = mysqli_query($con, $query);
+						$r = mysqli_fetch_assoc($hasil);
+						echo '
+							<div class="post">
+								<div class="top">
+									<div class="top-photo">
+										<img src= '. $r['photo_profile'] .' class="avatar">
+									</div>
+									<div class="top-name">
+										<b><span>'. $r['name'] .'</span></b><span>&nbsp;&nbsp;'. $r['username'] .'</span><br>
+										<span>'.$r_post['created_at'].'</span>
+									</div>
+								</div>
+								<div class="content-post fr-view">
+									'.$r_post['content'].'
+								</div>
+							</div>
+						';
+					}
+				?>
 				<button type="button" class="btn btn-outline-secondary" id="loadPostMore">Load More</button>
 			</div>
 			<div class="col-lg-1">

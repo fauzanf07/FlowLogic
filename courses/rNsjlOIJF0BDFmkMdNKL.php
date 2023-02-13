@@ -1,8 +1,14 @@
 <?php 	
 	session_start();
+	include('../db.php');
 	if(!isset($_SESSION['name'])){
 		header("Location: http://localhost/skripsi/");
 	}else{
+		$username = $_SESSION['username'];
+		$query = "SELECT * FROM tb_user WHERE username='$username'";
+		$hasil = mysqli_query($con, $query);
+		$r = mysqli_fetch_assoc($hasil);
+
 		$currCourse = $_SESSION['curr_course'];
 		$progress = intval(($_SESSION['curr_course']/5)*100);
 		$progressBg = "";
@@ -141,9 +147,9 @@
 							<div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?></div>
 						</div>
 						<div class="element-game">
-							<span><i class="bi bi-diamond-fill"></i> 500 Points</span>
-							<span><i class="bi bi-star-fill"></i> 1000 XP &nbsp;&nbsp;</span>
-							<span><i class="bi bi-capslock-fill"></i> Level 3 &nbsp;&nbsp;</span>
+							<span><i class="bi bi-diamond-fill"></i> <?php echo $r['point']; ?> Points</span>
+							<span><i class="bi bi-star-fill"></i> <?php echo $r['xp']; ?> XP &nbsp;&nbsp;</span>
+							<span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?> &nbsp;&nbsp;</span>
 						</div>
 						<hr>
 						<a href="../user/course.php" class="btn btn-info-class">Kembali ke Dashboard</a>

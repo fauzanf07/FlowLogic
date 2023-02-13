@@ -1,8 +1,14 @@
 <?php 	
 	session_start();
+	include('../db.php');
 	if(!isset($_SESSION['name'])){
 		header("Location: http://localhost/skripsi/");
 	}else{
+		$username = $_SESSION['username'];
+		$query = "SELECT * FROM tb_user WHERE username='$username'";
+		$hasil = mysqli_query($con, $query);
+		$r = mysqli_fetch_assoc($hasil);
+
 		$currCourse = $_SESSION['curr_course'];
 		$progress = intval(($_SESSION['curr_course']/5)*100);
 		$progressBg = "";
@@ -137,9 +143,9 @@
 							<div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?></div>
 						</div>
 						<div class="element-game">
-							<span><i class="bi bi-diamond-fill"></i> 500 Points</span>
-							<span><i class="bi bi-star-fill"></i> 1000 XP &nbsp;&nbsp;</span>
-							<span><i class="bi bi-capslock-fill"></i> Level 3 &nbsp;&nbsp;</span>
+							<span><i class="bi bi-diamond-fill"></i> <?php echo $r['point']; ?> Points</span>
+							<span><i class="bi bi-star-fill"></i> <?php echo $r['xp']; ?> XP &nbsp;&nbsp;</span>
+							<span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?> &nbsp;&nbsp;</span>
 						</div>
 						<hr>
 						<a href="../user/course.php" class="btn btn-info-class">Kembali ke Dashboard</a>
@@ -355,11 +361,32 @@
 	    </div>
 	  </div>
 	</div>
+	<div class="modal fade" id="exampleModal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content modal-bg-custom">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="staticBackdropLabel">Naik Level <i class="bi bi-capslock-fill"></i></h1>
+					<button type="button" class="btn-close btn-close-levelUp" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body body-levelUp">
+					<center><img width="55%" height="auto" src="../images/level-up.gif"/></center>
+					<center><h4 class="levelUp-desc">Hooraay!! Kamu telah mencapai Level 2!!</h4></center>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-close-levelUp" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary main-bg-color">Next Course</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="tsparticles"></div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.min.js" integrity="sha512-+YPbXItNhUCZR3fn5KeWPtJrXuoqRYQ4Gd1rIjEFG+h8UJYekebhOMh84vv7q+Y1sy5kdIIVtfftehCiigriMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
 </html>
