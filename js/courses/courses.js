@@ -94,10 +94,126 @@ $('#next').click(function(){
 	var nextCourse = $(this).data("next");
 	var currCourse = $(this).data("curr");
 	var username = $(this).data("username");
-	var myModal = new bootstrap.Modal(document.getElementById("exampleModal1"), {});
-	myModal.show();
-	playConfetti();
+	var reward = $(this).data("reward");
+	getRewards(nextCourse,currCourse,username, reward);
 });
+
+function getRewards(nextCourse, currCourse, username, reward){
+	if(nextCourse > currCourse && reward==0){
+		$.ajax({
+			url: "./course_trans/get_rewards.php",
+			type: "POST",
+			data: {
+				currCourse : currCourse,
+				username: username	
+			},
+			cache: false,
+			success: function(dataResult){
+				var dataResult = JSON.parse(dataResult);
+				if(dataResult.statusCode==200){
+					levelUp(nextCourse,currCourse,username);
+					$('#next').data('reward',1);
+				}
+				if(dataResult.statusCode==201){
+					console.log("There's something wrong with sql query");
+				}
+							
+			}
+		});
+	}else{
+		levelUp(nextCourse,currCourse,username);
+	}
+}
+function levelUp(nextCourse,currCourse,username){
+	$.ajax({
+		url: "./course_trans/update_level.php",
+		type: "POST",
+		data: {
+			username: username	
+		},
+		cache: false,
+		success: function(dataResult){
+			var dataResult = JSON.parse(dataResult);
+			console.log(dataResult);
+			if(dataResult.levelUp){
+				$('.levelUp-desc').html("Hooraay!! Kamu telah mencapai Level "+dataResult.level+"!!")
+				var myModal = new bootstrap.Modal(document.getElementById("exampleModal1"), {});
+				myModal.show();
+				playConfetti();
+			}else if(dataResult.statusCode==201){
+				console.log("There's something wrong with sql query");
+			}else{
+				
+				getNextCourse(nextCourse,currCourse,username);
+			}
+		}
+	});
+}
+
+function getNextCourse(nextCourse, currCourse, username){
+	$.ajax({
+		url: "./course_trans/get_course_name.php",
+		type: "POST",
+		data: {
+			course : nextCourse	
+		},
+		cache: false,
+		success: function(dataResult){
+			var dataResult = JSON.parse(dataResult);
+			var courseName = dataResult.courseName;
+			if(courseName!="" && nextCourse!=0){
+				if(nextCourse > currCourse ){
+					$.ajax({
+						url: "./course_trans/update_course.php",
+						type: "POST",
+						data: {
+							currCourse : currCourse,
+							username: username	
+						},
+						cache: false,
+						success: function(dataResult){
+							var dataResult = JSON.parse(dataResult);
+							if(dataResult.statusCode==200){
+								window.location.href = "../courses/"+courseName+".php";
+							}else{
+								console.log("There's something wrong with sql query");
+							}
+						}
+					});
+				}else{
+					window.location.href = "../courses/"+courseName+".php";
+				}
+			}
+			if(dataResult.statusCode==201){
+				console.log("There's something wrong with sql query");
+			}
+						
+		}
+	});
+}
+$('#previous').click(function(){
+	var idCourse = $(this).data("prev");
+	$.ajax({
+			url: "./course_trans/get_course_name.php",
+			type: "POST",
+			data: {
+				course : idCourse	
+			},
+			cache: false,
+			success: function(dataResult){
+				var dataResult = JSON.parse(dataResult);
+				var courseName = dataResult.courseName;
+				if(courseName!=""){
+					window.location.href = "../courses/"+courseName+".php";
+				}
+				if(dataResult.statusCode==201){
+					console.log("There's something wrong with sql query");
+				}
+							
+			}
+	});
+});
+
 function playConfetti(){
 	tsParticles.load("tsparticles", {
 		"fullScreen": {
@@ -236,93 +352,3 @@ $('.btn-close-levelUp').click(function(){
 	const particles = tsParticles.domItem(0);
 	particles.stop();
 })
-
-function getRewards(nextCourse, currCourse, username){
-	if(nextCourse > currCourse){
-		$.ajax({
-			url: "./course_trans/get_rewards.php",
-			type: "POST",
-			data: {
-				currCourse : currCourse,
-				username: username	
-			},
-			cache: false,
-			success: function(dataResult){
-				var dataResult = JSON.parse(dataResult);
-				if(dataResult.statusCode==200){
-					getNextCourse(nextCourse,currCourse,username);
-				}
-				if(dataResult.statusCode==201){
-					console.log("There's something wrong with sql query");
-				}
-							
-			}
-		});
-	}else{
-		getNextCourse(nextCourse,currCourse,username);
-	}
-}
-
-function getNextCourse(nextCourse, currCourse, username){
-	$.ajax({
-		url: "./course_trans/get_course_name.php",
-		type: "POST",
-		data: {
-			course : nextCourse	
-		},
-		cache: false,
-		success: function(dataResult){
-			var dataResult = JSON.parse(dataResult);
-			var courseName = dataResult.courseName;
-			if(courseName!=""){
-				if(nextCourse > currCourse){
-					$.ajax({
-						url: "./course_trans/update_course.php",
-						type: "POST",
-						data: {
-							currCourse : currCourse,
-							username: username	
-						},
-						cache: false,
-						success: function(dataResult){
-							var dataResult = JSON.parse(dataResult);
-							if(dataResult.statusCode==200){
-								window.location.href = "../courses/"+courseName+".php";
-							}else{
-								console.log("There's something wrong with sql query");
-							}
-						}
-					});
-				}else{
-					window.location.href = "../courses/"+courseName+".php";
-				}
-			}
-			if(dataResult.statusCode==201){
-				console.log("There's something wrong with sql query");
-			}
-						
-		}
-	});
-}
-$('#previous').click(function(){
-	var idCourse = $(this).data("prev");
-	$.ajax({
-			url: "./course_trans/get_course_name.php",
-			type: "POST",
-			data: {
-				course : idCourse	
-			},
-			cache: false,
-			success: function(dataResult){
-				var dataResult = JSON.parse(dataResult);
-				var courseName = dataResult.courseName;
-				if(courseName!=""){
-					window.location.href = "../courses/"+courseName+".php";
-				}
-				if(dataResult.statusCode==201){
-					console.log("There's something wrong with sql query");
-				}
-							
-			}
-	});
-});

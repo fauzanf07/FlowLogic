@@ -328,7 +328,7 @@
 					<p>Integer facilisis dictum sodales. Sed nec est non velit dignissim vestibulum et at orci. Nulla tempus dignissim accumsan. Donec tempus pulvinar molestie. Etiam et sagittis lectus. Donec metus quam, auctor sed nisl et, consectetur feugiat tellus. Nam et tortor dapibus, ultricies lorem in, facilisis nibh. Ut blandit lacus enim, sed tincidunt lectus egestas eu. Suspendisse potenti.</p>
 					
 					<p>Nam imperdiet semper lacus, eu blandit dolor tincidunt at. Praesent non mauris luctus, congue dolor quis, accumsan urna. Suspendisse potenti. Nulla eu nulla pulvinar justo semper porta. Nunc aliquam in ante id elementum. Pellentesque viverra ut lectus at rhoncus. Curabitur in massa purus. Vivamus a mattis turpis, at maximus sem. Aliquam ultricies vitae felis ut mollis. Phasellus convallis dui justo, nec viverra purus consequat ut.</p>
-					<button class="btn btn-course f-right" id="next" data-next="2" data-curr="<?php echo $currCourse ?>" data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
+					<button class="btn btn-course f-right" id="next" data-next="2" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
 					<div style="clear: both;"></div>
 				</div>
 			</div>
@@ -370,7 +370,7 @@
 				</div>
 				<div class="modal-body body-levelUp">
 					<center><img width="55%" height="auto" src="../images/level-up.gif"/></center>
-					<center><h4 class="levelUp-desc">Hooraay!! Kamu telah mencapai Level 2!!</h4></center>
+					<center><h4 class="levelUp-desc"></h4></center>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-close-levelUp" data-bs-dismiss="modal">Close</button>
