@@ -218,3 +218,31 @@ body{
 	display: inline-block;
 	float: right;
 }
+
+.lang-list{
+	width: 70%;
+	display: inline-block;
+}
+
+#editor {
+	position: relative !important;
+	border: 1px solid lightgray;
+	margin: 20px auto;
+	height: 300px;
+	width: 100%;
+}
+
+.preview-code{
+	background-color: #141414;
+	border: 1px solid lightgray;
+	margin: 23px auto;
+	height: 300px;
+	width: 100%;
+	padding: 12px;
+	color: #fff;
+	font-size: 14px;
+}
+
+.error{
+	color: red;
+}

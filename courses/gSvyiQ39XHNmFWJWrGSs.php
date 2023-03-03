@@ -316,18 +316,44 @@
 					<p>Sed pretium, ex sed pulvinar molestie, massa lorem dictum augue, nec eleifend lacus eros ut neque. In ullamcorper sit amet mauris a luctus. Cras vestibulum enim id imperdiet dapibus. Aliquam in turpis nisi. Nam et condimentum enim. Aliquam erat volutpat. Etiam ac imperdiet nisl, in mollis sem. Morbi et imperdiet purus. Maecenas rutrum libero tellus, a molestie ligula egestas sit amet. Morbi sit amet leo viverra, cursus ipsum sed, sagittis metus. Vestibulum sed odio imperdiet, varius tellus non, aliquet metus. Cras molestie commodo est quis hendrerit. Morbi pulvinar dictum turpis sed varius.</p>
 
 					<p>Nullam pellentesque elit id condimentum pretium. Morbi et iaculis lectus, vel maximus tellus. Duis est nulla, eleifend non lacus ac, ultrices imperdiet quam. Mauris laoreet magna at viverra facilisis. Proin sed eros purus. Nullam vel lacus porta, tempus metus non, laoreet nibh. Proin ullamcorper iaculis ipsum. Integer eleifend a tortor sit amet pulvinar. Nullam sed libero non odio placerat lobortis eu ut risus. Nunc a tortor non tellus suscipit auctor ac non nulla. Aliquam erat volutpat. Curabitur consectetur tortor vel ex tristique aliquam.</p>
-
-					<h1>Lorem Ipsum</h1>
-
-					<p>Proin lacinia porta felis, sed sodales erat vehicula vitae. Aliquam elementum at neque quis varius. Aliquam id dui nec nisl dapibus interdum quis vel massa. Donec volutpat suscipit imperdiet. Nullam maximus turpis velit, tincidunt fringilla libero ultrices eu. Vivamus lacinia eros ac nisl euismod pharetra. Morbi pulvinar semper auctor. Duis eget sodales justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum erat quis magna venenatis, vel malesuada dolor dignissim. In aliquam scelerisque lectus a fermentum. Sed malesuada mi nibh, eget fringilla diam ullamcorper a. Praesent in orci in leo sagittis rutrum.</p>
-
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu elit interdum, semper est sed, molestie sem. Vivamus mollis sagittis tincidunt. Fusce tempus purus a eros mattis luctus. Suspendisse ut libero sed augue egestas vestibulum. Cras ultricies ante lectus, eu suscipit ipsum accumsan ac. Donec commodo nisl at dolor scelerisque, et porta massa varius. Quisque eget tortor vel justo venenatis imperdiet vitae vel dui. Aliquam ultrices tincidunt suscipit. Nulla facilisi. Aliquam vitae odio non lacus vulputate iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lectus tellus, tincidunt vitae eros id, dignissim dapibus nisl. Mauris orci augue, pellentesque in bibendum nec, mollis eget nisi. Aliquam in magna ut dui efficitur molestie. Cras vitae pellentesque ex, sit amet bibendum orci.</p>
-
-					<p>Cras eros odio, porttitor id quam ut, auctor finibus ante. Aliquam sed mi vitae nisi porttitor egestas ut sed tellus. Sed quis elit libero. Nam mi elit, tincidunt vel dapibus ac, vulputate ut purus. Cras auctor, justo eu egestas luctus, lacus nibh sollicitudin quam, ut luctus velit felis eget enim. Quisque scelerisque dolor et arcu mattis, vitae gravida magna congue. Fusce ultrices, tortor a tristique laoreet, felis felis imperdiet dui, eget rutrum nisi ipsum vitae mi. Aenean fermentum, nisl quis eleifend vehicula, ipsum dolor aliquam orci, eu dapibus enim odio eget nunc. Nam est ipsum, feugiat sed elit sit amet, egestas dictum ante. Phasellus vestibulum sollicitudin semper. Praesent hendrerit vel tellus eget pretium. Donec varius suscipit lectus, et consequat erat accumsan ac. Fusce pharetra, eros quis rhoncus interdum, mi risus congue leo, in pretium nulla turpis non ex. Donec ullamcorper ipsum non enim venenatis ultricies at nec nunc.</p>
-
-					<p>Integer facilisis dictum sodales. Sed nec est non velit dignissim vestibulum et at orci. Nulla tempus dignissim accumsan. Donec tempus pulvinar molestie. Etiam et sagittis lectus. Donec metus quam, auctor sed nisl et, consectetur feugiat tellus. Nam et tortor dapibus, ultricies lorem in, facilisis nibh. Ut blandit lacus enim, sed tincidunt lectus egestas eu. Suspendisse potenti.</p>
 					
-					<p>Nam imperdiet semper lacus, eu blandit dolor tincidunt at. Praesent non mauris luctus, congue dolor quis, accumsan urna. Suspendisse potenti. Nulla eu nulla pulvinar justo semper porta. Nunc aliquam in ante id elementum. Pellentesque viverra ut lectus at rhoncus. Curabitur in massa purus. Vivamus a mattis turpis, at maximus sem. Aliquam ultricies vitae felis ut mollis. Phasellus convallis dui justo, nec viverra purus consequat ut.</p>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6">
+								<select class="form-select lang-list" aria-label="Default select example">
+									<option value="1 csharp" selected>C#</option>
+									<option value="4 java">Java</option>
+									<option value="5 python">Python</option>
+									<option value="6 c_cpp">C (gcc)</option>
+									<option value="7 c_cpp">C++ (gcc)</option>
+									<option value="8 php">Php</option>
+									<option value="12 ruby">Ruby</option>
+									<option value="13 perl">Perl</option>
+									<option value="17 javascript">Javascript</option>
+									<option value="20 golang">Go</option>
+									<option value="37 swift">Swift</option>
+									<option value="43 kotlin">Kotlin</option>
+								</select><button type="button" class="btn btn-success float-end" id="run"><i class="bi bi-play-fill"></i> RUN</button>
+								<pre id="editor">using System;
+namespace HelloWorld
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Hello World!");    
+		}
+	}
+}
+								</pre>
+							</div>
+							<div class="col-lg-6">
+								<h3>Result</h3>
+								<div class="preview-code">
+								</div>
+							</div>
+						</div>
+					</div>
 					<button class="btn btn-course f-right" id="next" data-next="2" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
 					<div style="clear: both;"></div>
 				</div>
@@ -388,5 +414,6 @@
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.min.js" integrity="sha512-+YPbXItNhUCZR3fn5KeWPtJrXuoqRYQ4Gd1rIjEFG+h8UJYekebhOMh84vv7q+Y1sy5kdIIVtfftehCiigriMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js" integrity="sha512-NSbvq6xPdfFIa2wwSh8vtsPL7AyYAYRAUWRDCqFH34kYIjQ4M7H2POiULf3CH11TRcq3Ww6FZDdLZ8msYhMxjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
 </html>

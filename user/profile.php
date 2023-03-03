@@ -4,6 +4,17 @@
 		header("Location: http://localhost/skripsi/");
 	}
 	include("../db.php");
+	$currCourse = $_SESSION['curr_course'];
+	$progress = intval(($_SESSION['curr_course']/5)*100);
+	$progressBg = "";
+	if($progress<=30){
+		$progressBg = "bg-danger";
+	}else if($progress<=60){
+		$progressBg = "bg-warning";
+	}else{
+		$progressBg = "bg-success";
+	}
+	
  ?>
 <!DOCTYPE html>
 <html>
@@ -115,7 +126,7 @@
 								<div class="card-body">
 							    	<h6>Algorithm & Programming</h6>
 								    <div class="progress">
-									  <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+										<div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?></div>
 									</div>
 								</div>
 							</div>
