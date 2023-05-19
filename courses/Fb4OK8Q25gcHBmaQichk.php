@@ -116,7 +116,7 @@
 		    <div class="collapse navbar-collapse " id="navbarNav">
 			    <ul class="navbar-nav ms-auto">
 			    	<li class="nav-item">
-			        	<a class="nav-link active" aria-current="course" href="../user/course.php" style="text-align: center;">Dashboard</a>
+			        	<a class="nav-link active" aria-current="course" href="../user/course.php" style="text-align: center;">Corridor</a>
 			        </li>
 			        <div class="btn-group dropdown-center">
 						<button type="button" class="btn btn-light dropdown-toggle btn-nav" data-bs-toggle="dropdown" aria-expanded="false">
@@ -152,7 +152,7 @@
 							<span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?> &nbsp;&nbsp;</span>
 						</div>
 						<hr>
-						<a href="../user/course.php" class="btn btn-info-class">Kembali ke Dashboard</a>
+						<a href="../user/course.php" class="btn btn-info-class">Kembali ke Corridor</a>
 						<a href="../user/home.php"  class="btn btn-info-class mt-15">Kembali ke Home</a>
 					</div>
 					<div class="side-modules">

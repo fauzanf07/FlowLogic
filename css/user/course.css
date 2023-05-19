@@ -25,7 +25,7 @@ html {
 	border-radius: 20px;
 }
 #class-desc{
-	margin-top: 30px;
+	margin-top: 20px;
 }
 .card-class .card{
 	width: 18rem;
@@ -52,6 +52,10 @@ html {
 .info-class-page{
 	width: 100%;
 	padding: 50px;
+}
+
+.card-info{
+	height: 220px !important;
 }
 
 .silabus-page{

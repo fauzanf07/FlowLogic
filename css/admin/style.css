@@ -12,14 +12,6 @@ body{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	overflow: scroll;
-}
-
-.navbar{
-	background-color: #e3f2fd;
-}
-.navbar-brand{
-	margin-left: 10px;
 }
 
 .container-fluid{
@@ -35,7 +27,7 @@ body{
 
 .left-content{
 	height: 100%;
-	padding-top: 30px;
+	padding-top: 2.5%;
 }
 
 #admin-mode{
@@ -75,7 +67,7 @@ body{
 	border-top: 1px solid #000;
 }
 .section:hover{
-	background-color: #9c9c9c;
+	background-color: #0680f9;
 	color: #fff;
 	cursor: pointer;
 }
@@ -83,18 +75,18 @@ body{
 	border-bottom: 1px solid #000;
 }
 .current{
-	background-color: #9c9c9c;
+	background-color: #0680f9;
 	color: #fff;
 }
 .right-content{
-	background-color: #c2bebe;
+	background-color: #fff;
 	height: 100%;
 	padding: 30px;
 	overflow: scroll;
 }
 
 .right-content h3{
-	color: #fff;
+	color: #000;
 }
 
 .user-list{
@@ -103,12 +95,81 @@ body{
 	border-radius: 30px;
 	padding: 20px;
 	margin-top: 50px;
+	border: 1px solid #000;
+	float: right;
 }
 
-#assign-title, #assignments, #achv-title, #achievements{
+.content-2{
 	display: none;
 }
 
 .btn-action{
 	margin-top: 10px;
+}
+
+#sign-out{
+	width: 50%;
+	padding: 7px 0;
+	background-color: crimson;
+	color: #fff;
+	margin: 0 auto;
+}
+
+.chart{
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+}
+.download{
+	float: right;
+	margin-right: 5.5%;
+	margin-top: 2%;
+}
+
+.post{
+	width: 80%;
+	padding: 20px 30px;
+	background-color: #f3f4f6;
+	border-radius: 20px;
+	margin: 30px 0 0 0;
+}
+
+.avatar{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.top{
+	width: 100%;
+	display: inline-block;
+}
+.top-photo{
+	width: 10%;
+	display: inline-block;
+	float: left;
+}
+.top-name{
+	width: 90%;
+	display: inline-block;
+	float: right;
+	padding-left: 10px;
+}
+.content-post{
+	padding-top: 20px;
+}
+
+.control{
+	display: inline-block;
+	float: right;
+}
+.control button{
+	width: 80px;
+	margin-right: 5px;
+}
+
+.accepted{
+	color: #17ef55;
+}
+.rejected{
+	color: #f00;
 }

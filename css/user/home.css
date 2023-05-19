@@ -48,6 +48,95 @@
 .content-post{
 	padding-top: 20px;
 }
+
+.lico-section{
+	display: inline-block;
+	float: right;
+	margin-top: 10px;
+}
+.lico-button{
+	color: #ADADAD;
+}
+.amount{
+	padding-left: 5px;
+}
+.clear{
+	clear: both;
+}
+.like-btn:hover{
+	color: #000;
+	cursor: pointer;
+}
+.comment-btn:hover{
+	color: #000;
+	cursor: pointer;
+}
+.comment-section{
+	display: none;
+}
+.comment{
+	width: 100%;
+	display: inline-block;
+	padding: 0;
+	margin-top: 15px;
+}
+.image-profile{
+	width: 10%;
+	display: inline-block;
+	float: left;
+}
+.com-sect{
+	margin: 0;
+	width: 90%;
+	padding-left: 10px;
+	display: inline-block;
+	float: right;
+}
+.username{
+	font-weight: 700;
+	display: block;
+	margin-bottom: 10px;
+}
+.isi-comment{
+	margin-top: 5px;
+}
+
+.comment-form{
+	width: 100%;
+}
+.input-comment{
+	width: 90%;
+	float: left;
+	padding-right: 10px;
+}
+.comment-control{
+	resize: none;
+	height: 60px !important;
+}
+.send-comment{
+	width: 10%;
+	display: flex;
+	float: right;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+}
+.send{
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	vertical-align: middle;
+	text-align: center;
+	color: #adadad;
+	background-color: #005bf9;
+	border-radius: 50%;
+}
+
+.send:hover{
+	cursor: pointer;
+	background-color: #0053d8;
+}
 .badges{
 	width: 200px;
 	height: auto;

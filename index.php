@@ -33,9 +33,9 @@
                 <div class="col-lg-5 order-lg-1 order-md-2 order-sm-2 order-2 ">
                     <div class="d-flex align-items-center" style="min-height: 100%">
                         <div class="box w-100 content">
-                            <h1>ALGORITMA</h1>
-                            <h2>PEMROGRAMAN</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada tortor neque, a dignissim purus accumsan id. Nam lobortis mauris quis egestas tincidunt. Mauris sed enim quam. Nullam tortor nunc, vehicula iaculis leo ac, consequat tincidunt sem. Sed et velit vestibulum, dapibus tortor non, tempus urna.</p>
+                            <h1>FUNCODE</h1>
+                            <h2>PEMROGRAMAN DASAR</h2>
+                            <p>Platform pembelajaran ini menyediakan kursus pemrograman dasar dengan pendekatan gamifikasi yang bertujuan untuk meningkatkan kemampuan berpikir komputasional siswa. Dengan menggunakan gamifikasi, platform ini menawarkan pengalaman belajar yang lebih interaktif dan menyenangkan bagi siswa.</p>
                             <a href="sign-up" class="btn btn-primary register-btn">REGISTER</a>
                         </div>
                     </div>

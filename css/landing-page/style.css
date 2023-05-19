@@ -34,7 +34,8 @@
 .content h2{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 45px;
+    font-size: 37px;
+    margin-bottom: 20px;
 }
 
 .register-btn{

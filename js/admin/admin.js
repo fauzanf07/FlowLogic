@@ -1,141 +1,69 @@
 $(document).ready(function () {
     $('#table-user').DataTable();
 });
-
-function changeAdmin(btn){
-	var id = btn.getAttribute("data-id");
-	Swal.fire({
-	  title: 'Are you sure?',
-	  text: "You're gonna change the status of this user!",
-	  icon: 'warning',
-	  showCancelButton: true,
-	  confirmButtonColor: '#3085d6',
-	  cancelButtonColor: '#d33',
-	  confirmButtonText: 'Yes, Change it!'
-	}).then((result) => {
-	  if (result.isConfirmed) {
-	    $.ajax({
-					url: "admin-trans.php",
-					type: "POST",
-					data: {
-						id: id,				
-					},
-					cache: false,
-					success: function(dataResult){
-						var dataResult = JSON.parse(dataResult);
-						console.log(dataResult)
-						if(dataResult.statusCode==200){
-							Swal.fire({
-							  title: 'Good job!',
-							  text: 'Changed status successfully!',
-							  icon: 'success',
-							  confirmButtonColor: '#23fa5c',
-							}).then((result) =>{
-								if(result.isConfirmed){
-									location.reload();
-								}
-							});
-						}
-						else if(dataResult.statusCode==201){
-							Swal.fire({
-							  title: 'Error!',
-							  text: 'Something is wrong',
-							  icon: 'error',
-							  confirmButtonText: 'Ok',
-							  confirmButtonColor: "#d63630"
-							})
-						}
-					}
-				});
-	  }
+function controlPost(id,status){
+	var idPost = $(id).data('id');
+	$.ajax({
+		url: "./backend/control-post.php",
+		type: "POST",
+		data: {
+			id: idPost,
+			status: status		
+		},
+		cache: false,
+		success: function(dataResult){
+			var dataResult = JSON.parse(dataResult);
+			console.log(dataResult.statusCode);
+			if(dataResult.statusCode == 201){
+				$('#accept'+idPost).remove();
+				$('#reject'+idPost).remove();
+				if(status==1){
+					$('#control'+idPost).append('<span class="accepted">Diterima &#10003;</span>');
+				}else{
+					$('#control'+idPost).append('<span class="rejected">Ditolak</span>');
+				}
+			}
+		}
 	});
 }
-
-function deleteUser(btn){
-	var id = btn.getAttribute("data-id");
-	Swal.fire({
-	  title: 'Are you sure?',
-	  text: "You won't be able to revert this!",
-	  icon: 'warning',
-	  showCancelButton: true,
-	  confirmButtonColor: '#3085d6',
-	  cancelButtonColor: '#d33',
-	  confirmButtonText: 'Yes, Delete it!'
-	}).then((result) => {
-	  if (result.isConfirmed) {
-	    $.ajax({
-					url: "delete-trans.php",
-					type: "POST",
-					data: {
-						id: id,				
-					},
-					cache: false,
-					success: function(dataResult){
-						var dataResult = JSON.parse(dataResult);
-						console.log(dataResult)
-						if(dataResult.statusCode==200){
-							Swal.fire({
-							  title: 'Good job!',
-							  text: 'Delete User successfully!',
-							  icon: 'success',
-							  confirmButtonColor: '#23fa5c',
-							}).then((result) =>{
-								if(result.isConfirmed){
-									location.reload();
-								}
-							})		
-						}
-						else if(dataResult.statusCode==201){
-							Swal.fire({
-							  title: 'Error!',
-							  text: 'Something is wrong',
-							  icon: 'error',
-							  confirmButtonText: 'Ok',
-							  confirmButtonColor: "#d63630"
-							})
-						}
-					}
-				});
-	  }
-	});
-}
-
 function logout(){
 	window.location.href = "./logout.php";
 }
 
-$("#user-menu").click(function(){
-	$("#user-menu").addClass("current");
-	$("#assignments-menu").removeClass("current");
-	$("#achievements-menu").removeClass("current");
-	$("#user-title").css("display","block");
-	$("#user-list").css("display","block");
-	$("#assign-title").css("display","none");
-	$("#assignments").css("display","none");
-	$("#achv-title").css("display","none");
-	$("#achievements").css("display","none");
+$("#progress-menu").click(function(){
+	$('.content-2').css('display', 'none');
+	$('.content-1').css('display','block');
+	$("#postingan-menu").removeClass("current");
+	$("#progress-menu").addClass("current");
 });
 
-$("#assignments-menu").click(function(){
-	$("#user-menu").removeClass("current");
-	$("#assignments-menu").addClass("current");
-	$("#achievements-menu").removeClass("current");
-	$("#user-title").css("display","none");
-	$("#user-list").css("display","none");
-	$("#assign-title").css("display","block");
-	$("#assignments").css("display","block");
-	$("#achv-title").css("display","none");
-	$("#achievements").css("display","none");
+$("#postingan-menu").click(function(){
+	$('.content-1').css('display', 'none');
+	$('.content-2').css('display','block');
+	$("#progress-menu").removeClass("current");
+	$("#postingan-menu").addClass("current");
 });
 
-$("#achievements-menu").click(function(){
-	$("#user-menu").removeClass("current");
-	$("#assignments-menu").removeClass("current");
-	$("#achievements-menu").addClass("current");
-	$("#user-title").css("display","none");
-	$("#user-list").css("display","none");
-	$("#assign-title").css("display","none");
-	$("#assignments").css("display","none");
-	$("#achv-title").css("display","block");
-	$("#achievements").css("display","block");
-});
+const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Pengenalan Flowchart', 'Simbol-Simbol Flowchart', 'Pseudoode', 'Subrutin', 'Fungsi', 'Implementasi code'],
+      datasets: [{
+        label: '# of Rata-rata nilai',
+        data: [90, 85, 83, 70, 75, 70],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+		  suggestedMin: 0,
+		  suggestedMax: 100,
+		  step: 20
+        }
+      }
+    }
+  });

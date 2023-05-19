@@ -14,7 +14,7 @@ $("#sign-in").click(function(){
                 var dataResult = JSON.parse(dataResult);
                 console.log(dataResult);
                 if(dataResult.statusCode==200){
-                    window.location.href = "../admin";
+                    window.location.href = "../guru";
                 }
                 if(dataResult.statusCode==201){
                     window.location.href = "../user/home.php";		

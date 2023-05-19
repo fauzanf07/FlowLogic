@@ -3,6 +3,9 @@
 	if(!isset($_SESSION['name'])){
 		header("Location: http://localhost/skripsi/");
 	}
+	$user_id = $_SESSION['user_id'];
+	$photoProfile = $_SESSION['photo_profile'];
+	$username = $_SESSION['username'];
 	include("../db.php");
 ?>
 <!DOCTYPE html>
@@ -36,7 +39,7 @@
 	          <a class="nav-link" href="./profile.php">Profile</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="./course.php">Course</a>
+	          <a class="nav-link" href="./course.php">Corridor</a>
 	        </li>
 	        <li class="nav-item">
 	          <a class="nav-link btn btn-secondary" id="sign-out">Sign out <i class="bi bi-arrow-right"></i></a>
@@ -52,10 +55,11 @@
 				<button type="button" class="btn btn-light" id="refresh">Refresh</button>
 				<?php
 
-					$sql = "SELECT * FROM tb_post ORDER BY created_at DESC";
+					$sql = "SELECT * FROM tb_post AS a WHERE a.status='1' ORDER BY accepted_at DESC";
 					$result = mysqli_query($con, $sql);
 					while($r_post = mysqli_fetch_assoc($result)){
 						$id = $r_post['id_user'];
+						$id_post = $r_post['id'];
 						$query = "SELECT * FROM tb_user WHERE id='$id'";
 						$hasil = mysqli_query($con, $query);
 						$r = mysqli_fetch_assoc($hasil);
@@ -72,6 +76,55 @@
 								</div>
 								<div class="content-post fr-view">
 									'.$r_post['content'].'
+								</div>';
+						mysqli_query($con, "CALL like_comment('$user_id','$id_post',@liked,@likes,@comments)");
+						$query_lico = "SELECT @liked,@likes,@comments";
+						$hasil_lico = mysqli_query($con, $query_lico);
+						$r_lico = mysqli_fetch_assoc($hasil_lico);
+						echo '
+								<div class="lico-section">
+								';
+								if($r_lico['@liked'] == 0){
+									echo '<span id="like'.$id_post.'" data-id="'.$id_post.'" data-user="'.$user_id.'" data-liked="'.$r_lico['@liked'].'" class="lico-button like-btn" style="color:#adadad;" onclick="likeBtn(this);"><i class="bi bi-heart-fill"></i></span><span class="amount me-3" id="likeAmount'.$id_post.'">'.$r_lico['@likes'].'</span>';
+								}else{
+									echo '<span id="like'.$id_post.'" data-id="'.$id_post.'" data-user="'.$user_id.'" data-liked="'.$r_lico['@liked'].'" class="lico-button like-btn" style="color:#f00;" onclick="likeBtn(this);"><i class="bi bi-heart-fill"></i></span><span class="amount me-3" id="likeAmount'.$id_post.'">'.$r_lico['@likes'].'</span>';
+								}
+								echo '
+									<span id="comment'.$id_post.'" data-id="'.$id_post.'" data-show="0" class="lico-button comment-btn" onclick="commBtn(this);"><i class="bi bi-chat-square-dots-fill"></i></span><span class="amount" id="commAmount'.$id_post.'">'.$r_lico['@comments'].'</span>
+								</div>
+								<div class="clear"></div>
+								<div class="comment-section" id="comSect'.$id_post.'">
+									<h6>Komentar &middot; <span id="commentAmount'.$id_post.'">'.$r_lico['@comments'].'</span></h6>
+									<div id="comments'.$id_post.'">';
+
+								$query_comments = "SELECT a.*, b.username, b.photo_profile FROM tb_comment_post AS a LEFT JOIN tb_user as b ON a.id_user = b.id WHERE a.id_post = '$id_post';";
+								$hasil_comments = mysqli_query($con, $query_comments);
+								while($r_comments = mysqli_fetch_array($hasil_comments)){
+									echo '
+										<div class="comment">
+											<div class="image-profile">
+												<img src="'.$r_comments['photo_profile'].'" class="avatar">
+											</div>
+											<div class="com-sect">
+												<b><span>'.$r_comments['username'].'</span></b><span>&nbsp;&nbsp;'.$r_comments['created_at'].'</span><br>
+												<p class="isi-comment">'.$r_comments['comment'].'</p>
+											</div>
+										</div>
+									';
+								}
+								echo'
+									</div>
+									<div class="comment-form">
+										<div class="input-comment">
+											<textarea class="form-control comment-control" placeholder="Tulis komentar di sini" id="commentBox'.$id_post.'" data-id="'.$id_post.'" oninput="onInput(this);"></textarea>
+										</div>
+										<div class="send-comment">
+											<div class="send" id="send'.$id_post.'" data-id="'.$id_post.'" data-username="'. $username.'" data-profile="'. $photoProfile .'" data-user="'. $user_id.'" onclick="sendComment(this);">
+												<i class="bi bi-send-fill"></i>
+											</div>
+										</div>
+										<div class="clear"></div>
+									</div>
 								</div>
 							</div>
 						';

@@ -23,7 +23,8 @@
 	  	$_SESSION['name'] = $row["name"];
 	  	$_SESSION['username'] = $row["username"];
 	  	$_SESSION['photo_profile'] = $row["photo_profile"];
-	  }
+		$_SESSION['user_id'] = $row['id'];
+	}
 	  if($txtPassword == $pass){
 	  	if($admin == 1){
 	  		echo json_encode(array("statusCode"=>200));
