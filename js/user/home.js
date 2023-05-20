@@ -103,7 +103,7 @@ function sendComment(id){
 			success: function(dataResult){
 				var dataResult = JSON.parse(dataResult);
 				if(dataResult.statusCode==200){
-					$('#comments'+id).append('<div class="comment"><div class="image-profile"><img src="'+photoProfile+'" class="avatar"></div><div class="com-sect"><b><span>'+username+'</span></b><span>&nbsp;&nbsp;'+dateTime+'</span><br><p class="isi-comment">'+comment+'</p></div></div>');
+					$('#comments'+id).append('<div class="comment"><div class="image-profile"><img src="'+photoProfile+'" class="avatar"></div><div class="com-sect"><b><span><a class="no-undr" href="../profile.php?user='+username+'">'+username+'</a></span></b><span>&nbsp;&nbsp;'+dateTime+'</span><br><p class="isi-comment">'+comment+'</p></div></div>');
 					$('#commentBox'+id).val('');
 					$('#commAmount'+id).text(comments);
 					$('#commentAmount'+id).text(comments);

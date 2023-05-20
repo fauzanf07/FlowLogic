@@ -36,7 +36,7 @@
 	          <a class="nav-link active" aria-current="page" href="#">Home</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="./profile.php">Profile</a>
+	          <a class="nav-link" href="./profile.php?user=<?php echo $_SESSION['username']; ?>">Profile</a>
 	        </li>
 	        <li class="nav-item">
 	          <a class="nav-link" href="./course.php">Corridor</a>
@@ -70,7 +70,7 @@
 										<img src= '. $r['photo_profile'] .' class="avatar">
 									</div>
 									<div class="top-name">
-										<b><span>'. $r['name'] .'</span></b><span>&nbsp;&nbsp;'. $r['username'] .'</span><br>
+										<b><span><a class="no-undr" href="./profile.php?user='.$r['username'].'">'. $r['name'] .'</a></span></b><span>&nbsp;&nbsp;'. $r['username'] .'</span><br>
 										<span>'.$r_post['created_at'].'</span>
 									</div>
 								</div>
@@ -106,7 +106,7 @@
 												<img src="'.$r_comments['photo_profile'].'" class="avatar">
 											</div>
 											<div class="com-sect">
-												<b><span>'.$r_comments['username'].'</span></b><span>&nbsp;&nbsp;'.$r_comments['created_at'].'</span><br>
+												<b><span><a class="no-undr" href="./profile.php?user='.$r_comments['username'].'">'.$r_comments['username'].'</a></span></b><span>&nbsp;&nbsp;'.$r_comments['created_at'].'</span><br>
 												<p class="isi-comment">'.$r_comments['comment'].'</p>
 											</div>
 										</div>

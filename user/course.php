@@ -46,7 +46,7 @@
 			        	<a class="nav-link "  href="./home.php">Home</a>
 			        </li>
 			        <li class="nav-item">
-			        	<a class="nav-link" href="./profile.php" >Profile</a>
+			        	<a class="nav-link" href="./profile.php?user=<?php echo $_SESSION['username']; ?>" >Profile</a>
 			        </li>
 			        <li class="nav-item">
 			        	<a class="nav-link active" aria-current="course" href="#">Corridor</a>

@@ -45,6 +45,10 @@
 	float: right;
 	padding-left: 10px;
 }
+.no-undr{
+	text-decoration: none;
+	color: #000;
+}
 .content-post{
 	padding-top: 20px;
 }

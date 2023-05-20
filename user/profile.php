@@ -4,8 +4,15 @@
 		header("Location: http://localhost/skripsi/");
 	}
 	include("../db.php");
-	$currCourse = $_SESSION['curr_course'];
-	$progress = intval(($_SESSION['curr_course']/5)*100);
+	$username = $_GET['user'];
+	$sql = "SELECT a.*,b.curr_course FROM tb_user as a LEFT JOIN tb_courses as b ON a.id = b.id_user WHERE username='$username'";
+	$query = mysqli_query($con,$sql);
+	$res = mysqli_fetch_assoc($query);
+	$user_id = $res['id'];
+	$photoProfile = $res['photo_profile'];
+	$name = $res['name'];
+	$currCourse = $res['curr_course'];
+	$progress = intval(($currCourse/5)*100);
 	$progressBg = "";
 	if($progress<=30){
 		$progressBg = "bg-danger";
@@ -14,9 +21,6 @@
 	}else{
 		$progressBg = "bg-success";
 	}
-	$user_id = $_SESSION['user_id'];
-	$photoProfile = $_SESSION['photo_profile'];
-	$username = $_SESSION['username'];
  ?>
 <!DOCTYPE html>
 <html>
@@ -55,7 +59,13 @@
 							<a class="nav-link " href="./home.php">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="profile" href="./profile.php">Profile</a>
+							<?php
+								if($username == $_SESSION['username']){
+									echo '<a class="nav-link active" aria-current="profile" href="./profile.php">Profile</a>';
+								}else{
+									echo '<a class="nav-link" aria-current="profile" href="./profile.php">Profile</a>';
+								}
+							?>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="./course.php">Corridor</a>
@@ -71,13 +81,12 @@
 		<div class="container">
 			<div class="row row-profile">
 				<div class="col-lg-3">
-					<center><img src="<?php echo $_SESSION['photo_profile']; ?>" class="profile-pic" id="profile-pic">
+					<center><img src="<?php echo $photoProfile; ?>" class="profile-pic" id="profile-pic">
 					</center>
-					<h3 class="profile-name"><?php echo $_SESSION['name']; ?></h3>
-					<span class="username"><?php echo $_SESSION['username']; ?></span>
+					<h3 class="profile-name"><?php echo $name; ?></h3>
+					<span class="username-profile"><?php echo $username; ?></span>
 					<div class="info">
 						<?php
-							$username= $_SESSION['username'];
 							$sql = "SELECT * FROM tb_user WHERE username='$username'";
 							$result = mysqli_query($con, $sql);
 							$r = mysqli_fetch_assoc($result);
@@ -111,14 +120,21 @@
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="nav-feed" role="tabpanel"
 							aria-labelledby="nav-feed-tab" tabindex="0">
+							<?php 
+								if($username == $_SESSION['username'])
+								{
+							?>
 							<div class="share-wrapper">
 								<h3>Share your knowledge</h3>
 								<textarea id="shareBox"></textarea>
 								<center><button type="button" id="share"
-										data-username="<?php echo $_SESSION['username']; ?>" onclick="share(this);"
+										data-username="<?php echo $username; ?>" onclick="share(this);"
 										class="btn btn-primary mt-4">SHARE YOUR KNOWLEDGE&nbsp; <i
 											class="bi bi-send-fill"></i></button></center>
 							</div>
+							<?php
+								}
+								?>
 							<div class="your-post">
 								<?php
 
@@ -133,7 +149,7 @@
 														<img src= '. $r['photo_profile'] .' class="avatar">
 													</div>
 													<div class="top-name">
-														<b><span>'. $r['name'] .'</span></b><span>&nbsp;&nbsp;'. $r['username'] .'</span>
+														<b><span><a class="no-undr" href="./profile.php?user='.$r['username'].'">'. $r['name'] .'</a></span></b><span>&nbsp;&nbsp;'. $r['username'] .'</span>
 														<div class="control">';
 														if($r_post['status']==0){
 															echo '
@@ -186,7 +202,7 @@
 																<img src="'.$r_comments['photo_profile'].'" class="avatar">
 															</div>
 															<div class="com-sect">
-																<b><span>'.$r_comments['username'].'</span></b><span>&nbsp;&nbsp;'.$r_comments['created_at'].'</span><br>
+																<b><span><a class="no-undr" href="./profile.php?user='.$r_comments['username'].'">'.$r_comments['username'].'</a></span></b><span>&nbsp;&nbsp;'.$r_comments['created_at'].'</span><br>
 																<p class="isi-comment">'.$r_comments['comment'].'</p>
 															</div>
 														</div>
@@ -260,13 +276,13 @@
 						<div class="tab-pane fade" id="nav-badges" role="tabpanel" aria-labelledby="nav-badges-tab"
 							tabindex="0">
 							<div class="card card-badges" style="width: 18rem;">
-								<img src="../images/badges.png" class="card-img-top" alt="...">
+								<img src="../images/badges/penguasa-alur.png" class="card-img-top" alt="...">
 								<div class="card-body">
 									<center>
-										<h5 class="card-title">Digital Badge System</h5>
+										<h5 class="card-title">PENGUASA ALUR</h5>
 									</center>
 									<center>
-										<p class="card-text">COMPLETION BADGES</p>
+										<p class="card-text">Diberikan kepada peserta yang mampu menguasai flowchart dengan baik dan menerapkan prinsip alur logis.</p>
 									</center><br />
 									<center>
 										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
@@ -274,13 +290,13 @@
 								</div>
 							</div>
 							<div class="card card-badges" style="width: 18rem;">
-								<img src="../images/badges.png" class="card-img-top" alt="...">
+								<img src="../images/badges/ahli-prosedur.png" class="card-img-top" alt="...">
 								<div class="card-body">
 									<center>
-										<h5 class="card-title">Digital Badge System</h5>
+										<h5 class="card-title">AHLI PROSEDUR</h5>
 									</center>
 									<center>
-										<p class="card-text">COMPLETION BADGES</p>
+										<p class="card-text">Diberikan kepada peserta yang terampil dalam merancang dan mengimplementasikan prosedur yang efektif dan efisien.</p>
 									</center><br />
 									<center>
 										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
@@ -288,13 +304,55 @@
 								</div>
 							</div>
 							<div class="card card-badges" style="width: 18rem;">
-								<img src="../images/badges.png" class="card-img-top" alt="...">
+								<img src="../images/badges/analis-logika.png" class="card-img-top" alt="...">
 								<div class="card-body">
 									<center>
-										<h5 class="card-title">Digital Badge System</h5>
+										<h5 class="card-title">ANALIS LOGIKA</h5>
 									</center>
 									<center>
-										<p class="card-text">COMPLETION BADGES</p>
+										<p class="card-text">Diberikan kepada peserta yang terampil dalam menganalisis masalah dan merancang solusi menggunakan flowchart dan pseudocode.</p>
+									</center><br />
+									<center>
+										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
+									</center>
+								</div>
+							</div>
+							<div class="card card-badges" style="width: 18rem;">
+								<img src="../images/badges/pakar-fungsi.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<center>
+										<h5 class="card-title">PAKAR FUNGSI</h5>
+									</center>
+									<center>
+										<p class="card-text">Diberikan kepada peserta yang mahir dalam menggunakan fungsi dan mampu mengoptimalkan penggunaannya dalam pemrograman.</p>
+									</center><br />
+									<center>
+										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
+									</center>
+								</div>
+							</div>
+							<div class="card card-badges" style="width: 18rem;">
+								<img src="../images/badges/penakluk-kode.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<center>
+										<h5 class="card-title">PENAKLUK KODE</h5>
+									</center>
+									<center>
+										<p class="card-text"> Diberikan kepada peserta yang mampu menguasai dan mengatasi tantangan-tantangan dalam pemrograman.</p>
+									</center><br />
+									<center>
+										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
+									</center>
+								</div>
+							</div>
+							<div class="card card-badges" style="width: 18rem;">
+								<img src="../images/badges/aktivis-unggul.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<center>
+										<h5 class="card-title">AKTIVIS UNGGUL</h5>
+									</center>
+									<center>
+										<p class="card-text">Diberikan kepada peserta yang aktif berbagi pengetahuan, bertanya, dan memberi komentar dalam proses pembelajaran..</p>
 									</center><br />
 									<center>
 										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>

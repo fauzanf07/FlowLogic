@@ -46,7 +46,7 @@ body{
 	margin-top: 20px;
 	line-height: 30px;
 }
-.username{
+.username-profile{
 	font-size: 20px;
 }
 
@@ -86,6 +86,10 @@ body{
 	display: inline-block;
 	float: right;
 	padding-left: 10px;
+}
+.no-undr{
+	text-decoration: none;
+	color: #000;
 }
 .content-post{
 	padding-top: 20px;
