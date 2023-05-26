@@ -27,7 +27,7 @@ $('.material-name').click(function(){
 	const diff = course -currCourse;
 	if(diff==1 || diff>0){
 		if(diff==1){
-			$msg = "Untuk melanjutkan ke kelas berikutnya, klik tombol berikutnya di akhir halaman ini";
+			$msg = "Untuk melanjutkan ke kelas berikutnya, klik tombol berikutnya di akhir halaman kelas terakhir anda pelajari";
 		}else{
 			$msg = "Kelas ini masih terkunci, anda harus menyelesaikan kelas-kelas sebelumnya";
 		}

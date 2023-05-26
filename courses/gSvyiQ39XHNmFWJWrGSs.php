@@ -118,6 +118,7 @@
 			    	<li class="nav-item">
 			        	<a class="nav-link active" aria-current="course" href="../user/course.php" style="text-align: center;">Corridor</a>
 			        </li>
+
 			        <div class="btn-group dropdown-center">
 						<button type="button" class="btn btn-light dropdown-toggle btn-nav" data-bs-toggle="dropdown" aria-expanded="false">
 						    <img src="<?php echo $_SESSION['photo_profile']; ?>" class="photo_profile">
@@ -143,10 +144,11 @@
 							<div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?></div>
 						</div>
 						<div class="element-game">
-							<span><i class="bi bi-diamond-fill"></i> <?php echo $r['point']; ?> Points</span>
-							<span><i class="bi bi-star-fill"></i> <?php echo $r['xp']; ?> XP &nbsp;&nbsp;</span>
 							<span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?> &nbsp;&nbsp;</span>
+							<span><i class="bi bi-star-fill"></i> <span id="xpUser"><?php echo $r['xp']; ?> XP</span> &nbsp;&nbsp;</span>
+							<span><i class="bi bi-diamond-fill"></i> <span id="pointsUser"><?php echo $r['point']; ?></span> Points</span>
 						</div>
+						<span style="display:block;clear:both;"></span>
 						<hr>
 						<a href="../user/course.php" class="btn btn-info-class">Kembali ke Corridor</a>
 						<a href="../user/home.php"  class="btn btn-info-class mt-15">Kembali ke Home</a>
@@ -159,7 +161,7 @@
 								<div class="accordion-item">
 								    <h2 class="accordion-header" id="flush-headingOne">
 								      	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-								        	Lorem ipsum dolor sit amet
+								        	<b>Level 1: Diagram Alir (Flowchart)</b>
 								      	</button>
 								    </h2>
 								    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -171,10 +173,10 @@
 											  				<span class="checklist <?php if($currCourse>1) echo 'check'; ?>"><?php if($currCourse>1) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name" data-course="1" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  				<a>Pengenalan Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC1" data-course="1">
@@ -189,10 +191,10 @@
 											  				<span class="checklist <?php if($currCourse>2) echo 'check'; ?>"><?php if($currCourse>2) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name" data-course="2" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  				<a>Simbol dan Notasi Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC2" data-course="2">
@@ -207,10 +209,10 @@
 											  				<span class="checklist <?php if($currCourse>3) echo 'check'; ?>"><?php if($currCourse>3) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name" data-course="3" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  				<a>Pemahaman Alur Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC3" data-course="3">
@@ -225,10 +227,10 @@
 											  				<span class="checklist <?php if($currCourse>4) echo 'check'; ?>"><?php if($currCourse>4) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name" data-course="4" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  				<a>Teknik membuat Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC4" data-course="4">
@@ -243,10 +245,28 @@
 											  				<span class="checklist <?php if($currCourse>5) echo 'check'; ?>"><?php if($currCourse>5) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name" data-course="5" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  				<a>Quiz Singkat</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> Up to +25 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> Up to +500</span>
+															</div>
+											  			</div>
+											  			<div class="user-footprint" id="userFootprintC5" data-course="5">
+											  				<img  class="user-img-footprint" id='userImgFootprintC5'>
+											  				<span class="user-total" id="totalUserC5"></span>
+											  			</div>
+											  		</div>
+											  </li>
+											  <li class="list-group-item">
+											  		<div style="width: 100%;">
+											  			<div class="check-side ">
+											  				<span class="checklist <?php if($currCourse>6) echo 'check'; ?>"><?php if($currCourse>6) echo '&#10003;'; ?></span>
+											  			</div>
+											  			<div class="material-name" data-course="6" data-curr="<?php echo $currCourse ?>">
+											  				<a>Challenge: Studi Kasus</a>
+															<div class="get-item">
+																<span><i class="bi bi-diamond-fill"></i> +30 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +300</span>
 															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC5" data-course="5">
@@ -306,18 +326,38 @@
 			</div>
 			<div class="col-lg-8 side-right order-lg-2 corder-md-1">
 				<div class="right-content">
-					<h1>Lorem Ipsum</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus est leo, sed lobortis lectus ultrices nec. Morbi eleifend varius aliquam. Suspendisse odio eros, scelerisque in eleifend vel, accumsan et lorem. Maecenas velit quam, pellentesque sed ultricies at, consectetur eget lectus. Nunc at ipsum eu orci sagittis convallis. Curabitur ultricies nunc vel laoreet convallis. Nam tempus risus lectus, eget pulvinar lectus dapibus quis. Aenean lectus sem, varius in metus a, pretium congue erat.</p>
+					<p>Mungkin bagi seseorang yang berkecimpung dalam bidang algoritma dan pemrograman tidaklah asing mengenai diagram alir atau sering disebut juga Flowchart dan mungkin dari beberapa kalangan awam masih belum memahami apa itu flowchart. Flowchart ini cukup penting untuk digunakan sebelum kita membuat sebuah program di komputer, terlepas dari bahasa pemrograman apapun yang digunakan. Untuk mengetahui lebih lanjut mengenai flowchart, mari kita simak bahasan berikut ini!</p>
+					<h4>Apa itu flowchart?</h4><br>
+					<center><img src="../images/ilustrasi-flowchart.jpg" alt="Ilustrasi Flowchart" height="auto" width="60%"></center>
+					<br><p>Flowchart atau sering disebut juga Diagram Alir merupakan sebuah diagram yang merepresentasikan algoritma atau langkah-langkah dan keputusan melakukan sebuah proses dari suatu program. </p>
 
-					<p>Nullam commodo augue turpis, non pulvinar mi tincidunt vel. Morbi vel egestas est. Nunc enim ligula, tincidunt id mollis tristique, tincidunt ut justo. Ut cursus rutrum eros vitae ultricies. Cras ornare nisi id cursus varius. Nullam sed lacus aliquet purus eleifend auctor ac id ante. Proin dui libero, cursus vitae feugiat non, consectetur sit amet arcu. Aliquam posuere eget ante id posuere. Donec ut nunc erat. Duis vitae est turpis.</p>
+					<p>Pada prinsipnya, flowchart digambarkan menggunakan simbol-simbol yang mewakili berbagai proses. Setiap simbol melambangkan suatu proses khusus. Sedangkan untuk menghubungkan satu proses dengan proses berikutnya, digunakan garis penghubung.</p>
 
-					<p>Vestibulum facilisis lectus vitae aliquam commodo. Vestibulum eget condimentum nulla. Duis viverra nisl vel consequat sollicitudin. Etiam iaculis suscipit tempor. Vivamus sodales iaculis orci at ultrices. Ut sollicitudin bibendum elit, at mollis nunc pharetra id. Ut malesuada urna sed sem scelerisque tincidunt. In egestas nulla id mauris molestie, ac porta nisl fringilla. Fusce congue, dui nec aliquet lacinia, est nunc porta metus, in cursus ipsum justo ac metus.</p>
+					<p>Dengan menggunakan flowchart, setiap langkah dalam proses dapat diilustrasikan secara lebih terperinci. Selain itu, apabila ada penambahan langkah baru, dapat dengan mudah dilakukan melalui flowchart ini.</p>
 
-					<p>Sed pretium, ex sed pulvinar molestie, massa lorem dictum augue, nec eleifend lacus eros ut neque. In ullamcorper sit amet mauris a luctus. Cras vestibulum enim id imperdiet dapibus. Aliquam in turpis nisi. Nam et condimentum enim. Aliquam erat volutpat. Etiam ac imperdiet nisl, in mollis sem. Morbi et imperdiet purus. Maecenas rutrum libero tellus, a molestie ligula egestas sit amet. Morbi sit amet leo viverra, cursus ipsum sed, sagittis metus. Vestibulum sed odio imperdiet, varius tellus non, aliquet metus. Cras molestie commodo est quis hendrerit. Morbi pulvinar dictum turpis sed varius.</p>
+					<p>Setelah selesai membuat flowchart, tugas programmer adalah menerjemahkan desain logis tersebut menjadi program menggunakan bahasa pemrograman yang telah disepakati.</p>
 
-					<p>Nullam pellentesque elit id condimentum pretium. Morbi et iaculis lectus, vel maximus tellus. Duis est nulla, eleifend non lacus ac, ultrices imperdiet quam. Mauris laoreet magna at viverra facilisis. Proin sed eros purus. Nullam vel lacus porta, tempus metus non, laoreet nibh. Proin ullamcorper iaculis ipsum. Integer eleifend a tortor sit amet pulvinar. Nullam sed libero non odio placerat lobortis eu ut risus. Nunc a tortor non tellus suscipit auctor ac non nulla. Aliquam erat volutpat. Curabitur consectetur tortor vel ex tristique aliquam.</p>
-					
-					<div class="container">
+					<h4>Tujuan flowchart</h4>
+
+					<p>Flowchart atau diagram alir digunakan untuk menggambarkan langkah-langkah penyelesaian suatu masalah secara sederhana, jelas, teratur, dan terstruktur. Tujuan dari penggunaan flowchart ini adalah untuk memberikan pemahaman yang lebih baik tentang tahapan yang diperlukan dalam menyelesaikan masalah tersebut. Flowchart menggunakan simbol-simbol standar yang membantu dalam mengkomunikasikan informasi dengan efektif.</p>
+					<p>Sehingga masalah yang tadinya rumit menjadi lebih mudah untuk dipahami dan dicari solusinya dengan penjelasan yang sederhana memakai diagram alir.</p>
+
+					<h2>Jenis-jenis flowchart</h2>
+					<p>Flowchart sendiri terdiri dari lima jenis, masing-masing jenis memiliki ciri khas tersendiri. Berikut  jenis-jenisnya:</p>
+
+					<ol>
+						<li><b>Flowchart Dokumen</b></li>
+						<p>Terdapat jenis flowchart yang pertama disebut sebagai flowchart dokumen atau juga dikenal sebagai paperwork flowchart. Flowchart dokumen digunakan untuk melacak jalur alur form dari satu bagian ke bagian lainnya, termasuk proses, pencatatan, dan penyimpanan laporan.</p>
+						<li><b>Flowchart Program</b></li>
+						<p>Flowchart ini secara terperinci menggambarkan prosedur dari proses program. Flowchart program terdiri dari dua jenis, yaitu flowchart logika program (program logic flowchart) dan flowchart program komputer terinci (detailed computer program flowchart).</p>
+						<li><b>Flowchart Process</b></li>
+						<p>Flowchart proses merupakan metode visualisasi rekayasa industri yang digunakan untuk memperinci dan menganalisis langkah-langkah berikutnya dalam sebuah prosedur atau sistem.</p>
+						<li><b>Flowchart Sistem</b></li>
+						<p>Flowchart sistem ini digunakan untuk menggambarkan secara keseluruhan tahapan atau proses kerja yang sedang berlangsung di dalam sistem. Flowchart sistem juga memberikan urutan rinci dari setiap prosedur yang terdapat dalam sistem tersebut.</p>
+						<li><b>Flowchart Skematik</b></li>
+						<p>Dan yang terakhir adalah Flowchart Skematik. Flowchart ini memperlihatkan urutan prosedur dalam suatu sistem, serupa dengan flowchart sistem. Namun, terdapat perbedaan dalam penggunaan simbol-simbol untuk menggambarkan alur. Flowchart skematik juga menggunakan gambar-gambar komputer dan peralatan lainnya untuk membantu pemahaman flowchart bagi orang yang tidak terbiasa.</p>
+					</ol>
+					<!-- <div class="container">
 						<div class="row">
 							<div class="col-lg-6">
 								<select class="form-select lang-list" aria-label="Default select example">
@@ -353,7 +393,7 @@ namespace HelloWorld
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<button class="btn btn-course f-right" id="next" data-next="2" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
 					<div style="clear: both;"></div>
 				</div>

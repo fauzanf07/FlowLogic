@@ -5,6 +5,7 @@
 		header("Location: http://localhost/skripsi/");
 	}else{
 		$username = $_SESSION['username'];
+		$idUser= $_SESSION['user_id'];
 		$query = "SELECT * FROM tb_user WHERE username='$username'";
 		$hasil = mysqli_query($con, $query);
 		$r = mysqli_fetch_assoc($hasil);
@@ -143,10 +144,11 @@
 							<div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?></div>
 						</div>
 						<div class="element-game">
-						<span><i class="bi bi-diamond-fill"></i> <?php echo $r['point']; ?> Points</span>
-							<span><i class="bi bi-star-fill"></i> <?php echo $r['xp']; ?> XP &nbsp;&nbsp;</span>
 							<span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?> &nbsp;&nbsp;</span>
+							<span><i class="bi bi-star-fill"></i> <span id="xpUser"><?php echo $r['xp']; ?> XP</span> &nbsp;&nbsp;</span>
+							<span><i class="bi bi-diamond-fill"></i> <span id="pointsUser"><?php echo $r['point']; ?> Points</span></span>
 						</div>
+						<span style="display:block;clear:both;"></span>
 						<hr>
 						<a href="../user/course.php" class="btn btn-info-class">Kembali ke Corridor</a>
 						<a href="../user/home.php"  class="btn btn-info-class mt-15">Kembali ke Home</a>
@@ -306,28 +308,275 @@
 			</div>
 			<div class="col-lg-8 side-right order-lg-2 corder-md-1">
 				<div class="right-content">
-					<h1>Lorem Ipsum</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus est leo, sed lobortis lectus ultrices nec. Morbi eleifend varius aliquam. Suspendisse odio eros, scelerisque in eleifend vel, accumsan et lorem. Maecenas velit quam, pellentesque sed ultricies at, consectetur eget lectus. Nunc at ipsum eu orci sagittis convallis. Curabitur ultricies nunc vel laoreet convallis. Nam tempus risus lectus, eget pulvinar lectus dapibus quis. Aenean lectus sem, varius in metus a, pretium congue erat.</p>
-
-					<p>Nullam commodo augue turpis, non pulvinar mi tincidunt vel. Morbi vel egestas est. Nunc enim ligula, tincidunt id mollis tristique, tincidunt ut justo. Ut cursus rutrum eros vitae ultricies. Cras ornare nisi id cursus varius. Nullam sed lacus aliquet purus eleifend auctor ac id ante. Proin dui libero, cursus vitae feugiat non, consectetur sit amet arcu. Aliquam posuere eget ante id posuere. Donec ut nunc erat. Duis vitae est turpis.</p>
-
-					<p>Vestibulum facilisis lectus vitae aliquam commodo. Vestibulum eget condimentum nulla. Duis viverra nisl vel consequat sollicitudin. Etiam iaculis suscipit tempor. Vivamus sodales iaculis orci at ultrices. Ut sollicitudin bibendum elit, at mollis nunc pharetra id. Ut malesuada urna sed sem scelerisque tincidunt. In egestas nulla id mauris molestie, ac porta nisl fringilla. Fusce congue, dui nec aliquet lacinia, est nunc porta metus, in cursus ipsum justo ac metus.</p>
-
-					<p>Sed pretium, ex sed pulvinar molestie, massa lorem dictum augue, nec eleifend lacus eros ut neque. In ullamcorper sit amet mauris a luctus. Cras vestibulum enim id imperdiet dapibus. Aliquam in turpis nisi. Nam et condimentum enim. Aliquam erat volutpat. Etiam ac imperdiet nisl, in mollis sem. Morbi et imperdiet purus. Maecenas rutrum libero tellus, a molestie ligula egestas sit amet. Morbi sit amet leo viverra, cursus ipsum sed, sagittis metus. Vestibulum sed odio imperdiet, varius tellus non, aliquet metus. Cras molestie commodo est quis hendrerit. Morbi pulvinar dictum turpis sed varius.</p>
-
-					<p>Nullam pellentesque elit id condimentum pretium. Morbi et iaculis lectus, vel maximus tellus. Duis est nulla, eleifend non lacus ac, ultrices imperdiet quam. Mauris laoreet magna at viverra facilisis. Proin sed eros purus. Nullam vel lacus porta, tempus metus non, laoreet nibh. Proin ullamcorper iaculis ipsum. Integer eleifend a tortor sit amet pulvinar. Nullam sed libero non odio placerat lobortis eu ut risus. Nunc a tortor non tellus suscipit auctor ac non nulla. Aliquam erat volutpat. Curabitur consectetur tortor vel ex tristique aliquam.</p>
-
-					<h1>Lorem Ipsum</h1>
-
-					<p>Proin lacinia porta felis, sed sodales erat vehicula vitae. Aliquam elementum at neque quis varius. Aliquam id dui nec nisl dapibus interdum quis vel massa. Donec volutpat suscipit imperdiet. Nullam maximus turpis velit, tincidunt fringilla libero ultrices eu. Vivamus lacinia eros ac nisl euismod pharetra. Morbi pulvinar semper auctor. Duis eget sodales justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum erat quis magna venenatis, vel malesuada dolor dignissim. In aliquam scelerisque lectus a fermentum. Sed malesuada mi nibh, eget fringilla diam ullamcorper a. Praesent in orci in leo sagittis rutrum.</p>
-
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu elit interdum, semper est sed, molestie sem. Vivamus mollis sagittis tincidunt. Fusce tempus purus a eros mattis luctus. Suspendisse ut libero sed augue egestas vestibulum. Cras ultricies ante lectus, eu suscipit ipsum accumsan ac. Donec commodo nisl at dolor scelerisque, et porta massa varius. Quisque eget tortor vel justo venenatis imperdiet vitae vel dui. Aliquam ultrices tincidunt suscipit. Nulla facilisi. Aliquam vitae odio non lacus vulputate iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lectus tellus, tincidunt vitae eros id, dignissim dapibus nisl. Mauris orci augue, pellentesque in bibendum nec, mollis eget nisi. Aliquam in magna ut dui efficitur molestie. Cras vitae pellentesque ex, sit amet bibendum orci.</p>
-
-					<p>Cras eros odio, porttitor id quam ut, auctor finibus ante. Aliquam sed mi vitae nisi porttitor egestas ut sed tellus. Sed quis elit libero. Nam mi elit, tincidunt vel dapibus ac, vulputate ut purus. Cras auctor, justo eu egestas luctus, lacus nibh sollicitudin quam, ut luctus velit felis eget enim. Quisque scelerisque dolor et arcu mattis, vitae gravida magna congue. Fusce ultrices, tortor a tristique laoreet, felis felis imperdiet dui, eget rutrum nisi ipsum vitae mi. Aenean fermentum, nisl quis eleifend vehicula, ipsum dolor aliquam orci, eu dapibus enim odio eget nunc. Nam est ipsum, feugiat sed elit sit amet, egestas dictum ante. Phasellus vestibulum sollicitudin semper. Praesent hendrerit vel tellus eget pretium. Donec varius suscipit lectus, et consequat erat accumsan ac. Fusce pharetra, eros quis rhoncus interdum, mi risus congue leo, in pretium nulla turpis non ex. Donec ullamcorper ipsum non enim venenatis ultricies at nec nunc.</p>
-
-					<p>Integer facilisis dictum sodales. Sed nec est non velit dignissim vestibulum et at orci. Nulla tempus dignissim accumsan. Donec tempus pulvinar molestie. Etiam et sagittis lectus. Donec metus quam, auctor sed nisl et, consectetur feugiat tellus. Nam et tortor dapibus, ultricies lorem in, facilisis nibh. Ut blandit lacus enim, sed tincidunt lectus egestas eu. Suspendisse potenti.</p>
-					
-					<p>Nam imperdiet semper lacus, eu blandit dolor tincidunt at. Praesent non mauris luctus, congue dolor quis, accumsan urna. Suspendisse potenti. Nulla eu nulla pulvinar justo semper porta. Nunc aliquam in ante id elementum. Pellentesque viverra ut lectus at rhoncus. Curabitur in massa purus. Vivamus a mattis turpis, at maximus sem. Aliquam ultricies vitae felis ut mollis. Phasellus convallis dui justo, nec viverra purus consequat ut.</p>
+				<h1>Quiz Singkat</h1>
+					<?php 
+						$sql = "SELECT * FROM tb_quiz WHERE id_user='$idUser'";
+						$res = mysqli_query($con, $sql);
+						$amount = mysqli_num_rows($res);
+						if($amount==0){
+					?>
+					<div class="quiz-box">
+						<div class="pop-up">
+								<h5>Benar!</h5>
+								<span class="icon-eval"><i class="bi bi-check-circle"></i></span>
+								<div class="point-xp">
+									<span><i class="bi bi-star-fill"></i> XP : +<span id="add-xp" style="display:inline-block"></span> &nbsp;&nbsp;</span>
+									<span><i class="bi bi-diamond-fill"></i> Points : +<span id="add-points" style="display:inline-block"></span></span>
+								</div>
+						</div>
+						<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<h6>Mengenai Quiz:</h6>
+									<ol>
+										<li>Setiap soal akan diberikan waktu yang telah ditentukan untuk menjawab soal tersebut.</li>
+										<li>Setiap soal yang dijawab dengan benar, peserta didik akan mendapatkan xp dengan jumlah sesuai kecepatan anda menjawab soal dan 5 coin per soal yang benar.</li>
+										<li>Setelah quiz selesai, peserta didik akan melihat peringkat pada quiz ini dari jumlah xp tertinggi sampai terendah.</li>
+									</ol>
+									<center><button class="btn-quiz" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(1,20);">Mulai Quiz</button></center>
+								</div>
+								<div class="carousel-item">
+									<div class="auto-refresher" id="auto-refresher1"></div>
+									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining1"></span></span>
+									<p>Tujuan utama penggunaan flowchart dalam analisis proses atau algoritma adalah...</p>
+									<div class="pilgan-wrapper">
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan11">Mengoptimalkan kecepatan komputasi</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan12">Menyediakan dokumentasi visual yang mudah dipahami</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan13">Meningkatkan keamanan data</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan14">Memvisualisasikan data statistik</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan15">Menghubungkan perangkat keras dan perangkat lunak</div>
+									</div>
+									<div class="point-xp">
+										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp1"></span> &nbsp;&nbsp;</span>
+										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points1"></span></span>
+									</div>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(2,20);" id="nextSoal1">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(1,20,false);" id="btnEval1">Evaluasi</button>
+								</div>
+								<div class="carousel-item">
+									<div class="auto-refresher" id="auto-refresher2"></div>
+									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining2"></span></span>
+									<p>Perbedaan antara flowchart vertikal dan flowchart horizontal terletak pada...</p>
+									<div class="pilgan-wrapper">
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21">Bentuk simbol yang digunakan</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22">Urutan langkah-langkah dalam algoritma</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23">Jenis perangkat keras yang digunakan</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24">Cara penyusunan elemen-elemen flowchart</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25">Kecepatan pemrosesan data</div>
+									</div>
+									<div class="point-xp">
+										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp2"></span> &nbsp;&nbsp;</span>
+										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points2"></span></span>
+									</div>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(3,20);" id="nextSoal2">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(2,20,false);" id="btnEval2">Evaluasi</button>
+								</div>
+								<div class="carousel-item">
+									<div class="auto-refresher" id="auto-refresher3"></div>
+									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining3"></span></span>
+									<p>Simbol umum yang sering digunakan dalam flowchart termasuk...</p>
+									<div class="pilgan-wrapper">
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31">Segitiga, kotak, dan panah</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32">Lingkaran, garis, dan persegi panjang</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33">Kubus, segitiga, dan elips</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34">Silinder, hexagon, dan panah</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35">Kotak, silinder, dan elips</div>
+									</div>
+									<div class="point-xp">
+										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp3"></span> &nbsp;&nbsp;</span>
+										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points3"></span></span>
+									</div>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(4,20);" id="nextSoal3">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(3,20,false);" id="btnEval3">Evaluasi</button>
+								</div>
+								<div class="carousel-item">
+									<div class="auto-refresher" id="auto-refresher4"></div>
+									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining4"></span></span>
+									<p>Pengendalian alur dalam flowchart mengacu pada...</p>
+									<div class="pilgan-wrapper">
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41">Pengaturan tingkat kecepatan pemrosesan</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42">Mengatur arus listrik dalam sistem komputer</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43">Penggunaan simbol khusus dalam algoritma</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44">Memantau kinerja sistem secara real-time</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45">Mengatur urutan eksekusi instruksi dalam algoritma</div>
+									</div>
+									<div class="point-xp">
+										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp4"></span> &nbsp;&nbsp;</span>
+										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points4"></span></span>
+									</div>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(5,20);" id="nextSoal4">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(4,20,false);" id="btnEval4">Evaluasi</button>
+								</div>
+								<div class="carousel-item">
+									<div class="auto-refresher" id="auto-refresher5"></div>
+									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining5"></span></span>
+									<p>Flowchart sering digunakan dalam bidang...</p>
+									<div class="pilgan-wrapper">
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51">Seni dan desain</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52">Musik dan hiburan</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53">Ilmu pengetahuan dan teknologi</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54">Bisnis dan pemasaran</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55">Olahraga dan kebugaran</div>
+									</div>
+									<div class="point-xp">
+										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp5"></span> &nbsp;&nbsp;</span>
+										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points5"></span></span>
+									</div>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"  onclick="result(5,<?php echo $idUser; ?>);"id="nextSoal5">Result</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(5,20,false);" id="btnEval5">Evaluasi</button>
+								</div>
+								<div class="carousel-item">
+									<div class="container">
+										<div class="row">
+											<div class="col-lg-7">
+												<h4>Rankings</h4>
+												<table class="table" style="color:white;">
+													<thead>
+														<tr>
+														<th scope="col">#</th>
+														<th scope="col">Nama</th>
+														<th scope="col">XP</th>
+														<th scope="col">Points</th>
+														</tr>
+													</thead>
+													<tbody id="rank-table">
+													</tbody>
+												</table>
+											</div>
+											<div class="col-lg-5">
+												<h4>Result</h4>
+												<hr>
+												<table style="width:100%;">
+													<tr>
+														<th style="width:60%;">Jumlah Benar&nbsp;&nbsp;&nbsp;</th>
+														<td id="jmlBnr"> </td>
+													</tr>
+													<tr>
+														<th style="width:60%;">Jumlah Salah</th>
+														<td id="jmlSlh"> </td>
+													</tr>
+													<tr>
+														<th style="width:60%;">Total XP</th>
+														<td id="totalResXP"> </td>
+													</tr>
+													<tr>
+														<th style="width:60%;">Total Point</th>
+														<td id="totalResPoints"> </td>
+													</tr>
+													<tr>
+														<th style="width:60%;">Nilai</th>
+														<td id="totalNilai"> </td>
+													</tr>
+													<tr>
+														<th style="width:60%;"><br>Grade</th>
+														<td>
+															<br>
+															<div class="grade" id="grade">
+																
+															</div>
+														</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+						}
+						else{
+					?>
+					<div class="quiz-box">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-7">
+									<h4>Rankings</h4>
+									<table class="table" style="color:white;">
+										<thead>
+											<tr>
+											<th scope="col">#</th>
+											<th scope="col">Nama</th>
+											<th scope="col">XP</th>
+											<th scope="col">Points</th>
+											</tr>
+										</thead>
+										<tbody id="rank-table">
+										<?php
+											$sql = "SELECT a.*, b.name FROM tb_quiz as a LEFT JOIN tb_user as b on a.id_user= b.id ORDER BY a.xp DESC, a.points DESC";
+											$res = mysqli_query($con, $sql);
+											$i=1;
+											while($row =mysqli_fetch_assoc($res))
+											{
+												echo "
+													<tr>
+														<th scope='row'>".$i."</th>
+														<td>".$row['name']."</td>
+														<td>".$row['xp']."</td>
+														<td>".$row['points']."</td>
+													</tr>
+												";
+												$i++;
+											}
+										?>
+										</tbody>
+									</table>
+								</div>
+								<div class="col-lg-5">
+									<?php
+										$sql = "SELECT * FROM tb_quiz WHERE id_user='$idUser'";
+										$res = mysqli_query($con, $sql);
+										$row=mysqli_fetch_assoc($res);
+									?>
+									<h4>Result</h4>
+									<hr>
+									<table style="width:100%;">
+										<tr>
+											<th style="width:60%;">Jumlah Benar&nbsp;&nbsp;&nbsp;</th>
+											<td id="jmlBnr"><?php echo $row['benar']; ?></td>
+										</tr>
+										<tr>
+											<th style="width:60%;">Jumlah Salah</th>
+											<td id="jmlSlh"><?php echo $row['salah']; ?> </td>
+										</tr>
+										<tr>
+											<th style="width:60%;">Total XP</th>
+											<td id="totalResXP"><?php echo $row['xp']; ?> </td>
+										</tr>
+										<tr>
+											<th style="width:60%;">Total Point</th>
+											<td id="totalResPoints"> <?php echo $row['points']; ?></td>
+										</tr>
+										<tr>
+											<th style="width:60%;">Nilai</th>
+											<td id="totalNilai"><?php echo $row['nilai']; ?></td>
+										</tr>
+										<tr>
+											<th style="width:60%;"><br>Grade</th>
+											<td>
+												<br>
+												<?php
+													$grade = $row['grade'];
+													if($grade == 'A' || $grade=='B'){
+														echo '<div class="grade" id="grade" style="color:#0cff00; border:2px solid #0cff00">'.$grade.'</div>';
+													}else if($grade == 'C'){
+														echo '<div class="grade" id="grade" style="color:yellow; border:2px solid yellow">'.$grade.'</div>';
+													}else{
+														echo '<div class="grade" id="grade" style="color:red; border:2px solid red">'.$grade.'</div>';
+													}
+												?>
+												
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+						}
+					?>
 					<button class="btn btn-course" id="previous" data-prev="4">Sebelumnya</button>
 					<button class="btn btn-course f-right" id="next" data-next="0" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
 				</div>
@@ -389,5 +638,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.min.js" integrity="sha512-+YPbXItNhUCZR3fn5KeWPtJrXuoqRYQ4Gd1rIjEFG+h8UJYekebhOMh84vv7q+Y1sy5kdIIVtfftehCiigriMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js" integrity="sha512-NSbvq6xPdfFIa2wwSh8vtsPL7AyYAYRAUWRDCqFH34kYIjQ4M7H2POiULf3CH11TRcq3Ww6FZDdLZ8msYhMxjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="../js/courses/autorefresher.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
+<script type="text/javascript" src="../js/courses/quiz/quiz1.js"></script>
 </html>
