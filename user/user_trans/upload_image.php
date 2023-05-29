@@ -1,7 +1,7 @@
 <?php
     try {
         // File Route.
-        $fileRoute = "/../../images/user-posts";
+        $fileRoute = "/../../images/user-posts/";
         
         $fieldname = "file";
         

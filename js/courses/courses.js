@@ -384,6 +384,7 @@ function share(id){
                     text: 'Berhasil dibagikan!',
                     icon: 'success',
                     confirmButtonColor: '#23fa5c',
+					allowOutsideClick: false,
                 }).then((result) =>{
                     if(result.isConfirmed){
                         location.reload();
@@ -396,7 +397,8 @@ function share(id){
                   text: 'There is something wrong with server',
                   icon: 'error',
                   confirmButtonText: 'Ok',
-                  confirmButtonColor: "#d63630"
+                  confirmButtonColor: "#d63630",
+				  allowOutsideClick: false,
                 })
             }
             
