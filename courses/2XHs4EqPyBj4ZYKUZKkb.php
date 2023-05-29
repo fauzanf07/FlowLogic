@@ -26,7 +26,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Course 1</title>
+	<title>Quiz Singkat</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="stylesheet" type="text/css" href="../css/courses/style.css">
@@ -161,102 +161,145 @@
 								<div class="accordion-item">
 								    <h2 class="accordion-header" id="flush-headingOne">
 								      	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-								        	Lorem ipsum dolor sit amet
+										  <b>Level 1: Diagram Alir (Flowchart)</b>
 								      	</button>
 								    </h2>
 								    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 								      	<div class="accordion-body">
 								      		<ul class="list-group list-group-flush">
-											  	<li class="list-group-item">
-											  		<div style="width: 100%;">
-											  			<div class="check-side ">
-											  				<span class="checklist <?php if($currCourse>1) echo 'check'; ?>"><?php if($currCourse>1) echo '&#10003;'; ?></span>
-											  			</div>
-											  			<div class="material-name" data-course="1" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+											  <li class="list-group-item">
+													<div style="width: 100%;">
+														<div class="check-side ">
+															<span
+																class="checklist <?php if($currCourse>1) echo 'check'; ?>"><?php if($currCourse>1) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="1"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Pengenalan Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
-											  			</div>
-											  			<div class="user-footprint" id="userFootprintC1" data-course="1">
-											  				<img class="user-img-footprint" id='userImgFootprintC1'>
-											  				<span class="user-total" id="totalUserC1"></span>
-											  			</div>
-											  		</div>
+														</div>
+														<div class="user-footprint" id="userFootprintC1"
+															data-course="1">
+															<img class="user-img-footprint" id='userImgFootprintC1'>
+															<span class="user-total" id="totalUserC1"></span>
+														</div>
+													</div>
 												</li>
-											  <li class="list-group-item">
-											  		<div style="width: 100%;">
-											  			<div class="check-side ">
-											  				<span class="checklist <?php if($currCourse>2) echo 'check'; ?>"><?php if($currCourse>2) echo '&#10003;'; ?></span>
-											  			</div>
-											  			<div class="material-name" data-course="2" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+												<li class="list-group-item">
+													<div style="width: 100%;">
+														<div class="check-side ">
+															<span
+																class="checklist <?php if($currCourse>2) echo 'check'; ?>"><?php if($currCourse>2) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="2"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Simbol dan Notasi Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
-											  			</div>
-											  			<div class="user-footprint" id="userFootprintC2" data-course="2">
-											  				<img  class="user-img-footprint" id='userImgFootprintC2'>
-											  				<span class="user-total" id="totalUserC2"></span>
-											  			</div>
-											  		</div>
-											  </li>
-											  <li class="list-group-item">
-											  		<div style="width: 100%;">
-											  			<div class="check-side">
-											  				<span class="checklist <?php if($currCourse>3) echo 'check'; ?>"><?php if($currCourse>3) echo '&#10003;'; ?></span>
-											  			</div>
-											  			<div class="material-name" data-course="3" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+														</div>
+														<div class="user-footprint" id="userFootprintC2"
+															data-course="2">
+															<img class="user-img-footprint" id='userImgFootprintC2'>
+															<span class="user-total" id="totalUserC2"></span>
+														</div>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div style="width: 100%;">
+														<div class="check-side">
+															<span
+																class="checklist <?php if($currCourse>3) echo 'check'; ?>"><?php if($currCourse>3) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="3"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Pemahaman Alur Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
-											  			</div>
-											  			<div class="user-footprint" id="userFootprintC3" data-course="3">
-											  				<img  class="user-img-footprint" id='userImgFootprintC3'>
-											  				<span class="user-total" id="totalUserC3"></span>
-											  			</div>
-											  		</div>
-											  </li>
-											  <li class="list-group-item">
-											  		<div style="width: 100%;">
-											  			<div class="check-side ">
-											  				<span class="checklist <?php if($currCourse>4) echo 'check'; ?>"><?php if($currCourse>4) echo '&#10003;'; ?></span>
-											  			</div>
-											  			<div class="material-name" data-course="4" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+														</div>
+														<div class="user-footprint" id="userFootprintC3"
+															data-course="3">
+															<img class="user-img-footprint" id='userImgFootprintC3'>
+															<span class="user-total" id="totalUserC3"></span>
+														</div>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div style="width: 100%;">
+														<div class="check-side ">
+															<span
+																class="checklist <?php if($currCourse>4) echo 'check'; ?>"><?php if($currCourse>4) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="4"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Teknik membuat Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
-											  			</div>
-											  			<div class="user-footprint" id="userFootprintC4" data-course="4">
-											  				<img  class="user-img-footprint" id='userImgFootprintC4'>
-											  				<span class="user-total" id="totalUserC4"></span>
-											  			</div>
-											  		</div>
-											  </li>
-											  <li class="list-group-item" id="current-li">
-											  		<div style="width: 100%;">
-											  			<div class="check-side ">
-											  				<span class="checklist <?php if($currCourse>5) echo 'check'; ?>"><?php if($currCourse>5) echo '&#10003;'; ?></span>
-											  			</div>
-											  			<div class="material-name" data-course="5" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+														</div>
+														<div class="user-footprint" id="userFootprintC4"
+															data-course="4">
+															<img class="user-img-footprint" id='userImgFootprintC4'>
+															<span class="user-total" id="totalUserC4"></span>
+														</div>
+													</div>
+												</li>
+												<li class="list-group-item " id="current-li">
+													<div style="width: 100%;">
+														<div class="check-side ">
+															<span
+																class="checklist <?php if($currCourse>5) echo 'check'; ?>"><?php if($currCourse>5) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="5"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Quiz Singkat</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> Up to +25
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> Up to +500</span>
 															</div>
-											  			</div>
-											  			<div class="user-footprint" id="userFootprintC5" data-course="5">
-											  				<img  class="user-img-footprint" id='userImgFootprintC5'>
-											  				<span class="user-total" id="totalUserC5"></span>
-											  			</div>
-											  		</div>
-											  </li>
+														</div>
+														<div class="user-footprint" id="userFootprintC5"
+															data-course="5">
+															<img class="user-img-footprint" id='userImgFootprintC5'>
+															<span class="user-total" id="totalUserC5"></span>
+														</div>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div style="width: 100%;">
+														<div class="check-side ">
+															<span
+																class="checklist <?php if($currCourse>6) echo 'check'; ?>"><?php if($currCourse>6) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="6"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Challenge: Studi Kasus</a>
+															<div class="get-item">
+																<span><i class="bi bi-diamond-fill"></i> +30
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +300 &nbsp;&nbsp;</span>
+                                                                <span<i class="bi bi-award-fill"></i> 1</span>
+															</div>
+														</div>
+														<div class="user-footprint" id="userFootprintC6"
+															data-course="6">
+															<img class="user-img-footprint" id='userImgFootprintC6'>
+															<span class="user-total" id="totalUserC6"></span>
+														</div>
+													</div>
+												</li>
 											</ul>
 								      	</div>
 								    </div>
@@ -578,7 +621,7 @@
 						}
 					?>
 					<button class="btn btn-course" id="previous" data-prev="4">Sebelumnya</button>
-					<button class="btn btn-course f-right" id="next" data-next="0" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
+					<button class="btn btn-course f-right" id="next" data-next="6" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
 				</div>
 			</div>
 		</div>

@@ -25,7 +25,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Course 1</title>
+	<title>Pengenalan Flowchart</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="stylesheet" type="text/css" href="../css/courses/style.css">
@@ -266,12 +266,13 @@
 											  				<a>Challenge: Studi Kasus</a>
 															<div class="get-item">
 																<span><i class="bi bi-diamond-fill"></i> +30 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +300</span>
+																<span><i class="bi bi-star-fill"></i> +300 &nbsp;&nbsp;</span>
+                                                                <span<i class="bi bi-award-fill"></i> 1</span>
 															</div>
 											  			</div>
-											  			<div class="user-footprint" id="userFootprintC5" data-course="5">
-											  				<img  class="user-img-footprint" id='userImgFootprintC5'>
-											  				<span class="user-total" id="totalUserC5"></span>
+											  			<div class="user-footprint" id="userFootprintC6" data-course="6">
+											  				<img  class="user-img-footprint" id='userImgFootprintC6'>
+											  				<span class="user-total" id="totalUserC6"></span>
 											  			</div>
 											  		</div>
 											  </li>

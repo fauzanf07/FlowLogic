@@ -26,7 +26,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Course 1</title>
+	<title>Pemahaman Alur Flowchart</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="stylesheet" type="text/css" href="../css/courses/style.css">
@@ -166,7 +166,7 @@
 								<div class="accordion-item">
 								    <h2 class="accordion-header" id="flush-headingOne">
 								      	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-								        	Lorem ipsum dolor sit amet
+											<b>Level 1: Diagram Alir (Flowchart)</b>
 								      	</button>
 								    </h2>
 								    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -294,13 +294,14 @@
 															<div class="get-item">
 																<span><i class="bi bi-diamond-fill"></i> +30
 																	&nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +300</span>
+																<span><i class="bi bi-star-fill"></i> +300 &nbsp;&nbsp;</span>
+                                                                <span<i class="bi bi-award-fill"></i> 1</span>
 															</div>
 														</div>
-														<div class="user-footprint" id="userFootprintC5"
-															data-course="5">
-															<img class="user-img-footprint" id='userImgFootprintC5'>
-															<span class="user-total" id="totalUserC5"></span>
+														<div class="user-footprint" id="userFootprintC6"
+															data-course="6">
+															<img class="user-img-footprint" id='userImgFootprintC6'>
+															<span class="user-total" id="totalUserC6"></span>
 														</div>
 													</div>
 												</li>
@@ -355,8 +356,70 @@
 			</div>
 			<div class="col-lg-8 side-right order-lg-2 corder-md-1">
 				<div class="right-content">
+					<p>Siapa yang tidak ingin memahami alur flowchart dengan lebih mudah dan efektif? Setelah menguasai dasar-dasar simbol-simbol flowchart, pintu pemahaman yang lebih dalam akan terbuka lebar. Dalam artikel ini, kita akan menjelajahi dunia yang menarik dari pemahaman alur flowchart, di mana langkah-langkah proses akan terurai dengan jelas dan memudahkan kita dalam menerjemahkannya ke dalam sebuah desain logis yang terstruktur. Mari kita mulai perjalanan menuju pemahaman yang lebih mendalam dan membawa keahlian kita dalam penggunaan flowchart ke level berikutnya!</p>
 					<h4>Pemahaman Alur Flowchart</h4>
-					<p></p>
+					<p>Untuk menginterpretasikan flowchart ke dalam bahasa pemrograman komputer dengan benar tentunya kalian harus memahami alur flowchart tersebut. Berikut merupakan beberapa cara efektif untuk memahami alur flowchart dengan lebih baik.</p>
+					<ol>
+						<h5><li>Pelajari simbol-simbol Flowchart</li></h5>
+						<p> Langkah pertama dalam memahami alur flowchart adalah mempelajari simbol-simbol yang digunakan. Setiap simbol mewakili tindakan atau keputusan tertentu dalam proses. Meskipun cukup banyak simbol-simbol yang terdapat pada flowchart, namun terdapat beberapa simbol yang sangat penting kamu ketahui yang mana simbol-simbol tersebut sering ditemukan di dalam flowchart. Berikut simbol-simbol tersebut.</p>
+						<table class="table">
+							<tr>
+								<th>Simbol</th>
+								<th>Nama</th>
+								<th>Fungsi</th>
+							</tr>
+							<tr>
+								<td><img src="../images/simbol/terminal.png" alt=""></td>
+								<td>Terminator</td>
+								<td>Digunakan untuk memulai atau mengakhiri program.</td>
+							</tr>
+							<tr>
+								<td><img src="../images/simbol/flow-direction.png" alt=""></td>
+								<td>Flow Direction</td>
+								<td>Berfungsi untuk menghubungkan simbol yang satu dengan yang lainnya, menyatakan arus suatu proses.</td>
+							</tr>
+							<tr>
+								<td><img src="../images/simbol/decision.png" alt=""></td>
+								<td>Decision</td>
+								<td>Digunakan untuk memilih proses yang akan dilakukan berdasarkan kondisi tertentu.</td>
+							</tr>
+							<tr>
+								<td><img src="../images/simbol/processing.png" alt=""></td>
+								<td>Processing</td>
+								<td>Digunakan untuk menunjukkan pengolahan yang akan dilakukan dalam komputer</td>
+							</tr>
+							<tr>
+								<td><img src="../images/simbol/input-output.png" alt=""></td>
+								<td>Input / Output</td>
+								<td>Digunakan untuk menyatakan input dan output tanpa melihat jenisnya</td>
+							</tr>
+							<tr>
+								<td><img src="../images/simbol/preparation.png" alt=""></td>
+								<td>Preparation</td>
+								<td>Untuk mempersiapkan penyimpanan yang akan digunakan sebagai tempat pengolahan di dalam storage</td>
+							</tr>
+						</table>
+						<p>Dengan memahami arti dan fungsi setiap simbol, tentunya kita dapat menginterpretasikan setiap simbol yang terdapat di dalam flowchart.</p>
+						<h5><li>Analisis Langkah-Langkah Secara Terperinci</li></h5>
+						<p>Setelah memahami simbol-simbol dasar, langkah berikutnya adalah menganalisis langkah-langkah dalam flowchart secara terperinci. Mulailah dengan langkah awal dan ikuti alur langkah demi langkah. Perhatikan bagaimana setiap tindakan atau keputusan dihubungkan satu sama lain. Perhatikan juga arah alur, apakah linear, berulang, atau memiliki cabang-cabang. Dengan menganalisis langkah-langkah secara mendetail, kita dapat memahami alur proses dengan lebih baik.</p>
+
+						<h5><li>Identifikasi Pola-Pola Umum</li></h5>
+						<p>Saat mempelajari flowchart, perhatikan pola-pola umum yang muncul. Pola-pola ini dapat membantu kita memahami dan mengenali jenis-jenis alur proses yang sering digunakan. Misalnya, pola pengulangan (loop) akan ditandai dengan simbol panah yang kembali ke langkah sebelumnya, sedangkan pola pemilihan (decision) akan ditandai dengan simbol rombus (belah ketupat) yang mengarahkan alur ke langkah-langkah yang berbeda. Dengan mengidentifikasi pola-pola ini, kita dapat dengan cepat memahami alur flowchart yang kompleks.</p>
+					</ol>
+					<p>Setelah dijelaskan bagaimana cara efektif untuk memahami alur flowchart. Mari kita pelajari dan pahami contoh flowchart berikut ini.</p>
+					<center><img src="../images/simbol/contoh.png" width="40%" height="auto" alt=""></center>
+					<br><p>Mari kita breakdown satu persatu dari flowchart diatas.</p>
+					<center><img src="../images/simbol/breakdown-1.png" alt=""></center><br>
+					<p>Diawali dengan simbol terminator dan keterangan START yang mana artinya program dimulai. Selanjutnya terdapat simbol preparation dengan keterangan bil:int. Seperti yang kita ketahui bahwa simbol preparation digunakan untuk mempersiapkan penyimpanan yang akan digunakan. Maka dari itu bil disini merupakan tempat penyimpanan yang akan digunakan atau dalam bahasa pemrograman disebut variabel yang mana variabel bil ini berupa integer atau bilangan bulat. Jadi variabel bil ini akan menyimpan sebuah bilangan bulat.</p>
+					<center><img src="../images/simbol/breakdown-2.png" alt=""></center>
+					<p>Selanjutnya terdapat simbol processing yang mana digunakan untuk pengolahan yang akan dilakukan. Disini dapat diartikan bahwa kita akan menyimpan bilangan 1 kedalam variabel bil tersebut. Di dalam pemrograman kita menyebutnya penginialisasian variabel bil dengan nilai 1.</p>
+					<center><img src="../images/simbol/breakdown-3.png" alt=""></center>
+					<p>Simbol selanjutnya yakni simbol decision yang mana digunakan untuk menentukan proses yang akan dilakukan berdasarkan kondisi tertentu. Di dalam simbol ini selalu terdapat dua alur yakni alur ya/benar jika kondisi tersebut benar dan alur tidak/salah jika kondisi tersebut salah. Di kasus flowchart ini mengondisikan apakah bilangan yang terdapat di variabel bil jika dimoduluskan (hasil bagi) dengan 2 menghasilkan 1. Lebih sederhananya ini menentukan apakah variabe bil tersebut bilangan ganjil atau tidak karena bilangan ganjil akan selalu menghasilkan 1 jika dimoduluskan dengan 2. Jika iya/benar maka proses output print (menampilkan) variabel bil dilakukan dan setelah proses tersebut dilakukan maka dilanjutkan ke decision selanjutnya. Tetapi jika salah, maka akan langsung dilanjutkan ke decision selanjutnya.</p>
+					<center><img src="../images/simbol/breakdown-4.png" alt=""></center><br>
+					<p>Decision selanjutnya ialah menentukan apakah bilangan pada variabel bil kurang dari atau sama dengan 10. Jika kondisi benar maka proses bil = bil + 1 dilakukan. Proses tersebut mengartikan bahwa variabel bil akan menyimpan bilangan kembali yang mana bilangan tersebut merupakan penjumlahan bilangan pada variabel sebelumnya dengan 1. Lebih sederhananya variabel bilangan ini akan bertambah satu. Setelah proses tersebut dilakukan maka akan dilanjutkan ke decision sebelumnya. Disini kita bisa melihat bahwa terdapat pola pengulangan (loop) ditandai dengan simbol panah yang kembali ke langkah sebelumnya. Loop ini akan terus berlangsung sampai kondisi pada decision bil <= 10 salah/tidak. Kemudian jika kondisi salah pada decision bil <= 10, maka program berakhir. </p>
+					<br>
+					<p>Setelah memahami contoh flowchart diatas, maka disimpulkan bahwa flowchart tersebut menjelaskan proses menampilkan bilangan ganjil dari bilangan 1 - 10 dalam komputer. Jika kita sudah memahami flowchart tersebut maka langkah selanjutnya membuat program tersebut dengan bahasa pemrograman yang kita butuhkan atau inginkan.</p>
+					<div style="clear:both;"></div>
 					<button class="btn btn-course" id="previous" data-prev="2">Sebelumnya</button>
 					<button class="btn btn-course f-right" id="next" data-next="4" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
 				</div>

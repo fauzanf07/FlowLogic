@@ -6,13 +6,14 @@
 
     $content = $_POST['content'];
     $username = $_POST['username'];
+    $challenge = isset($_POST['challenge']) ? $_POST['challenge'] : 0;
 
     $sql = "SELECT id FROM tb_user WHERE username='$username'";
     $result = mysqli_query($con, $sql);
 	$r = mysqli_fetch_assoc($result);
     $id_user = $r['id'];
 
-    $sql = "INSERT INTO tb_post VALUES('','$id_user','$content','0','','$date')";
+    $sql = "INSERT INTO tb_post VALUES('','$id_user','$content','0','$challenge','','$date')";
     $result = mysqli_query($con, $sql);
     if($result){
         echo json_encode(array("statusCode"=>200));

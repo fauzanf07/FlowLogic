@@ -25,7 +25,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Course 1</title>
+	<title>Teknik membuat Flowchart</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="stylesheet" type="text/css" href="../css/courses/style.css">
@@ -147,10 +147,11 @@
 							<div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar" aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?></div>
 						</div>
 						<div class="element-game">
-							<span><i class="bi bi-diamond-fill"></i> <?php echo $r['point']; ?> Points</span>
-							<span><i class="bi bi-star-fill"></i> <?php echo $r['xp']; ?> XP &nbsp;&nbsp;</span>
 							<span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?> &nbsp;&nbsp;</span>
+							<span><i class="bi bi-star-fill"></i> <span id="xpUser"><?php echo $r['xp']; ?> XP</span> &nbsp;&nbsp;</span>
+							<span><i class="bi bi-diamond-fill"></i> <span id="pointsUser"><?php echo $r['point']; ?></span> Points</span>
 						</div>
+						<span style="display:block;clear:both;"></span>
 						<hr>
 						<a href="../user/course.php" class="btn btn-info-class">Kembali ke Corridor</a>
 						<a href="../user/home.php"  class="btn btn-info-class mt-15">Kembali ke Home</a>
@@ -163,102 +164,145 @@
 								<div class="accordion-item">
 								    <h2 class="accordion-header" id="flush-headingOne">
 								      	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-								        	Lorem ipsum dolor sit amet
+											<b>Level 1: Diagram Alir (Flowchart)</b>
 								      	</button>
 								    </h2>
 								    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 								      	<div class="accordion-body">
 								      		<ul class="list-group list-group-flush">
 											  	<li class="list-group-item">
-											  		<div style="width: 100%;">
-											  			<div class="check-side ">
-											  				<span class="checklist <?php if($currCourse>1) echo 'check'; ?>"><?php if($currCourse>1) echo '&#10003;'; ?></span>
-											  			</div>
-											  			<div class="material-name" data-course="1" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+													<div style="width: 100%;">
+														<div class="check-side ">
+															<span
+																class="checklist <?php if($currCourse>1) echo 'check'; ?>"><?php if($currCourse>1) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="1"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Pengenalan Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
-											  			</div>
-											  			<div class="user-footprint" id="userFootprintC1" data-course="1">
-											  				<img class="user-img-footprint" id='userImgFootprintC1'>
-											  				<span class="user-total" id="totalUserC1"></span>
-											  			</div>
-											  		</div>
+														</div>
+														<div class="user-footprint" id="userFootprintC1"
+															data-course="1">
+															<img class="user-img-footprint" id='userImgFootprintC1'>
+															<span class="user-total" id="totalUserC1"></span>
+														</div>
+													</div>
 												</li>
-											  <li class="list-group-item">
-											  		<div style="width: 100%;">
-											  			<div class="check-side ">
-											  				<span class="checklist <?php if($currCourse>2) echo 'check'; ?>"><?php if($currCourse>2) echo '&#10003;'; ?></span>
-											  			</div>
-											  			<div class="material-name" data-course="2" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+												<li class="list-group-item">
+													<div style="width: 100%;">
+														<div class="check-side ">
+															<span
+																class="checklist <?php if($currCourse>2) echo 'check'; ?>"><?php if($currCourse>2) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="2"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Simbol dan Notasi Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
-											  			</div>
-											  			<div class="user-footprint" id="userFootprintC2" data-course="2">
-											  				<img  class="user-img-footprint" id='userImgFootprintC2'>
-											  				<span class="user-total" id="totalUserC2"></span>
-											  			</div>
-											  		</div>
-											  </li>
-											  <li class="list-group-item">
-											  		<div style="width: 100%;">
-											  			<div class="check-side">
-											  				<span class="checklist <?php if($currCourse>3) echo 'check'; ?>"><?php if($currCourse>3) echo '&#10003;'; ?></span>
-											  			</div>
-											  			<div class="material-name" data-course="3" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+														</div>
+														<div class="user-footprint" id="userFootprintC2"
+															data-course="2">
+															<img class="user-img-footprint" id='userImgFootprintC2'>
+															<span class="user-total" id="totalUserC2"></span>
+														</div>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div style="width: 100%;">
+														<div class="check-side">
+															<span
+																class="checklist <?php if($currCourse>3) echo 'check'; ?>"><?php if($currCourse>3) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="3"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Pemahaman Alur Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
-											  			</div>
-											  			<div class="user-footprint" id="userFootprintC3" data-course="3">
-											  				<img  class="user-img-footprint" id='userImgFootprintC3'>
-											  				<span class="user-total" id="totalUserC3"></span>
-											  			</div>
-											  		</div>
-											  </li>
-											  <li class="list-group-item" id="current-li">
-											  		<div style="width: 100%;">
-											  			<div class="check-side ">
-											  				<span class="checklist <?php if($currCourse>4) echo 'check'; ?>"><?php if($currCourse>4) echo '&#10003;'; ?></span>
-											  			</div>
-											  			<div class="material-name" data-course="4" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+														</div>
+														<div class="user-footprint" id="userFootprintC3"
+															data-course="3">
+															<img class="user-img-footprint" id='userImgFootprintC3'>
+															<span class="user-total" id="totalUserC3"></span>
+														</div>
+													</div>
+												</li>
+												<li class="list-group-item" id="current-li">
+													<div style="width: 100%;">
+														<div class="check-side ">
+															<span
+																class="checklist <?php if($currCourse>4) echo 'check'; ?>"><?php if($currCourse>4) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="4"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Teknik membuat Flowchart</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> +0
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +100</span>
 															</div>
-											  			</div>
-											  			<div class="user-footprint" id="userFootprintC4" data-course="4">
-											  				<img  class="user-img-footprint" id='userImgFootprintC4'>
-											  				<span class="user-total" id="totalUserC4"></span>
-											  			</div>
-											  		</div>
-											  </li>
-											  <li class="list-group-item">
-											  		<div style="width: 100%;">
-											  			<div class="check-side ">
-											  				<span class="checklist <?php if($currCourse>5) echo 'check'; ?>"><?php if($currCourse>5) echo '&#10003;'; ?></span>
-											  			</div>
-											  			<div class="material-name" data-course="5" data-curr="<?php echo $currCourse ?>">
-											  				<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+														</div>
+														<div class="user-footprint" id="userFootprintC4"
+															data-course="4">
+															<img class="user-img-footprint" id='userImgFootprintC4'>
+															<span class="user-total" id="totalUserC4"></span>
+														</div>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div style="width: 100%;">
+														<div class="check-side ">
+															<span
+																class="checklist <?php if($currCourse>5) echo 'check'; ?>"><?php if($currCourse>5) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="5"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Quiz Singkat</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +500 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +1000</span>
+																<span><i class="bi bi-diamond-fill"></i> Up to +25
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> Up to +500</span>
 															</div>
-											  			</div>
-											  			<div class="user-footprint" id="userFootprintC5" data-course="5">
-											  				<img  class="user-img-footprint" id='userImgFootprintC5'>
-											  				<span class="user-total" id="totalUserC5"></span>
-											  			</div>
-											  		</div>
-											  </li>
+														</div>
+														<div class="user-footprint" id="userFootprintC5"
+															data-course="5">
+															<img class="user-img-footprint" id='userImgFootprintC5'>
+															<span class="user-total" id="totalUserC5"></span>
+														</div>
+													</div>
+												</li>
+												<li class="list-group-item">
+													<div style="width: 100%;">
+														<div class="check-side ">
+															<span
+																class="checklist <?php if($currCourse>6) echo 'check'; ?>"><?php if($currCourse>6) echo '&#10003;'; ?></span>
+														</div>
+														<div class="material-name" data-course="6"
+															data-curr="<?php echo $currCourse ?>">
+															<a>Challenge: Studi Kasus</a>
+															<div class="get-item">
+																<span><i class="bi bi-diamond-fill"></i> +30
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +300 &nbsp;&nbsp;</span>
+                                                                <span<i class="bi bi-award-fill"></i> 1</span>
+															</div>
+														</div>
+														<div class="user-footprint" id="userFootprintC6"
+															data-course="6">
+															<img class="user-img-footprint" id='userImgFootprintC6'>
+															<span class="user-total" id="totalUserC6"></span>
+														</div>
+													</div>
+												</li>
 											</ul>
 								      	</div>
 								    </div>
@@ -310,28 +354,69 @@
 			</div>
 			<div class="col-lg-8 side-right order-lg-2 corder-md-1">
 				<div class="right-content">
-					<h1>Lorem Ipsum</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus est leo, sed lobortis lectus ultrices nec. Morbi eleifend varius aliquam. Suspendisse odio eros, scelerisque in eleifend vel, accumsan et lorem. Maecenas velit quam, pellentesque sed ultricies at, consectetur eget lectus. Nunc at ipsum eu orci sagittis convallis. Curabitur ultricies nunc vel laoreet convallis. Nam tempus risus lectus, eget pulvinar lectus dapibus quis. Aenean lectus sem, varius in metus a, pretium congue erat.</p>
+					<p>Setelah Anda mempelajari dengan baik tentang pemahaman alur flowchart, saatnya menggali lebih dalam dengan mempelajari teknik penggambaran flowchart. Dalam artikel ini, kita akan membahas bagaimana cara menggambar atau merancang flowchart dengan benar. Dengan memahami teknik penggambaran ini, kalian akan memiliki keterampilan yang kuat dalam merepresentasikan langkah-langkah proses dengan jelas dan terstruktur. Mari kita mulai petualangan baru ini dalam menguasai teknik penggambaran flowchart yang akan membuka pintu menuju pemahaman yang lebih mendalam tentang dunia flowchart!</p>
+					<p>Sebelum kita memelajari teknik penggambaran flowchart, alangkah baiknya kita mengenal software untuk membuat flowchart itu sendiri. Sebenarnya flowchart juga dapat digambar di kertas, tetapi akan lebih mudah jika kita menggunakan software pembuat flowchart berikut ini.</p>
+					<ol>
+						<h5><li>Microsoft Visio</li></h5>
+						<center><img src="../images/visio.png" alt="" width="30%" height="auto"></center>
+						<p>Visio merupakan salah satu platform yang paling umum digunakan untuk membuat flowchart dan diagram. Ini menyediakan beragam bentuk dan simbol yang dapat digunakan untuk menggambarkan alur proses dengan mudah.</p>
+						<h5><li>Lucidchart</li></h5>
+						<center><img src="../images/lucidchart.png" alt="" width="30%" height="auto"></center>
+						<p>Lucidchart adalah platform berbasis web yang memungkinkan Anda membuat flowchart secara online. Ini memiliki antarmuka yang intuitif dan menyediakan berbagai pilihan bentuk, simbol, dan template untuk membuat flowchart yang menarik. Klik <a href="https://www.lucidchart.com/" target="blank">disini</a> untuk ke Lucidchart</p>
+						<h5><li>Draw.io atau Diagrams.net</li></h5>
+						<center><img src="../images/diagrams-logo.png" alt="" width="25%" height="auto"></center>
+						<p>Draw.io atau Diagrams.net adalah platform diagram online yang dapat digunakan untuk membuat flowchart, diagram alur kerja, dan banyak jenis diagram lainnya. Ini menyediakan beragam pilihan bentuk, simbol, dan opsi kustomisasi. Klik <a href="https://draw.io/" target="blank">disini</a> untuk ke Diagrams.net</p>
+						<h5><li>Gliffy</li></h5>
+						<center><img src="../images/gliffy.png" alt="" width="30%" height="auto"></center>
+						<p>Gliffy adalah platform lain yang memungkinkan Anda membuat flowchart dengan mudah. Ini menyediakan antarmuka yang sederhana dan intuitif, serta pilihan simbol dan bentuk yang lengkap.</p>
+						<h5><li>Google Drawings</li></h5>
+						<center><img src="../images/google-drawing.jpg" alt="" width="30%" height="auto"></center>
+						<p>Google Drawings merupakan alat yang terintegrasi dengan Google Drive. Ini menyediakan fitur dasar untuk membuat flowchart dan diagram dengan mudah dan berbagi dengan kolaborator.</p>
+					</ol>
+					<p>Selain itu, ada juga perangkat lunak diagram lainnya seperti Dia, OmniGraffle, dan SmartDraw yang dapat digunakan untuk membuat flowchart. Pilihan platform tergantung pada preferensi pribadi dan kebutuhan kalian dalam membuat dan berbagi flowchart.</p>
 
-					<p>Nullam commodo augue turpis, non pulvinar mi tincidunt vel. Morbi vel egestas est. Nunc enim ligula, tincidunt id mollis tristique, tincidunt ut justo. Ut cursus rutrum eros vitae ultricies. Cras ornare nisi id cursus varius. Nullam sed lacus aliquet purus eleifend auctor ac id ante. Proin dui libero, cursus vitae feugiat non, consectetur sit amet arcu. Aliquam posuere eget ante id posuere. Donec ut nunc erat. Duis vitae est turpis.</p>
-
-					<p>Vestibulum facilisis lectus vitae aliquam commodo. Vestibulum eget condimentum nulla. Duis viverra nisl vel consequat sollicitudin. Etiam iaculis suscipit tempor. Vivamus sodales iaculis orci at ultrices. Ut sollicitudin bibendum elit, at mollis nunc pharetra id. Ut malesuada urna sed sem scelerisque tincidunt. In egestas nulla id mauris molestie, ac porta nisl fringilla. Fusce congue, dui nec aliquet lacinia, est nunc porta metus, in cursus ipsum justo ac metus.</p>
-
-					<p>Sed pretium, ex sed pulvinar molestie, massa lorem dictum augue, nec eleifend lacus eros ut neque. In ullamcorper sit amet mauris a luctus. Cras vestibulum enim id imperdiet dapibus. Aliquam in turpis nisi. Nam et condimentum enim. Aliquam erat volutpat. Etiam ac imperdiet nisl, in mollis sem. Morbi et imperdiet purus. Maecenas rutrum libero tellus, a molestie ligula egestas sit amet. Morbi sit amet leo viverra, cursus ipsum sed, sagittis metus. Vestibulum sed odio imperdiet, varius tellus non, aliquet metus. Cras molestie commodo est quis hendrerit. Morbi pulvinar dictum turpis sed varius.</p>
-
-					<p>Nullam pellentesque elit id condimentum pretium. Morbi et iaculis lectus, vel maximus tellus. Duis est nulla, eleifend non lacus ac, ultrices imperdiet quam. Mauris laoreet magna at viverra facilisis. Proin sed eros purus. Nullam vel lacus porta, tempus metus non, laoreet nibh. Proin ullamcorper iaculis ipsum. Integer eleifend a tortor sit amet pulvinar. Nullam sed libero non odio placerat lobortis eu ut risus. Nunc a tortor non tellus suscipit auctor ac non nulla. Aliquam erat volutpat. Curabitur consectetur tortor vel ex tristique aliquam.</p>
-
-					<h1>Lorem Ipsum</h1>
-
-					<p>Proin lacinia porta felis, sed sodales erat vehicula vitae. Aliquam elementum at neque quis varius. Aliquam id dui nec nisl dapibus interdum quis vel massa. Donec volutpat suscipit imperdiet. Nullam maximus turpis velit, tincidunt fringilla libero ultrices eu. Vivamus lacinia eros ac nisl euismod pharetra. Morbi pulvinar semper auctor. Duis eget sodales justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum erat quis magna venenatis, vel malesuada dolor dignissim. In aliquam scelerisque lectus a fermentum. Sed malesuada mi nibh, eget fringilla diam ullamcorper a. Praesent in orci in leo sagittis rutrum.</p>
-
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu elit interdum, semper est sed, molestie sem. Vivamus mollis sagittis tincidunt. Fusce tempus purus a eros mattis luctus. Suspendisse ut libero sed augue egestas vestibulum. Cras ultricies ante lectus, eu suscipit ipsum accumsan ac. Donec commodo nisl at dolor scelerisque, et porta massa varius. Quisque eget tortor vel justo venenatis imperdiet vitae vel dui. Aliquam ultrices tincidunt suscipit. Nulla facilisi. Aliquam vitae odio non lacus vulputate iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lectus tellus, tincidunt vitae eros id, dignissim dapibus nisl. Mauris orci augue, pellentesque in bibendum nec, mollis eget nisi. Aliquam in magna ut dui efficitur molestie. Cras vitae pellentesque ex, sit amet bibendum orci.</p>
-
-					<p>Cras eros odio, porttitor id quam ut, auctor finibus ante. Aliquam sed mi vitae nisi porttitor egestas ut sed tellus. Sed quis elit libero. Nam mi elit, tincidunt vel dapibus ac, vulputate ut purus. Cras auctor, justo eu egestas luctus, lacus nibh sollicitudin quam, ut luctus velit felis eget enim. Quisque scelerisque dolor et arcu mattis, vitae gravida magna congue. Fusce ultrices, tortor a tristique laoreet, felis felis imperdiet dui, eget rutrum nisi ipsum vitae mi. Aenean fermentum, nisl quis eleifend vehicula, ipsum dolor aliquam orci, eu dapibus enim odio eget nunc. Nam est ipsum, feugiat sed elit sit amet, egestas dictum ante. Phasellus vestibulum sollicitudin semper. Praesent hendrerit vel tellus eget pretium. Donec varius suscipit lectus, et consequat erat accumsan ac. Fusce pharetra, eros quis rhoncus interdum, mi risus congue leo, in pretium nulla turpis non ex. Donec ullamcorper ipsum non enim venenatis ultricies at nec nunc.</p>
-
-					<p>Integer facilisis dictum sodales. Sed nec est non velit dignissim vestibulum et at orci. Nulla tempus dignissim accumsan. Donec tempus pulvinar molestie. Etiam et sagittis lectus. Donec metus quam, auctor sed nisl et, consectetur feugiat tellus. Nam et tortor dapibus, ultricies lorem in, facilisis nibh. Ut blandit lacus enim, sed tincidunt lectus egestas eu. Suspendisse potenti.</p>
-					
-					<p>Nam imperdiet semper lacus, eu blandit dolor tincidunt at. Praesent non mauris luctus, congue dolor quis, accumsan urna. Suspendisse potenti. Nulla eu nulla pulvinar justo semper porta. Nunc aliquam in ante id elementum. Pellentesque viverra ut lectus at rhoncus. Curabitur in massa purus. Vivamus a mattis turpis, at maximus sem. Aliquam ultricies vitae felis ut mollis. Phasellus convallis dui justo, nec viverra purus consequat ut.</p>
+					<h5>Teknik Membuat Flowchart</h5>
+					<p>Sebelum membuat flowchart langkah pertama yang harus kamu lakukan ialah melakukan langkah-langkah satu persatu penyelesaian permasalahan akan dijadikan flowchart. Misalkan kita akan membuat flowchart dengan permasalahan menentukan bilangan positif, negatif, dan 0. Berikut langkah-langkah untuk menyelesaikan permasalah tersebut.</p>
+					<ol>
+						<li>Mulai</li>
+						<li>Persiapkan bilangan</li>	
+						<li>Masukkan bilangan</li>
+						<li>Jika bilangan lebih dari 0, maka tampilkan "Bilangan Positif" lalu selesai. Jika tidak, maka lanjutkan ke langkah selanjutnya</li>
+						<li>Jika bilangan lebih dari 0, maka tampilkan "Bilangan Negatif" lalu selesai. Jika tidak, maka lanjutkan ke langkah selanjutnya</li>
+						<li>Jika bilangan sama dengan 0, maka tampilkan "Bilangan Nol" lalu selesai. Jika tidak, maka lanjutkan ke langkah selanjutnya</li>
+						<li>Selesai</li>
+					</ol>
+					<p>Langkah berikutnya yakni menganalisis setiap langkah dan menginterpretasikannya kedalam simbol flowchart yang sesuai. Mari kita analisis dan interpretasikan langkah-langkah pada permasalahan sebelumnya ke dalam simbol flowchart. </p>
+					<ol>
+						<li>Langkah pertama dapat kita interpretasikan ke dalam simbol terminator karena terminator digunakan untuk mengawali atau mengakhiri program. Maka hasilnya akan seperti dibawah ini.
+							<br><img src="../images/simbol/langkah-1.png" alt="">
+						</li><br>
+						<li>Langkah kedua simbol flowchart yang sesuai dengan langkah tersebut ialah simbol preparation karena bilangan ini menjadi wadah penyimpan yang akan digunakan untuk menyimpan angka tersebut. Kita tentukan bilangan tersebut berbentuk bilangan bulat maka hasilnya akan seperti berikut.
+							<br><img src="../images/simbol/langkah-2.png" alt="">
+						</li><br>
+						<li>
+							Selanjutnya simbol flowchart yang sesuai dengan langkah ketiga ialah simbol input karena kita harus menginputkan atau memasukan sebuah bilangan. Maka hasilnya akan seperti ini
+							<br><img src="../images/simbol/langkah-3.png" alt="">
+						</li><br>
+						<li>
+							Berikutnya pada langkah ke 4 ini terdapat dua simbol yakni simbol decision dan simbol output. Simbol decision untuk menentukan kondisi apakah bilangan lebih dari nol. Sedangkan simbol output digunakan untuk menampilkan teks berupa "Bilangan Positif". Hasilnya akan seperti berikut.
+							<br><img src="../images/simbol/langkah-4.png" alt="">
+						</li><br>
+						<li>
+							Pada langkah ke 5 ini sama seperti langkah ke 4 terdapat dua simbol yakni simbol decision dan simbol output. Hasilnya akan seperti berikut.
+							<br><img src="../images/simbol/langkah-5.png" alt="">
+						</li><br>
+						<li>
+							Pada langkah ke 6 ini sama seperti langkah ke 4 dan 5 maka hasilnya akan seperti berikut.
+							<br><img src="../images/simbol/langkah-6.png" alt="">
+						</li><br>
+						<li>
+							Dan langkah yang terakhir kita menggunakan simbol terminator yang mana untuk mengakhiri program.
+							<br><img src="../images/simbol/langkah-7.png" alt="">
+						</li><br>
+					</ol>
+					<p>Setelah menganalisis setiap langkah dan menginterpretasikannya kedalam simbol flowchart yang sesuai, selanjutnya susun simbol-simbol tersebut dan beri alur flowchart menggunakan panah sesuai alur pada langkah-langkah yang kita buat. Maka hasil flowchart dari permasalahan tersebut akan jadi seperti ini.</p>
+					<center><img src="../images/simbol/result-flowchart.png" width="30%" height="auto" alt=""></center>
 					<button class="btn btn-course" id="previous" data-prev="3">Sebelumnya</button>
 					<button class="btn btn-course f-right" id="next" data-next="5" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
 				</div>

@@ -26,7 +26,7 @@
 <html>
 
 <head>
-	<title>Course 1</title>
+	<title>Simbol dan Notasi Flowchart</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -316,13 +316,14 @@
 															<div class="get-item">
 																<span><i class="bi bi-diamond-fill"></i> +30
 																	&nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +300</span>
+																<span><i class="bi bi-star-fill"></i> +300 &nbsp;&nbsp;</span>
+                                                                <span<i class="bi bi-award-fill"></i> 1</span>
 															</div>
 														</div>
-														<div class="user-footprint" id="userFootprintC5"
-															data-course="5">
-															<img class="user-img-footprint" id='userImgFootprintC5'>
-															<span class="user-total" id="totalUserC5"></span>
+														<div class="user-footprint" id="userFootprintC6"
+															data-course="6">
+															<img class="user-img-footprint" id='userImgFootprintC6'>
+															<span class="user-total" id="totalUserC6"></span>
 														</div>
 													</div>
 												</li>
@@ -488,6 +489,11 @@
 									<td><img src="../images/simbol/manual-input.png" alt=""></td>
 									<td>Manual Input Symbol</td>
 									<td>Digunakan untuk menginputkan data secara manual dengan keyboard.</td>
+								</tr>
+								<tr>
+									<td><img src="../images/simbol/preparation.png" alt=""></td>
+									<td>Preparation</td>
+									<td>Untuk mempersiapkan penyimpanan yang akan digunakan sebagai tempat pengolahan di dalam storage</td>
 								</tr>
 							</tbody>
 						</table>
