@@ -91,11 +91,17 @@ $('.user-footprint').click(function(){
 });
 
 $('#next').click(function(){
+	var idUser = $(this).data("user");
 	var nextCourse = $(this).data("next");
 	var currCourse = $(this).data("curr");
 	var username = $(this).data("username");
 	var reward = $(this).data("reward");
+	var desc = "Kamu telah menyelesaikan materi " + $(this).data("materi");
+	var artikel = $(this).data('artikel');
 	getRewards(nextCourse,currCourse,username, reward);
+	if(artikel!=0){
+		updateHistory(idUser,2,100,desc);
+	}
 });
 
 function getRewards(nextCourse, currCourse, username, reward){
@@ -543,3 +549,56 @@ $('.likes').click(function(){
 	});
 	
 });
+
+var rankPage = 1;
+function getRanks(loadMore,btnRanks){
+	var offset = 5 * (rankPage-1);
+	if(btnRanks){
+		rankPage = 1;
+	}
+	$.ajax({
+		url: "./course_trans/get_ranks.php",
+		type: "POST",
+		data: {
+			offset: offset,
+			rankPage: rankPage
+		},
+		cache: false,
+		success: function(dataResult){
+			var dataResult = JSON.parse(dataResult);
+			console.log(dataResult);
+			if(!loadMore){
+				$('.userList').remove();
+			}
+			for(i=0; i< dataResult.arr.length; i++){
+					$('#tableRanks').append("<tr class='userList'><th scope='row'>"+(i+1+offset)+"</th><td>"+dataResult.arr[i].name+"</td><td>"+dataResult.arr[i].point+"</td><td>"+dataResult.arr[i].xp+"</td></tr>");
+			}
+			rankPage++;
+			if(dataResult.max==1){
+				$('#loadRanksMore').css("display","none");
+			}
+		}
+	});
+};
+$('#closeRanks').click(function(){
+	rankPage = 1;
+	$('#loadRanksMore').css("display","inline-block");
+});
+
+function updateHistory(idUser,type,earns,desc){
+	$.ajax({
+		url: "./course_trans/update_history.php",
+		type: "POST",
+		data: {
+			idUser: idUser,
+			type: type,
+			earns: earns,
+			desc: desc
+		},
+		cache: false,
+		success: function(dataResult){
+			var dataResult = JSON.parse(dataResult);
+			console.log(dataResult);
+		}
+	});
+}

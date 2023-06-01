@@ -1,47 +1,3 @@
-var page = 1;
-$('#sign-out').click(function(){
-	window.location.href = "./logout.php";
-});
-
-$('#loadRanksMore').click(function(){
-	console.log("kskd");
-	console.log(page);
-	page = page+1;
-});
-
-function likeBtn(id){
-	var userId = $(id).data('user');
-	var liked = $(id).data('liked');
-	var id = $(id).data('id');
-	var likes = parseInt($('#likeAmount'+id).text());
-	console.log(userId);
-	$.ajax({
-		url: "./user_trans/like_post.php",
-		type: "POST",
-		data: {
-			userId: userId,
-			postId: id,
-			mode: liked,	
-		},
-		cache: false,
-		success: function(dataResult){
-			var dataResult = JSON.parse(dataResult);
-			if(dataResult.statusCode==200){
-				if(liked==0){
-					likes++;
-					$('#like'+id).css('color','#f00');
-					$('#likeAmount'+id).text(likes);
-					$('#like'+id).data('liked','1');
-				}else{
-					likes--;
-					$('#like'+id).css('color','#adadad');
-					$('#likeAmount'+id).text(likes);
-					$('#like'+id).data('liked','0');
-				}
-			}
-		}
-	});
-}
 
 function onInput(ini){
 	var id = $(ini).data('id');
@@ -92,7 +48,7 @@ function sendComment(id){
 	if(comment!=''){
 		comments++;
 		$.ajax({
-			url: "./user_trans/comment_post.php",
+			url: "./backend/comment_post.php",
 			type: "POST",
 			data: {
 				userId: userId,
@@ -113,28 +69,3 @@ function sendComment(id){
 		});
 	}
 }
-
-var rankPage = 2;
-function loadMore(){
-	var offset = 5 * (rankPage-1);
-	$.ajax({
-		url: "./user_trans/get_ranks.php",
-		type: "POST",
-		data: {
-			offset: offset,
-			rankPage: rankPage
-		},
-		cache: false,
-		success: function(dataResult){
-			var dataResult = JSON.parse(dataResult);
-			console.log(dataResult);
-			for(i=0; i< dataResult.arr.length; i++){
-				$('#tableRanks').append("<tr class='userList'><th scope='row'>"+(i+offset+1)+"</th><td>"+dataResult.arr[i].name+"</td><td>"+dataResult.arr[i].point+"</td><td>"+dataResult.arr[i].xp+"</td></tr>");
-			}
-			rankPage++;
-			if(dataResult.max==1){
-				$('#loadRanksMore').css("display","none");
-			}
-		}
-	});
-};

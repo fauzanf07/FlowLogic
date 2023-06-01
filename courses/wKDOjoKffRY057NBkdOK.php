@@ -5,6 +5,7 @@
 		header("Location: http://localhost/skripsi/");
 	}else{
 		$username = $_SESSION['username'];
+		$idUser= $_SESSION['user_id'];
 		$query = "SELECT * FROM tb_user WHERE username='$username'";
 		$hasil = mysqli_query($con, $query);
 		$r = mysqli_fetch_assoc($hasil);
@@ -543,7 +544,7 @@
 					</ol>
 					<button class="btn btn-course" id="previous" data-prev="1">Sebelumnya</button>
 					<button class="btn btn-course f-right" id="next" data-next="3" data-curr="<?php echo $currCourse ?>"
-						data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
+						data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Simbol dan Notasi Flowchart" data-artikel="1">Berikutnya</button>
 				</div>
 			</div>
 		</div>

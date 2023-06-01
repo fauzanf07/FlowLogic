@@ -5,6 +5,7 @@
 	}
 	include("../db.php");
 	$username = $_GET['user'];
+	
 	$sql = "SELECT a.*,b.curr_course FROM tb_user as a LEFT JOIN tb_courses as b ON a.id = b.id_user WHERE username='$username'";
 	$query = mysqli_query($con,$sql);
 	$res = mysqli_fetch_assoc($query);
@@ -12,6 +13,14 @@
 	$photoProfile = $res['photo_profile'];
 	$name = $res['name'];
 	$currCourse = $res['curr_course'];
+	$points = $res['point'];
+	$badges = $res['badges'];
+
+	$sql = "SELECT res.* FROM (SELECT a.*, @row_number := @row_number + 1 AS row_num FROM (SELECT @row_number := 0) AS r, tb_user AS a WHERE a.admin='0' ORDER BY point DESC, xp DESC) AS res WHERE res.username='$username'";
+	$query = mysqli_query($con,$sql);
+	$res = mysqli_fetch_assoc($query);
+	$rank = $res['row_num'];
+
 	$progress = intval(($currCourse/5)*100);
 	$progressBg = "";
 	if($progress<=30){
@@ -93,11 +102,11 @@
 							$id_user = $r['id'];
 						?>
 						<span class="info-item"><i class="bi bi-person-fill"></i>&nbsp;&nbsp; Level
-							<?php echo $r['level']; ?> - Explorer</span>
-						<span class="info-item"><i class="bi bi-trophy-fill"></i>&nbsp;&nbsp; 10th</span>
+							<?php echo $r['level']; ?> </span>
+						<span class="info-item"><i class="bi bi-trophy-fill"></i>&nbsp;&nbsp; <?php echo $rank ?> Rank</span>
 						<span class="info-item"><i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;
 							<?php echo $r['point']; ?> Point(s)</span>
-						<span class="info-item"><i class="bi bi-award-fill"></i>&nbsp;&nbsp; 3 Badges</span>
+						<span class="info-item"><i class="bi bi-award-fill"></i>&nbsp;&nbsp; <?php echo $badges ?> Badge(s)</span>
 						<span class="info-item"><i class="bi bi-star-fill"></i>&nbsp;&nbsp; <?php echo $r['xp']; ?>
 							XP</span>
 					</div>
@@ -249,119 +258,89 @@
 							<div class="card card-progress">
 								<h5 class="card-header">Activity Histories</h5>
 								<div class="card-body">
-									<div class="row-custom">
-										<div class="coloumn-1"><i class="bi bi-arrow-up-circle-fill"></i>&nbsp; Level Up
-										</div>
-										<div class="coloumn-2">Level up to Level 3 and have become an Explorer</div>
-									</div>
-									<div class="row-custom">
-										<div class="coloumn-1"><i class="bi bi-star-fill"></i>&nbsp; +500 XP</div>
-										<div class="coloumn-2">You have finished basic algorithm material</div>
-									</div>
-									<div class="row-custom">
-										<div class="coloumn-1"><i class="bi bi-award-fill"></i></i>&nbsp; New Badges
-										</div>
-										<div class="coloumn-2">You have earned Digital Badge System</div>
-									</div>
+									<?php
+										$sql = "SELECT * FROM tb_history WHERE id_user = '$user_id'";
+										$result = mysqli_query($con, $sql);
+										while($r_hist = mysqli_fetch_assoc($result)){
+											if($r_hist['type'] == 1){
+												echo '
+													<div class="row-custom">
+														<div class="coloumn-1"><i class="bi bi-arrow-up-circle-fill"></i>&nbsp; Level Up
+														</div>
+														<div class="coloumn-2">'.$r_hist['description'].'</div>
+													</div>
+												';
+											}else if($r_hist['type'] == 2){
+												echo '
+													<div class="row-custom">
+														<div class="coloumn-1"><i class="bi bi-star-fill"></i>&nbsp; +'.$r_hist['earns'].' XP</div>
+														<div class="coloumn-2">'.$r_hist['description'].'</div>
+													</div>
+												';
+											}else if($r_hist['type'] == 3){
+												echo '
+													<div class="row-custom">
+														<div class="coloumn-1"><i class="bi bi-award-fill"></i></i>&nbsp; New Badges
+														</div>
+														<div class="coloumn-2">'.$r_hist['description'].'</div>
+													</div>
+												';
+											}
+										}
+
+									?>
 								</div>
 							</div>
 							<div class="card card-progress">
 								<h5 class="card-header">Points Histories</h5>
 								<div class="card-body">
-									<span>Your current points : <b>500 Pts</b></span>
-									<div class="row-custom">
-										<div class="coloumn-1"><i class="bi bi-diamond-fill"></i>&nbsp; +500 Pts</div>
-										<div class="coloumn-2">You have finished Assignment 1</div>
-									</div>
+									<span>Your current points : <b><?php echo $points; ?> Pts</b></span>
+									<?php
+										$sql = "SELECT * FROM tb_history WHERE id_user = '$user_id'";
+										$result = mysqli_query($con, $sql);
+										while($r_hist = mysqli_fetch_assoc($result)){
+											if($r_hist['type'] == 4){
+												echo '
+												<div class="row-custom">
+													<div class="coloumn-1"><i class="bi bi-diamond-fill"></i>&nbsp; +'.$r_hist['earns'].' Pts</div>
+													<div class="coloumn-2">'.$r_hist['description'].'</div>
+												</div>
+												';
+											}
+										}
+									?>
 								</div>
 							</div>
 						</div>
 						<div class="tab-pane fade" id="nav-badges" role="tabpanel" aria-labelledby="nav-badges-tab"
 							tabindex="0">
-							<div class="card card-badges" style="width: 18rem;">
-								<img src="../images/badges/penguasa-alur.png" class="card-img-top" alt="...">
-								<div class="card-body">
-									<center>
-										<h5 class="card-title">PENGUASA ALUR</h5>
-									</center>
-									<center>
-										<p class="card-text">Diberikan kepada peserta yang mampu menguasai flowchart dengan baik dan menerapkan prinsip alur logis.</p>
-									</center><br />
-									<center>
-										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
-									</center>
-								</div>
-							</div>
-							<div class="card card-badges" style="width: 18rem;">
-								<img src="../images/badges/ahli-prosedur.png" class="card-img-top" alt="...">
-								<div class="card-body">
-									<center>
-										<h5 class="card-title">AHLI PROSEDUR</h5>
-									</center>
-									<center>
-										<p class="card-text">Diberikan kepada peserta yang terampil dalam merancang dan mengimplementasikan prosedur yang efektif dan efisien.</p>
-									</center><br />
-									<center>
-										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
-									</center>
-								</div>
-							</div>
-							<div class="card card-badges" style="width: 18rem;">
-								<img src="../images/badges/analis-logika.png" class="card-img-top" alt="...">
-								<div class="card-body">
-									<center>
-										<h5 class="card-title">ANALIS LOGIKA</h5>
-									</center>
-									<center>
-										<p class="card-text">Diberikan kepada peserta yang terampil dalam menganalisis masalah dan merancang solusi menggunakan flowchart dan pseudocode.</p>
-									</center><br />
-									<center>
-										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
-									</center>
-								</div>
-							</div>
-							<div class="card card-badges" style="width: 18rem;">
-								<img src="../images/badges/pakar-fungsi.png" class="card-img-top" alt="...">
-								<div class="card-body">
-									<center>
-										<h5 class="card-title">PAKAR FUNGSI</h5>
-									</center>
-									<center>
-										<p class="card-text">Diberikan kepada peserta yang mahir dalam menggunakan fungsi dan mampu mengoptimalkan penggunaannya dalam pemrograman.</p>
-									</center><br />
-									<center>
-										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
-									</center>
-								</div>
-							</div>
-							<div class="card card-badges" style="width: 18rem;">
-								<img src="../images/badges/penakluk-kode.png" class="card-img-top" alt="...">
-								<div class="card-body">
-									<center>
-										<h5 class="card-title">PENAKLUK KODE</h5>
-									</center>
-									<center>
-										<p class="card-text"> Diberikan kepada peserta yang mampu menguasai dan mengatasi tantangan-tantangan dalam pemrograman.</p>
-									</center><br />
-									<center>
-										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
-									</center>
-								</div>
-							</div>
-							<div class="card card-badges" style="width: 18rem;">
-								<img src="../images/badges/aktivis-unggul.png" class="card-img-top" alt="...">
-								<div class="card-body">
-									<center>
-										<h5 class="card-title">AKTIVIS UNGGUL</h5>
-									</center>
-									<center>
-										<p class="card-text">Diberikan kepada peserta yang aktif berbagi pengetahuan, bertanya, dan memberi komentar dalam proses pembelajaran..</p>
-									</center><br />
-									<center>
-										<p class="card-text">Earned: 14 Feb, 2022 02:30:00</p>
-									</center>
-								</div>
-							</div>
+							<?php
+								$sql = "SELECT * FROM tb_users_badge AS a JOIN badges_name AS b ON a.id_badges = b.id WHERE id_user = '$user_id'";
+								$result = mysqli_query($con, $sql);
+								while($r_badges = mysqli_fetch_assoc($result)){
+									$dateString = $r_badges['earned_at'];
+									$dateTime = strtotime($dateString);
+									$earned_at =  date('d M, Y H:i:s', $dateTime);
+
+									echo '
+										<div class="card card-badges" style="width: 18rem;">
+											<img src="../images/badges/'.$r_badges['filename'].'" class="card-img-top" alt="...">
+											<div class="card-body">
+												<center>
+													<h5 class="card-title">'.strtoupper($r_badges['name']).'</h5>
+												</center>
+												<center>
+													<p class="card-text">'.$r_badges['description'].'</p>
+												</center><br />
+												<center>
+													<p class="card-text">Earned: '.$earned_at.'</p>
+												</center>
+											</div>
+										</div>
+									';
+								}
+							?>
+							
 						</div>
 					</div>
 				</div>

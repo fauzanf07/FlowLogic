@@ -143,61 +143,29 @@
 					      <th scope="col">#</th>
 					      <th scope="col">Name</th>
 					      <th scope="col">Points</th>
+						  <th scope="col">Xp</th>
 					    </tr>
 					  </thead>
-					  <tbody>
-					    <tr>
-					      <th scope="row">1</th>
-					      <td>Ahmad Wahyudin Suryono</td>
-					      <td>2000</td>
-					    <tr>
-					      <th scope="row">2</th>
-					      <td>Ahmad Wahyudin Suryono</td>
-					      <td>2000</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">3</th>
-					      <td>Ahmad Wahyudin Suryono</td>
-					      <td>2000</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">4</th>
-					      <td>Ahmad Wahyudin Suryono</td>
-					      <td>2000</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">5</th>
-					      <td>Ahmad Wahyudin Suryono</td>
-					      <td>2000</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">6</th>
-					      <td>Ahmad Wahyudin Suryono</td>
-					      <td>2000</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">7</th>
-					      <td>Ahmad Wahyudin Suryono</td>
-					      <td>2000</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">8</th>
-					      <td>Ahmad Wahyudin Suryono</td>
-					      <td>2000</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">9</th>
-					      <td>Ahmad Wahyudin Suryono</td>
-					      <td>2000</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">10</th>
-					      <td>Ahmad Wahyudin Suryono</td>
-					      <td>2000</td>
-					    </tr>
+					  <tbody id="tableRanks">
+						<?php
+							$sql = "SELECT * FROM tb_user WHERE admin='0' ORDER BY point DESC, xp DESC LIMIT 0,5";
+							$result = mysqli_query($con, $sql);
+							$i=1;
+							while($row = mysqli_fetch_assoc($result)){
+								echo '
+									<tr>
+										<th scope="row">'.$i.'</th>
+										<td>'.$row['name'].'</td>
+										<td>'.$row['point'].'</td>
+										<td>'.$row['xp'].'</td>
+									</tr>
+								';
+								$i++;
+							}
+						?>
 					  </tbody>
 					</table>
-					<button type="button" class="btn btn-outline-secondary" id="loadRanksMore">Load More</button>
+					<button type="button" class="btn btn-outline-secondary" id="loadRanksMore" onclick="loadMore();">Load More</button>
 				</div>
 
 			</div>

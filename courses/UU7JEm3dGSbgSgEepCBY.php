@@ -5,6 +5,7 @@
 		header("Location: http://localhost/skripsi/");
 	}else{
 		$username = $_SESSION['username'];
+        $idUser= $_SESSION['user_id'];
 		$query = "SELECT * FROM tb_user WHERE username='$username'";
 		$hasil = mysqli_query($con, $query);
 		$r = mysqli_fetch_assoc($hasil);
@@ -51,7 +52,7 @@
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel"><i class="bi bi-trophy-fill"></i>&nbsp;&nbsp;Top Ranks
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="closeRanks"></button>
         </div>
         <div class="offcanvas-body">
             <div class="ranks">
@@ -61,61 +62,14 @@
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
                             <th scope="col">Points</th>
+                            <th scope="col">XP</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Ahmad Wahyudin Suryono</td>
-                            <td>2000</td>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Ahmad Wahyudin Suryono</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Ahmad Wahyudin Suryono</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Ahmad Wahyudin Suryono</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Ahmad Wahyudin Suryono</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td>Ahmad Wahyudin Suryono</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">7</th>
-                            <td>Ahmad Wahyudin Suryono</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">8</th>
-                            <td>Ahmad Wahyudin Suryono</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">9</th>
-                            <td>Ahmad Wahyudin Suryono</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">10</th>
-                            <td>Ahmad Wahyudin Suryono</td>
-                            <td>2000</td>
-                        </tr>
+                    <tbody id="tableRanks">
+                        
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore">Load More</button>
+                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore" onclick="getRanks(true, false);">Load More</button>
             </div>
         </div>
     </div>
@@ -157,7 +111,7 @@
                         </ul>
                     </div>
                     <button class="btn btn-light btn-nav" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks" onclick="getRanks(false, true);"><i
                             class="bi bi-trophy-fill"></i></button>
                 </ul>
             </div>
@@ -441,7 +395,11 @@
                         $sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='1' ORDER BY created_at DESC";
                         $res = mysqli_query($con, $sql);
                         $count = mysqli_num_rows($res);
-                        if($count== 0){
+                        if($count!=0){
+                            $row = mysqli_fetch_assoc($res);
+                            $status = $row['status'];
+                        }
+                        if($count== 0 || $status == 2){
                     ?>
                     <div class="share-wrapper">
                         <textarea id="shareBox"></textarea>
@@ -450,7 +408,7 @@
                                     class="bi bi-send-fill"></i></button></center>
                     </div>
                     <?php
-                        }else{
+                        }if($count!=0){
                     ?>
                     <div class="your-post">
                         <?php
@@ -554,7 +512,7 @@
                         ?>
                     <button class="btn btn-course" id="previous" data-prev="5">Sebelumnya</button>
                     <button class="btn btn-course f-right" id="next" data-next="5" data-curr="<?php echo $currCourse ?>"
-                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
+                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Challenge 1" data-artikel="0">Berikutnya</button>
                 </div>
             </div>
         </div>

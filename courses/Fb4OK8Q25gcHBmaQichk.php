@@ -5,6 +5,7 @@
 		header("Location: http://localhost/skripsi/");
 	}else{
 		$username = $_SESSION['username'];
+		$idUser= $_SESSION['user_id'];
 		$query = "SELECT * FROM tb_user WHERE username='$username'";
 		$hasil = mysqli_query($con, $query);
 		$r = mysqli_fetch_assoc($hasil);
@@ -418,7 +419,7 @@
 					<p>Setelah menganalisis setiap langkah dan menginterpretasikannya kedalam simbol flowchart yang sesuai, selanjutnya susun simbol-simbol tersebut dan beri alur flowchart menggunakan panah sesuai alur pada langkah-langkah yang kita buat. Maka hasil flowchart dari permasalahan tersebut akan jadi seperti ini.</p>
 					<center><img src="../images/simbol/result-flowchart.png" width="30%" height="auto" alt=""></center>
 					<button class="btn btn-course" id="previous" data-prev="3">Sebelumnya</button>
-					<button class="btn btn-course f-right" id="next" data-next="5" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
+					<button class="btn btn-course f-right" id="next" data-next="5" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Teknik Membuat Flowchart" data-artikel="1">Berikutnya</button>
 				</div>
 			</div>
 		</div>

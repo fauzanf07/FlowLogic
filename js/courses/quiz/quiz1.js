@@ -117,6 +117,9 @@ function result(jml, user){
         $('.grade').css('border','2px solid red');
     }
 
+    updateHistory(user,2,xp,"Kamu telah menyelesaikan Quiz Singkat 1");
+    updateHistory(user,4,points,"Kamu telah menyelesaikan Quiz Singkat 1");
+
     $.ajax({
         url: "./course_trans/insert_quiz.php",
         type: "POST",

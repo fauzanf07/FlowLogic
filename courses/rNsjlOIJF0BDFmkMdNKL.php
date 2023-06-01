@@ -421,7 +421,7 @@
 					<p>Setelah memahami contoh flowchart diatas, maka disimpulkan bahwa flowchart tersebut menjelaskan proses menampilkan bilangan ganjil dari bilangan 1 - 10 dalam komputer. Jika kita sudah memahami flowchart tersebut maka langkah selanjutnya membuat program tersebut dengan bahasa pemrograman yang kita butuhkan atau inginkan.</p>
 					<div style="clear:both;"></div>
 					<button class="btn btn-course" id="previous" data-prev="2">Sebelumnya</button>
-					<button class="btn btn-course f-right" id="next" data-next="4" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
+					<button class="btn btn-course f-right" id="next" data-next="4" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Pemahaman Alur Flowchart" data-artikel="1">Berikutnya</button>
 				</div>
 			</div>
 		</div>

@@ -4,6 +4,9 @@
 	if(!isset($_SESSION['name'])){
 		header("Location: http://localhost/skripsi/");
 	}
+	$user_id = $_SESSION['user_id'];
+	$username = $_SESSION['username'];
+	$photoProfile = $_SESSION['photo_profile'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,9 +21,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
-	<link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.0.17/css/froala_style.min.css" integrity="sha512-7LA92qqMxQg1dy0GXIaceecW4zpFq/pu2inmPOd/IaCjDnjzDP1luaG9NTYU8BeaUmBw73jHCGRJjQ3xDpdDlg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/plugins/image.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet"
+		type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.0.17/css/froala_style.min.css"
+		integrity="sha512-7LA92qqMxQg1dy0GXIaceecW4zpFq/pu2inmPOd/IaCjDnjzDP1luaG9NTYU8BeaUmBw73jHCGRJjQ3xDpdDlg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/plugins/image.min.css" rel="stylesheet"
+		type="text/css" />
 </head>
 
 <body>
@@ -38,6 +45,9 @@
 				</div>
 				<div class="section" id="postingan-menu">
 					<i class="bi bi-file-earmark-richtext-fill"></i> &nbsp;&nbsp; Postingan Siswa</span>
+				</div>
+				<div class="section" id="challenge-menu">
+					<i class="bi bi-clipboard-check"></i> &nbsp;&nbsp; Challenges Siswa</span>
 				</div>
 				<br><br>
 				<button class="nav-link btn" id="sign-out" onclick="logout()">Sign out <i
@@ -89,11 +99,14 @@
 					</div>
 				</div>
 				<div class="content-2">
-					<h3 id="post-title"><i class="bi bi-file-earmark-richtext-fill"></i> &nbsp;&nbsp; Postingan Siswa</h3>
+					<h3 id="post-title"><i class="bi bi-file-earmark-richtext-fill"></i> &nbsp;&nbsp; Postingan Siswa
+					</h3>
 					<?php
-						$sql = "SELECT a.*, b.name, b.username, b.photo_profile FROM tb_post AS a JOIN tb_user AS b ON b.id = a.id_user ORDER BY a.status,created_at DESC";
+						$sql = "SELECT a.*, b.name, b.username, b.photo_profile FROM tb_post AS a JOIN tb_user AS b ON b.id = a.id_user WHERE a.challenge ='0' OR (a.challenge ='1' AND a.status='1') ORDER BY a.status,created_at DESC";
 						$result = mysqli_query($con, $sql);
 						while($r_post = mysqli_fetch_assoc($result)){
+							$id = $r_post['id_user'];
+							$id_post = $r_post['id'];
 							echo '
 								<div class="post">
 									<div class="top">
@@ -125,11 +138,108 @@
 									</div>
 									<div class="content-post fr-view">
 										'.$r_post['content'].'
-									</div>
+									</div>';
+									mysqli_query($con, "CALL like_comment('$user_id','$id_post',@liked,@likes,@comments)");
+									$query_lico = "SELECT @liked,@likes,@comments";
+									$hasil_lico = mysqli_query($con, $query_lico);
+									$r_lico = mysqli_fetch_assoc($hasil_lico);
+									echo '
+											<div class="lico-section">
+												<span id="comment'.$id_post.'" data-id="'.$id_post.'" data-show="0" class="lico-button comment-btn" onclick="commBtn(this);"><i class="bi bi-chat-square-dots-fill"></i></span><span class="amount" id="commAmount'.$id_post.'">'.$r_lico['@comments'].'</span>
+											</div>
+											<div class="clear"></div>
+											<div class="comment-section" id="comSect'.$id_post.'">
+												<h6>Komentar &middot; <span id="commentAmount'.$id_post.'">'.$r_lico['@comments'].'</span></h6>
+												<div id="comments'.$id_post.'">';
+			
+											$query_comments = "SELECT a.*, b.username, b.photo_profile FROM tb_comment_post AS a LEFT JOIN tb_user as b ON a.id_user = b.id WHERE a.id_post = '$id_post';";
+											$hasil_comments = mysqli_query($con, $query_comments);
+											while($r_comments = mysqli_fetch_array($hasil_comments)){
+												echo '
+													<div class="comment">
+														<div class="image-profile">
+															<img src="'.$r_comments['photo_profile'].'" class="avatar">
+														</div>
+														<div class="com-sect">
+															<b><span><a class="no-undr" href="./profile.php?user='.$r_comments['username'].'">'.$r_comments['username'].'</a></span></b><span>&nbsp;&nbsp;'.$r_comments['created_at'].'</span><br>
+															<p class="isi-comment">'.$r_comments['comment'].'</p>
+														</div>
+													</div>
+												';
+											}
+											echo'
+												</div>
+												<div class="comment-form">
+													<div class="input-comment">
+														<textarea class="form-control comment-control" placeholder="Tulis komentar di sini" id="commentBox'.$id_post.'" data-id="'.$id_post.'" oninput="onInput(this);"></textarea>
+													</div>
+													<div class="send-comment">
+														<div class="send" id="send'.$id_post.'" data-id="'.$id_post.'" data-username="'. $username.'" data-profile="'. $photoProfile .'" data-user="'. $user_id.'" onclick="sendComment(this);">
+															<i class="bi bi-send-fill"></i>
+														</div>
+													</div>
+													<div class="clear"></div>
+												</div>
+											</div>
 								</div>
 							';
 						}
 					?>
+				</div>
+				<div class="content-3">
+					<h3 id="chlg-title"><i class="bi bi-clipboard-check"></i> &nbsp;&nbsp; Challenges Siswa</h3>
+					<div class="user-list">
+						<table class="table table-striped" id="table-chall">
+							<thead>
+								<tr>
+									<th>Nama</th>
+									<th>Challenge</th>
+									<th>Created at</th>
+									<th>Status</th>
+									<th>Aksi</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php 
+								$sql = "SELECT a.*, b.name FROM tb_post AS a JOIN tb_user AS b ON a.id_user = b.id WHERE a.challenge != '0'" ;
+								$result = mysqli_query($con,$sql);
+				        		if (mysqli_num_rows($result) > 0) {
+									while($row = mysqli_fetch_array($result)) {
+									  	echo "
+									  		<tr>
+								        		<td>".$row["name"]."</td>
+								        		<td>".$row['challenge']."</td>
+											  	<td>".$row['created_at']."</td>
+												<td id='statusCol".$row['id']."'>";
+												if($row['status'] == 0){
+													echo '<span class="pending">Pending <i class="bi bi-clock"></i></span>';
+												}else if($row['status'] == 1){
+													echo '<span class="accepted">Diterima &#10003;</span>';
+												}else{
+													echo '<span class="rejected">Ditolak</span>';
+												}
+										echo "</td>
+								        		<td>
+														";
+														if($row['status']==0){
+															echo "
+																<button class='btn btn-success admin btn-action' data-id='".$row["id"]."' data-user='".$row["id_user"]."' data-status='1' data-challenge='".$row["challenge"]."' id='accepted".$row['id']."' onclick='usersChallenge(this);' style='width: 100px;'>Terima</button>&nbsp;&nbsp;
+																<button class='btn btn-danger admin btn-action' data-id='".$row["id"]."' data-user='".$row["id_user"]."'  data-status='2' data-challenge='".$row["challenge"]."' id='rejected".$row['id']."' onclick='usersChallenge(this);' style='width: 100px;'>Tolak</button>&nbsp;&nbsp;
+															";
+														}
+														echo "
+															<a class='btn admin btn-action' data-id='".$row["id"]."' href='./view-challenge.php?id=".$row['id']."' style='width: 100px; background-color:#6a00ff; color:#fff;'>Lihat</a>&nbsp;&nbsp;
+								        		</td>
+								        	</tr>
+									  	";
+										  
+									}
+								}
+				        	 ?>
+
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -142,7 +252,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
 	integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
 	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js">
+</script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>

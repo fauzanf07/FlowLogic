@@ -621,7 +621,7 @@
 						}
 					?>
 					<button class="btn btn-course" id="previous" data-prev="4">Sebelumnya</button>
-					<button class="btn btn-course f-right" id="next" data-next="6" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>">Berikutnya</button>
+					<button class="btn btn-course f-right" id="next" data-next="6" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Quiz Singkat 1" data-artikel="0">Berikutnya</button>
 				</div>
 			</div>
 		</div>
