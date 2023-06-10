@@ -56,59 +56,11 @@
 							<th scope="col">Points</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">1</th>
-							<td>Ahmad Wahyudin Suryono</td>
-							<td>2000</td>
-						<tr>
-							<th scope="row">2</th>
-							<td>Ahmad Wahyudin Suryono</td>
-							<td>2000</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Ahmad Wahyudin Suryono</td>
-							<td>2000</td>
-						</tr>
-						<tr>
-							<th scope="row">4</th>
-							<td>Ahmad Wahyudin Suryono</td>
-							<td>2000</td>
-						</tr>
-						<tr>
-							<th scope="row">5</th>
-							<td>Ahmad Wahyudin Suryono</td>
-							<td>2000</td>
-						</tr>
-						<tr>
-							<th scope="row">6</th>
-							<td>Ahmad Wahyudin Suryono</td>
-							<td>2000</td>
-						</tr>
-						<tr>
-							<th scope="row">7</th>
-							<td>Ahmad Wahyudin Suryono</td>
-							<td>2000</td>
-						</tr>
-						<tr>
-							<th scope="row">8</th>
-							<td>Ahmad Wahyudin Suryono</td>
-							<td>2000</td>
-						</tr>
-						<tr>
-							<th scope="row">9</th>
-							<td>Ahmad Wahyudin Suryono</td>
-							<td>2000</td>
-						</tr>
-						<tr>
-							<th scope="row">10</th>
-							<td>Ahmad Wahyudin Suryono</td>
-							<td>2000</td>
-						</tr>
+					<tbody id="tableRanks">
+						
 					</tbody>
 				</table>
-				<button type="button" class="btn btn-outline-secondary" id="loadRanksMore">Load More</button>
+				<button type="button" class="btn btn-outline-secondary" id="loadRanksMore" onclick="getRanks(true, false);">Load More</button>
 			</div>
 		</div>
 	</div>
@@ -131,15 +83,6 @@
 							<img src="<?php echo $_SESSION['photo_profile']; ?>" class="photo_profile">
 						</button>
 						<ul class="dropdown-menu">
-							<li><span class="dropdown-item"><i class="bi bi-diamond-fill"></i>&nbsp;&nbsp; 500
-									Points</span></li>
-							<li><span class="dropdown-item"><i class="bi bi-star-fill"></i>&nbsp;&nbsp; 1000 XP</span>
-							</li>
-							<li><span class="dropdown-item"><i class="bi bi-capslock-fill"></i>&nbsp;&nbsp; Level
-									3</span></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
 							<li><a class="dropdown-item" href="../user/home.php"><i
 										class="bi bi-house-fill"></i>&nbsp;&nbsp; Home</a></li>
 							<li><a class="dropdown-item"
@@ -150,7 +93,7 @@
 						</ul>
 					</div>
 					<button class="btn btn-light btn-nav" type="button" data-bs-toggle="offcanvas"
-						data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+						data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onclick="getRanks(false, true);"><i
 							class="bi bi-trophy-fill"></i></button>
 				</ul>
 			</div>
@@ -165,7 +108,7 @@
 						<div class="progress" style="height: 30px; margin-top: 10px;">
 							<div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar"
 								aria-label="Example with label"
-								style="width: <?php echo $progress . "%"; ?>; aria-valuenow=" 25" aria-valuemin="0"
+								style="width:  <?php echo $progress . "%"; ?>" aria-valuenow=" 25" aria-valuemin="0"
 								aria-valuemax="100"><?php echo $progress . "%"; ?></div>
 						</div>
 						<div class="element-game">
@@ -337,15 +280,37 @@
 										<button class="accordion-button collapsed" type="button"
 											data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
 											aria-expanded="false" aria-controls="flush-collapseTwo">
-											Lorem ipsum dolor sit amet
+											<b>Level 2: Pseudocode</b>
 										</button>
 									</h2>
 									<div id="flush-collapseTwo" class="accordion-collapse collapse"
 										aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-										<div class="accordion-body">Placeholder content for this accordion, which is
-											intended to demonstrate the <code>.accordion-flush</code> class. This is the
-											second item's accordion body. Let's imagine this being filled with some
-											actual content.</div>
+										<div class="accordion-body">
+											<ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>7) echo 'check'; ?>"><?php if($currCourse>7) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="7"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Pengenalan Pseudocode</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC7"
+                                                            data-course="7">
+                                                            <img class="user-img-footprint" id='userImgFootprintC7'>
+                                                            <span class="user-total" id="totalUserC7"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>  
+                                            </ul>
+										</div>
 									</div>
 								</div>
 								<div class="accordion-item">

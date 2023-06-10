@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Challenge: Studi Kasus</title>
+    <title>Pengenalan Pseudocode</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -260,7 +260,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item" id="current-li">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -300,7 +300,7 @@
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
                                         <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -315,7 +315,7 @@
                                                                 <span><i class="bi bi-star-fill"></i> +100</span>
                                                             </div>
                                                         </div>
-                                                        <div class="user-footprint" id="userFootprintC1"
+                                                        <div class="user-footprint" id="userFootprintC7"
                                                             data-course="7">
                                                             <img class="user-img-footprint" id='userImgFootprintC7'>
                                                             <span class="user-total" id="totalUserC7"></span>
@@ -327,15 +327,15 @@
                                     </div>
                                 </div>
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingFour">
+                                    <h2 class="accordion-header" id="flush-headingThree">
                                         <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
-                                            aria-expanded="false" aria-controls="flush-collapseFour">
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
                                             Lorem ipsum dolor sit amet
                                         </button>
                                     </h2>
-                                    <div id="flush-collapseFour" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">Placeholder content for this accordion, which is
                                             intended to demonstrate the <code>.accordion-flush</code> class. This is the
                                             third item's accordion body. Nothing more exciting happening here in terms
@@ -387,144 +387,32 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <h4>Challenge: Studi Kasus</h4>
-                    <p>Selamat Anda telah mencapai di akhir level ini!! Untuk menerapkan pengetahuan yang telah kamu
-                        dapat di level 1 ini, kami tantang anda untuk mengikuti challenge ini. Tentunya terdapat
-                        beberapa keuntungan jika anda mengikuti challenge ini yakni mendapatkan 30 points, 300 XP, dan 1
-                        Badge (Lencana). Ayo ikuti challenge ini! Semakin banyak points dan xp yang kamu dapat, semakin
-                        besar peluang anda memenangkan reward dari kami!</p>
-                    <b>
-                        <p>Ketentuan Challenge : </p>
-                    </b>
+                    <p>Selamat anda sudah mencapai di level 2! Di dalam level 2 ini anda akan mempelajari mengenai pseudocode yang mana pseudocode ini salah satu cara penyajian algoritma seperti flowchart namun pada pseudocode ini hampir mirip dengan bahasa pemrograman dibanding dengan Flowchart. Untuk informasi lebih lanjut mari kita simak berikut ini!</p>
+                    <h4>Pengenalan pseudocode?</h4><br>
+                    <center><img src="../images/pseudocode.jpg" width="60%" height="auto"></center><br>
+                    <p><b>Pseudocode</b> menggabungkan kata <b>"pseudo"</b> yang berarti tiruan atau imitasi, dan <b>"code"</b> yang merujuk pada kode yang terkait dengan instruksi yang ditulis dalam bahasa komputer (bahasa pemrograman). Dalam terjemahan sederhana, pseudocode adalah imitasi atau tiruan dari kode bahasa pemrograman. Dalam dasarnya, pseudocode adalah bahasa yang digunakan oleh para programmer untuk memikirkan masalah yang perlu dipecahkan tanpa harus memperhatikan sintaksis dari bahasa pemrograman tertentu. Tidak ada aturan tertentu dalam penulisan sintaksis dalam pseudocode. Oleh karena itu, pseudocode digunakan untuk menggambarkan logika urutan langkah dalam program tanpa memperhatikan bahasa pemrograman yang digunakan. Meskipun pseudocode tidak memiliki aturan penulisan sintaksis, pada level ini akan memberikan beberapa aturan penulisan sintaksis yang sederhana agar pembaca dapat lebih mudah mempelajari algoritma-algoritma yang ada dalam level ini.</p>
+                    <p>Begini, sekarang anda lihat bahasa pemrograman di bawah ini.</p><br>
+                    <center><img src="../images/contoh-algoritma.png" width="60%" height="auto"></center><br>
+                    <p>Apakah anda yakin bahwa semua orang bahkan orang awam akan mengerti mengenai bahasa pemrograman C diatas? Tentu saja tidak karena tidak semua orang memahami bahasa pemrograman C. Sekarang bandingkan dengan bahasa pseudocode dibawah ini.</p>
+                    <center><img src="../images/contoh-pseudocode.png" width="60%" height="auto"></center><br>
+                    <p>Apakah cara penyajian algoritma menentukan bilangan ganjil lebih mudah dimengerti melalui bahasa pemrograman atau pseudocode? Anda pasti merasakan bahwa cara penyajian pseudocode lebih mudah dimengerti dibandingkan dengan bahasa pemrograman karena pseudocode ini disajikan dengan bahasa sehari-hari. Umumnya, pseudocode ditulis dengan bahasa Inggris karena lebih mudah ketika mengkonversikannya ke bahasa pemrograman. Tapi juga tidak masalah jika Anda menggunakan bahasa Indonesia.</p>
+                    <br><h4>Apa fungsi pseudocode?</h4><br>
+                    <p>Seperti yang dijelaskan diatas bahwa pseudocode digunakan oleh para programmer untuk memikirkan masalah yang perlu dipecahkan tanpa harus memperhatikan sintaksis dari bahasa pemrograman tertentu. Namun terdapat beberapa fungsi pseudocode lagi, yakni sebagai berikut.</p>
                     <ol>
-                        <li>Cari atau temukan permasalahan di kehidupan sehari-hari.</li>
-                        <li>Buatlah langkah-langkah (algoritma) untuk menyelesaikan permasalahan tersebut.</li>
-                        <li>Setelah itu, buatlah flowchat dari algoritma tersebut.</li>
-                        <li>Share algoritma dan flowchart anda di box share your knowledge di bawah ini.</li>
-                        <li>Konten yang dibagikan harus memuat seluruh ketentuan dan tidak mengandung SARA dan
-                            pornografi.</li>
+                        <h5><li>Sebagai media dokumentasi</li></h5>
+                        <p>Dokumentasi berperan penting sebagai panduan untuk memastikan bahwa proses perancangan program sesuai dengan harapan. Dokumentasi merupakan elemen krusial dalam pembangunan proyek, karena akan dibutuhkan oleh para programmer untuk mengecek logika program jika terjadi error atau bug di masa yang akan datang.</p>
+                        <h5><li>Sebagai Titik Tengah Antara Flowchart dan Kode</li></h5>
+                        <p>Bagi pengembang yang baru memulai, seringkali mengalami kesulitan dalam mengubah alur diagram atau flowchart menjadi kode pemrograman. Namun, pseudocode hadir sebagai jembatan yang baik, karena membantu dalam melakukan transisi secara efektif dan efisien.</p>
+                        <h5><li>Sebagai Jembatan Komunikasi</li></h5>
+                        <p>Pseudocode berfungsi sebagai jembatan yang memungkinkan seorang programmer berkolaborasi dengan anggota tim dari berbagai divisi seperti mitra bisnis, manajer, desainer, dan lainnya. Dengan menggunakan pseudocode, programmer dapat dengan mudah menjelaskan bagaimana mekanisme kode bekerja, yang pada gilirannya meningkatkan efektivitas komunikasi.</p>
+                        <h5><li>Mempercepat Proses Penyelesaian</li></h5>
+                        <p>Tujuan utama penggunaan pseudocode adalah untuk mempercepat proses pembuatan sistem. Berbeda dengan diagram alur yang memiliki format dan struktur yang agak sulit dipahami secara langsung, pseudocode menggunakan struktur yang sederhana dan mudah dibaca. Ini juga membuatnya lebih mudah untuk dimodifikasi.</p>
+                        <p>Dengan pseudocode, proses konversi ke dalam bahasa pemrograman tidak memerlukan waktu yang lama, karena alur algoritma telah digambarkan dengan jelas.</p>
                     </ol>
-                    <?php
-                        $sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='1' ORDER BY created_at DESC";
-                        $res = mysqli_query($con, $sql);
-                        $count = mysqli_num_rows($res);
-                        if($count!=0){
-                            $row = mysqli_fetch_assoc($res);
-                            $status = $row['status'];
-                        }
-                        if($count== 0 || $status == 2){
-                    ?>
-                    <div class="share-wrapper">
-                        <textarea id="shareBox"></textarea>
-                        <center><button type="button" id="share" data-username="<?php echo $username; ?>"
-                                onclick="share(this);" class="btn btn-primary mt-4">SHARE YOUR KNOWLEDGE&nbsp; <i
-                                    class="bi bi-send-fill"></i></button></center>
-                    </div>
-                    <?php
-                        }if($count!=0){
-                    ?>
-                    <div class="your-post">
-                        <?php
-
-									$sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='1' ORDER BY created_at DESC";
-									$result = mysqli_query($con, $sql);
-									while($r_post = mysqli_fetch_assoc($result)){
-										$id_post = $r_post['id'];
-										echo '
-											<div class="post">
-												<div class="top">
-													<div class="top-photo">
-														<img src= '. $r['photo_profile'] .' class="avatar">
-													</div>
-													<div class="top-name">
-														<b><span><a class="no-undr" href="./profile.php?user='.$r['username'].'">'. $r['name'] .'</a></span></b><span>&nbsp;&nbsp;'. $r['username'] .'</span>
-														<div class="control">';
-														if($r_post['status']==0){
-															echo '
-																<span class="pending">Pending <i class="bi bi-clock"></i></span>
-															';
-														}else if($r_post['status']==1){
-															echo '
-																<span class="accepted">Diterima &#10003;</span>
-															';
-														}else{
-															echo '
-															<span class="rejected">Ditolak</span>
-															';
-														}
-														echo '
-														</div>
-														<br>
-														<span>'.$r_post['created_at'].'</span>
-													</div>
-												</div>
-												<div class="content-post fr-view">
-													'.$r_post['content'].'
-												</div>';
-										$curr_user_id = $_SESSION['user_id'];	
-										$curr_username = $_SESSION['username'];
-										$curr_photoProfile = $_SESSION['photo_profile'];
-										mysqli_query($con, "CALL like_comment('$curr_user_id','$id_post',@liked,@likes,@comments)");
-										$query_lico = "SELECT @liked,@likes,@comments";
-										$hasil_lico = mysqli_query($con, $query_lico);
-										$r_lico = mysqli_fetch_assoc($hasil_lico);
-										echo '
-												<div class="lico-section">
-												';
-												if($r_lico['@liked'] == 0){
-													echo '<span id="like'.$id_post.'" data-id="'.$id_post.'" data-user="'.$curr_user_id.'" data-liked="'.$r_lico['@liked'].'" class="lico-button like-btn" style="color:#adadad;" onclick="likeBtn(this);"><i class="bi bi-heart-fill"></i></span><span class="amount me-3 likes" data-id="'.$id_post.'" id="likeAmount'.$id_post.'">'.$r_lico['@likes'].'</span>';
-												}else{
-													echo '<span id="like'.$id_post.'" data-id="'.$id_post.'" data-user="'.$curr_user_id.'" data-liked="'.$r_lico['@liked'].'" class="lico-button like-btn" style="color:#f00;" onclick="likeBtn(this);"><i class="bi bi-heart-fill"></i></span><span class="amount me-3 likes" data-id="'.$id_post.'" id="likeAmount'.$id_post.'">'.$r_lico['@likes'].'</span>';
-												}
-												echo '
-													<span id="comment'.$id_post.'" data-id="'.$id_post.'" data-show="0" class="lico-button comment-btn" onclick="commBtn(this);"><i class="bi bi-chat-square-dots-fill"></i></span><span class="amount" id="commAmount'.$id_post.'">'.$r_lico['@comments'].'</span>
-												</div>
-												<div class="clear"></div>
-												<div class="comment-section" id="comSect'.$id_post.'">
-													<h6>Komentar &middot; <span id="commentAmount'.$id_post.'">'.$r_lico['@comments'].'</span></h6>
-													<div id="comments'.$id_post.'">';
-
-												$query_comments = "SELECT a.*, b.username, b.photo_profile FROM tb_comment_post AS a LEFT JOIN tb_user as b ON a.id_user = b.id WHERE a.id_post = '$id_post';";
-												$hasil_comments = mysqli_query($con, $query_comments);
-												while($r_comments = mysqli_fetch_array($hasil_comments)){
-													echo '
-														<div class="comment">
-															<div class="image-profile">
-																<img src="'.$r_comments['photo_profile'].'" class="avatar">
-															</div>
-															<div class="com-sect">
-																<b><span><a class="no-undr" href="./profile.php?user='.$r_comments['username'].'">'.$r_comments['username'].'</a></span></b><span>&nbsp;&nbsp;'.$r_comments['created_at'].'</span><br>
-																<p class="isi-comment">'.$r_comments['comment'].'</p>
-															</div>
-														</div>
-													';
-												}
-												echo'
-													</div>
-													<div class="comment-form">
-														<div class="input-comment">
-															<textarea class="form-control comment-control" placeholder="Tulis komentar di sini" id="commentBox'.$id_post.'" data-id="'.$id_post.'" oninput="onInput(this);"></textarea>
-														</div>
-														<div class="send-comment">
-															<div class="send" id="send'.$id_post.'" data-id="'.$id_post.'" data-username="'. $curr_username.'" data-profile="'. $curr_photoProfile .'" data-user="'. $curr_user_id.'" onclick="sendComment(this);">
-																<i class="bi bi-send-fill"></i>
-															</div>
-														</div>
-														<div class="clear"></div>
-													</div>
-												</div>
-											</div>
-										';
-									}
-								?>
-
-                    </div>
-
-                    <?php
-                        }
-                        ?>
+                    <p>Menerapkan pseudocode akan memberi banyak manfaat. Misalnya, Anda dapat mengurangi kesalahan ketika melakukan coding, karena hanya tinggal melihat alur yang telah dituangkan dalam pseudocode.</p>
+                    <p>Berkat pseudocode juga, proses coding akan menjadi lancar dan hasil akhir proyek website Anda pun akan menjadi bagus.</p>
                     <button class="btn btn-course" id="previous" data-prev="6">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="7" data-curr="<?php echo $currCourse ?>"
+                    <button class="btn btn-course f-right" id="next" data-next="5" data-curr="<?php echo $currCourse ?>"
                         data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Challenge 1" data-artikel="0">Berikutnya</button>
                 </div>
             </div>
@@ -564,6 +452,8 @@
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Naik Level <i class="bi bi-capslock-fill"></i>
                     </h1>
+                    <button type="button" class="btn-close btn-close-levelUp" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body body-levelUp">
                     <center><img width="55%" height="auto" src="../images/level-up.gif" /></center>
@@ -572,7 +462,9 @@
                     </center>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary main-bg-color" onclick="getNextCourse(7,<?php echo $currCourse ?>,'<?php echo $_SESSION['username']; ?>')">Next Course</button>
+                    <button type="button" class="btn btn-secondary btn-close-levelUp"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary main-bg-color">Next Course</button>
                 </div>
             </div>
         </div>

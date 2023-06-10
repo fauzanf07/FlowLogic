@@ -30,6 +30,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="stylesheet" type="text/css" href="../css/courses/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/courses/autorefresher.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -52,59 +53,11 @@
 						      <th scope="col">Points</th>
 						    </tr>
 						</thead>
-						<tbody>
-						    <tr>
-							    <th scope="row">1</th>
-							    <td>Ahmad Wahyudin Suryono</td>
-							    <td>2000</td>
-						    <tr>
-							    <th scope="row">2</th>
-							    <td>Ahmad Wahyudin Suryono</td>
-							    <td>2000</td>
-						    </tr>
-						    <tr>
-							    <th scope="row">3</th>
-							    <td>Ahmad Wahyudin Suryono</td>
-							    <td>2000</td>
-						    </tr>
-						    <tr>
-						      	<th scope="row">4</th>
-						      	<td>Ahmad Wahyudin Suryono</td>
-						      	<td>2000</td>
-						    </tr>
-						    <tr>
-						      	<th scope="row">5</th>
-						      	<td>Ahmad Wahyudin Suryono</td>
-						     	<td>2000</td>
-						    </tr>
-						    <tr>
-						      	<th scope="row">6</th>
-						      	<td>Ahmad Wahyudin Suryono</td>
-						      	<td>2000</td>
-						    </tr>
-						    <tr>
-						    	<th scope="row">7</th>
-						      	<td>Ahmad Wahyudin Suryono</td>
-						      	<td>2000</td>
-						    </tr>
-						    <tr>
-						      	<th scope="row">8</th>
-						     	<td>Ahmad Wahyudin Suryono</td>
-						     	<td>2000</td>
-						    </tr>
-						    <tr>
-						      	<th scope="row">9</th>
-						     	<td>Ahmad Wahyudin Suryono</td>
-						      	<td>2000</td>
-						    </tr>
-						    <tr>
-						      	<th scope="row">10</th>
-						      	<td>Ahmad Wahyudin Suryono</td>
-						      	<td>2000</td>
-						    </tr>
+						<tbody id="tableRanks">
+
 						</tbody>
 					</table>
-				<button type="button" class="btn btn-outline-secondary" id="loadRanksMore">Load More</button>
+				<button type="button" class="btn btn-outline-secondary" id="loadRanksMore" onclick="getRanks(true, false);">Load More</button>
 			</div>
 		</div>
 	</div>
@@ -129,7 +82,7 @@
 						    <li><a class="dropdown-item" href="../user/logout.php"><i class="bi bi-box-arrow-right"></i>&nbsp;&nbsp; Logout</a></li>
 						</ul>
 					</div>
-					<button class="btn btn-light btn-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-trophy-fill"></i></button>
+					<button class="btn btn-light btn-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onclick="getRanks(false, true);"><i class="bi bi-trophy-fill"></i></button>
 			    </ul>
 		    </div>
 		</div>
@@ -307,11 +260,37 @@
 								<div class="accordion-item">
 								    <h2 class="accordion-header" id="flush-headingTwo">
 									    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-									        Lorem ipsum dolor sit amet
+									        <b>Level 2: Pseudocode</b>
 									    </button>
 								    </h2>
 									    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-									    	<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+									    	<div class="accordion-body">
+											<ul class="list-group list-group-flush">
+                                                <li class="list-group-item" >
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>7) echo 'check'; ?>"><?php if($currCourse>7) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="7"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Pengenalan Pseudocode</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC7"
+                                                            data-course="7">
+                                                            <img class="user-img-footprint" id='userImgFootprintC7'>
+                                                            <span class="user-total" id="totalUserC7"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>  
+                                            </ul>
+
+											</div>
 									    </div>
 								</div>
 								<div class="accordion-item">

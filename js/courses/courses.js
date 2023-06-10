@@ -135,7 +135,8 @@ function levelUp(nextCourse,currCourse,username){
 		url: "./course_trans/update_level.php",
 		type: "POST",
 		data: {
-			username: username	
+			username: username,
+			currCourse: (nextCourse-1)
 		},
 		cache: false,
 		success: function(dataResult){
@@ -552,10 +553,11 @@ $('.likes').click(function(){
 
 var rankPage = 1;
 function getRanks(loadMore,btnRanks){
-	var offset = 5 * (rankPage-1);
 	if(btnRanks){
 		rankPage = 1;
+		$('#loadRanksMore').css("display","block");
 	}
+	var offset = 5 * (rankPage-1);
 	$.ajax({
 		url: "./course_trans/get_ranks.php",
 		type: "POST",
