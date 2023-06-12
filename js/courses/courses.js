@@ -98,13 +98,10 @@ $('#next').click(function(){
 	var reward = $(this).data("reward");
 	var desc = "Kamu telah menyelesaikan materi " + $(this).data("materi");
 	var artikel = $(this).data('artikel');
-	getRewards(nextCourse,currCourse,username, reward);
-	if(artikel!=0){
-		updateHistory(idUser,2,100,desc);
-	}
+	getRewards(nextCourse,currCourse,username, reward,artikel,idUser,desc);
 });
 
-function getRewards(nextCourse, currCourse, username, reward){
+function getRewards(nextCourse, currCourse, username, reward,artikel,idUser, desc){
 	if(nextCourse > currCourse && reward==0){
 		$.ajax({
 			url: "./course_trans/get_rewards.php",
@@ -117,6 +114,9 @@ function getRewards(nextCourse, currCourse, username, reward){
 			success: function(dataResult){
 				var dataResult = JSON.parse(dataResult);
 				if(dataResult.statusCode==200){
+					if(artikel!=0){
+						updateHistory(idUser,2,100,desc);
+					}
 					levelUp(nextCourse,currCourse,username);
 					$('#next').data('reward',1);
 				}

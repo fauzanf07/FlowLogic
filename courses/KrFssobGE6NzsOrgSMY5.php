@@ -12,7 +12,7 @@
         $id_user= $r['id'];
 
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/5)*100);
+		$progress = intval(($_SESSION['curr_course']/8)*100);
 		$progressBg = "";
 		if($progress <=30){
 			$progressBg = "bg-danger";
@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Pengenalan Pseudocode</title>
+    <title>Notasi Algoritmik</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -300,7 +300,7 @@
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
                                         <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" id="current-li">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -321,7 +321,7 @@
                                                             <span class="user-total" id="totalUserC7"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li>  
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -343,8 +343,8 @@
                                                             <span class="user-total" id="totalUserC8"></span>
                                                         </div>
                                                     </div>
-                                                </li>   
-                                                <li class="list-group-item">
+                                                </li>
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -365,7 +365,7 @@
                                                             <span class="user-total" id="totalUserC9"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li>    
                                             </ul>
                                         </div>
                                     </div>
@@ -431,33 +431,115 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <p>Selamat anda sudah mencapai di level 2! Di dalam level 2 ini anda akan mempelajari mengenai pseudocode yang mana pseudocode ini salah satu cara penyajian algoritma seperti flowchart namun pada pseudocode ini hampir mirip dengan bahasa pemrograman dibanding dengan Flowchart. Untuk informasi lebih lanjut mari kita simak berikut ini!</p>
-                    <h4>Pengenalan pseudocode?</h4><br>
-                    <center><img src="../images/pseudocode.jpg" width="60%" height="auto"></center><br>
-                    <p><b>Pseudocode</b> menggabungkan kata <b>"pseudo"</b> yang berarti tiruan atau imitasi, dan <b>"code"</b> yang merujuk pada kode yang terkait dengan instruksi yang ditulis dalam bahasa komputer (bahasa pemrograman). Dalam terjemahan sederhana, pseudocode adalah imitasi atau tiruan dari kode bahasa pemrograman. Dalam dasarnya, pseudocode adalah bahasa yang digunakan oleh para programmer untuk memikirkan masalah yang perlu dipecahkan tanpa harus memperhatikan sintaksis dari bahasa pemrograman tertentu. Tidak ada aturan tertentu dalam penulisan sintaksis dalam pseudocode. Oleh karena itu, pseudocode digunakan untuk menggambarkan logika urutan langkah dalam program tanpa memperhatikan bahasa pemrograman yang digunakan. Meskipun pseudocode tidak memiliki aturan penulisan sintaksis, pada level ini akan memberikan beberapa aturan penulisan sintaksis yang sederhana agar pembaca dapat lebih mudah mempelajari algoritma-algoritma yang ada dalam level ini.</p>
-                    <p>Begini, sekarang anda lihat bahasa pemrograman di bawah ini.</p><br>
-                    <center><img src="../images/contoh-algoritma.png" width="60%" height="auto"></center><br>
-                    <p>Apakah anda yakin bahwa semua orang bahkan orang awam akan mengerti mengenai bahasa pemrograman C diatas? Tentu saja tidak karena tidak semua orang memahami bahasa pemrograman C. Sekarang bandingkan dengan bahasa pseudocode dibawah ini.</p>
-                    <center><img src="../images/contoh-pseudocode.png" width="60%" height="auto"></center><br>
-                    <p>Apakah cara penyajian algoritma menentukan bilangan ganjil lebih mudah dimengerti melalui bahasa pemrograman atau pseudocode? Anda pasti merasakan bahwa cara penyajian pseudocode lebih mudah dimengerti dibandingkan dengan bahasa pemrograman karena pseudocode ini disajikan dengan bahasa sehari-hari. Umumnya, pseudocode ditulis dengan bahasa Inggris karena lebih mudah ketika mengkonversikannya ke bahasa pemrograman. Tapi juga tidak masalah jika Anda menggunakan bahasa Indonesia.</p>
-                    <br><h4>Apa fungsi pseudocode?</h4><br>
-                    <p>Seperti yang dijelaskan diatas bahwa pseudocode digunakan oleh para programmer untuk memikirkan masalah yang perlu dipecahkan tanpa harus memperhatikan sintaksis dari bahasa pemrograman tertentu. Namun terdapat beberapa fungsi pseudocode lagi, yakni sebagai berikut.</p>
+                    <h4>Notasi Algoritmik</h4>
+                    <p>Masih berhubung dengan artikel sebelumnya, pada artikel ini kita akan membahas bagaimana menulis notasi-notasi umum yang ada di bahasa pemrograman kedalam notasi algoritmik di Pseudocode. Tanpa basa-basi lagi, berikut adalah bagaimana notasi-notasi umum yang ada di bahasa pemrograman dituliskan dalam notasi algoritmik pada Pseudocode. </p>
                     <ol>
-                        <h5><li>Sebagai media dokumentasi</li></h5>
-                        <p>Dokumentasi berperan penting sebagai panduan untuk memastikan bahwa proses perancangan program sesuai dengan harapan. Dokumentasi merupakan elemen krusial dalam pembangunan proyek, karena akan dibutuhkan oleh para programmer untuk mengecek logika program jika terjadi error atau bug di masa yang akan datang.</p>
-                        <h5><li>Sebagai Titik Tengah Antara Flowchart dan Kode</li></h5>
-                        <p>Bagi pengembang yang baru memulai, seringkali mengalami kesulitan dalam mengubah alur diagram atau flowchart menjadi kode pemrograman. Namun, pseudocode hadir sebagai jembatan yang baik, karena membantu dalam melakukan transisi secara efektif dan efisien.</p>
-                        <h5><li>Sebagai Jembatan Komunikasi</li></h5>
-                        <p>Pseudocode berfungsi sebagai jembatan yang memungkinkan seorang programmer berkolaborasi dengan anggota tim dari berbagai divisi seperti mitra bisnis, manajer, desainer, dan lainnya. Dengan menggunakan pseudocode, programmer dapat dengan mudah menjelaskan bagaimana mekanisme kode bekerja, yang pada gilirannya meningkatkan efektivitas komunikasi.</p>
-                        <h5><li>Mempercepat Proses Penyelesaian</li></h5>
-                        <p>Tujuan utama penggunaan pseudocode adalah untuk mempercepat proses pembuatan sistem. Berbeda dengan diagram alur yang memiliki format dan struktur yang agak sulit dipahami secara langsung, pseudocode menggunakan struktur yang sederhana dan mudah dibaca. Ini juga membuatnya lebih mudah untuk dimodifikasi.</p>
-                        <p>Dengan pseudocode, proses konversi ke dalam bahasa pemrograman tidak memerlukan waktu yang lama, karena alur algoritma telah digambarkan dengan jelas.</p>
+                        <li>
+                            <h5><i>Variable Assignment</i></h5>
+                            <p><i>Variable Assignment</i> merupakan pengisian atau penyimpanan nilai ke dalam sebuah variabel. <i>Assignment Variable</i> pada umumnya menggunakan = di dalam bahasa pemrograman contohnya pada bahasa C, C++, Java, Python, dll. Ada juga yang menggunakan := seperti di dalam bahasa pemrograman Pascal dan Ada. Nah untuk di Pseudocode penulisan <i>Assignment Variable</i> ini kita menggunakan simbol &#8592;. Contohnya seperti berikut.</p>
+                            <center><code>max &#8592; x</code></center>
+                            <p>Notasi algoritmik diatas mengandung arti bahwa variabel max akan menyimpan nilai yang ada di variabel x. Notasi algoritmik tersebut setara dengan <code>max = x;</code> pada bahasa C atau <code>max := x;</code> pada bahasa Pascal.</p>
+                        </li>
+                        <li>
+                            <h5>Operasi Matematika</h5>
+                            <p>Operasi matematika seperti penjumlahan, pengurangan, perkalian, dan pembagian juga perlu dituliskan dalam notasi algoritmik di Pseudocode karena operasi matematika ini sangat sering digunakan dalam bahasa pemrograman. Berikut ini adalah contoh penulisan notasi algoritmik untuk operasi matematika umum:</p>
+                            <ul>
+                                <li><b>Penjumlahan:</b></li>
+                                <center><code>hasil ← a + b</code></center>
+                                <p>Artinya, variabel "hasil" akan menyimpan hasil penjumlahan antara variabel "a" dan "b".</p>
+                                <li><b>Pengurangan</b></li>
+                                <center><code>selisih ← x - y</code></center>
+                                <p>Artinya, variabel "selisih" akan menyimpan hasil pengurangan antara variabel "x" dan "y".</p>
+                                <li><b>Perkalian:</b></li>
+                                <center><code>hasil ← c * d</code></center>
+                                <p>Artinya, variabel "hasil" akan menyimpan hasil perkalian antara variabel "c" dan "d".</p>
+                                <li><b>Pembagian:</b></li>
+                                <center><code>hasil ← p / q</code></center>
+                                <p>Artinya, variabel "hasil" akan menyimpan hasil pembagian antara variabel "p" dan "q".</p>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5><i>Conditional Statements</i></h5>
+                            <p>Pada bahasa pemrograman, kita sering menggunakan statement kondisional seperti if-else untuk membuat keputusan berdasarkan kondisi tertentu. Berikut adalah contoh penulisan notasi algoritmik untuk statement kondisional:</p>
+                            <code><pre>
+if x > y then
+    write("x lebih besar dari y")
+else then
+    write("y lebih besar dari x")
+end if
+                            </pre></code>
+                            <p>Notasi algoritmik diatas menggambarkan penggunaan statement kondisional if-else dalam membandingkan nilai variabel "x" dan "y".</p>
+                        </li>
+                        <li>
+                            <h5><i>Looping</i></h5>
+                            <p>Looping atau perulangan digunakan untuk mengulang sebuah blok perintah berulang kali selama kondisi tertentu terpenuhi. Berikut adalah contoh penulisan notasi algoritmik untuk perulangan:</p>
+                            <ul>
+                                <li><b>Perulangan While:</b></li>
+                                <code>
+                                    <pre>
+
+while (kondisi terpenuhi)
+    ...(blok perintah)...
+end while </pre>
+                                </code>
+                                <p>Notasi algoritmik di atas mengindikasikan bahwa blok perintah akan terus dijalankan selama kondisi terpenuhi. Berikut contoh pseudocode yang terdapat perulangan while.</p>
+                                <center><img src="../images/contoh-while-pse.png" width="25%" height="auto" alt=""></center>
+                                <li><b>Perulangan For:</b></li>
+                                <code>
+                                    <pre>
+
+for (iterasi)
+    ...(blok perintah)...
+end for </pre>
+                                </code>
+                                <p>Notasi algoritmik ini menunjukkan bahwa blok perintah akan dijalankan untuk setiap elemen dalam kumpulan data.Berikut contoh pseudocode yang terdapat perulangan for.</p>
+                                <center><img src="../images/contoh-for-pse.png" width="25%" height="auto" alt=""></center>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>Prosedur</h5>
+                            <p>Prosedur adalah blok kode yang dapat dipanggil dan digunakan berulang kali dalam sebuah program. Berikut adalah contoh penulisan notasi algoritmik untuk prosedur:</p>
+                            <code>
+                                <pre>
+
+Prosedur nama_prosedur(input (<i>tipe data</i>) (<i>parameter)</i>)
+
+Deskripsi
+    (variabel dan tipe data)
+
+Deklarasi
+    (blok program)
+</pre>
+                            </code>
+                            <p>Notasi algoritmik di atas menunjukkan struktur dasar untuk mendefinisikan sebuah prosedur dengan nama "nama_prosedur" dan menerima parameter jika diperlukan. Contoh prosedur pada pseudocode.</p>
+                            <center><img src="../images/contoh-prosedur-pse.png" width="30%" height="auto" alt=""></center>
+                        </li>
+                        <li>
+                            <h5>Fungsi</h5>
+                            <p>Fungsi adalah blok kode yang mengembalikan nilai tertentu setelah dieksekusi. Hampir sama dengan penulisan notasi algoritmik untuk prosedur, berikut adalah contoh penulisan notasi algoritmik untuk fungsi:</p>
+                            <code>
+                                <pre>
+
+Fungsi nama_fungsi(input (<i>tipe data</i>) (<i>parameter)</i>; output (<i>tipe data</i>) (<i>nilai)</i>)
+
+Deskripsi
+    (variabel dan tipe data)
+
+Deklarasi
+    (blok program)
+    return (nilai)
+</pre>
+                            </code>
+                            <p>Notasi algoritmik di atas menunjukkan struktur dasar untuk mendefinisikan sebuah fungsi dengan nama "nama_fungsi" dan menerima parameter jika diperlukan. Fungsi tersebut akan mengembalikan nilai setelah eksekusi.</p>
+                            <center><img src="../images/contoh-fungsi-pse.png" width="40%" height="auto" alt=""></center>
+                            <p>Jika kita perhatikan, terdapat dua pendefinisian yang ada di dalam kurung setelah nama fungsi yakni input dan output. Apa bedanya? Pendefinisian input yang terdapat di fungsi tersebut merupakan parameter-paramater yang akan diterima oleh fungsi tersebut. Sedangan pada pendefinisian output pada fungsi tersebut merupakan sebuah nilai yang akan dikeluarkan oleh fungsi tersebut.</p>
+                        </li>
                     </ol>
-                    <p>Menerapkan pseudocode akan memberi banyak manfaat. Misalnya, Anda dapat mengurangi kesalahan ketika melakukan coding, karena hanya tinggal melihat alur yang telah dituangkan dalam pseudocode.</p>
-                    <p>Berkat pseudocode juga, proses coding akan menjadi lancar dan hasil akhir proyek website Anda pun akan menjadi bagus.</p>
-                    <button class="btn btn-course" id="previous" data-prev="6">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="8" data-curr="<?php echo $currCourse ?>"
-                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Pengenalan Pseudocode" data-artikel="1">Berikutnya</button>
+                    <p>Dengan mengetahui cara menulis notasi-notasi umum bahasa pemrograman dalam notasi algoritmik di Pseudocode, kita dapat dengan lebih mudah merancang algoritma dan memahami logika pemrograman tanpa harus terikat dengan sintaksis dari bahasa pemrograman tertentu. Notasi algoritmik memberikan fleksibilitas dan pemahaman yang lebih luas dalam menyusun algoritma secara umum.</p>
+                    <div style="clear:both;"></div>
+                    <button class="btn btn-course" id="previous" data-prev="8">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="10" data-curr="<?php echo $currCourse ?>"
+                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Notasi Algoritmik" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>
