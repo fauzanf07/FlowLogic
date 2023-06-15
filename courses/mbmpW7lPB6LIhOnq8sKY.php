@@ -375,7 +375,7 @@
                                                         </div>
                                                         <div class="material-name" data-course="10"
                                                             data-curr="<?php echo $currCourse ?>">
-                                                            <a>Lorem ipsum dolor sit amet</a>
+                                                            <a>Cara menulis Pseudocode</a>
                                                             <div class="get-item">
                                                                 <span><i class="bi bi-diamond-fill"></i> +0
                                                                     &nbsp;&nbsp;</span>
@@ -454,8 +454,18 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <h4>Lorem ipsum dolor sit amet</h4>
-                    
+                    <h4>Cara menulis Pseudocode</h4>
+                    <p>Penulisan Pseudocode ini memanglah tidak memiliki aturan baku atau pasti akan tetapi alangkah baiknya penulisan Pseudocode ini harus jelas dan logis agar orang mudah memahami Pseudocode yang kita tulis. Berikut ini saran-saran yang kamu sebaiknya lakukan untuk menulis Pseudocode :</p>
+                    <ul>
+                        <li><b>Pastikan untuk menuliskan instruksi dengan spesifik dan konsisten.</b></li>
+                        <p>Pastikan untuk menulis pseudocode dengan spesifik dan konsisten. Dalam pseudocode, disarankan untuk menggunakan huruf kapital untuk perintah kode seperti IF, ELSE, dan THEN. Hal ini akan membantu ketika Kamu kemudian menulis kode program sebenarnya menggunakan bahasa pemrograman, sehingga tidak akan kebingungan dalam membedakan notasi dan komponen yang dituliskan.</p>
+                        <li><b>Manfaatkanlah indentasi saat menulis kode</b></li>
+                        <p>Meskipun penggunaan indentasi tidak wajib dalam pseudocode, sebaiknya Kamu menggunakan indentasi untuk memudahkan membaca notasi seperti if, for, dan while. Penting untuk diketahui bahwa indentasi ini memiliki pengaruh yang signifikan dalam beberapa bahasa pemrograman, seperti Python. Indentasi adalah penggunaan spasi atau tabulasi yang diterapkan pada baris-baris kode dalam sebuah program komputer untuk menunjukkan struktur hierarkis atau blok kode. Contoh identasi seperti gambar berikut yang ditandai garis merah : </p>
+                        <center><img src="../images/contoh-tabulasi.png" width="30%" height="auto" alt=""></center>
+                        <li><b>Buat Pseudocode dengan sederhana</b></li>
+                        <p>Sebaiknya, usahakan agar pseudocode yang Kamu buat tetap sederhana. Tujuannya adalah untuk memudahkan Kamu dalam mengubahnya menjadi kode program yang sebenarnya.</p>
+                    </ul>
+                    <p>Itulah beberapa saran yang dapat kamu terapkan ketika menulis Pseudocode. Dengan menerapkan saran-saran tersebut anda akan mudah menerjemahkan Pseudocode ke dalam Bahasa Pemrograman.</p>
                     <div style="clear:both;"></div>
                     <button class="btn btn-course" id="previous" data-prev="8">Sebelumnya</button>
                     <button class="btn btn-course f-right" id="next" data-next="10" data-curr="<?php echo $currCourse ?>"

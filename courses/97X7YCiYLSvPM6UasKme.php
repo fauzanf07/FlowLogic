@@ -12,7 +12,7 @@
         $id_user= $r['id'];
 
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/8)*100);
+		$progress = intval(($_SESSION['curr_course']/5)*100);
 		$progressBg = "";
 		if($progress <=30){
 			$progressBg = "bg-danger";
@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Notasi Algoritmik</title>
+    <title>Challenge: Studi Kasus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -238,7 +238,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+												<li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -316,13 +316,13 @@
                                                                 <span><i class="bi bi-star-fill"></i> +100</span>
                                                             </div>
                                                         </div>
-                                                        <div class="user-footprint" id="userFootprintC7"
+                                                        <div class="user-footprint" id="userFootprintC1"
                                                             data-course="7">
                                                             <img class="user-img-footprint" id='userImgFootprintC7'>
                                                             <span class="user-total" id="totalUserC7"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li> 
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -345,7 +345,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item" id="current-li">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -388,21 +388,45 @@
                                                             <span class="user-total" id="totalUserC10"></span>
                                                         </div>
                                                     </div>
-                                                </li>      
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>11) echo 'check'; ?>"><?php if($currCourse>11) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="11"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Cara menulis Pseudocode</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> Up to +300
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +300
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span<i class="bi bi-award-fill"></i> 1</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC11"
+                                                            data-course="11">
+                                                            <img class="user-img-footprint" id='userImgFootprintC11'>
+                                                            <span class="user-total" id="totalUserC11"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>        
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingThree">
+                                    <h2 class="accordion-header" id="flush-headingFour">
                                         <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                            aria-expanded="false" aria-controls="flush-collapseFour">
                                             Lorem ipsum dolor sit amet
                                         </button>
                                     </h2>
-                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">Placeholder content for this accordion, which is
                                             intended to demonstrate the <code>.accordion-flush</code> class. This is the
                                             third item's accordion body. Nothing more exciting happening here in terms
@@ -454,216 +478,182 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <h4>Notasi Algoritmik</h4>
-                    <p>Masih berhubung dengan artikel sebelumnya, pada artikel ini kita akan membahas bagaimana menulis notasi-notasi umum yang ada di bahasa pemrograman kedalam notasi algoritmik di Pseudocode. Tanpa basa-basi lagi, berikut adalah bagaimana notasi-notasi umum yang ada di bahasa pemrograman dituliskan dalam notasi algoritmik pada Pseudocode. </p>
+                    <h4>Challenge: Studi Kasus</h4>
+                    <p>Selamat Anda telah mencapai di akhir-akhir level ini!! Untuk menerapkan pengetahuan yang telah kamu
+                        dapat di level 2 ini, kami tantang anda untuk mengikuti challenge ini. Tentunya terdapat
+                        beberapa keuntungan jika anda mengikuti challenge ini yakni mendapatkan poin sampai 300 points, 300 XP, dan 1
+                        Badge (Lencana). Ayo ikuti challenge ini! Semakin banyak points dan xp yang kamu dapat, semakin
+                        besar peluang anda memenangkan reward dari kami!</p>
+                    <b>
+                        <p>Ketentuan Challenge : </p>
+                    </b>
                     <ol>
-                        <li>
-                            <h5><i>Variable Assignment</i></h5>
-                            <p><i>Variable Assignment</i> merupakan pengisian atau penyimpanan nilai ke dalam sebuah variabel. <i>Assignment Variable</i> pada umumnya menggunakan = di dalam bahasa pemrograman contohnya pada bahasa C, C++, Java, Python, dll. Ada juga yang menggunakan := seperti di dalam bahasa pemrograman Pascal dan Ada. Nah untuk di Pseudocode penulisan <i>Assignment Variable</i> ini kita menggunakan simbol &#8592;. Contohnya seperti berikut.</p>
-                            <center><code>max &#8592; x</code></center>
-                            <p>Notasi algoritmik diatas mengandung arti bahwa variabel max akan menyimpan nilai yang ada di variabel x. Notasi algoritmik tersebut setara dengan <code>max = x;</code> pada bahasa C atau <code>max := x;</code> pada bahasa Pascal.</p>
-                        </li>
-                        <li>
-                            <h5>Operasi Matematika</h5>
-                            <p>Operasi matematika seperti penjumlahan, pengurangan, perkalian, dan pembagian juga perlu dituliskan dalam notasi algoritmik di Pseudocode karena operasi matematika ini sangat sering digunakan dalam bahasa pemrograman. Berikut ini adalah contoh penulisan notasi algoritmik untuk operasi matematika umum:</p>
-                            <ul>
-                                <li><b>Penjumlahan:</b></li>
-                                <center><code>hasil ← a + b</code></center>
-                                <p>Artinya, variabel "hasil" akan menyimpan hasil penjumlahan antara variabel "a" dan "b".</p>
-                                <li><b>Pengurangan</b></li>
-                                <center><code>selisih ← x - y</code></center>
-                                <p>Artinya, variabel "selisih" akan menyimpan hasil pengurangan antara variabel "x" dan "y".</p>
-                                <li><b>Perkalian:</b></li>
-                                <center><code>hasil ← c * d</code></center>
-                                <p>Artinya, variabel "hasil" akan menyimpan hasil perkalian antara variabel "c" dan "d".</p>
-                                <li><b>Pembagian:</b></li>
-                                <center><code>hasil ← p / q</code></center>
-                                <p>Artinya, variabel "hasil" akan menyimpan hasil pembagian antara variabel "p" dan "q".</p>
-                            </ul>
-                        </li>
-                        <li>
-                            <h5>Operator Perbandingan</h5>
-                            <p>Operator perbandingan dalam notasi algoritmik Pseudocode digunakan untuk membandingkan dua nilai atau variabel. Hasil perbandingan ini akan menghasilkan nilai kebenaran (boolean) yaitu True (benar) atau False (salah). Berikut adalah beberapa contoh operator perbandingan dan cara penulisannya dalam notasi algoritmik Pseudocode:</p>
-                            <table class="table">
-                                <tr>
-                                    <th>Operator</th>
-                                    <th>Notasi Algoritmik</th>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Sama Dengan (==)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 == variable2 then
-    // pernyataan jika variable1 sama dengan variable2
-else
-    // pernyataan jika variable1 tidak sama dengan variable2
-end if
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Tidak Sama Dengan (!=)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 != variable2 then
-    // pernyataan jika variable1 sama dengan variable2
-else
-    // pernyataan jika variable1 tidak sama dengan variable2
-end if
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Lebih Besar (>)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 > variable2 then
-    // pernyataan jika variable1 lebih besar dari variable2
-else
-    // pernyataan jika variable1 tidak lebih besar dari variable2
-end if
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Lebih Kecil (<)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 < variable2 then
-    // pernyataan jika variable1 lebih kecil dari variable2
-else
-    // pernyataan jika variable1 tidak lebih kecil dari variable2
-end if
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Lebih Besar Sama Dengan (>=)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 >= variable2 then
-    // pernyataan jika variable1 lebih besar atau sama dengan variable2
-else
-    // pernyataan jika variable1 tidak lebih besar atau sama dengan variable2
-end if
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Lebih Kecil Sama Dengan (<=)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 <= variable2 then
-    // pernyataan jika variable1 lebih kecil atau sama dengan variable2
-else
-    // pernyataan jika variable1 tidak lebih kecil atau sama dengan variable2
-end if
-
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                            </table>
-                        </li>
-                        <li>
-                            <h5><i>Conditional Statements</i></h5>
-                            <p>Pada bahasa pemrograman, kita sering menggunakan statement kondisional seperti if-else untuk membuat keputusan berdasarkan kondisi tertentu. Berikut adalah contoh penulisan notasi algoritmik untuk statement kondisional:</p>
-                            <code><pre>
-if x > y then
-    write("x lebih besar dari y")
-else then
-    write("y lebih besar dari x")
-end if
-                            </pre></code>
-                            <p>Notasi algoritmik diatas menggambarkan penggunaan statement kondisional if-else dalam membandingkan nilai variabel "x" dan "y".</p>
-                        </li>
-                        <li>
-                            <h5><i>Looping</i></h5>
-                            <p>Looping atau perulangan digunakan untuk mengulang sebuah blok perintah berulang kali selama kondisi tertentu terpenuhi. Berikut adalah contoh penulisan notasi algoritmik untuk perulangan:</p>
-                            <ul>
-                                <li><b>Perulangan While:</b></li>
-                                <code>
-                                    <pre>
-
-while (kondisi terpenuhi)
-    ...(blok perintah)...
-end while </pre>
-                                </code>
-                                <p>Notasi algoritmik di atas mengindikasikan bahwa blok perintah akan terus dijalankan selama kondisi terpenuhi. Berikut contoh pseudocode yang terdapat perulangan while.</p>
-                                <center><img src="../images/contoh-while-pse.png" width="25%" height="auto" alt=""></center>
-                                <li><b>Perulangan For:</b></li>
-                                <code>
-                                    <pre>
-
-for (iterasi)
-    ...(blok perintah)...
-end for </pre>
-                                </code>
-                                <p>Notasi algoritmik ini menunjukkan bahwa blok perintah akan dijalankan untuk setiap elemen dalam kumpulan data.Berikut contoh pseudocode yang terdapat perulangan for.</p>
-                                <center><img src="../images/contoh-for-pse.png" width="25%" height="auto" alt=""></center>
-                            </ul>
-                        </li>
-                        <li>
-                            <h5>Prosedur</h5>
-                            <p>Prosedur adalah blok kode yang dapat dipanggil dan digunakan berulang kali dalam sebuah program. Berikut adalah contoh penulisan notasi algoritmik untuk prosedur:</p>
-                            <code>
-                                <pre>
-
-Prosedur nama_prosedur(input (<i>tipe data</i>) (<i>parameter)</i>)
-
-Deskripsi
-    (variabel dan tipe data)
-
-Deklarasi
-    (blok program)
-</pre>
-                            </code>
-                            <p>Notasi algoritmik di atas menunjukkan struktur dasar untuk mendefinisikan sebuah prosedur dengan nama "nama_prosedur" dan menerima parameter jika diperlukan. Contoh prosedur pada pseudocode.</p>
-                            <center><img src="../images/contoh-prosedur-pse.png" width="30%" height="auto" alt=""></center>
-                        </li>
-                        <li>
-                            <h5>Fungsi</h5>
-                            <p>Fungsi adalah blok kode yang mengembalikan nilai tertentu setelah dieksekusi. Hampir sama dengan penulisan notasi algoritmik untuk prosedur, berikut adalah contoh penulisan notasi algoritmik untuk fungsi:</p>
-                            <code>
-                                <pre>
-
-Fungsi nama_fungsi(input (<i>tipe data</i>) (<i>parameter)</i>; output (<i>tipe data</i>) (<i>nilai)</i>)
-
-Deskripsi
-    (variabel dan tipe data)
-
-Deklarasi
-    (blok program)
-    return (nilai)
-</pre>
-                            </code>
-                            <p>Notasi algoritmik di atas menunjukkan struktur dasar untuk mendefinisikan sebuah fungsi dengan nama "nama_fungsi" dan menerima parameter jika diperlukan. Fungsi tersebut akan mengembalikan nilai setelah eksekusi.</p>
-                            <center><img src="../images/contoh-fungsi-pse.png" width="40%" height="auto" alt=""></center>
-                            <p>Jika kita perhatikan, terdapat dua pendefinisian yang ada di dalam kurung setelah nama fungsi yakni input dan output. Apa bedanya? Pendefinisian input yang terdapat di fungsi tersebut merupakan parameter-paramater yang akan diterima oleh fungsi tersebut. Sedangan pada pendefinisian output pada fungsi tersebut merupakan sebuah nilai yang akan dikeluarkan oleh fungsi tersebut.</p>
-                        </li>
+                        <li>Cari atau temukan permasalahan di kehidupan sehari-hari.</li>
+                        <li>Buatlah langkah-langkah (algoritma) untuk menyelesaikan permasalahan tersebut. Anda bisa mengambil permasalahan dan algoritma dari challenge sebelumnya.</li>
+                        <li>Setelah itu, buatlah pseudocode dari algoritma tersebut.</li>
+                        <li>Share algoritma dan pseudocode anda di box share your knowledge di bawah ini.</li>
+                        <li>Konten yang dibagikan harus memuat seluruh ketentuan dan tidak mengandung SARA dan
+                            pornografi.</li>
                     </ol>
-                    <p>Dengan mengetahui cara menulis notasi-notasi umum bahasa pemrograman dalam notasi algoritmik di Pseudocode, kita dapat dengan lebih mudah merancang algoritma dan memahami logika pemrograman tanpa harus terikat dengan sintaksis dari bahasa pemrograman tertentu. Notasi algoritmik memberikan fleksibilitas dan pemahaman yang lebih luas dalam menyusun algoritma secara umum.</p>
-                    <div style="clear:both;"></div>
-                    <button class="btn btn-course" id="previous" data-prev="8">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="10" data-curr="<?php echo $currCourse ?>"
-                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Notasi Algoritmik" data-artikel="1">Berikutnya</button>
+                    <?php
+                        $sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='2' ORDER BY created_at DESC";
+                        $res = mysqli_query($con, $sql);
+                        $count = mysqli_num_rows($res);
+                        if($count!=0){
+                            $row = mysqli_fetch_assoc($res);
+                            $status = $row['status'];
+                        }
+                        if($count== 0 || $status == 2){
+                    ?>
+                    <div class="share-wrapper">
+                        <textarea id="shareBox"></textarea>
+                        <center><button type="button" id="share" data-username="<?php echo $username; ?>"
+                                onclick="share(this);" class="btn btn-primary mt-4">SHARE YOUR KNOWLEDGE&nbsp; <i
+                                    class="bi bi-send-fill"></i></button></center>
+                    </div>
+                    <?php
+                        }if($count!=0){
+                    ?>
+                    <div class="your-post">
+                        <?php
+
+									$sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='2' ORDER BY created_at DESC";
+									$result = mysqli_query($con, $sql);
+									while($r_post = mysqli_fetch_assoc($result)){
+										$id_post = $r_post['id'];
+										echo '
+											<div class="post">
+												<div class="top">
+													<div class="top-photo">
+														<img src= '. $r['photo_profile'] .' class="avatar">
+													</div>
+													<div class="top-name">
+														<b><span><a class="no-undr" href="./profile.php?user='.$r['username'].'">'. $r['name'] .'</a></span></b><span>&nbsp;&nbsp;'. $r['username'] .'</span>
+														<div class="control">';
+														if($r_post['status']==0){
+															echo '
+																<span class="pending">Pending <i class="bi bi-clock"></i></span>
+															';
+														}else if($r_post['status']==1){
+															echo '
+																<span class="accepted">Diterima &#10003;</span>
+															';
+														}else{
+															echo '
+															<span class="rejected">Ditolak</span>
+															';
+														}
+														echo '
+														</div>
+														<br>
+														<span>'.$r_post['created_at'].'</span>
+													</div>
+												</div>
+												<div class="content-post fr-view">
+													'.$r_post['content'].'
+												</div>';
+										$curr_user_id = $_SESSION['user_id'];	
+										$curr_username = $_SESSION['username'];
+										$curr_photoProfile = $_SESSION['photo_profile'];
+										mysqli_query($con, "CALL like_comment('$curr_user_id','$id_post',@liked,@likes,@comments)");
+										$query_lico = "SELECT @liked,@likes,@comments";
+										$hasil_lico = mysqli_query($con, $query_lico);
+										$r_lico = mysqli_fetch_assoc($hasil_lico);
+										echo '
+												<div class="lico-section">
+												';
+												if($r_lico['@liked'] == 0){
+													echo '<span id="like'.$id_post.'" data-id="'.$id_post.'" data-user="'.$curr_user_id.'" data-liked="'.$r_lico['@liked'].'" class="lico-button like-btn" style="color:#adadad;" onclick="likeBtn(this);"><i class="bi bi-heart-fill"></i></span><span class="amount me-3 likes" data-id="'.$id_post.'" id="likeAmount'.$id_post.'">'.$r_lico['@likes'].'</span>';
+												}else{
+													echo '<span id="like'.$id_post.'" data-id="'.$id_post.'" data-user="'.$curr_user_id.'" data-liked="'.$r_lico['@liked'].'" class="lico-button like-btn" style="color:#f00;" onclick="likeBtn(this);"><i class="bi bi-heart-fill"></i></span><span class="amount me-3 likes" data-id="'.$id_post.'" id="likeAmount'.$id_post.'">'.$r_lico['@likes'].'</span>';
+												}
+												echo '
+													<span id="comment'.$id_post.'" data-id="'.$id_post.'" data-show="0" class="lico-button comment-btn" onclick="commBtn(this);"><i class="bi bi-chat-square-dots-fill"></i></span><span class="amount" id="commAmount'.$id_post.'">'.$r_lico['@comments'].'</span>
+												</div>
+												<div class="clear"></div>
+												<div class="comment-section" id="comSect'.$id_post.'">
+													<h6>Komentar &middot; <span id="commentAmount'.$id_post.'">'.$r_lico['@comments'].'</span></h6>
+													<div id="comments'.$id_post.'">';
+
+												$query_comments = "SELECT a.*, b.username, b.photo_profile FROM tb_comment_post AS a LEFT JOIN tb_user as b ON a.id_user = b.id WHERE a.id_post = '$id_post';";
+												$hasil_comments = mysqli_query($con, $query_comments);
+												while($r_comments = mysqli_fetch_array($hasil_comments)){
+													echo '
+														<div class="comment">
+															<div class="image-profile">
+																<img src="'.$r_comments['photo_profile'].'" class="avatar">
+															</div>
+															<div class="com-sect">
+																<b><span><a class="no-undr" href="./profile.php?user='.$r_comments['username'].'">'.$r_comments['username'].'</a></span></b><span>&nbsp;&nbsp;'.$r_comments['created_at'].'</span><br>
+																<p class="isi-comment">'.$r_comments['comment'].'</p>
+															</div>
+														</div>
+													';
+												}
+												echo'
+													</div>
+													<div class="comment-form">
+														<div class="input-comment">
+															<textarea class="form-control comment-control" placeholder="Tulis komentar di sini" id="commentBox'.$id_post.'" data-id="'.$id_post.'" oninput="onInput(this);"></textarea>
+														</div>
+														<div class="send-comment">
+															<div class="send" id="send'.$id_post.'" data-id="'.$id_post.'" data-username="'. $curr_username.'" data-profile="'. $curr_photoProfile .'" data-user="'. $curr_user_id.'" onclick="sendComment(this);">
+																<i class="bi bi-send-fill"></i>
+															</div>
+														</div>
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										';
+									}
+								?>
+
+                    </div>
+					<br>
+					<p><b>Selamat! Anda telah menyelesaikan Challenge ini. Reward yang kamu dapat :</b></p>
+					<?php
+						$sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='2' AND `status`='1'";
+						$result = mysqli_query($con, $sql);
+						$cnt = mysqli_num_rows($res);
+						if($cnt !=0){
+							$row = mysqli_fetch_assoc($result);
+							$nilai = $row['grade'];
+							if($nilai=='A'){
+								$point = 300;
+							}else if($nilai=='B'){
+								$point = 200;
+							}else{
+								$point = 100;
+							}
+
+					?>
+					<table class="table" style="width: 50%;">
+						<tbody>
+							<tr>
+								<th>XP</th>
+								<td>300</td>
+							</tr>
+							<tr>
+								<th>Points</th>
+								<td><?php echo $point; ?></td>
+							</tr>
+							<tr>
+								<th>Nilai</th>
+								<td><?php echo $nilai; ?></td>
+							</tr>
+							<tr>
+								<th>Badges</th>
+								<td><img src="../images/badges/penguasa-alur.png" alt="" width="100%" height="auto"></td>
+							</tr>
+						</tbody>
+					</table>
+                    <?php
+						}}
+                        ?>
+                    <button class="btn btn-course" id="previous" data-prev="4">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="6" data-curr="<?php echo $currCourse ?>"
+                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Challenge 1" data-artikel="0">Berikutnya</button>
                 </div>
             </div>
         </div>
@@ -702,8 +692,6 @@ Deklarasi
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Naik Level <i class="bi bi-capslock-fill"></i>
                     </h1>
-                    <button type="button" class="btn-close btn-close-levelUp" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body body-levelUp">
                     <center><img width="55%" height="auto" src="../images/level-up.gif" /></center>
@@ -712,9 +700,7 @@ Deklarasi
                     </center>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-close-levelUp"
-                        data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary main-bg-color">Next Course</button>
+                    <button type="button" class="btn btn-primary main-bg-color" onclick="getNextCourse(7,<?php echo $currCourse ?>,'<?php echo $_SESSION['username']; ?>')">Next Course</button>
                 </div>
             </div>
         </div>

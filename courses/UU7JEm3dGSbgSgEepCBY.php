@@ -332,7 +332,29 @@
                                                             <span class="user-total" id="totalUserC9"></span>
                                                         </div>
                                                     </div>
-                                                </li>    
+                                                </li>  
+												<li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>10) echo 'check'; ?>"><?php if($currCourse>10) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="10"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Cara menulis Pseudocode</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC10"
+                                                            data-course="10">
+                                                            <img class="user-img-footprint" id='userImgFootprintC10'>
+                                                            <span class="user-total" id="totalUserC10"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>     
                                             </ul>
 
 											</div>
@@ -677,24 +699,26 @@
 	    </div>
 	  </div>
 	</div>
-	<div class="modal fade" id="exampleModal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content modal-bg-custom">
-				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="staticBackdropLabel">Naik Level <i class="bi bi-capslock-fill"></i></h1>
-					<button type="button" class="btn-close btn-close-levelUp" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body body-levelUp">
-					<center><img width="55%" height="auto" src="../images/level-up.gif"/></center>
-					<center><h4 class="levelUp-desc"></h4></center>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary btn-close-levelUp" data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary main-bg-color">Next Course</button>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div class="modal fade" id="exampleModal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-bg-custom">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Naik Level <i class="bi bi-capslock-fill"></i>
+                    </h1>
+                </div>
+                <div class="modal-body body-levelUp">
+                    <center><img width="55%" height="auto" src="../images/level-up.gif" /></center>
+                    <center>
+                        <h4 class="levelUp-desc"></h4>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary main-bg-color" onclick="getNextCourse(7,<?php echo $currCourse ?>,'<?php echo $_SESSION['username']; ?>')">Next Course</button>
+                </div>
+            </div>
+        </div>
+    </div>
 	<div id="tsparticles"></div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
