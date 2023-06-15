@@ -82,64 +82,6 @@ const ctx = document.getElementById('myChart');
     }
   });
 
-  function updateHistory(idUser,challenge,idPost,idStatus){
-	$.ajax({
-		url: "./backend/update_history_challenge.php",
-		type: "POST",
-		data: {
-			idUser: idUser,
-			challenge: challenge
-		},
-		cache: false,
-		success: function(dataResult){
-			var dataResult = JSON.parse(dataResult);
-			console.log(dataResult);
-			if(dataResult.statusCode==200){
-				Swal.fire({
-					title: 'Good job!',
-					text: 'Berhasil dilakukan!',
-					icon: 'success',
-					confirmButtonColor: '#23fa5c',
-					allowOutsideClick: false,
-				});
-				$('#accepted'+idPost).css('display','none');
-				$('#rejected'+idPost).css('display','none');
-				$('#statusCol'+idPost).empty();
-				if(idStatus == 1){
-					$('#statusCol'+idPost).append('<span class="accepted">Diterima &#10003;</span>');
-				}else{
-					$('#statusCol'+idPost).append('<span class="rejected">Ditolak</span>');
-				}
-			}
-		}
-	});
-}
-
-function usersChallenge(id){
-	var idPost = $(id).data('id');
-	var idUser = $(id).data('user');
-	var idChall = $(id).data('challenge');
-	var idStatus = $(id).data('status');
-
-	$.ajax({
-		url: "./backend/challenge.php",
-		type: "POST",
-		data: {
-			id: idPost,
-			idUser: idUser,
-			idChall: idChall,
-			idStatus: idStatus
-		},
-		cache: false,
-		success: function(dataResult){
-			var dataResult = JSON.parse(dataResult);
-			console.log(dataResult.statusCode);
-			if(dataResult.statusCode == 201){
-				updateHistory(idUser,idChall,idPost,idStatus)
-			}
-		}
-	});
-}
 
 
 function onInput(ini){

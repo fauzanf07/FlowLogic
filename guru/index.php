@@ -220,18 +220,9 @@
 												}
 										echo "</td>
 								        		<td>
-														";
-														if($row['status']==0){
-															echo "
-																<button class='btn btn-success admin btn-action' data-id='".$row["id"]."' data-user='".$row["id_user"]."' data-status='1' data-challenge='".$row["challenge"]."' id='accepted".$row['id']."' onclick='usersChallenge(this);' style='width: 100px;'>Terima</button>&nbsp;&nbsp;
-																<button class='btn btn-danger admin btn-action' data-id='".$row["id"]."' data-user='".$row["id_user"]."'  data-status='2' data-challenge='".$row["challenge"]."' id='rejected".$row['id']."' onclick='usersChallenge(this);' style='width: 100px;'>Tolak</button>&nbsp;&nbsp;
-															";
-														}
-														echo "
-															<a class='btn admin btn-action' data-id='".$row["id"]."' href='./view-challenge.php?id=".$row['id']."' style='width: 100px; background-color:#6a00ff; color:#fff;'>Lihat</a>&nbsp;&nbsp;
+														<a class='btn admin btn-action' data-id='".$row["id"]."' href='./view-challenge.php?id=".$row['id']."&user=".$row['id_user']."&challenge=".$row['challenge']."' style='width: 100px; background-color:#6a00ff; color:#fff;'>Lihat</a>&nbsp;&nbsp;
 								        		</td>
-								        	</tr>
-									  	";
+								        	</tr>";
 										  
 									}
 								}

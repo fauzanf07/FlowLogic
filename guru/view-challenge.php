@@ -5,6 +5,8 @@
 		header("Location: http://localhost/skripsi/");
 	}
     $idPost = $_GET['id'];
+    $idUser = $_GET['user'];
+    $challenge = $_GET['challenge'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,6 +57,7 @@
                             $result = mysqli_query($con, $sql);
                             while($r_post = mysqli_fetch_assoc($result)){
                                 $id_post = $idPost;
+                                $nilai = $r_post['grade'];
                                 echo '
                                     <div class="post">
                                         <div class="top">
@@ -137,7 +140,27 @@
                         ?>
 
                     </div>
+                    <?php 
+                        if($nilai == '-'){
 
+                    ?>
+                        <label for="nilai" class='form-nilai'>Beri Nilai : </label>
+                        <select name="nilai" id="nilai" class='form-nilai'>
+                            <option value="A" selected>A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                        &nbsp;&nbsp;<button class='btn btn-success admin btn-action' data-id='<?php echo $idPost ?>' data-user='<?php echo $idUser ?>' data-status='1' data-challenge='<?php echo $challenge ?>' id='accepted' onclick='usersChallenge(this);' style='width: 100px;'>Terima</button>&nbsp;&nbsp;
+                        <button class='btn btn-danger admin btn-action' data-id='<?php echo $idPost ?>' data-user='<?php echo $idUser ?>'  data-status='2' data-challenge='<?php echo $challenge ?>' id='rejected' onclick='usersChallenge(this);' style='width: 100px;'>Tolak</button>&nbsp;&nbsp;
+                    <?php
+                        }else{
+
+                    ?>
+                    <br>
+                    <span><b>Nilai : </b><?php echo $nilai ?></span>
+                    <?php
+                        }
+                    ?>
 				</div>
 			</div>
 		</div>
@@ -151,6 +174,7 @@
 	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript" src="../js/admin/view-challenge.js"></script>
 
 </html>

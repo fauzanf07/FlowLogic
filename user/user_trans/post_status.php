@@ -13,7 +13,7 @@
 	$r = mysqli_fetch_assoc($result);
     $id_user = $r['id'];
 
-    $sql = "INSERT INTO tb_post VALUES('','$id_user','$content','0','$challenge','','$date')";
+    $sql = "INSERT INTO tb_post VALUES('','$id_user','$content','0','$challenge','-','','$date')";
     $result = mysqli_query($con, $sql);
     if($result){
         echo json_encode(array("statusCode"=>200));

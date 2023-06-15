@@ -3,12 +3,12 @@
 
     $idUser = $_POST['idUser'];
     $challenge = $_POST['challenge'];
+    $points = $_POST['points'];
 
     $sql = "SELECT a.*, b.name FROM tb_challenge_rewards AS a LEFT JOIN badges_name AS b ON a.challenge = b.challenge  WHERE a.challenge='$challenge'";
     $res1 = mysqli_query($con,$sql);
     $row = mysqli_fetch_assoc($res1);
     $xp = $row['xp'];
-    $points = $row['point'];
     $nameBadge = $row['name'];
 
     $desc1 = "Kamu telah menyelesaikan Challenge ". $challenge;

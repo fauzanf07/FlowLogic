@@ -197,10 +197,11 @@
 											  				<span class="checklist <?php if($currCourse>5) echo 'check'; ?>"><?php if($currCourse>5) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name" data-course="5" data-curr="<?php echo $currCourse ?>">
-											  				<a>Quiz Singkat</a>
+											  				<a>Challenge: Studi Kasus</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> Up to +25 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> Up to +500</span>
+																<span><i class="bi bi-diamond-fill"></i> Up to +300 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> +300 &nbsp;&nbsp;</span>
+                                                                <span<i class="bi bi-award-fill"></i> 1</span>
 															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC5" data-course="5">
@@ -208,18 +209,17 @@
 											  				<span class="user-total" id="totalUserC5"></span>
 											  			</div>
 											  		</div>
-											  </li>
+											  	</li>
 											  <li class="list-group-item">
 											  		<div style="width: 100%;">
 											  			<div class="check-side ">
 											  				<span class="checklist <?php if($currCourse>6) echo 'check'; ?>"><?php if($currCourse>6) echo '&#10003;'; ?></span>
 											  			</div>
 											  			<div class="material-name" data-course="6" data-curr="<?php echo $currCourse ?>">
-											  				<a>Challenge: Studi Kasus</a>
+											  				<a>Quiz Singkat</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> +30 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> +300 &nbsp;&nbsp;</span>
-                                                                <span<i class="bi bi-award-fill"></i> 1</span>
+																<span><i class="bi bi-diamond-fill"></i> Up to +25 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> Up to +500</span>
 															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC6" data-course="6">

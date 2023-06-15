@@ -69,3 +69,79 @@ function sendComment(id){
 		});
 	}
 }
+
+function updateHistory(idUser,challenge,points){
+	$.ajax({
+		url: "./backend/update_history_challenge.php",
+		type: "POST",
+		data: {
+			idUser: idUser,
+			challenge: challenge,
+			points: points
+		},
+		cache: false,
+		success: function(dataResult){
+			var dataResult = JSON.parse(dataResult);
+			console.log(dataResult);
+			if(dataResult.statusCode==200){
+				Swal.fire({
+					title: 'Good job!',
+					text: 'Berhasil dilakukan!',
+					icon: 'success',
+					confirmButtonColor: '#23fa5c',
+					allowOutsideClick: false,
+				});
+				$('#accepted').css('display','none');
+				$('#rejected').css('display','none');
+				$('.form-nilai').css('display','none');
+			}
+		}
+	});
+}
+
+function usersChallenge(id){
+	let idPost = $(id).data('id');
+	let idUser = $(id).data('user');
+	let idChall = $(id).data('challenge');
+	let idStatus = $(id).data('status');
+	let nilai = idStatus==1 ? $('#nilai').find(":selected").val() : '-';
+	let points = 0;
+	if(nilai == 'A'){
+		points = 300;
+	}else if(nilai=='B'){
+		points = 200;
+	}else{
+		points = 100;
+	}
+
+	$.ajax({
+		url: "./backend/challenge.php",
+		type: "POST",
+		data: {
+			id: idPost,
+			idUser: idUser,
+			idChall: idChall,
+			idStatus: idStatus,
+			nilai: nilai,
+			points: points
+		},
+		cache: false,
+		success: function(dataResult){
+			var dataResult = JSON.parse(dataResult);
+			console.log(dataResult.statusCode);
+			if(dataResult.statusCode == 201){
+				if(idStatus == 1){
+					updateHistory(idUser,idChall,points);
+				}else{
+					Swal.fire({
+						title: 'Good job!',
+						text: 'Berhasil dilakukan!',
+						icon: 'success',
+						confirmButtonColor: '#23fa5c',
+						allowOutsideClick: false,
+					});
+				}
+			}
+		}
+	});
+}

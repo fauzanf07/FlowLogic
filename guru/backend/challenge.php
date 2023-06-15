@@ -7,8 +7,10 @@
     $idUser = $_POST['idUser'];
     $challenge = $_POST['idChall'];
     $status = $_POST['idStatus'];
+    $nilai = $_POST['nilai'];
+    $points = $_POST['points'];
 
-    $sql = "UPDATE tb_post AS a SET a.status = '$status', a.accepted_at='$date' WHERE a.id = '$idPost'";
+    $sql = "UPDATE tb_post AS a SET a.status = '$status', a.grade = '$nilai', a.accepted_at='$date' WHERE a.id = '$idPost'";
     $res = mysqli_query($con,$sql);
 
     if($res){
@@ -20,7 +22,6 @@
                 $res1 = mysqli_query($con,$sql);
                 $row = mysqli_fetch_assoc($res1);
                 $xp = $row['xp'];
-                $points = $row['point'];
                 
                 $sql = "UPDATE tb_user AS a SET a.badges= a.badges+1, a.xp = (a.xp + $xp), a.point = (a.point + $points) WHERE a.id = '$idUser'";
                 $reslt = mysqli_query($con,$sql);
