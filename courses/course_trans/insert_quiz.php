@@ -19,7 +19,7 @@
         $sql = "UPDATE tb_user SET  xp = '$xpUser', `point`='$pointsUser' WHERE id = '$idUser'";
         $result = mysqli_query($con,$sql);
         if($result){
-            $sql = "SELECT a.*, b.name FROM tb_quiz as a LEFT JOIN tb_user as b on a.id_user= b.id ORDER BY a.xp DESC, a.points DESC";
+            $sql = "SELECT a.*, b.name FROM tb_quiz as a LEFT JOIN tb_user as b on a.id_user= b.id WHERE a.quiz='$quiz' ORDER BY a.xp DESC, a.points DESC";
             $res = mysqli_query($con, $sql);
             $emparray = array();
             while($row =mysqli_fetch_assoc($res))

@@ -231,7 +231,7 @@
 														</div>
 													</div>
 												</li>
-												<li class="list-group-item " id="current-li">
+												<li class="list-group-item ">
 													<div style="width: 100%;">
 														<div class="check-side ">
 															<span
@@ -379,28 +379,28 @@
                                                         </div>
                                                     </div>
                                                 </li>  
-												<li class="list-group-item">
-													<div style="width: 100%;">
-														<div class="check-side ">
-															<span
-																class="checklist <?php if($currCourse>12) echo 'check'; ?>"><?php if($currCourse>12) echo '&#10003;'; ?></span>
-														</div>
-														<div class="material-name" data-course="12"
-															data-curr="<?php echo $currCourse ?>">
-															<a>Quiz Singkat</a>
-															<div class="get-item">
+                                                <li class="list-group-item" id="current-li">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>12) echo 'check'; ?>"><?php if($currCourse>12) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="12"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Quiz Singkat</a>
+                                                            <div class="get-item">
 																<span><i class="bi bi-diamond-fill"></i> Up to +25
 																	&nbsp;&nbsp;</span>
 																<span><i class="bi bi-star-fill"></i> Up to +500</span>
 															</div>
-														</div>
-														<div class="user-footprint" id="userFootprintC12"
-															data-course="12">
-															<img class="user-img-footprint" id='userImgFootprintC12'>
-															<span class="user-total" id="totalUserC12"></span>
-														</div>
-													</div>
-												</li> 
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC12"
+                                                            data-course="12">
+                                                            <img class="user-img-footprint" id='userImgFootprintC12'>
+                                                            <span class="user-total" id="totalUserC12"></span>
+                                                        </div>
+                                                    </div>
+                                                </li> 
                                             </ul>
 
 											</div>
@@ -445,7 +445,7 @@
 				<div class="right-content">
 				<h1>Quiz Singkat</h1>
 					<?php 
-						$sql = "SELECT * FROM tb_quiz WHERE id_user='$idUser' AND quiz='1'";
+						$sql = "SELECT * FROM tb_quiz WHERE id_user='$idUser' AND quiz='2'";
 						$res = mysqli_query($con, $sql);
 						$amount = mysqli_num_rows($res);
 						if($amount==0){
@@ -473,13 +473,13 @@
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher1"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining1"></span></span>
-									<p>Tujuan utama penggunaan flowchart dalam analisis proses atau algoritma adalah...</p>
+									<p>Pemberian nilai kedalam sebuah variabel ditulis di bagian ... dalam Pseudocode</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan11">Mengoptimalkan kecepatan komputasi</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan12">Menyediakan dokumentasi visual yang mudah dipahami</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan13">Meningkatkan keamanan data</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan14">Memvisualisasikan data statistik</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan15">Menghubungkan perangkat keras dan perangkat lunak</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan11">Judul </div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan12">Deklarasi</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan13">Deksripsi / Algoritma</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan14">Fungsi</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan15">Manapun</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp1"></span> &nbsp;&nbsp;</span>
@@ -491,13 +491,13 @@
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher2"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining2"></span></span>
-									<p>Perbedaan antara flowchart vertikal dan flowchart horizontal terletak pada...</p>
+									<p>Notasi yang biasa digunakan untuk mengeluarkan output pada pseudocode adalah...</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21">Bentuk simbol yang digunakan</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22">Urutan langkah-langkah dalam algoritma</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23">Jenis perangkat keras yang digunakan</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24">Cara penyusunan elemen-elemen flowchart</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25">Kecepatan pemrosesan data</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21">Read</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22">Write</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23">Out</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24">Do</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25">Show</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp2"></span> &nbsp;&nbsp;</span>
@@ -509,13 +509,13 @@
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher3"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining3"></span></span>
-									<p>Simbol umum yang sering digunakan dalam flowchart termasuk...</p>
+									<p>Pada pseudocode, bagaimana penulisan sintaks yang benar untuk menjalankan tindakan jika kondisi terpenuhi?</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31">Segitiga, kotak, dan panah</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32">Lingkaran, garis, dan persegi panjang</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33">Kubus, segitiga, dan elips</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34">Silinder, hexagon, dan panah</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35">Kotak, silinder, dan elips</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31">IF condition THEN</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32">IF condition DO</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33">IF condition THEN DO</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34">IF condition EXECUTE</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35">IF condition PERFORM</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp3"></span> &nbsp;&nbsp;</span>
@@ -527,13 +527,13 @@
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher4"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining4"></span></span>
-									<p>Pengendalian alur dalam flowchart mengacu pada...</p>
+									<p>Mana yang merupakan notasi yang digunakan untuk melakukan perulangan terbatas dalam pseudocode? </p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41">Pengaturan tingkat kecepatan pemrosesan</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42">Mengatur arus listrik dalam sistem komputer</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43">Penggunaan simbol khusus dalam algoritma</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44">Memantau kinerja sistem secara real-time</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45">Mengatur urutan eksekusi instruksi dalam algoritma</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41">FOR</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42">WHILE</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43">IF</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44">ELSE IF</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45">SWITCH</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp4"></span> &nbsp;&nbsp;</span>
@@ -545,13 +545,13 @@
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher5"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining5"></span></span>
-									<p>Flowchart sering digunakan dalam bidang...</p>
+									<p>Apa tujuan dari menggunakan indentasi dalam pseudocode?</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51">Seni dan desain</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52">Musik dan hiburan</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53">Ilmu pengetahuan dan teknologi</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54">Bisnis dan pemasaran</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55">Olahraga dan kebugaran</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51">Mempercantik tampilan pseudocode.</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52">Memudahkan dalam membaca notasi algoritmik.</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53">Membantu dalam menghemat ruang penyimpanan.</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54">Menambah keamanan pseudocode.</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55">Tidak ada manfaat dari indentasi dalam pseudocode.</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp5"></span> &nbsp;&nbsp;</span>
@@ -639,7 +639,7 @@
 										</thead>
 										<tbody id="rank-table">
 										<?php
-											$sql = "SELECT a.*, b.name FROM tb_quiz as a LEFT JOIN tb_user as b on a.id_user= b.id WHERE a.quiz = '1' ORDER BY a.xp DESC, a.points DESC";
+											$sql = "SELECT a.*, b.name FROM tb_quiz as a LEFT JOIN tb_user as b on a.id_user= b.id WHERE a.quiz='2' ORDER BY a.xp DESC, a.points DESC";
 											$res = mysqli_query($con, $sql);
 											$i=1;
 											while($row =mysqli_fetch_assoc($res))
@@ -777,5 +777,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js" integrity="sha512-NSbvq6xPdfFIa2wwSh8vtsPL7AyYAYRAUWRDCqFH34kYIjQ4M7H2POiULf3CH11TRcq3Ww6FZDdLZ8msYhMxjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="../js/courses/autorefresher.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
-<script type="text/javascript" src="../js/courses/quiz/quiz1.js"></script>
+<script type="text/javascript" src="../js/courses/quiz/quiz2.js"></script>
 </html>

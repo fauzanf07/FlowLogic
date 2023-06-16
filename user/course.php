@@ -133,7 +133,7 @@
 			    <p class="mt-15">Peserta didik akan belajar mengenai apa itu flowchart, mengenali simbol-simbol dalam flowchart, memahami alur dari suatu flowchart, serta teknik penggambaran flowchart</p>
 			    <div class="card-flex">
 			    	<span><i class="bi bi-card-text"></i>&nbsp;&nbsp;6 Artikel &nbsp;&#10072;&nbsp; <i class="bi bi-card-checklist"></i>&nbsp;&nbsp;1 Quiz &nbsp;&#10072;&nbsp; <i class="bi bi-clipboard-check"></i>&nbsp;&nbsp;1 Challenge</span>
-			    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp;&nbsp; 48 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;55 points &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;1200 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge
+			    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp;&nbsp; 48 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;325 points &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;1200 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge
 			</div>
 			<div class="collapse collapse-materials" id="materialCollapse1">
 				<ul>
@@ -155,46 +155,52 @@
 					</li>
 					<li>
 						<div class="checklist"></div>
-						<span class="material-name">Quiz Singkat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;Up to 500 XP&nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 25 points</span>
+						<span class="material-name"><b>Challenge :</b> Studi Kasus&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 15 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;300 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 300 points &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge</span>
 					</li>
 					<li>
 						<div class="checklist"></div>
-						<span class="material-name"><b>Challenge :</b> Studi Kasus&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 15 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;300 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;30 points &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge</span>
+						<span class="material-name">Quiz Singkat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;Up to 500 XP&nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 25 points</span>
 					</li>
+					
 				</ul>
 			</div>
 			
 		</div>
 		<div class="card materials" data-aos="zoom-in">
 			<div class="card-body" id="material2">
-			    <h5 class="material-titles">Lorem Ipsum </h5>
+			    <h5 class="material-titles">Level 2: Pseudocode</h5>
 			    <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu.</p>
 			    <div class="card-flex">
-			    	<span><i class="bi bi-card-text"></i>&nbsp;&nbsp;5 Artikel &nbsp;&#10072;&nbsp; <i class="bi bi-card-checklist"></i>&nbsp;&nbsp;1 Ujian</span>
-			    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp;&nbsp; 5 Menit
+			    	<span><i class="bi bi-card-text"></i>&nbsp;&nbsp;6 Artikel &nbsp;&#10072;&nbsp; <i class="bi bi-card-checklist"></i>&nbsp;&nbsp;1 Quiz&nbsp;&#10072;&nbsp; <i class="bi bi-clipboard-check"></i>&nbsp;&nbsp;1 Challenge</span>
+			    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp;&nbsp; 40 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;325 points &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;1200 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge
 			</div>
 			<div class="collapse collapse-materials" id="materialCollapse2">
 				<ul>
 					<li>
 						<div class="checklist check">&#10003;</div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
+						<span class="material-name">Pengenalan Pseudocode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
 						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
+						<span class="material-name">Struktur Pseudocode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
 						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
+						<span class="material-name">Notasi Algoritmik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 8 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
 						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
+						<span class="material-name">Cara menulis Pseudocode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 4 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
 						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
+						<span class="material-name"><b>Challenge :</b> Studi Kasus&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 15 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;300 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 300 points &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge</span>
 					</li>
+					<li>
+						<div class="checklist"></div>
+						<span class="material-name">Quiz Singkat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;Up to 500 XP&nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 25 points</span>
+					</li>
+					
 				</ul>
 			</div>
 			

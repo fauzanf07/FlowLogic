@@ -1,7 +1,7 @@
 <?php
     include("../../db.php");
 
-    $levelUpCourse = [6,100,100];
+    $levelUpCourse = [6,12,100];
     $username = $_POST['username'];
     $sql = "SELECT * FROM tb_user AS a LEFT JOIN tb_courses AS b ON a.id = b.id_user WHERE username='$username'";
     $result = mysqli_query($con,$sql);
