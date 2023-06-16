@@ -238,7 +238,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-												<li class="list-group-item" id="current-li">
+												<li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -389,7 +389,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -397,7 +397,7 @@
                                                         </div>
                                                         <div class="material-name" data-course="11"
                                                             data-curr="<?php echo $currCourse ?>">
-                                                            <a>Cara menulis Pseudocode</a>
+                                                            <a>Challenge : Studi Kasus</a>
                                                             <div class="get-item">
                                                                 <span><i class="bi bi-diamond-fill"></i> Up to +300
                                                                     &nbsp;&nbsp;</span>
@@ -412,7 +412,8 @@
                                                             <span class="user-total" id="totalUserC11"></span>
                                                         </div>
                                                     </div>
-                                                </li>        
+                                                </li>
+                                                        
                                             </ul>
                                         </div>
                                     </div>
@@ -507,7 +508,7 @@
                     ?>
                     <div class="share-wrapper">
                         <textarea id="shareBox"></textarea>
-                        <center><button type="button" id="share" data-username="<?php echo $username; ?>"
+                        <center><button type="button" id="share" data-username="<?php echo $username; ?>" data-challenge='2'
                                 onclick="share(this);" class="btn btn-primary mt-4">SHARE YOUR KNOWLEDGE&nbsp; <i
                                     class="bi bi-send-fill"></i></button></center>
                     </div>
@@ -611,11 +612,12 @@
 
                     </div>
 					<br>
-					<p><b>Selamat! Anda telah menyelesaikan Challenge ini. Reward yang kamu dapat :</b></p>
-					<?php
+					
+                    <?php
+						}
 						$sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='2' AND `status`='1'";
 						$result = mysqli_query($con, $sql);
-						$cnt = mysqli_num_rows($res);
+						$cnt = mysqli_num_rows($result);
 						if($cnt !=0){
 							$row = mysqli_fetch_assoc($result);
 							$nilai = $row['grade'];
@@ -626,8 +628,8 @@
 							}else{
 								$point = 100;
 							}
-
 					?>
+                    <p><b>Selamat! Anda telah menyelesaikan Challenge ini. Reward yang kamu dapat :</b></p>
 					<table class="table" style="width: 50%;">
 						<tbody>
 							<tr>
@@ -644,12 +646,12 @@
 							</tr>
 							<tr>
 								<th>Badges</th>
-								<td><img src="../images/badges/penguasa-alur.png" alt="" width="100%" height="auto"></td>
+								<td><img src="../images/badges/analis-logika.png" alt="" width="100%" height="auto"></td>
 							</tr>
 						</tbody>
 					</table>
                     <?php
-						}}
+                        }
                         ?>
                     <button class="btn btn-course" id="previous" data-prev="4">Sebelumnya</button>
                     <button class="btn btn-course f-right" id="next" data-next="6" data-curr="<?php echo $currCourse ?>"

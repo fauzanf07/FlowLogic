@@ -373,13 +373,14 @@ var editor = new FroalaEditor('#shareBox',{
 function share(id){
     var content = editor.html.get();
     var username = $(id).data('username');
+	var challenge = $(id).data('challenge');
     $.ajax({
         url: "../user/user_trans/post_status.php",
         type: "POST",
         data: {
             content: content,
             username: username,
-			challenge: 1,	
+			challenge: challenge,	
         },
         cache: false,
         success: function(dataResult){
