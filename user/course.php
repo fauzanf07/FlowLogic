@@ -5,7 +5,7 @@
 		header("Location: http://localhost/skripsi/");
 	}else{
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/5)*100);
+		$progress = intval(($_SESSION['curr_course']/12)*100);
 		$progressBg = "";
 		if($progress<=30){
 			$progressBg = "bg-danger";
@@ -138,27 +138,27 @@
 			<div class="collapse collapse-materials" id="materialCollapse1">
 				<ul>
 					<li>
-						<div class="checklist check">&#10003;</div>
+						<div class="checklist <?php if($currCourse>1){ echo 'check';} ?>"><?php if($currCourse>1){ echo '&#10003;';} ?></div>
 						<span class="material-name">Pengenalan Flowchart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
+						<div class="checklist <?php if($currCourse>2){ echo 'check';} ?>"><?php if($currCourse>2){ echo '&#10003;';} ?></div>
 						<span class="material-name">Simbol dan Notasi Flowchart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
+						<div class="checklist <?php if($currCourse>3){ echo 'check';} ?>"><?php if($currCourse>3){ echo '&#10003;';} ?></div>
 						<span class="material-name">Pemahaman Alur Flowchart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 10 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
+						<div class="checklist <?php if($currCourse>4){ echo 'check';} ?>"><?php if($currCourse>4){ echo '&#10003;';} ?></div>
 						<span class="material-name">Teknik Membuat Flowchart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 10 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
+						<div class="checklist <?php if($currCourse>5){ echo 'check';} ?>"><?php if($currCourse>5){ echo '&#10003;';} ?></div>
 						<span class="material-name"><b>Challenge :</b> Studi Kasus&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 15 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;300 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 300 points &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
+						<div class="checklist <?php if($currCourse>6){ echo 'check';} ?>"><?php if($currCourse>6){ echo '&#10003;';} ?></div>
 						<span class="material-name">Quiz Singkat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;Up to 500 XP&nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 25 points</span>
 					</li>
 					
@@ -177,27 +177,27 @@
 			<div class="collapse collapse-materials" id="materialCollapse2">
 				<ul>
 					<li>
-						<div class="checklist check">&#10003;</div>
+						<div class="checklist <?php if($currCourse>7){ echo 'check';} ?>"><?php if($currCourse>7){ echo '&#10003;';} ?></div>
 						<span class="material-name">Pengenalan Pseudocode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
+						<div class="checklist <?php if($currCourse>8){ echo 'check';} ?>"><?php if($currCourse>8){ echo '&#10003;';} ?></div>
 						<span class="material-name">Struktur Pseudocode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
+						<div class="checklist <?php if($currCourse>9){ echo 'check';} ?>"><?php if($currCourse>9){ echo '&#10003;';} ?></div>
 						<span class="material-name">Notasi Algoritmik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 8 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
+						<div class="checklist <?php if($currCourse>10){ echo 'check';} ?>"><?php if($currCourse>10){ echo '&#10003;';} ?></div>
 						<span class="material-name">Cara menulis Pseudocode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 4 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
+						<div class="checklist <?php if($currCourse>11){ echo 'check';} ?>"><?php if($currCourse>11){ echo '&#10003;';} ?></div>
 						<span class="material-name"><b>Challenge :</b> Studi Kasus&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 15 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;300 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 300 points &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
+						<div class="checklist <?php if($currCourse>12){ echo 'check';} ?>"><?php if($currCourse>12){ echo '&#10003;';} ?></div>
 						<span class="material-name">Quiz Singkat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;Up to 500 XP&nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 25 points</span>
 					</li>
 					

@@ -1,4 +1,4 @@
-let kj_id = [2,4,1,5,3];
+let kj_id = [2,5,5,4,3];
 let xp = 0;
 let points =0;
 let benar=0;
@@ -38,7 +38,7 @@ setTimeout(() => {
 
 function getXP(min, max, time, soal){
     var range = max - min;
-    var perXp = Math.round(range/time);
+    var perXp = Math.floor(range/time);
     var remainTime= parseInt($('#auto-refresher-time-remaining'+soal).html());
     return min + (perXp * remainTime);
 }

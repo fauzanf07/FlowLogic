@@ -468,97 +468,124 @@
 										<li>Setiap soal yang dijawab dengan benar, peserta didik akan mendapatkan xp dengan jumlah sesuai kecepatan anda menjawab soal dan 5 coin per soal yang benar.</li>
 										<li>Setelah quiz selesai, peserta didik akan melihat peringkat pada quiz ini dari jumlah xp tertinggi sampai terendah.</li>
 									</ol>
-									<center><button class="btn-quiz" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(1,20);">Mulai Quiz</button></center>
+									<center><button class="btn-quiz" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(1,60);">Mulai Quiz</button></center>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher1"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining1"></span></span>
-									<p>Tujuan utama penggunaan flowchart dalam analisis proses atau algoritma adalah...</p>
+									<pre>
+
+Seorang ibu hendak berbelanja barang di sebuah toko online menggunakan aplikasi smartphone. 
+Terdapat beberapa tahapan untuk berbelanja di toko online tersebut, yaitu
+1) Mulai menjalankan aplikasi
+2) Memilih barang yang diinginkan.
+3) Memasukan alamat pengiriman.
+4) Memilih metode pembayaran
+5) Melakukan pembayaran
+6) Jika pembayaran berhasil, maka barang akan dikirim ke alamatnya. Dan jika gagal, proses pengiriman akan dibatalkan.
+
+Simbol flowchart yang tepat untuk menggambarkan langkah ke 3 yaitu...</pre>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan11">Mengoptimalkan kecepatan komputasi</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan12">Menyediakan dokumentasi visual yang mudah dipahami</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan13">Meningkatkan keamanan data</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan14">Memvisualisasikan data statistik</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan15">Menghubungkan perangkat keras dan perangkat lunak</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan11"><img src="../images/simbol/decision.png" width="80%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan12"><img src="../images/simbol/input-output.png" width="90%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan13"><img src="../images/simbol/terminal.png" width="80%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan14"><img src="../images/simbol/preparation.png" width="80%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan15"><img src="../images/simbol/processing.png" width="80%" height="auto" alt=""></div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp1"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points1"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(2,20);" id="nextSoal1">Next</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(1,20,false);" id="btnEval1">Evaluasi</button>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(2,60);" id="nextSoal1">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(1,60,false);" id="btnEval1">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher2"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining2"></span></span>
-									<p>Perbedaan antara flowchart vertikal dan flowchart horizontal terletak pada...</p>
+									<pre>
+
+Seorang ibu hendak berbelanja barang di sebuah toko online menggunakan aplikasi smartphone. 
+Terdapat beberapa tahapan untuk berbelanja di toko online tersebut, yaitu
+1) Mulai menjalankan aplikasi
+2) Memilih barang yang diinginkan.
+3) Memasukan alamat pengiriman.
+4) Memilih metode pembayaran
+5) Melakukan pembayaran
+6) Jika pembayaran berhasil, maka barang akan dikirim ke alamatnya. Dan jika gagal, proses pengiriman akan dibatalkan.
+
+Simbol flowchart yang tepat untuk menggambarkan langkah ke 5 yaitu...</pre>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21">Bentuk simbol yang digunakan</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22">Urutan langkah-langkah dalam algoritma</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23">Jenis perangkat keras yang digunakan</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24">Cara penyusunan elemen-elemen flowchart</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25">Kecepatan pemrosesan data</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21"><img src="../images/simbol/decision.png" width="80%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22"><img src="../images/simbol/input-output.png" width="90%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23"><img src="../images/simbol/terminal.png" width="80%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24"><img src="../images/simbol/preparation.png" width="80%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25"><img src="../images/simbol/processing.png" width="80%" height="auto" alt=""></div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp2"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points2"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(3,20);" id="nextSoal2">Next</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(2,20,false);" id="btnEval2">Evaluasi</button>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(3,60);" id="nextSoal2">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(2,60,false);" id="btnEval2">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher3"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining3"></span></span>
-									<p>Simbol umum yang sering digunakan dalam flowchart termasuk...</p>
+									<center>
+										<img src="../images/quiz/quiz-soal-3.png" width="40%" height="auto" alt="">
+									</center>
+									<p>Dari simbol-simbol flowchart diatas, urutan simbol yang tepat untuk membentuk algoritma menghitung luas lingkaran adalah..</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31">Segitiga, kotak, dan panah</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32">Lingkaran, garis, dan persegi panjang</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33">Kubus, segitiga, dan elips</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34">Silinder, hexagon, dan panah</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35">Kotak, silinder, dan elips</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31">1-2-3-4-5-6</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32">1-2-4-3-5-6</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33">1-3-2-4-5-6</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34">1-3-4-2-5-6</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35">1-4-3-2-5-6</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp3"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points3"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(4,20);" id="nextSoal3">Next</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(3,20,false);" id="btnEval3">Evaluasi</button>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(4,60);" id="nextSoal3">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(3,60,false);" id="btnEval3">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher4"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining4"></span></span>
-									<p>Pengendalian alur dalam flowchart mengacu pada...</p>
+									<center><img src="../images/quiz/quiz-soal-4.png" width="20%" height="auto" alt=""></center>
+									<p>Simbol yang tepat untuk melengkapi simbol nomor 1 yang rumpang pada flowchart diatas adalah…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41">Pengaturan tingkat kecepatan pemrosesan</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42">Mengatur arus listrik dalam sistem komputer</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43">Penggunaan simbol khusus dalam algoritma</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44">Memantau kinerja sistem secara real-time</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45">Mengatur urutan eksekusi instruksi dalam algoritma</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41"><img src="../images/quiz/pilgan-4-a.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42"><img src="../images/quiz/pilgan-4-b.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43"><img src="../images/quiz/pilgan-4-c.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44"><img src="../images/quiz/pilgan-4-d.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45"><img src="../images/quiz/pilgan-4-e.png" width="100%" height="auto" alt=""></div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp4"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points4"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(5,20);" id="nextSoal4">Next</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(4,20,false);" id="btnEval4">Evaluasi</button>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(5,60);" id="nextSoal4">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(4,60,false);" id="btnEval4">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher5"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining5"></span></span>
-									<p>Flowchart sering digunakan dalam bidang...</p>
+									<center><img src="../images/quiz/quiz-soal-4.png" width="20%" height="auto" alt=""></center>
+									<p>Simbol yang tepat untuk melengkapi simbol nomor 2 yang rumpang pada flowchart diatas adalah…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51">Seni dan desain</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52">Musik dan hiburan</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53">Ilmu pengetahuan dan teknologi</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54">Bisnis dan pemasaran</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55">Olahraga dan kebugaran</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51"><img src="../images/quiz/pilgan-5-a.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52"><img src="../images/quiz/pilgan-5-b.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53"><img src="../images/quiz/pilgan-5-c.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54"><img src="../images/quiz/pilgan-5-d.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55"><img src="../images/quiz/pilgan-5-e.png" width="100%" height="auto" alt=""></div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp5"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points5"></span></span>
 									</div>
 									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"  onclick="result(5,<?php echo $idUser; ?>);"id="nextSoal5">Result</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(5,20,false);" id="btnEval5">Evaluasi</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(5,60,false);" id="btnEval5">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="container">

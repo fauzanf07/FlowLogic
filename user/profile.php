@@ -261,6 +261,10 @@
 									<?php
 										$sql = "SELECT * FROM tb_history WHERE id_user = '$user_id'";
 										$result = mysqli_query($con, $sql);
+										$actCount = mysqli_num_rows($result);
+										if($actCount==0){
+											echo '<p>Belum ada jejak aktivitas</p>';
+										}
 										while($r_hist = mysqli_fetch_assoc($result)){
 											if($r_hist['type'] == 1){
 												echo '
@@ -317,6 +321,10 @@
 							<?php
 								$sql = "SELECT * FROM tb_users_badge AS a JOIN badges_name AS b ON a.id_badges = b.id WHERE id_user = '$user_id'";
 								$result = mysqli_query($con, $sql);
+								$badgeCount = mysqli_num_rows($result);
+								if($badgeCount==0){
+									echo '<center><p>Belum ada Lencana (Badges) yang didapatkan</p></center>';
+								}
 								while($r_badges = mysqli_fetch_assoc($result)){
 									$dateString = $r_badges['earned_at'];
 									$dateTime = strtotime($dateString);
