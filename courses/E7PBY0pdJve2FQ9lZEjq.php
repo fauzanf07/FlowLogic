@@ -12,7 +12,7 @@
         $id_user= $r['id'];
 
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/5)*100);
+		$progress = intval(($_SESSION['curr_course']/8)*100);
 		$progressBg = "";
 		if($progress <=30){
 			$progressBg = "bg-danger";
@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Pengenalan Pseudocode</title>
+    <title>Variabel Lokal dan Global</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,8 @@
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel"><i class="bi bi-trophy-fill"></i>&nbsp;&nbsp;Top Ranks
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="closeRanks"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                id="closeRanks"></button>
         </div>
         <div class="offcanvas-body">
             <div class="ranks">
@@ -66,10 +67,11 @@
                         </tr>
                     </thead>
                     <tbody id="tableRanks">
-                        
+
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore" onclick="getRanks(true, false);">Load More</button>
+                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore"
+                    onclick="getRanks(true, false);">Load More</button>
             </div>
         </div>
     </div>
@@ -102,8 +104,8 @@
                         </ul>
                     </div>
                     <button class="btn btn-light btn-nav" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks" onclick="getRanks(false, true);"><i
-                            class="bi bi-trophy-fill"></i></button>
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks"
+                        onclick="getRanks(false, true);"><i class="bi bi-trophy-fill"></i></button>
                 </ul>
             </div>
         </div>
@@ -116,9 +118,9 @@
                         <h5>Progress Kelas</h5>
                         <div class="progress" style="height: 30px; margin-top: 10px;">
                             <div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar"
-                                aria-label="Example with label"
-                                style="width: <?php echo $progress . "%"; ?>;" aria-valuenow=" 25" aria-valuemin="0"
-                                aria-valuemax="100"><?php echo $progress . "%"; ?></div>
+                                aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>;"
+                                aria-valuenow=" 25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?>
+                            </div>
                         </div>
                         <div class="element-game">
                             <span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?>
@@ -284,7 +286,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -300,8 +302,8 @@
                                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                        <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" id="current-li">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -344,7 +346,7 @@
                                                             <span class="user-total" id="totalUserC8"></span>
                                                         </div>
                                                     </div>
-                                                </li>   
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -366,7 +368,7 @@
                                                             <span class="user-total" id="totalUserC9"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -388,7 +390,7 @@
                                                             <span class="user-total" id="totalUserC10"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -412,7 +414,7 @@
                                                             <span class="user-total" id="totalUserC11"></span>
                                                         </div>
                                                     </div>
-                                                </li> 
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -423,10 +425,10 @@
                                                             data-curr="<?php echo $currCourse ?>">
                                                             <a>Quiz Singkat</a>
                                                             <div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> Up to +25
-																	&nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> Up to +500</span>
-															</div>
+                                                                <span><i class="bi bi-diamond-fill"></i> Up to +25
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> Up to +500</span>
+                                                            </div>
                                                         </div>
                                                         <div class="user-footprint" id="userFootprintC12"
                                                             data-course="12">
@@ -434,7 +436,7 @@
                                                             <span class="user-total" id="totalUserC12"></span>
                                                         </div>
                                                     </div>
-                                                </li> 
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -472,8 +474,8 @@
                                                             <span class="user-total" id="totalUserC13"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
-                                                <li class="list-group-item">
+                                                </li>
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -494,7 +496,7 @@
                                                             <span class="user-total" id="totalUserC14"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -506,33 +508,132 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <p>Selamat anda sudah mencapai di level 2! Di dalam level 2 ini anda akan mempelajari mengenai pseudocode yang mana pseudocode ini salah satu cara penyajian algoritma seperti flowchart namun pada pseudocode ini hampir mirip dengan bahasa pemrograman dibanding dengan Flowchart. Untuk informasi lebih lanjut mari kita simak berikut ini!</p>
-                    <h4>Pengenalan pseudocode?</h4><br>
-                    <center><img src="../images/pseudocode.jpg" width="60%" height="auto"></center><br>
-                    <p><b>Pseudocode</b> menggabungkan kata <b>"pseudo"</b> yang berarti tiruan atau imitasi, dan <b>"code"</b> yang merujuk pada kode yang terkait dengan instruksi yang ditulis dalam bahasa komputer (bahasa pemrograman). Dalam terjemahan sederhana, pseudocode adalah imitasi atau tiruan dari kode bahasa pemrograman. Dalam dasarnya, pseudocode adalah bahasa yang digunakan oleh para programmer untuk memikirkan masalah yang perlu dipecahkan tanpa harus memperhatikan sintaksis dari bahasa pemrograman tertentu. Tidak ada aturan tertentu dalam penulisan sintaksis dalam pseudocode. Oleh karena itu, pseudocode digunakan untuk menggambarkan logika urutan langkah dalam program tanpa memperhatikan bahasa pemrograman yang digunakan. Meskipun pseudocode tidak memiliki aturan penulisan sintaksis, pada level ini akan memberikan beberapa aturan penulisan sintaksis yang sederhana agar pembaca dapat lebih mudah mempelajari algoritma-algoritma yang ada dalam level ini.</p>
-                    <p>Begini, sekarang anda lihat bahasa pemrograman di bawah ini.</p><br>
-                    <center><img src="../images/contoh-algoritma.png" width="60%" height="auto"></center><br>
-                    <p>Apakah anda yakin bahwa semua orang bahkan orang awam akan mengerti mengenai bahasa pemrograman C diatas? Tentu saja tidak karena tidak semua orang memahami bahasa pemrograman C. Sekarang bandingkan dengan bahasa pseudocode dibawah ini.</p>
-                    <center><img src="../images/contoh-pseudocode.png" width="60%" height="auto"></center><br>
-                    <p>Apakah cara penyajian algoritma menentukan bilangan ganjil lebih mudah dimengerti melalui bahasa pemrograman atau pseudocode? Anda pasti merasakan bahwa cara penyajian pseudocode lebih mudah dimengerti dibandingkan dengan bahasa pemrograman karena pseudocode ini disajikan dengan bahasa sehari-hari. Umumnya, pseudocode ditulis dengan bahasa Inggris karena lebih mudah ketika mengkonversikannya ke bahasa pemrograman. Tapi juga tidak masalah jika Anda menggunakan bahasa Indonesia.</p>
-                    <br><h4>Apa fungsi pseudocode?</h4><br>
-                    <p>Seperti yang dijelaskan diatas bahwa pseudocode digunakan oleh para programmer untuk memikirkan masalah yang perlu dipecahkan tanpa harus memperhatikan sintaksis dari bahasa pemrograman tertentu. Namun terdapat beberapa fungsi pseudocode lagi, yakni sebagai berikut.</p>
+                    <p>Variabel merupakan alat penting dalam pemrograman untuk menyimpan dan mengelola data. Ada dua
+                        jenis variabel yang perlu kita ketahui: variabel lokal dan variabel global. Apa itu variabel
+                        lokal dan global? Dan apa perbedaannya? Yuk, mari kita mulai mempelajari variabel lokal dan
+                        global!</p>
+                    <h4>Pengenalan Pemrograman Modular</h4>
                     <ol>
-                        <h5><li>Sebagai media dokumentasi</li></h5>
-                        <p>Dokumentasi berperan penting sebagai panduan untuk memastikan bahwa proses perancangan program sesuai dengan harapan. Dokumentasi merupakan elemen krusial dalam pembangunan proyek, karena akan dibutuhkan oleh para programmer untuk mengecek logika program jika terjadi error atau bug di masa yang akan datang.</p>
-                        <h5><li>Sebagai Titik Tengah Antara Flowchart dan Kode</li></h5>
-                        <p>Bagi pengembang yang baru memulai, seringkali mengalami kesulitan dalam mengubah alur diagram atau flowchart menjadi kode pemrograman. Namun, pseudocode hadir sebagai jembatan yang baik, karena membantu dalam melakukan transisi secara efektif dan efisien.</p>
-                        <h5><li>Sebagai Jembatan Komunikasi</li></h5>
-                        <p>Pseudocode berfungsi sebagai jembatan yang memungkinkan seorang programmer berkolaborasi dengan anggota tim dari berbagai divisi seperti mitra bisnis, manajer, desainer, dan lainnya. Dengan menggunakan pseudocode, programmer dapat dengan mudah menjelaskan bagaimana mekanisme kode bekerja, yang pada gilirannya meningkatkan efektivitas komunikasi.</p>
-                        <h5><li>Mempercepat Proses Penyelesaian</li></h5>
-                        <p>Tujuan utama penggunaan pseudocode adalah untuk mempercepat proses pembuatan sistem. Berbeda dengan diagram alur yang memiliki format dan struktur yang agak sulit dipahami secara langsung, pseudocode menggunakan struktur yang sederhana dan mudah dibaca. Ini juga membuatnya lebih mudah untuk dimodifikasi.</p>
-                        <p>Dengan pseudocode, proses konversi ke dalam bahasa pemrograman tidak memerlukan waktu yang lama, karena alur algoritma telah digambarkan dengan jelas.</p>
+                        <h5>
+                            <li>Variabel Lokal</li>
+                        </h5>
+                        <p>Dalam penggunaan fungsi atau prosedur, kita dapat mendeklarasikan variabel-variabel yang akan
+                            digunakan di dalamnya. Jenis variabel ini disebut sebagai variabel lokal atau variabel
+                            internal. Ini berarti variabel hanya dikenali di dalam subprogram itu sendiri, seperti
+                            fungsi atau prosedur tersebut. Variabel lokal tidak dapat diakses, dipanggil, atau diubah
+                            oleh fungsi atau prosedur lain, bahkan oleh program utama, karena hanya dikenali di dalam
+                            fungsi atau prosedur di mana variabel tersebut dideklarasikan. Berikut contoh variabel lokal
+                            : </p>
+                        <div class="row">
+                            <div class="col-6">
+                                <b>Pseudocode : </b>
+                                <img src="../images/contoh-variabel-lokal.png" width="100%" height="auto">
+                            </div>
+                            <div class="col-6">
+                                <b>Bahasa C: </b>
+                                <img src="../images/contoh-variabel-lokal-c.png" width="100%" height="auto">
+                            </div>
+                        </div>
+                        <p>Untuk lebih memahami variabel lokal mari kita lihat kode program bahasa C di bawah ini
+                            kemudian kita jalankan.</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <select class="form-select lang-list" aria-label="Default select example">
+                                        <option value="6 c_cpp">C (gcc)</option>
+                                    </select><button type="button" class="btn btn-success float-end" id="run"
+                                        onclick="run(0);"><i class="bi bi-play-fill"></i> RUN</button>
+                                    <pre id="editor" class="editor">#include &lt;stdio.h&gt;
+
+void coba() {
+     int A;
+     A = 20;
+     printf("Nilai A di dalam prosedur coba() : %d\n", A);
+}
+
+int main() {
+    printf("Nilai A di dalam fungsi main() : %d\n", A);
+
+    return 0;
+}
+
+								</pre>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3>Result</h3>
+                                    <div class="preview-code" id="preview-code0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Program diatas akan menghasilkan error karena variabel A merupakan variabel lokal. Itu
+                            berarti variabel A hanya bisa diakses di dalam prosedur coba() saja dan tidak bisa diakses
+                            di program main().</p>
+                        <h5>
+                            <li>Variabel Global</li>
+                        </h5>
+                        <p>Variabel global adalah jenis variabel yang dapat diakses, dipanggil, dan dikenali oleh semua
+                            fungsi, prosedur, atau bagian program lainnya. Variabel global ini memungkinkan
+                            penggunaannya dalam beberapa fungsi atau prosedur, sehingga menghemat penulisan kode, karena
+                            tidak perlu lagi mengulangi penulisan variabel yang sama di beberapa fungsi atau prosedur.
+                        </p>
+                        <p>Dalam bahasa C sendiri kita telah mengetahui bahwa struktur program dalam bahasa C selalu ada
+                            fungsi utama dengan nama main() . Apabila kita mendeklarasikan sebuah variabel diluar fungsi
+                            main() / fungsi lain / prosedur lain, maka dengan sendirinya compiler akan menganggap
+                            variabel tersebut sebagai variabel global. Berikut contoh variabel global:</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <b>Pseudocode : </b>
+                                <img src="../images/contoh-variabel-global.png" width="100%" height="auto">
+                            </div>
+                            <div class="col-6">
+                                <b>Bahasa C: </b>
+                                <img src="../images/contoh-variabel-global-c.png" width="100%" height="auto">
+                            </div>
+                        </div>
+                        <p>Untuk lebih memahami variabel global mari kita lihat kode program bahasa C di bawah ini
+                            kemudian kita jalankan.</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <select class="form-select lang-list" aria-label="Default select example">
+                                        <option value="6 c_cpp">C (gcc)</option>
+                                    </select><button type="button" class="btn btn-success float-end" id="run"
+                                        onclick="run(1);"><i class="bi bi-play-fill"></i> RUN</button>
+                                    <pre id="editor" class="editor">#include &lt;stdio.h&gt;
+
+int A = 20;
+
+void coba() {
+     printf("Nilai A di dalam prosedur coba() : %d\n", A);
+}
+
+int main() {
+    coba();
+    printf("Nilai A di dalam fungsi coba() : %d\n", A);
+
+    return 0;
+}
+
+								</pre>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3>Result</h3>
+                                    <div class="preview-code" id="preview-code1">
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Dari program diatas kita bisa lihat bahwa prosedur coba dan fungsi main dapat mengakses
+                                nilai A. Oleh karena itu variabel A merupakan variabel global.</p>
+                        </div>
                     </ol>
-                    <p>Menerapkan pseudocode akan memberi banyak manfaat. Misalnya, Anda dapat mengurangi kesalahan ketika melakukan coding, karena hanya tinggal melihat alur yang telah dituangkan dalam pseudocode.</p>
-                    <p>Berkat pseudocode juga, proses coding akan menjadi lancar dan hasil akhir proyek website Anda pun akan menjadi bagus.</p>
-                    <button class="btn btn-course" id="previous" data-prev="6">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="8" data-curr="<?php echo $currCourse ?>"
-                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Pengenalan Pseudocode" data-artikel="1">Berikutnya</button>
+                    <p>Oke, cukup sudah pembahasan variabel lokal dan global ini. Apakah kalian sudah paham membedakan antara variabel lokal dan global?</p>
+                    <div style="clear:both;"></div>
+                    <button class="btn btn-course" id="previous" data-prev="12">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="14"
+                        data-curr="<?php echo $currCourse ?>" data-reward='0'
+                        data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>"
+                        data-materi="Pengenalan Pemrograman Modular" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>
@@ -611,5 +712,6 @@
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
+<script type="text/javascript" src="../js/courses/ace-editor.js"></script>
 
 </html>

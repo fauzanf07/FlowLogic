@@ -12,7 +12,7 @@
         $id_user= $r['id'];
 
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/5)*100);
+		$progress = intval(($_SESSION['curr_course']/8)*100);
 		$progressBg = "";
 		if($progress <=30){
 			$progressBg = "bg-danger";
@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Pengenalan Pseudocode</title>
+    <title>Pengenalan Pemrograman Modular</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -301,7 +301,7 @@
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
                                         <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" id="current-li">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -322,7 +322,7 @@
                                                             <span class="user-total" id="totalUserC7"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li>  
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -344,8 +344,8 @@
                                                             <span class="user-total" id="totalUserC8"></span>
                                                         </div>
                                                     </div>
-                                                </li>   
-                                                <li class="list-group-item">
+                                                </li>
+                                                <li class="list-group-item" >
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -366,7 +366,7 @@
                                                             <span class="user-total" id="totalUserC9"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li> 
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -388,7 +388,7 @@
                                                             <span class="user-total" id="totalUserC10"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -412,7 +412,7 @@
                                                             <span class="user-total" id="totalUserC11"></span>
                                                         </div>
                                                     </div>
-                                                </li> 
+                                                </li>      
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -451,7 +451,7 @@
                                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
                                             <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -472,7 +472,7 @@
                                                             <span class="user-total" id="totalUserC13"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li> 
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -494,7 +494,7 @@
                                                             <span class="user-total" id="totalUserC14"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li>   
                                             </ul>
                                         </div>
                                     </div>
@@ -506,33 +506,25 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <p>Selamat anda sudah mencapai di level 2! Di dalam level 2 ini anda akan mempelajari mengenai pseudocode yang mana pseudocode ini salah satu cara penyajian algoritma seperti flowchart namun pada pseudocode ini hampir mirip dengan bahasa pemrograman dibanding dengan Flowchart. Untuk informasi lebih lanjut mari kita simak berikut ini!</p>
-                    <h4>Pengenalan pseudocode?</h4><br>
-                    <center><img src="../images/pseudocode.jpg" width="60%" height="auto"></center><br>
-                    <p><b>Pseudocode</b> menggabungkan kata <b>"pseudo"</b> yang berarti tiruan atau imitasi, dan <b>"code"</b> yang merujuk pada kode yang terkait dengan instruksi yang ditulis dalam bahasa komputer (bahasa pemrograman). Dalam terjemahan sederhana, pseudocode adalah imitasi atau tiruan dari kode bahasa pemrograman. Dalam dasarnya, pseudocode adalah bahasa yang digunakan oleh para programmer untuk memikirkan masalah yang perlu dipecahkan tanpa harus memperhatikan sintaksis dari bahasa pemrograman tertentu. Tidak ada aturan tertentu dalam penulisan sintaksis dalam pseudocode. Oleh karena itu, pseudocode digunakan untuk menggambarkan logika urutan langkah dalam program tanpa memperhatikan bahasa pemrograman yang digunakan. Meskipun pseudocode tidak memiliki aturan penulisan sintaksis, pada level ini akan memberikan beberapa aturan penulisan sintaksis yang sederhana agar pembaca dapat lebih mudah mempelajari algoritma-algoritma yang ada dalam level ini.</p>
-                    <p>Begini, sekarang anda lihat bahasa pemrograman di bawah ini.</p><br>
-                    <center><img src="../images/contoh-algoritma.png" width="60%" height="auto"></center><br>
-                    <p>Apakah anda yakin bahwa semua orang bahkan orang awam akan mengerti mengenai bahasa pemrograman C diatas? Tentu saja tidak karena tidak semua orang memahami bahasa pemrograman C. Sekarang bandingkan dengan bahasa pseudocode dibawah ini.</p>
-                    <center><img src="../images/contoh-pseudocode.png" width="60%" height="auto"></center><br>
-                    <p>Apakah cara penyajian algoritma menentukan bilangan ganjil lebih mudah dimengerti melalui bahasa pemrograman atau pseudocode? Anda pasti merasakan bahwa cara penyajian pseudocode lebih mudah dimengerti dibandingkan dengan bahasa pemrograman karena pseudocode ini disajikan dengan bahasa sehari-hari. Umumnya, pseudocode ditulis dengan bahasa Inggris karena lebih mudah ketika mengkonversikannya ke bahasa pemrograman. Tapi juga tidak masalah jika Anda menggunakan bahasa Indonesia.</p>
-                    <br><h4>Apa fungsi pseudocode?</h4><br>
-                    <p>Seperti yang dijelaskan diatas bahwa pseudocode digunakan oleh para programmer untuk memikirkan masalah yang perlu dipecahkan tanpa harus memperhatikan sintaksis dari bahasa pemrograman tertentu. Namun terdapat beberapa fungsi pseudocode lagi, yakni sebagai berikut.</p>
+                    <p>Selamat! Anda telah naik ke level 3 yang mana pada level ini anda akan belajar mengenai Fungsi dan Prosedur. Fungsi dan Prosedur ini termasuk ke dalam pemrograman modular. Apakah kalian tau apa itu pemrograman modular? Jika tidak, mari yuk simak pembahasan berikut ini.</p>
+                    <h4>Pengenalan Pemrograman Modular</h4>
+                    <p>Dalam dunia pemrograman, kita seringkali dihadapkan pada tugas yang rumit yang perlu dipecah menjadi beberapa bagian yang lebih sederhana. Nah, dari situlah muncul ide penggunaan struktur pemrograman modular. Dengan menggunakan pendekatan ini, kita bisa memecahkan masalah besar menjadi sub-masalah yang lebih kecil, yang biasa disebut subprogram. Jadi, bayangkan saja, kita bisa membagi tugas bersama teman-teman kita dalam menyelesaikan program ini. Setiap orang akan bertanggung jawab atas subprogram tertentu, dan nantinya semua subprogram tersebut akan bergabung menjadi sebuah program utuh. Dengan pendekatan ini, pemrograman jadi lebih terorganisir, lebih mudah dipahami, dan tentunya membuat kita lebih efisien dalam menyelesaikan tugas kompleks.</p>
+                    <p>Mari kita bayangkan sebuah program yang dirancang untuk menghitung rata-rata dari sejumlah nilai bilangan bulat. Saat program berjalan, langkah-langkah yang dilakukan terdiri dari dua bagian. Pertama, program akan menjumlahkan semua nilai yang ada. Kemudian, program akan membagi jumlah tersebut dengan banyaknya nilai yang tersedia. Oleh karena itu, program ini bisa dipecah menjadi dua subprogram yang berbeda, yaitu subprogram untuk menjumlahkan nilai dan subprogram untuk melakukan pembagian.</p>
+                    <p>Selain itu, dalam pemrograman modular, kita dapat memanggil kembali subprogram yang telah kita definisikan setiap kali dibutuhkan dalam program tersebut. Hal ini menghindarkan kita dari mendefinisikan kumpulan instruksi yang sama berulang kali dalam program atau bahkan dalam program lainnya. Dengan menggunakan pemrograman modular, sebuah subprogram dapat dianggap sebagai program kecil yang memiliki tujuan spesifik. Biasanya, subprogram ini berisi operasi-operasi sederhana. Jika terjadi kesalahan, kesalahan tersebut dapat dengan mudah terlokalisir pada subprogram itu sendiri.</p>
+                    <center><img src="../images/ilustrasi-modular.png" width="70%" height="auto"></center><br>
+                    <center><i>Ilustrasi pemrograman modular</i></center><br>
+                    <p>Dalam dunia pemrograman, ada dua jenis subprogram yang sering digunakan untuk memecahkan masalah yang rumit menjadi lebih sederhana, yaitu fungsi (<i>function</i>) dan prosedur (<i>procedure</i>). Kedua jenis subprogram ini bisa digunakan bersama-sama atau hanya salah satu dari keduanya dalam sebuah program. Setiap jenis subprogram memiliki karakteristik dan perilaku yang berbeda, sehingga penggunaannya juga berbeda-beda tergantung kebutuhan.</p>
+                    <p>Sebagai bagian dari program utama, subprogram harus menetapkan kondisi awal (<i>initial state/I.S.</i>) sebelum menjalankan proses di dalamnya, serta menentukan kondisi akhir (<i>final state/F.S.</i>). Kondisi akhir ini dapat berupa hasil proses (output) atau perubahan nilai dalam variabel tertentu (khususnya untuk fungsi).</p>
+                    <p>Terdapat beberapa fungsi dan prosedur yang sudah disediakan dan bisa langsung digunakan oleh kita dalam program dengan mendefinisikan variabel-variabel yang dibutuhkan. Selain fungsi dan prosedur yang sudah ada, kita juga memiliki kemampuan untuk membuat fungsi dan prosedur sendiri yang diperlukan dalam program</p>
+                    <p>Ketika membuat sebuah subprogram, pemrogram memiliki pilihan untuk menyimpannya dalam salah satu dari dua lokasi berikut:</p>
                     <ol>
-                        <h5><li>Sebagai media dokumentasi</li></h5>
-                        <p>Dokumentasi berperan penting sebagai panduan untuk memastikan bahwa proses perancangan program sesuai dengan harapan. Dokumentasi merupakan elemen krusial dalam pembangunan proyek, karena akan dibutuhkan oleh para programmer untuk mengecek logika program jika terjadi error atau bug di masa yang akan datang.</p>
-                        <h5><li>Sebagai Titik Tengah Antara Flowchart dan Kode</li></h5>
-                        <p>Bagi pengembang yang baru memulai, seringkali mengalami kesulitan dalam mengubah alur diagram atau flowchart menjadi kode pemrograman. Namun, pseudocode hadir sebagai jembatan yang baik, karena membantu dalam melakukan transisi secara efektif dan efisien.</p>
-                        <h5><li>Sebagai Jembatan Komunikasi</li></h5>
-                        <p>Pseudocode berfungsi sebagai jembatan yang memungkinkan seorang programmer berkolaborasi dengan anggota tim dari berbagai divisi seperti mitra bisnis, manajer, desainer, dan lainnya. Dengan menggunakan pseudocode, programmer dapat dengan mudah menjelaskan bagaimana mekanisme kode bekerja, yang pada gilirannya meningkatkan efektivitas komunikasi.</p>
-                        <h5><li>Mempercepat Proses Penyelesaian</li></h5>
-                        <p>Tujuan utama penggunaan pseudocode adalah untuk mempercepat proses pembuatan sistem. Berbeda dengan diagram alur yang memiliki format dan struktur yang agak sulit dipahami secara langsung, pseudocode menggunakan struktur yang sederhana dan mudah dibaca. Ini juga membuatnya lebih mudah untuk dimodifikasi.</p>
-                        <p>Dengan pseudocode, proses konversi ke dalam bahasa pemrograman tidak memerlukan waktu yang lama, karena alur algoritma telah digambarkan dengan jelas.</p>
+                        <li>Dalam file yang sama dengan program utama: dapat dilakukan jika subprogram memiliki jumlah yang sedikit dan ukurannya kecil sehingga lebih mudah dikelola dalam satu file.</li>
+                        <li>Dalam file terpisah: biasanya dilakukan jika subprogram sudah cukup banyak sehingga sulit untuk dikelola dalam satu file, atau jika pemrogram ingin agar subprogram tersebut dapat digunakan dalam beberapa program utama sekaligus.</li>
                     </ol>
-                    <p>Menerapkan pseudocode akan memberi banyak manfaat. Misalnya, Anda dapat mengurangi kesalahan ketika melakukan coding, karena hanya tinggal melihat alur yang telah dituangkan dalam pseudocode.</p>
-                    <p>Berkat pseudocode juga, proses coding akan menjadi lancar dan hasil akhir proyek website Anda pun akan menjadi bagus.</p>
-                    <button class="btn btn-course" id="previous" data-prev="6">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="8" data-curr="<?php echo $currCourse ?>"
-                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Pengenalan Pseudocode" data-artikel="1">Berikutnya</button>
+                    <div style="clear:both;"></div>
+                    <button class="btn btn-course" id="previous" data-prev="12">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="14" data-curr="<?php echo $currCourse ?>"
+                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Pengenalan Pemrograman Modular" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>

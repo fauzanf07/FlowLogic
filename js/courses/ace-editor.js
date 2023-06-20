@@ -1,6 +1,23 @@
-var editor = ace.edit("editor");
-editor.setTheme("ace/theme/twilight");
-editor.session.setMode("ace/mode/csharp");
+var elements = document.querySelectorAll('.editor');
+
+elements.forEach(function(element) {
+    var editor = ace.edit(element);
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/c_cpp");
+})
+
+function getValue(index){
+    let i=0;
+    let value = "";
+    elements.forEach(function(element) {
+        var editor = ace.edit(element);
+        if(i==index){
+            value = editor.getValue();
+        }
+        i++;
+    });
+    return value;
+}
 
 $('.lang-list').on('change', function (e) {
     var optionSelected = $(".lang-list option:selected").val();
@@ -20,13 +37,13 @@ $('.lang-list').on('change', function (e) {
 	}
 });
 
-$("#run").click(function(){
+function run(index){
 	var optionSelected = $(".lang-list option:selected").val();
 	var value = optionSelected.split(" ");
 	var codeChoice = value[0];
-	var code = editor.getValue();
+	var code = getValue(index);
 	console.log(codeChoice);
-	$('.preview-code').html('<span id="output">Running...</span>');
+	$('#preview-code'+index).html('<span id="output">Running...</span>');
 	const settings = {
 		"async": true,
 		"crossDomain": true,
@@ -52,12 +69,12 @@ $("#run").click(function(){
 			output = output.replace(/\\n/g, "<br />");
 			output = output.replace(/\\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;");
 			output = output.replace(/\\s/g, "&nbsp;");
-			$('.preview-code').html('<span id="output">'+output+'</span>');
+			$('#preview-code'+index).html('<span id="output">'+output+'</span>');
 		}else{
 			error = error.replace(/\"/g, "");
 			error = error.replace(/\\\\/g, "\\");
-			$('.preview-code').html('<span id="output" class="error">'+error+'</span>');
+			$('#preview-code'+index).html('<span id="output" class="error">'+error+'</span>');
 		}
 		
 	});
-});
+};
