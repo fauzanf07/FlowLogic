@@ -497,6 +497,50 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                <li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>15) echo 'check'; ?>"><?php if($currCourse>15) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="15"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Identifikasi Variabel Lokal dan Global</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> Up to +50
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +0</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC15"
+                                                            data-course="15">
+                                                            <img class="user-img-footprint" id='userImgFootprintC15'>
+                                                            <span class="user-total" id="totalUserC15"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>16) echo 'check'; ?>"><?php if($currCourse>16) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="16"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Pengenalan Fungsi</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC16"
+                                                            data-course="16">
+                                                            <img class="user-img-footprint" id='userImgFootprintC16'>
+                                                            <span class="user-total" id="totalUserC16"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -629,11 +673,11 @@ int main() {
                     </ol>
                     <p>Oke, cukup sudah pembahasan variabel lokal dan global ini. Apakah kalian sudah paham membedakan antara variabel lokal dan global?</p>
                     <div style="clear:both;"></div>
-                    <button class="btn btn-course" id="previous" data-prev="12">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="14"
+                    <button class="btn btn-course" id="previous" data-prev="13">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="15"
                         data-curr="<?php echo $currCourse ?>" data-reward='0'
                         data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>"
-                        data-materi="Pengenalan Pemrograman Modular" data-artikel="1">Berikutnya</button>
+                        data-materi="Variabel Lokal dan Global" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>

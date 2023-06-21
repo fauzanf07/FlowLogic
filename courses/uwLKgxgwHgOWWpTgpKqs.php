@@ -12,7 +12,7 @@
         $id_user= $r['id'];
 
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/5)*100);
+		$progress = intval(($_SESSION['curr_course']/8)*100);
 		$progressBg = "";
 		if($progress <=30){
 			$progressBg = "bg-danger";
@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Challenge: Studi Kasus</title>
+    <title>Pengenalan Fungsi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,8 @@
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel"><i class="bi bi-trophy-fill"></i>&nbsp;&nbsp;Top Ranks
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="closeRanks"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                id="closeRanks"></button>
         </div>
         <div class="offcanvas-body">
             <div class="ranks">
@@ -66,10 +67,11 @@
                         </tr>
                     </thead>
                     <tbody id="tableRanks">
-                        
+
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore" onclick="getRanks(true, false);">Load More</button>
+                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore"
+                    onclick="getRanks(true, false);">Load More</button>
             </div>
         </div>
     </div>
@@ -102,8 +104,8 @@
                         </ul>
                     </div>
                     <button class="btn btn-light btn-nav" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks" onclick="getRanks(false, true);"><i
-                            class="bi bi-trophy-fill"></i></button>
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks"
+                        onclick="getRanks(false, true);"><i class="bi bi-trophy-fill"></i></button>
                 </ul>
             </div>
         </div>
@@ -116,9 +118,9 @@
                         <h5>Progress Kelas</h5>
                         <div class="progress" style="height: 30px; margin-top: 10px;">
                             <div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar"
-                                aria-label="Example with label"
-                                style="width: <?php echo $progress . "%"; ?>;" aria-valuenow=" 25" aria-valuemin="0"
-                                aria-valuemax="100"><?php echo $progress . "%"; ?></div>
+                                aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>;"
+                                aria-valuenow=" 25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?>
+                            </div>
                         </div>
                         <div class="element-game">
                             <span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?>
@@ -238,7 +240,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-												<li class="list-group-item" id="current-li">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -284,7 +286,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -300,7 +302,7 @@
                                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                        <ul class="list-group list-group-flush">
+                                            <ul class="list-group list-group-flush">
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -316,13 +318,13 @@
                                                                 <span><i class="bi bi-star-fill"></i> +100</span>
                                                             </div>
                                                         </div>
-                                                        <div class="user-footprint" id="userFootprintC1"
+                                                        <div class="user-footprint" id="userFootprintC7"
                                                             data-course="7">
                                                             <img class="user-img-footprint" id='userImgFootprintC7'>
                                                             <span class="user-total" id="totalUserC7"></span>
                                                         </div>
                                                     </div>
-                                                </li> 
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -366,7 +368,7 @@
                                                             <span class="user-total" id="totalUserC9"></span>
                                                         </div>
                                                     </div>
-                                                </li> 
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -423,10 +425,10 @@
                                                             data-curr="<?php echo $currCourse ?>">
                                                             <a>Quiz Singkat</a>
                                                             <div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> Up to +25
-																	&nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> Up to +500</span>
-															</div>
+                                                                <span><i class="bi bi-diamond-fill"></i> Up to +25
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> Up to +500</span>
+                                                            </div>
                                                         </div>
                                                         <div class="user-footprint" id="userFootprintC12"
                                                             data-course="12">
@@ -434,7 +436,7 @@
                                                             <span class="user-total" id="totalUserC12"></span>
                                                         </div>
                                                     </div>
-                                                </li>    
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -472,7 +474,7 @@
                                                             <span class="user-total" id="totalUserC13"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -494,8 +496,8 @@
                                                             <span class="user-total" id="totalUserC14"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
-                                                <li class="list-group-item">
+                                                </li>
+                                                <li class="list-group-item" >
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -517,7 +519,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -550,185 +552,36 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <h4>Challenge: Studi Kasus</h4>
-                    <p>Selamat Anda telah mencapai di akhir-akhir level ini!! Untuk menerapkan pengetahuan yang telah kamu
-                        dapat di level 1 ini, saya tantang anda untuk mengikuti challenge ini. Tentunya terdapat
-                        beberapa keuntungan jika anda mengikuti challenge ini yakni mendapatkan poin sampai 300 points, 300 XP, dan 1
-                        Badge (Lencana). Ayo ikuti challenge ini! Semakin banyak points dan xp yang kamu dapat, semakin
-                        besar peluang anda memenangkan reward dari saya!</p>
-                    <b>
-                        <p>Ketentuan Challenge : </p>
-                    </b>
-                    <ol>
-                        <li>Cari atau temukan permasalahan di kehidupan sehari-hari.</li>
-                        <li>Buatlah langkah-langkah (algoritma) untuk menyelesaikan permasalahan tersebut.</li>
-                        <li>Setelah itu, buatlah flowchat dari algoritma tersebut.</li>
-                        <li>Share algoritma dan flowchart anda di box share your knowledge di bawah ini.</li>
-                        <li>Konten yang dibagikan harus memuat seluruh ketentuan dan tidak mengandung SARA dan
-                            pornografi.</li>
-                    </ol>
-                    <?php
-                        $sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='1' ORDER BY created_at DESC";
-                        $res = mysqli_query($con, $sql);
-                        $count = mysqli_num_rows($res);
-                        if($count!=0){
-                            $row = mysqli_fetch_assoc($res);
-                            $status = $row['status'];
-                        }
-                        if($count== 0 || $status == 2){
-                    ?>
-                    <div class="share-wrapper">
-                        <textarea id="shareBox"></textarea>
-                        <center><button type="button" id="share" data-username="<?php echo $username; ?>" data-challenge='1'
-                                onclick="share(this);" class="btn btn-primary mt-4">SHARE YOUR KNOWLEDGE&nbsp; <i
-                                    class="bi bi-send-fill"></i></button></center>
-                    </div>
-                    <?php
-                        }if($count!=0){
-                    ?>
-                    <div class="your-post">
-                        <?php
-
-									$sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='1' ORDER BY created_at DESC";
-									$result = mysqli_query($con, $sql);
-									while($r_post = mysqli_fetch_assoc($result)){
-										$id_post = $r_post['id'];
-										echo '
-											<div class="post">
-												<div class="top">
-													<div class="top-photo">
-														<img src= '. $r['photo_profile'] .' class="avatar">
-													</div>
-													<div class="top-name">
-														<b><span><a class="no-undr" href="./profile.php?user='.$r['username'].'">'. $r['name'] .'</a></span></b><span>&nbsp;&nbsp;'. $r['username'] .'</span>
-														<div class="control">';
-														if($r_post['status']==0){
-															echo '
-																<span class="pending">Pending <i class="bi bi-clock"></i></span>
-															';
-														}else if($r_post['status']==1){
-															echo '
-																<span class="accepted">Diterima &#10003;</span>
-															';
-														}else{
-															echo '
-															<span class="rejected">Ditolak</span>
-															';
-														}
-														echo '
-														</div>
-														<br>
-														<span>'.$r_post['created_at'].'</span>
-													</div>
-												</div>
-												<div class="content-post fr-view">
-													'.$r_post['content'].'
-												</div>';
-										$curr_user_id = $_SESSION['user_id'];	
-										$curr_username = $_SESSION['username'];
-										$curr_photoProfile = $_SESSION['photo_profile'];
-										mysqli_query($con, "CALL like_comment('$curr_user_id','$id_post',@liked,@likes,@comments)");
-										$query_lico = "SELECT @liked,@likes,@comments";
-										$hasil_lico = mysqli_query($con, $query_lico);
-										$r_lico = mysqli_fetch_assoc($hasil_lico);
-										echo '
-												<div class="lico-section">
-												';
-												if($r_lico['@liked'] == 0){
-													echo '<span id="like'.$id_post.'" data-id="'.$id_post.'" data-user="'.$curr_user_id.'" data-liked="'.$r_lico['@liked'].'" class="lico-button like-btn" style="color:#adadad;" onclick="likeBtn(this);"><i class="bi bi-heart-fill"></i></span><span class="amount me-3 likes" data-id="'.$id_post.'" id="likeAmount'.$id_post.'">'.$r_lico['@likes'].'</span>';
-												}else{
-													echo '<span id="like'.$id_post.'" data-id="'.$id_post.'" data-user="'.$curr_user_id.'" data-liked="'.$r_lico['@liked'].'" class="lico-button like-btn" style="color:#f00;" onclick="likeBtn(this);"><i class="bi bi-heart-fill"></i></span><span class="amount me-3 likes" data-id="'.$id_post.'" id="likeAmount'.$id_post.'">'.$r_lico['@likes'].'</span>';
-												}
-												echo '
-													<span id="comment'.$id_post.'" data-id="'.$id_post.'" data-show="0" class="lico-button comment-btn" onclick="commBtn(this);"><i class="bi bi-chat-square-dots-fill"></i></span><span class="amount" id="commAmount'.$id_post.'">'.$r_lico['@comments'].'</span>
-												</div>
-												<div class="clear"></div>
-												<div class="comment-section" id="comSect'.$id_post.'">
-													<h6>Komentar &middot; <span id="commentAmount'.$id_post.'">'.$r_lico['@comments'].'</span></h6>
-													<div id="comments'.$id_post.'">';
-
-												$query_comments = "SELECT a.*, b.username, b.photo_profile FROM tb_comment_post AS a LEFT JOIN tb_user as b ON a.id_user = b.id WHERE a.id_post = '$id_post';";
-												$hasil_comments = mysqli_query($con, $query_comments);
-												while($r_comments = mysqli_fetch_array($hasil_comments)){
-													echo '
-														<div class="comment">
-															<div class="image-profile">
-																<img src="'.$r_comments['photo_profile'].'" class="avatar">
-															</div>
-															<div class="com-sect">
-																<b><span><a class="no-undr" href="./profile.php?user='.$r_comments['username'].'">'.$r_comments['username'].'</a></span></b><span>&nbsp;&nbsp;'.$r_comments['created_at'].'</span><br>
-																<p class="isi-comment">'.$r_comments['comment'].'</p>
-															</div>
-														</div>
-													';
-												}
-												echo'
-													</div>
-													<div class="comment-form">
-														<div class="input-comment">
-															<textarea class="form-control comment-control" placeholder="Tulis komentar di sini" id="commentBox'.$id_post.'" data-id="'.$id_post.'" oninput="onInput(this);"></textarea>
-														</div>
-														<div class="send-comment">
-															<div class="send" id="send'.$id_post.'" data-id="'.$id_post.'" data-username="'. $curr_username.'" data-profile="'. $curr_photoProfile .'" data-user="'. $curr_user_id.'" onclick="sendComment(this);">
-																<i class="bi bi-send-fill"></i>
-															</div>
-														</div>
-														<div class="clear"></div>
-													</div>
-												</div>
-											</div>
-										';
-									}
-								?>
-
-                    </div>
-					<br>
-                    <?php
-						}
-                        ?>
-					<?php
-						$sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='1' AND `status`='1'";
-						$result = mysqli_query($con, $sql);
-						$cnt = mysqli_num_rows($result);
-						if($cnt !=0){
-							$row = mysqli_fetch_assoc($result);
-							$nilai = $row['grade'];
-							if($nilai=='A'){
-								$point = 300;
-							}else if($nilai=='B'){
-								$point = 200;
-							}else{
-								$point = 100;
-							}
-
-					?>
-                    <p><b>Selamat! Anda telah menyelesaikan Challenge ini. Reward yang kamu dapat :</b></p>
-					<table class="table" style="width: 50%;">
-						<tbody>
-							<tr>
-								<th>XP</th>
-								<td>300</td>
-							</tr>
-							<tr>
-								<th>Points</th>
-								<td><?php echo $point; ?></td>
-							</tr>
-							<tr>
-								<th>Nilai</th>
-								<td><?php echo $nilai; ?></td>
-							</tr>
-							<tr>
-								<th>Badges</th>
-								<td><img src="../images/badges/penguasa-alur.png" alt="" width="100%" height="auto"></td>
-							</tr>
-						</tbody>
-					</table>
-                    <?php 
-                        }
-                    ?>
-                    <button class="btn btn-course" id="previous" data-prev="4">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="6" data-curr="<?php echo $currCourse ?>"
-                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Challenge 1" data-artikel="0">Berikutnya</button>
+                    <p>Seperti yang telah dijelaskan bahwa pemrograman modular dapat dibentuk dengan fungsi dan prosedur. Nah kali ini kita akan mempelajari fungsi. Apa sih itu fungsi? Bagaimana pembuatannya? dan Apa sih kegunaannya? Yuk tanpa basa basi terlalu lama, kita simak pembelajaran berikut ini.</p>
+                    <h4>Pengenalan Fungsi</h4>
+                    <center><img src="../images/contoh-fungsi.png" width="40%" height="auto"></center>
+                    <p>Fungsi adalah bagian program yang menerima data sebagai input, melakukan perhitungan berdasarkan data tersebut, dan menghasilkan output baru. Dalam fungsi, nilai dalam satu kisaran akan diubah menjadi nilai dalam kisaran lain dengan menggunakan operasi atau proses tertentu. Fungsi membantu dalam memecah persoalan yang kompleks menjadi beberapa sub-persoalan yang lebih sederhana untuk diselesaikan.</p>
+                    <p>Ketika membuat sebuah fungsi, kita perlu melakukan hal-hal berikut:</p>
+                    <ul>
+                        <li>Memberikan nama pada fungsi.</li>
+                        <li>Menentukan jenis data yang akan dihasilkan atau dikembalikan oleh fungsi.</li>
+                        <li>Menyusun daftar parameter yang diperlukan oleh fungsi, yaitu data yang dibutuhkan sebagai input.</li>
+                        <li>Menulis satu atau lebih instruksi yang akan melakukan perhitungan atau operasi tertentu.</li>
+                    </ul>
+                    <p>Setelah itu, fungsi yang telah didefinisikan dapat digunakan dalam bagian utama program atau dalam fungsi lain dengan cara memanggil nama fungsi dan memberikan parameter yang diperlukan oleh fungsi tersebut.</p>
+                    <p>Fungsi beroperasi menggunakan mekanisme pemanggilan-pengembalian (call-return mechanism). Langkah-langkah dalam mekanisme ini adalah sebagai berikut:</p>
+                    <ul>
+                        <li>Fungsi dipanggil dari program utama atau fungsi lainnya.</li>
+                        <li>Sejumlah operasi dalam fungsi dieksekusi.</li>
+                        <li>Hasil eksekusi dikembalikan ke program utama atau fungsi yang memanggilnya.</li>
+                    </ul>
+                    <p>Pada dasarnya, fungsi memiliki manfaat sebagai berikut:</p>
+                    <ul>
+                        <li>Mengurangi pengulangan penulisan program yang sama berulang kali.</li>
+                        <li>Membuat program menjadi terstruktur, sehingga lebih mudah dipahami dan dikembangkan.</li>
+                    </ul>
+                    <p>Fungsi-fungsi yang telah kita kenal sebelumnya termasuk fungsi main(), yang merupakan fungsi yang mutlak karena program akan dimulai dari sini. Contoh lainnya adalah fungsi printf() yang digunakan untuk menampilkan informasi atau data ke layar, dan masih banyak fungsi lainnya yang memiliki tujuan khusus.</p>
+                    <div style="clear:both;"></div>
+                    <button class="btn btn-course" id="previous" data-prev="12">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="14"
+                        data-curr="<?php echo $currCourse ?>" data-reward='0'
+                        data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>"
+                        data-materi="Pengenalan Pemrograman Modular" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>
@@ -767,6 +620,8 @@
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Naik Level <i class="bi bi-capslock-fill"></i>
                     </h1>
+                    <button type="button" class="btn-close btn-close-levelUp" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body body-levelUp">
                     <center><img width="55%" height="auto" src="../images/level-up.gif" /></center>
@@ -775,7 +630,9 @@
                     </center>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary main-bg-color" onclick="getNextCourse(7,<?php echo $currCourse ?>,'<?php echo $_SESSION['username']; ?>')">Next Course</button>
+                    <button type="button" class="btn btn-secondary btn-close-levelUp"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary main-bg-color">Next Course</button>
                 </div>
             </div>
         </div>
@@ -803,5 +660,6 @@
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
+<script type="text/javascript" src="../js/courses/ace-editor.js"></script>
 
 </html>

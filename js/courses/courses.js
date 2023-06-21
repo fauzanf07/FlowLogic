@@ -605,3 +605,58 @@ function updateHistory(idUser,type,earns,desc){
 		}
 	});
 }
+
+
+//FOR GAME
+
+function allowDrop(ev) {
+	ev.preventDefault();
+}
+
+function drag(ev) {
+	ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData("text");
+	ev.target.appendChild(document.getElementById(data));
+}
+
+function check(){
+	const parent1 = $('#drop1');
+	const imageElements1 = parent1.find('img');
+	let benarLokal = 0;
+
+	imageElements1.each(function() {
+		const dataId = $(this).data('id');
+		if( dataId == 3 || dataId == 4 || dataId == 5){
+			benarLokal++;
+		}
+	});
+
+	const parent2 = $('#drop2');
+	const imageElements2 = parent2.find('img');
+	let benarGlobal = 0;
+
+	imageElements2.each(function() {
+		const dataId = $(this).data('id');
+		console.log(dataId);
+		if(dataId == 1 || dataId == 2){
+			benarGlobal++;
+		}
+	});
+	console.log(benarGlobal+' '+benarLokal);
+	if(benarLokal==3 && benarGlobal==2){
+		$('#check').remove();
+		let poin = parseInt($('#poin').html());
+		$('#getPoin').remove();
+		$('#result').removeClass('wrong-res').addClass('right-res');
+		$('#result').html("Yeay, Anda benar dengan "+poin+" poin yang didapatkan! Itu berarti anda sudah mengenal perbedaan antara variabel lokal dan global.");
+	}else{
+		let poin = parseInt($('#poin').html());
+		$('#poin').html(poin-5);
+		$('#result').removeClass('right-res').addClass('wrong-res');
+		$('#result').html("Oops! Jawaban anda masih salah. Ayo coba lagi!")
+	}
+}

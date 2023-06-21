@@ -568,6 +568,40 @@ body{
 .rejected{
 	color: #f00;
 }
+
+.box-variabel{
+	margin: 30px 0;
+	width: 100%;
+	border: 1px solid #000;
+	border-radius: 10px;
+	padding: 20px;
+}
+.drop{
+	width: 90%;
+	border: 1px solid #000;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+.img-var{
+	display: inline-block;
+	margin: 15px 5px;
+}
+.result-box{
+	margin: 30px 0;
+	width: 100%;
+	border: 1px solid #000;
+	border-radius: 10px;
+	padding: 20px;
+}
+.wrong-res{
+	font-weight: bold;
+	color: #f00;
+}
+.right-res{
+	font-weight: bold;
+	color: #09bf67;
+}
 @keyframes fade-out {
 	from {
 	  opacity: 1;
