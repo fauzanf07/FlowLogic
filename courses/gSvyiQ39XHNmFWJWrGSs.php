@@ -479,6 +479,28 @@
                                                         </div>
                                                     </div>
                                                 </li> 
+												<li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>17) echo 'check'; ?>"><?php if($currCourse>17) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="17"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Struktur Fungsi</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC17"
+                                                            data-course="17">
+                                                            <img class="user-img-footprint" id='userImgFootprintC17'>
+                                                            <span class="user-total" id="totalUserC17"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
