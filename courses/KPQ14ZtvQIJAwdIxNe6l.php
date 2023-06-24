@@ -561,6 +561,28 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                <li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>18) echo 'check'; ?>"><?php if($currCourse>18) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="18"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Prototipe Fungsi</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC18"
+                                                            data-course="18">
+                                                            <img class="user-img-footprint" id='userImgFootprintC18'>
+                                                            <span class="user-total" id="totalUserC18"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -573,8 +595,18 @@
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
                     <p>Setelah mengenal apa itu fungsi, yuk kita telaah struktur fungsi lebih lanjut agar kalian bisa menggunakannya dalam bahasa pemrograman.</p>
-                    <h4>Struktur Fungsi</h4><br>
-                    <p>Sebuah fungsi sederhana terutama pada bahasa C memiliki struktur penulisan sebagai berikut.</p>
+                    <h4>Struktur Fungsi</h4>
+                    <p>Pada pembelajaran ini, kalian akan mempelajari tentang struktur fungsi dalam tiga aspek yang berbeda, yaitu flowchart, pseudocode, dan bahasa pemrograman. Flowchart memberikan visualisasi grafis tentang bagaimana fungsi bekerja dan bagaimana aliran kontrol mengalir di dalamnya. Pseudocode memberikan pendekatan deskriptif dalam menulis algoritma dan struktur fungsi tanpa terikat pada sintaksis tertentu. Sedangkan, bahasa pemrograman adalah implementasi nyata dari fungsi menggunakan sintaksis dan aturan tertentu yang diakui oleh komputer. Dengan mempelajari struktur fungsi dalam ketiga konteks ini, kalian akan dapat memahami cara mendesain, mengorganisir, dan mengimplementasikan fungsi yang efektif dalam pemrograman.</p>
+                    <ol>
+                        <h5><li>Flowchart</li></h5>
+                        <p>Tidak ada struktur khusus untuk pembuatan fungsi pada flowchart. Tetapi sebuah fungsi biasanya digambarkan secara terpisah dari alur utama. Kemudian untuk pemanggilan fungsi pada alur utama di flowchart menggunakan simbol seperti berikut.</p>
+                        <center><img src="../images/simbol/predefined-process.png" width="15%" height="auto"></center><br>
+                        <p>Berikut contoh penggambaran fungsi dalam flowchart.</p>
+                        <center><img src="../images/contoh-fungsi-flw.png" width="30%" height="auto"></center>
+                        <h5><li>Pseudocode</li></h5>
+                        <p>Untuk penulisan fungsi pada pseudocode, anda sudah mempelajarinya di materi <a class="link-offset-2 link-underline link-underline-opacity-0" href="./KrFssobGE6NzsOrgSMY5.php">Notasi Algoritmik</a>. Di dalam materi tersebut terdapat bagaimana cara penulisan fungsi pada <i>Pseudocode</i>.</p>
+                        <h5><li>Bahasa Pemrograman C</li></h5>
+                        <p>Sebuah fungsi sederhana terutama pada bahasa C memiliki struktur penulisan sebagai berikut.</p>
                     <center><img src="../images/struktur-fungsi.png" width="40%" height="auto"></center><br>
                     <u><b>Keterangan : </b></u>
                     <ul>
@@ -593,6 +625,11 @@ long kuadrat(long l){
                     </code>
                     <p>Fungsi menggunakan pernyataan return untuk mengembalikan nilai dari fungsi tersebut. Dalam contoh sebelumnya, fungsi kuadrat() mengembalikan nilai kuadrat dari argumen yang diberikan.
                     </p>
+                    </ol>
+                    <div style="clear:both;"></div>
+                    <button class="btn btn-course" id="previous" data-prev="16">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="18" data-curr="<?php echo $currCourse ?>"
+                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Struktur Fungsi" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>

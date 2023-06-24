@@ -12,7 +12,7 @@
         $id_user= $r['id'];
 
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/8)*100);
+		$progress = intval(($_SESSION['curr_course']/5)*100);
 		$progressBg = "";
 		if($progress <=30){
 			$progressBg = "bg-danger";
@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Notasi Algoritmik</title>
+    <title>Prototipe Fungsi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -322,7 +322,7 @@
                                                             <span class="user-total" id="totalUserC7"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -344,8 +344,8 @@
                                                             <span class="user-total" id="totalUserC8"></span>
                                                         </div>
                                                     </div>
-                                                </li>
-                                                <li class="list-group-item" id="current-li">
+                                                </li>   
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -366,7 +366,7 @@
                                                             <span class="user-total" id="totalUserC9"></span>
                                                         </div>
                                                     </div>
-                                                </li> 
+                                                </li>  
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -388,7 +388,7 @@
                                                             <span class="user-total" id="totalUserC10"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li>  
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -412,7 +412,7 @@
                                                             <span class="user-total" id="totalUserC11"></span>
                                                         </div>
                                                     </div>
-                                                </li>      
+                                                </li> 
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -561,7 +561,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -594,216 +594,46 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <h4>Notasi Algoritmik</h4>
-                    <p>Masih berhubung dengan artikel sebelumnya, pada artikel ini kita akan membahas bagaimana menulis notasi-notasi umum yang ada di bahasa pemrograman kedalam notasi algoritmik di Pseudocode. Tanpa basa-basi lagi, berikut adalah bagaimana notasi-notasi umum yang ada di bahasa pemrograman dituliskan dalam notasi algoritmik pada Pseudocode. </p>
+                    <h4>Prototipe Fungsi</h4>
+                    <p>Dalam pembelajaran ini, kalian akan mempelajari tentang prototipe fungsi. Prototipe fungsi adalah deklarasi awal dari fungsi yang mencakup tipe data yang dikembalikan oleh fungsi, nama fungsi, dan parameter yang diterima oleh fungsi.</p>
+                    <p>Prototype fungsi atau purwa rupa fungsi adalah sebuah deklarasi fungsi tanpa isi yang bertujuan untuk mengatur struktur program C dengan lebih baik dan memudahkan pengontrolan fungsi-fungsi yang ada dalam program, termasuk tipe data dan parameter yang digunakan. Biasanya prototipe fungsi ditempatkan sebelum fungsi main() pada bahasa pemrograman C. Prototipe fungsi ini berfungsi sebagai cara untuk memberitahu kompiler mengenai:</p>
                     <ol>
-                        <li>
-                            <h5><i>Variable Assignment</i></h5>
-                            <p><i>Variable Assignment</i> merupakan pengisian atau penyimpanan nilai ke dalam sebuah variabel. <i>Assignment Variable</i> pada umumnya menggunakan = di dalam bahasa pemrograman contohnya pada bahasa C, C++, Java, Python, dll. Ada juga yang menggunakan := seperti di dalam bahasa pemrograman Pascal dan Ada. Nah untuk di Pseudocode penulisan <i>Assignment Variable</i> ini kita menggunakan simbol &#8592;. Contohnya seperti berikut.</p>
-                            <center><code>max &#8592; x</code></center>
-                            <p>Notasi algoritmik diatas mengandung arti bahwa variabel max akan menyimpan nilai yang ada di variabel x. Notasi algoritmik tersebut setara dengan <code>max = x;</code> pada bahasa C atau <code>max := x;</code> pada bahasa Pascal.</p>
-                        </li>
-                        <li>
-                            <h5>Operasi Matematika</h5>
-                            <p>Operasi matematika seperti penjumlahan, pengurangan, perkalian, dan pembagian juga perlu dituliskan dalam notasi algoritmik di Pseudocode karena operasi matematika ini sangat sering digunakan dalam bahasa pemrograman. Berikut ini adalah contoh penulisan notasi algoritmik untuk operasi matematika umum:</p>
-                            <ul>
-                                <li><b>Penjumlahan:</b></li>
-                                <center><code>hasil ← a + b</code></center>
-                                <p>Artinya, variabel "hasil" akan menyimpan hasil penjumlahan antara variabel "a" dan "b".</p>
-                                <li><b>Pengurangan</b></li>
-                                <center><code>selisih ← x - y</code></center>
-                                <p>Artinya, variabel "selisih" akan menyimpan hasil pengurangan antara variabel "x" dan "y".</p>
-                                <li><b>Perkalian:</b></li>
-                                <center><code>hasil ← c * d</code></center>
-                                <p>Artinya, variabel "hasil" akan menyimpan hasil perkalian antara variabel "c" dan "d".</p>
-                                <li><b>Pembagian:</b></li>
-                                <center><code>hasil ← p / q</code></center>
-                                <p>Artinya, variabel "hasil" akan menyimpan hasil pembagian antara variabel "p" dan "q".</p>
-                            </ul>
-                        </li>
-                        <li>
-                            <h5>Operator Perbandingan</h5>
-                            <p>Operator perbandingan dalam notasi algoritmik Pseudocode digunakan untuk membandingkan dua nilai atau variabel. Hasil perbandingan ini akan menghasilkan nilai kebenaran (boolean) yaitu True (benar) atau False (salah). Berikut adalah beberapa contoh operator perbandingan dan cara penulisannya dalam notasi algoritmik Pseudocode:</p>
-                            <table class="table">
-                                <tr>
-                                    <th>Operator</th>
-                                    <th>Notasi Algoritmik</th>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Sama Dengan (==)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 == variable2 then
-    // pernyataan jika variable1 sama dengan variable2
-else
-    // pernyataan jika variable1 tidak sama dengan variable2
-end if
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Tidak Sama Dengan (!=)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 != variable2 then
-    // pernyataan jika variable1 sama dengan variable2
-else
-    // pernyataan jika variable1 tidak sama dengan variable2
-end if
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Lebih Besar (>)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 > variable2 then
-    // pernyataan jika variable1 lebih besar dari variable2
-else
-    // pernyataan jika variable1 tidak lebih besar dari variable2
-end if
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Lebih Kecil (<)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 < variable2 then
-    // pernyataan jika variable1 lebih kecil dari variable2
-else
-    // pernyataan jika variable1 tidak lebih kecil dari variable2
-end if
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Lebih Besar Sama Dengan (>=)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 >= variable2 then
-    // pernyataan jika variable1 lebih besar atau sama dengan variable2
-else
-    // pernyataan jika variable1 tidak lebih besar atau sama dengan variable2
-end if
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Perbandingan Lebih Kecil Sama Dengan (<=)</td>
-                                    <td>
-                                        <code>
-<pre>
-if variable1 <= variable2 then
-    // pernyataan jika variable1 lebih kecil atau sama dengan variable2
-else
-    // pernyataan jika variable1 tidak lebih kecil atau sama dengan variable2
-end if
-
-</pre>
-
-                                        </code>
-                                    </td>
-                                </tr>
-                            </table>
-                        </li>
-                        <li>
-                            <h5><i>Conditional Statements</i></h5>
-                            <p>Pada bahasa pemrograman, kita sering menggunakan statement kondisional seperti if-else untuk membuat keputusan berdasarkan kondisi tertentu. Berikut adalah contoh penulisan notasi algoritmik untuk statement kondisional:</p>
-                            <code><pre>
-if x > y then
-    write("x lebih besar dari y")
-else then
-    write("y lebih besar dari x")
-end if
-                            </pre></code>
-                            <p>Notasi algoritmik diatas menggambarkan penggunaan statement kondisional if-else dalam membandingkan nilai variabel "x" dan "y".</p>
-                        </li>
-                        <li>
-                            <h5><i>Looping</i></h5>
-                            <p>Looping atau perulangan digunakan untuk mengulang sebuah blok perintah berulang kali selama kondisi tertentu terpenuhi. Berikut adalah contoh penulisan notasi algoritmik untuk perulangan:</p>
-                            <ul>
-                                <li><b>Perulangan While:</b></li>
-                                <code>
-                                    <pre>
-
-while (kondisi terpenuhi)
-    ...(blok perintah)...
-end while </pre>
-                                </code>
-                                <p>Notasi algoritmik di atas mengindikasikan bahwa blok perintah akan terus dijalankan selama kondisi terpenuhi. Berikut contoh pseudocode yang terdapat perulangan while.</p>
-                                <center><img src="../images/contoh-while-pse.png" width="25%" height="auto" alt=""></center>
-                                <li><b>Perulangan For:</b></li>
-                                <code>
-                                    <pre>
-
-for (iterasi)
-    ...(blok perintah)...
-end for </pre>
-                                </code>
-                                <p>Notasi algoritmik ini menunjukkan bahwa blok perintah akan dijalankan untuk setiap elemen dalam kumpulan data.Berikut contoh pseudocode yang terdapat perulangan for.</p>
-                                <center><img src="../images/contoh-for-pse.png" width="25%" height="auto" alt=""></center>
-                            </ul>
-                        </li>
-                        <li>
-                            <h5>Prosedur</h5>
-                            <p>Prosedur adalah blok kode yang dapat dipanggil dan digunakan berulang kali dalam sebuah program. Berikut adalah contoh penulisan notasi algoritmik untuk prosedur:</p>
-                            <code>
-                                <pre>
-
-Prosedur nama_prosedur(input (<i>tipe data</i>) (<i>parameter)</i>)
-
-Deskripsi
-    (variabel dan tipe data)
-
-Deklarasi
-    (blok program)
-</pre>
-                            </code>
-                            <p>Notasi algoritmik di atas menunjukkan struktur dasar untuk mendefinisikan sebuah prosedur dengan nama "nama_prosedur" dan menerima parameter jika diperlukan. Contoh prosedur pada pseudocode.</p>
-                            <center><img src="../images/contoh-prosedur-pse.png" width="30%" height="auto" alt=""></center>
-                        </li>
-                        <li>
-                            <h5>Fungsi</h5>
-                            <p>Fungsi adalah blok kode yang mengembalikan nilai tertentu setelah dieksekusi. Hampir sama dengan penulisan notasi algoritmik untuk prosedur, berikut adalah contoh penulisan notasi algoritmik untuk fungsi:</p>
-                            <code>
-                                <pre>
-
-Fungsi nama_fungsi(input (<i>tipe data</i>) (<i>parameter)</i>; output (<i>tipe data</i>) (<i>nilai)</i>)
-
-Deskripsi
-    (variabel dan tipe data)
-
-Deklarasi
-    (blok program)
-    return (nilai)
-</pre>
-                            </code>
-                            <p>Notasi algoritmik di atas menunjukkan struktur dasar untuk mendefinisikan sebuah fungsi dengan nama "nama_fungsi" dan menerima parameter jika diperlukan. Fungsi tersebut akan mengembalikan nilai setelah eksekusi.</p>
-                            <center><img src="../images/contoh-fungsi-pse.png" width="40%" height="auto" alt=""></center>
-                            <p>Jika kita perhatikan, terdapat dua pendefinisian yang ada di dalam kurung setelah nama fungsi yakni input dan output. Apa bedanya? Pendefinisian input yang terdapat di fungsi tersebut merupakan parameter-paramater yang akan diterima oleh fungsi tersebut. Sedangan pada pendefinisian output pada fungsi tersebut merupakan sebuah nilai yang akan dikeluarkan oleh fungsi tersebut.</p>
-                        </li>
+                        <li>Tipe data yang dihasilkan oleh fungsi.</li>
+                        <li>Jumlah parameter yang diterima oleh fungsi.</li>
+                        <li>Tipe data dari masing-masing parameter.</li>
                     </ol>
-                    <p>Dengan mengetahui cara menulis notasi-notasi umum bahasa pemrograman dalam notasi algoritmik di Pseudocode, kita dapat dengan lebih mudah merancang algoritma dan memahami logika pemrograman tanpa harus terikat dengan sintaksis dari bahasa pemrograman tertentu. Notasi algoritmik memberikan fleksibilitas dan pemahaman yang lebih luas dalam menyusun algoritma secara umum.</p>
+                    <p>Salah satu keuntungan menggunakan prototipe adalah bahwa kompiler akan melakukan konversi antara tipe data parameter dalam definisi fungsi dan parameter saat pemanggilan fungsi, dan akan menunjukkan kesalahan jika jumlah parameter dalam definisi dan pemanggilan fungsi tidak sesuai.</p>
+                    <center><img src="../images/contoh-prototipe-fungsi.png" width="50%" height="auto"></center>
+                    <p>Berikut ini contoh penerapan prototipe fungsi pada pemrograman bahasa C</p>
+                    <code>
+                        <pre>
+#include &lt;stdio.h&gt;
+
+int hitungLuasPersegi(int sisi); //Prototype fungsi
+
+int main() {
+    int sisi, luas;
+
+    printf("Masukkan panjang sisi persegi: ");
+    scanf("%d", &sisi);
+
+    luas = hitungLuasPersegi(sisi);
+
+    printf("Luas persegi dengan sisi %d adalah: %d\n", sisi, luas);
+
+    return 0;
+}
+
+int hitungLuasPersegi(int sisi) {
+    int luas = sisi * sisi;
+    return luas;
+}
+                        </pre>
+                    </code>
                     <div style="clear:both;"></div>
-                    <button class="btn btn-course" id="previous" data-prev="8">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="10" data-curr="<?php echo $currCourse ?>"
-                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Notasi Algoritmik" data-artikel="1">Berikutnya</button>
+                    <button class="btn btn-course" id="previous" data-prev="16">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="18" data-curr="<?php echo $currCourse ?>"
+                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Struktur Fungsi" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>
