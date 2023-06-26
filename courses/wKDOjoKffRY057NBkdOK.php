@@ -11,7 +11,7 @@
 		$r = mysqli_fetch_assoc($hasil);
 
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/5)*100);
+		$progress = intval(($_SESSION['curr_course']/20)*100);
 		$progressBg = "";
 		if($progress <=30){
 			$progressBg = "bg-danger";
@@ -566,6 +566,50 @@
                                                             data-course="18">
                                                             <img class="user-img-footprint" id='userImgFootprintC18'>
                                                             <span class="user-total" id="totalUserC18"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+												<li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>19) echo 'check'; ?>"><?php if($currCourse>19) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="19"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Parameter Aktual dan Formal</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC19"
+                                                            data-course="19">
+                                                            <img class="user-img-footprint" id='userImgFootprintC19'>
+                                                            <span class="user-total" id="totalUserC19"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+												<li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>20) echo 'check'; ?>"><?php if($currCourse>20) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="20"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Pemanggilan Fungsi</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC20"
+                                                            data-course="20">
+                                                            <img class="user-img-footprint" id='userImgFootprintC20'>
+                                                            <span class="user-total" id="totalUserC20"></span>
                                                         </div>
                                                     </div>
                                                 </li>

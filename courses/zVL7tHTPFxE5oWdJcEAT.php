@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Identifikasi Variabel Lokal dan Global</title>
+    <title>Pemanggilan Fungsi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,8 +52,7 @@
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel"><i class="bi bi-trophy-fill"></i>&nbsp;&nbsp;Top Ranks
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
-                id="closeRanks"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="closeRanks"></button>
         </div>
         <div class="offcanvas-body">
             <div class="ranks">
@@ -67,11 +66,10 @@
                         </tr>
                     </thead>
                     <tbody id="tableRanks">
-
+                        
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore"
-                    onclick="getRanks(true, false);">Load More</button>
+                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore" onclick="getRanks(true, false);">Load More</button>
             </div>
         </div>
     </div>
@@ -104,8 +102,8 @@
                         </ul>
                     </div>
                     <button class="btn btn-light btn-nav" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks"
-                        onclick="getRanks(false, true);"><i class="bi bi-trophy-fill"></i></button>
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks" onclick="getRanks(false, true);"><i
+                            class="bi bi-trophy-fill"></i></button>
                 </ul>
             </div>
         </div>
@@ -118,9 +116,9 @@
                         <h5>Progress Kelas</h5>
                         <div class="progress" style="height: 30px; margin-top: 10px;">
                             <div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar"
-                                aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>;"
-                                aria-valuenow=" 25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?>
-                            </div>
+                                aria-label="Example with label"
+                                style="width: <?php echo $progress . "%"; ?>;" aria-valuenow=" 25" aria-valuemin="0"
+                                aria-valuemax="100"><?php echo $progress . "%"; ?></div>
                         </div>
                         <div class="element-game">
                             <span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?>
@@ -286,7 +284,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-
+                                                
                                             </ul>
                                         </div>
                                     </div>
@@ -302,7 +300,7 @@
                                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush">
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -346,7 +344,7 @@
                                                             <span class="user-total" id="totalUserC8"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li>   
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -368,7 +366,7 @@
                                                             <span class="user-total" id="totalUserC9"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li>  
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -390,7 +388,7 @@
                                                             <span class="user-total" id="totalUserC10"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li>  
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -414,7 +412,7 @@
                                                             <span class="user-total" id="totalUserC11"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li> 
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -425,10 +423,10 @@
                                                             data-curr="<?php echo $currCourse ?>">
                                                             <a>Quiz Singkat</a>
                                                             <div class="get-item">
-                                                                <span><i class="bi bi-diamond-fill"></i> Up to +25
-                                                                    &nbsp;&nbsp;</span>
-                                                                <span><i class="bi bi-star-fill"></i> Up to +500</span>
-                                                            </div>
+																<span><i class="bi bi-diamond-fill"></i> Up to +25
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> Up to +500</span>
+															</div>
                                                         </div>
                                                         <div class="user-footprint" id="userFootprintC12"
                                                             data-course="12">
@@ -436,7 +434,7 @@
                                                             <span class="user-total" id="totalUserC12"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li> 
                                             </ul>
                                         </div>
                                     </div>
@@ -474,7 +472,7 @@
                                                             <span class="user-total" id="totalUserC13"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li>  
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -496,8 +494,8 @@
                                                             <span class="user-total" id="totalUserC14"></span>
                                                         </div>
                                                     </div>
-                                                </li>
-                                                <li class="list-group-item" id="current-li">
+                                                </li>  
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -607,7 +605,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -640,75 +638,95 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <h4>Identifikasi Variabel Lokal dan Global</h4>
-                    <p>Sekarang kalian akan mengidentifikasi variabel lokal dan global dari program bahasa C yang disajikan. Tentunya terdapat rewards yang akan kalian dapatkan dari permainan sederhana ini. Anda akan mendapatkan poin maksimal 50 poin, namun poin tersebut akan berkurang -5 setiap kali anda mengecek jawaban anda dan jawaban tersebut salah. Jadi pastikan jawabanmu benar ya! Cara memainkan permainan ini cukup mudah :</p>
+                    <h4>Pemanggilan Fungsi</h4>
+                    <p>Ada dua cara untuk melewatkan parameter ke dalam fungsi, yaitu berupa:</p>
+                    <ul>
+                        <li>Pemanggilan dengan nilai (<i>Call by Value</i>)</li>
+                        <li>Pemanggilan dengan referensi (<i>Call by Reference</i>)</li>
+                    </ul>
                     <ol>
-                        <li>identifikasi variabel-variabel yang ada di program yang disajikan.</li>
-                        <li>Terdapat box di bagian bawah yang berisi variabel-variable dalam program tersebut kemudian anda seret variabel-variabel tersebut dan jatuhkan ke kolom variabel lokal atau global yang menurut kamu benar.</li>
-                        <li>Jika semua variabel sudah semua dikelompokan menjadi variabel lokal dan global serta anda yakin dengan jawabannya. Anda bisa klik tombol check untuk mengetahui hasil jawaban tersebut apakah salah atau benar. </li>
-                        <li>Hasil dari jawaban tersebut akan muncul di kotak Result. Selamat mengerjakan!</li>
+                        <h5><li>Pemanggilan dengan Nilai (<i>Call by Value</i>)</li></h5>
+                        <p>Dalam pemanggilan by value, nilai dari argumen yang diteruskan akan disalin ke parameter fungsi. Dalam hal ini, meskipun nilai parameter fungsi berubah, nilai argumen asli tidak akan terpengaruh. Perhatikan program berikut.</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <select class="form-select lang-list" aria-label="Default select example">
+                                        <option value="6 c_cpp">C (gcc)</option>
+                                    </select><button type="button" class="btn btn-success float-end" id="run"
+                                        onclick="run(0);"><i class="bi bi-play-fill"></i> RUN</button>
+                                    <pre id="editor" class="editor">
+#include &lt;stdio.h&gt;
+
+// Fungsi penambahan dua bilangan
+int tambah(int a, int b) {
+    int hasil = a + b;
+    return hasil;
+}
+
+int main() {
+    int angka1 = 5;
+    int angka2 = 3;
+    int hasilTambah = <b>tambah(angka1, angka2);</b>
+    
+    printf("Hasil penambahan: %d\n", hasilTambah);
+    
+    return 0;
+}
+								</pre>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3>Result</h3>
+                                    <div class="preview-code" id="preview-code0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Dalam contoh di atas, fungsi <code>tambah</code> menerima dua parameter by value, yaitu <code>a</code> dan <code>b</code>. Ketika fungsi dipanggil dengan argumen <code>angka1</code> dan <code>angka2</code>, nilai dari kedua argumen tersebut disalin ke dalam parameter <code>a</code> dan <code>b</code>. Kemudian, di dalam fungsi, dilakukan penambahan nilai <code>a</code> dan <code>b</code>, dan hasilnya dikembalikan sebagai nilai fungsi.</p>
+                        <p>Pada pemanggilan fungsi dengan nilai, perubahan yang terjadi pada parameter fungsi tidak mempengaruhi nilai variabel asli di luar fungsi. Dalam contoh ini, meskipun <code>hasilTambah</code> dihitung dalam fungsi tambah, nilai dari <code>angka1</code> dan <code>angka2</code> tidak berubah setelah pemanggilan fungsi.</p>
+                        <h5><li>Pemanggilan dengan Referensi</li></h5>
+                        <p>Pemanggilan dengan reference adalah suatu metode di mana alamat variabel dikirimkan ke dalam fungsi. Dengan menggunakan pendekatan ini, kita dapat mengubah nilai variabel di luar fungsi dengan melakukan perubahan di dalam fungsi tersebut. Perhatikan program berikut.</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <select class="form-select lang-list" aria-label="Default select example">
+                                        <option value="6 c_cpp">C (gcc)</option>
+                                    </select><button type="button" class="btn btn-success float-end" id="run"
+                                        onclick="run(1);"><i class="bi bi-play-fill"></i> RUN</button>
+                                    <pre id="editor" class="editor">
+#include &lt;stdio.h&gt;
+
+// Fungsi penambahan
+int tambah(int *a) {
+    (*a)++;  // Mengubah nilai variabel di luar fungsi
+    return 0;
+}
+
+int main() {
+    int angka = 5;
+    
+    printf("Sebelum penambahan: %d\n", angka);
+    <b>tambah(&angka);</b>  // Mengirim alamat variabel ke fungsi
+    printf("Setelah penambahan: %d\n", angka);
+    
+    return 0;
+}
+
+								</pre>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3>Result</h3>
+                                    <div class="preview-code" id="preview-code1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Dalam contoh di atas, fungsi <code>tambah</code> menerima parameter dengan referensi, yaitu pointer <code>a</code> yang menunjuk ke alamat suatu variabel. Di dalam fungsi <code>tambah</code>, nilai variabel di luar fungsi tersebut diubah dengan menambahkan 1 ke nilai yang ditunjuk oleh pointer <code>a</code>.</p>
+                        <p>Pada pemanggilan fungsi dengan referensi, alamat variabel dikirimkan ke fungsi. Dalam contoh ini, dengan menggunakan operator <code>&</code> pada saat pemanggilan fungsi <code>tambah(&angka)</code>, alamat variabel <code>angka</code>  dikirimkan ke fungsi <code>tambah</code> tersebut. Oleh karena itu, perubahan yang terjadi di dalam fungsi <code>tambah</code> akan mempengaruhi nilai variabel <code>angka</code>  di fungsi <code>main</code> juga.</p>
                     </ol>
-                    <?php 
-						$sql = "SELECT * FROM tb_game WHERE id_user='$idUser' AND game='1'";
-						$res = mysqli_query($con, $sql);
-						$amount = mysqli_num_rows($res);
-						if($amount==0){
-					?>
-                    <b><p>Perhatikan program berikut ini!</p></b>
-                    <center><img src="../images/game/1/kode-program.png" width="60%" height="auto"></center>
-                    <div class="box-variabel" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <h5>Variabel - Variabel</h5>
-                        <img src="../images/game/1/var1.png" class="img-var" width="35%" height="auto" id="var1" data-id="1" draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var3.png" class="img-var" width="35%" height="auto" id="var3" data-id="3"draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var2.png" class="img-var" width="35%" height="auto" id="var2" data-id="2" draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var5.png" class="img-var" width="35%" height="auto" id="var5" data-id="5" draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var4.png" class="img-var" width="35%" height="auto" id="var4" data-id="4" draggable="true" ondragstart="drag(event)">
-                    </div>
-                    <table class="table table-bordered">
-                        <tr>
-                            <th class="align-middle"><center>Variabel Lokal</center></th>
-                            <td>
-                                <center><p>Drop di kotak bawah ini!</p></center>
-                                <div class="drop" id="drop1" ondrop="drop(event)" ondragover="allowDrop(event)" >
-                                    
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="align-middle"><center>Variabel Global</center></th>
-                            <td>
-                                <center><p>Drop di kotak bawah ini!</p></center>
-                                <div class="drop" id="drop2" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <button type="button" class="btn btn-success" style="width:18%; float:right;" onclick="check(<?php echo $idUser ?>,1);" id="check">Check</button>
                     <div style="clear:both;"></div>
-                    <div class="result-box">
-                        <h5>Result</h5>
-                        <p id="getPoin">Poin yang akan di dapat : <span id="poin">50</span></p>
-                        <p id="result"></p>
-                    </div>
-                    <?php 
-                        }else{
-                            $row= mysqli_fetch_assoc($res);
-                            $points = $row['points'];
-                    ?>
-                    <div class="result-box">
-                        <h5>Result</h5>
-                        <p id="result" class="right-res">Yeay, Anda benar dengan <?php echo $points; ?> poin yang didapatkan! Itu berarti anda sudah mengenal perbedaan antara variabel lokal dan global.</p>
-                    </div>
-                    <?php
-                        }
-                    ?>
-                    <div style="clear:both;"></div>
-                    <button class="btn btn-course" id="previous" data-prev="14">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="16"
-                        data-curr="<?php echo $currCourse ?>" data-reward='0'
-                        data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>"
-                        data-materi="Identifikasi Variabel Lokal dan Global" data-artikel="1">Berikutnya</button>
+                    <button class="btn btn-course" id="previous" data-prev="17">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="19" data-curr="<?php echo $currCourse ?>"
+                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Prototipe Fungsi" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>
@@ -787,7 +805,5 @@
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
-<script type="text/javascript" src="../js/courses/game/game1.js"></script>
 <script type="text/javascript" src="../js/courses/ace-editor.js"></script>
-
 </html>

@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Identifikasi Variabel Lokal dan Global</title>
+    <title>Parameter Aktual dan Formal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -497,7 +497,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item" id="current-li">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -585,7 +585,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -640,75 +640,42 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <h4>Identifikasi Variabel Lokal dan Global</h4>
-                    <p>Sekarang kalian akan mengidentifikasi variabel lokal dan global dari program bahasa C yang disajikan. Tentunya terdapat rewards yang akan kalian dapatkan dari permainan sederhana ini. Anda akan mendapatkan poin maksimal 50 poin, namun poin tersebut akan berkurang -5 setiap kali anda mengecek jawaban anda dan jawaban tersebut salah. Jadi pastikan jawabanmu benar ya! Cara memainkan permainan ini cukup mudah :</p>
+                    <h4>Parameter Aktual dan Formal</h4>
+                    <p>Dalam prosedur dan fungsi, terdapat konsep penting yang dikenal sebagai parameter aktual dan formal. Kedua konsep ini berperan dalam pengiriman dan penerimaan nilai antara bagian-bagian fungs dan prosedur yang saling berinteraksi. Memahami perbedaan antara parameter aktual dan formal sangat penting untuk mengembangkan fungsi dan prosedur dengan baik dan menghindari kesalahan yang tidak diinginkan. Artikel ini akan menjelaskan secara detail tentang konsep tersebut.</p>
                     <ol>
-                        <li>identifikasi variabel-variabel yang ada di program yang disajikan.</li>
-                        <li>Terdapat box di bagian bawah yang berisi variabel-variable dalam program tersebut kemudian anda seret variabel-variabel tersebut dan jatuhkan ke kolom variabel lokal atau global yang menurut kamu benar.</li>
-                        <li>Jika semua variabel sudah semua dikelompokan menjadi variabel lokal dan global serta anda yakin dengan jawabannya. Anda bisa klik tombol check untuk mengetahui hasil jawaban tersebut apakah salah atau benar. </li>
-                        <li>Hasil dari jawaban tersebut akan muncul di kotak Result. Selamat mengerjakan!</li>
+                        <h5><li>Pengertian Parameter Aktual dan Formal</li></h5>
+                        <ul>
+                            <li><b>Parameter Aktual : </b>Variabel yang digunakan saat memanggil sebuah fungsi. Parameter formal merujuk pada parameter yang dideklarasikan di dalam tanda kurung saat mendefinisikan sebuah fungsi atau prosedur. </li>
+                            <li><b>Paramerer Formal : </b>Variabel yang tercantum dalam daftar parameter saat mendefinisikan sebuah fungsi. Parameter aktual merujuk pada nilai yang sebenarnya dilewatkan atau dikirim ke fungsi atau prosedur saat memanggilnya. Nilai-nilai ini kemudian akan diterima oleh parameter formal dan digunakan di dalam tubuh fungsi atau prosedur.</li>
+                        </ul><br>
+                        <h5><li>Bentuk Penulisan Parameter Aktual dan Formal</li></h5>
+                        <p>Berikut ini bentuk penulisan parameter aktual dan formal.</p>
+                        <center><img src="../images/parameter-aktual-formal.png" width="50%" height="auto"></center>
+                        <br><h5><li>Contoh Penggunaan Parameter Aktual dan Formal</li></h5>
+                        <p>Misalkan kita memiliki fungsi penjumlahan sederhana yang menerima dua parameter formal, yaitu "a" dan "b". Ketika kita memanggil fungsi tersebut, kita perlu menyediakan dua nilai sebagai parameter aktual. Misalnya:</p>
+                        <code>
+<pre>
+int penjumlahan(int a, int b) {
+   return a + b;
+}
+
+int main{
+    ...
+    int hasil = penjumlahan(5, 7);
+    ...
+}
+</pre>
+                        </code>
+                        <p>Pada contoh di atas, nilai 5 dan 7 adalah parameter aktual yang dilewatkan ke parameter formal "a" dan "b" di dalam fungsi penjumlahan. Fungsi tersebut akan mengembalikan hasil penjumlahan dari kedua parameter tersebut.</p>
+                        <h5><li>Kesimpulan</li></h5>
+                        <p>Dalam artikel ini, kita telah membahas konsep parameter aktual dan formal dalam prosedur dan fungsi. Parameter aktual merujuk pada nilai-nilai yang dilewatkan saat memanggil fungsi, sedangkan parameter formal merujuk pada variabel yang dideklarasikan di dalam definisi fungsi. Memahami perbedaan antara keduanya sangat penting dalam pengembangan fungsi yang efektif dan menghindari kesalahan.</p>
                     </ol>
-                    <?php 
-						$sql = "SELECT * FROM tb_game WHERE id_user='$idUser' AND game='1'";
-						$res = mysqli_query($con, $sql);
-						$amount = mysqli_num_rows($res);
-						if($amount==0){
-					?>
-                    <b><p>Perhatikan program berikut ini!</p></b>
-                    <center><img src="../images/game/1/kode-program.png" width="60%" height="auto"></center>
-                    <div class="box-variabel" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <h5>Variabel - Variabel</h5>
-                        <img src="../images/game/1/var1.png" class="img-var" width="35%" height="auto" id="var1" data-id="1" draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var3.png" class="img-var" width="35%" height="auto" id="var3" data-id="3"draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var2.png" class="img-var" width="35%" height="auto" id="var2" data-id="2" draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var5.png" class="img-var" width="35%" height="auto" id="var5" data-id="5" draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var4.png" class="img-var" width="35%" height="auto" id="var4" data-id="4" draggable="true" ondragstart="drag(event)">
-                    </div>
-                    <table class="table table-bordered">
-                        <tr>
-                            <th class="align-middle"><center>Variabel Lokal</center></th>
-                            <td>
-                                <center><p>Drop di kotak bawah ini!</p></center>
-                                <div class="drop" id="drop1" ondrop="drop(event)" ondragover="allowDrop(event)" >
-                                    
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="align-middle"><center>Variabel Global</center></th>
-                            <td>
-                                <center><p>Drop di kotak bawah ini!</p></center>
-                                <div class="drop" id="drop2" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <button type="button" class="btn btn-success" style="width:18%; float:right;" onclick="check(<?php echo $idUser ?>,1);" id="check">Check</button>
                     <div style="clear:both;"></div>
-                    <div class="result-box">
-                        <h5>Result</h5>
-                        <p id="getPoin">Poin yang akan di dapat : <span id="poin">50</span></p>
-                        <p id="result"></p>
-                    </div>
-                    <?php 
-                        }else{
-                            $row= mysqli_fetch_assoc($res);
-                            $points = $row['points'];
-                    ?>
-                    <div class="result-box">
-                        <h5>Result</h5>
-                        <p id="result" class="right-res">Yeay, Anda benar dengan <?php echo $points; ?> poin yang didapatkan! Itu berarti anda sudah mengenal perbedaan antara variabel lokal dan global.</p>
-                    </div>
-                    <?php
-                        }
-                    ?>
-                    <div style="clear:both;"></div>
-                    <button class="btn btn-course" id="previous" data-prev="14">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="16"
+                    <button class="btn btn-course" id="previous" data-prev="18">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="20"
                         data-curr="<?php echo $currCourse ?>" data-reward='0'
                         data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>"
-                        data-materi="Identifikasi Variabel Lokal dan Global" data-artikel="1">Berikutnya</button>
+                        data-materi="Parameter Aktual dan Formal" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>
@@ -787,7 +754,6 @@
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
-<script type="text/javascript" src="../js/courses/game/game1.js"></script>
 <script type="text/javascript" src="../js/courses/ace-editor.js"></script>
 
 </html>

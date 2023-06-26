@@ -5,7 +5,7 @@
 		header("Location: http://localhost/skripsi/");
 	}else{
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/12)*100);
+		$progress = intval(($_SESSION['curr_course']/20)*100);
 		$progressBg = "";
 		if($progress<=30){
 			$progressBg = "bg-danger";

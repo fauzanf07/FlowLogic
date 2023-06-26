@@ -12,7 +12,7 @@
         $id_user= $r['id'];
 
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/8)*100);
+		$progress = intval(($_SESSION['curr_course']/20)*100);
 		$progressBg = "";
 		if($progress <=30){
 			$progressBg = "bg-danger";
@@ -583,6 +583,50 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                <li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>19) echo 'check'; ?>"><?php if($currCourse>19) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="19"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Parameter Aktual dan Formal</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC19"
+                                                            data-course="19">
+                                                            <img class="user-img-footprint" id='userImgFootprintC19'>
+                                                            <span class="user-total" id="totalUserC19"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>20) echo 'check'; ?>"><?php if($currCourse>20) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="20"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Pemanggilan Fungsi</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC20"
+                                                            data-course="20">
+                                                            <img class="user-img-footprint" id='userImgFootprintC20'>
+                                                            <span class="user-total" id="totalUserC20"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -766,7 +810,7 @@ end for </pre>
                             <code>
                                 <pre>
 
-Prosedur nama_prosedur(input (<i>tipe data</i>) (<i>parameter)</i>)
+Prosedur nama_prosedur(input/output (<i>tipe data</i>) (<i>parameter)</i>)
 
 Deskripsi
     (variabel dan tipe data)
@@ -775,7 +819,7 @@ Deklarasi
     (blok program)
 </pre>
                             </code>
-                            <p>Notasi algoritmik di atas menunjukkan struktur dasar untuk mendefinisikan sebuah prosedur dengan nama "nama_prosedur" dan menerima parameter jika diperlukan. Contoh prosedur pada pseudocode.</p>
+                            <p>Notasi algoritmik di atas menunjukkan struktur dasar untuk mendefinisikan sebuah prosedur dengan nama "nama_prosedur" dan menerima parameter jika diperlukan. Input/output pada parameter ditentukan berdasarkan jenis parameter formal apa dari parameter tersebut. Hal ini akan di pelajari di materi fungsi dan prosedur. Contoh prosedur pada pseudocode.</p>
                             <center><img src="../images/contoh-prosedur-pse.png" width="30%" height="auto" alt=""></center>
                         </li>
                         <li>
@@ -784,7 +828,7 @@ Deklarasi
                             <code>
                                 <pre>
 
-Fungsi nama_fungsi(input (<i>tipe data</i>) (<i>parameter)</i>; output (<i>tipe data</i>) (<i>nilai)</i>)
+Fungsi nama_fungsi(input/output (<i>tipe data</i>) (<i>parameter)</i>)
 
 Deskripsi
     (variabel dan tipe data)
@@ -796,7 +840,7 @@ Deklarasi
                             </code>
                             <p>Notasi algoritmik di atas menunjukkan struktur dasar untuk mendefinisikan sebuah fungsi dengan nama "nama_fungsi" dan menerima parameter jika diperlukan. Fungsi tersebut akan mengembalikan nilai setelah eksekusi.</p>
                             <center><img src="../images/contoh-fungsi-pse.png" width="40%" height="auto" alt=""></center>
-                            <p>Jika kita perhatikan, terdapat dua pendefinisian yang ada di dalam kurung setelah nama fungsi yakni input dan output. Apa bedanya? Pendefinisian input yang terdapat di fungsi tersebut merupakan parameter-paramater yang akan diterima oleh fungsi tersebut. Sedangan pada pendefinisian output pada fungsi tersebut merupakan sebuah nilai yang akan dikeluarkan oleh fungsi tersebut.</p>
+                            <p>Input/output pada parameter ditentukan berdasarkan jenis parameter formal apa dari parameter tersebut. Hal ini akan di pelajari di materi fungsi dan prosedur</p>
                         </li>
                     </ol>
                     <p>Dengan mengetahui cara menulis notasi-notasi umum bahasa pemrograman dalam notasi algoritmik di Pseudocode, kita dapat dengan lebih mudah merancang algoritma dan memahami logika pemrograman tanpa harus terikat dengan sintaksis dari bahasa pemrograman tertentu. Notasi algoritmik memberikan fleksibilitas dan pemahaman yang lebih luas dalam menyusun algoritma secara umum.</p>

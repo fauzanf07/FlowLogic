@@ -21,7 +21,7 @@
 	$res = mysqli_fetch_assoc($query);
 	$rank = $res['row_num'];
 
-	$progress = intval(($currCourse/5)*100);
+	$progress = intval(($currCourse/20)*100);
 	$progressBg = "";
 	if($progress<=30){
 		$progressBg = "bg-danger";
