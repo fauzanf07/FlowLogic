@@ -606,3 +606,25 @@ function updateHistory(idUser,type,earns,desc){
 	});
 }
 
+function openAccess(idUser, chall,quiz, game){
+	$.ajax({
+		url: "./course_trans/open_challenge.php",
+		type: "POST",
+		data: {
+			idUser: idUser,
+			chall: chall,
+			quiz: quiz,
+			game: game
+		},
+		cache: false,
+		success: function(dataResult){
+			var dataResult = JSON.parse(dataResult);
+			console.log(dataResult);
+			if(dataResult.statusCode==200){
+				location.reload();
+			}else if(dataResult.statusCode==202){
+				alert('XP anda tidak cukup untuk membuka challenge ini');
+			}
+		}
+	});
+}

@@ -36,12 +36,13 @@ setTimeout(() => {
   }, 2000);
 }
 
-function getXP(min, max, time, soal){
+function getXpAndPoint(min, max, time, soal){
     var range = max - min;
-    var perXp = Math.round(range/time);
     var remainTime= parseInt($('#auto-refresher-time-remaining'+soal).html());
-    return min + (perXp * remainTime);
+    var bonus = Math.floor(remainTime * range/time);
+    return min + bonus;
 }
+
 function disabledPilgan(soal){
     for(let i=1; i<=5;i++){
         $('#pilgan'+soal+i).removeAttr('onclick');
@@ -58,10 +59,10 @@ function evaluasi(soal, time, timesUp){
         if(check==1){
             benar++;
             $('.choose').addClass('correct');
-            let addXp = getXP(20,100,time,soal);
-            let addPoints = 5;
+            let addXp = getXpAndPoint(20,100,time,soal);
+            let addPoints = getXpAndPoint(20,100,time,soal);
             xp += addXp;
-            points +=5;
+            points +=addPoints;
             $('#add-xp').html(addXp);
             $('#add-points').html(addPoints);
             updateAward(soal);

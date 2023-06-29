@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Fun Code</title>
+	<title>FlowLogic</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/landing-page/style.css?v=2.0">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg  nav-parent">
         <div class="container-fluid">
             <a class="navbar-brand" href=".">
-			    <h4><i class="bi bi-code-square"></i>&nbsp;&nbsp;FunCode</h4>
+			    <h4><i class="bi bi-code-square"></i>&nbsp;&nbsp;FlowLogic</h4>
 			</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@
                 <div class="col-lg-5 order-lg-1 order-md-2 order-sm-2 order-2 ">
                     <div class="d-flex align-items-center" style="min-height: 100%">
                         <div class="box w-100 content">
-                            <h1>FUNCODE</h1>
+                            <h1>FLOWLOGIC</h1>
                             <h2>PEMROGRAMAN DASAR</h2>
                             <p>Platform pembelajaran ini menyediakan kursus pemrograman dasar dengan pendekatan gamifikasi yang bertujuan untuk meningkatkan kemampuan berpikir komputasional siswa. Dengan menggunakan gamifikasi, platform ini menawarkan pengalaman belajar yang lebih interaktif dan menyenangkan bagi siswa.</p>
                             <a href="sign-up" class="btn btn-primary register-btn">REGISTER</a>

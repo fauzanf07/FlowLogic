@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Variabel Lokal dan Global</title>
+    <title>Struktur Prosedur</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -475,7 +475,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item" id="current-li">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -637,7 +637,7 @@
                                                         </div>
                                                         <div class="material-name" data-course="21"
                                                             data-curr="<?php echo $currCourse ?>">
-                                                            <a>Challange : Studi Kasus</a>
+                                                            <a>Pengenalan Prosedur</a>
                                                             <div class="get-item">
                                                                 <span><i class="bi bi-diamond-fill"></i> +0
                                                                     &nbsp;&nbsp;</span>
@@ -648,6 +648,28 @@
                                                             data-course="21">
                                                             <img class="user-img-footprint" id='userImgFootprintC21'>
                                                             <span class="user-total" id="totalUserC21"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item" id="current-li">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>22) echo 'check'; ?>"><?php if($currCourse>22) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="22"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Struktur Prosedur</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC22"
+                                                            data-course="22">
+                                                            <img class="user-img-footprint" id='userImgFootprintC22'>
+                                                            <span class="user-total" id="totalUserC22"></span>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -684,132 +706,41 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <p>Variabel merupakan alat penting dalam pemrograman untuk menyimpan dan mengelola data. Ada dua
-                        jenis variabel yang perlu kita ketahui: variabel lokal dan variabel global. Apa itu variabel
-                        lokal dan global? Dan apa perbedaannya? Yuk, mari kita mulai mempelajari variabel lokal dan
-                        global!</p>
-                    <h4>Pengenalan Pemrograman Modular</h4>
+                    <h4>Pengenalan Prosedur</h4>
+                    <p>Sebenarnya, struktur prosedur hampir sama dengan struktur pada fungsi namun terdapat sedikit perbedaan yang dapat kita lihat pada prosedur dan fungsi terutama pada bahasa pemrograman C. Berikut ini merupakan struktur prosedur dalam Flowchart, Pseudocode, dan Bahasa pemrograman C.</p>
                     <ol>
-                        <h5>
-                            <li>Variabel Lokal</li>
-                        </h5>
-                        <p>Dalam penggunaan fungsi atau prosedur, kita dapat mendeklarasikan variabel-variabel yang akan
-                            digunakan di dalamnya. Jenis variabel ini disebut sebagai variabel lokal atau variabel
-                            internal. Ini berarti variabel hanya dikenali di dalam subprogram itu sendiri, seperti
-                            fungsi atau prosedur tersebut. Variabel lokal tidak dapat diakses, dipanggil, atau diubah
-                            oleh fungsi atau prosedur lain, bahkan oleh program utama, karena hanya dikenali di dalam
-                            fungsi atau prosedur di mana variabel tersebut dideklarasikan. Berikut contoh variabel lokal
-                            : </p>
-                        <div class="row">
-                            <div class="col-6">
-                                <b>Pseudocode : </b>
-                                <img src="../images/contoh-variabel-lokal.png" width="100%" height="auto">
-                            </div>
-                            <div class="col-6">
-                                <b>Bahasa C: </b>
-                                <img src="../images/contoh-variabel-lokal-c.png" width="100%" height="auto">
-                            </div>
-                        </div>
-                        <p>Untuk lebih memahami variabel lokal mari kita lihat kode program bahasa C di bawah ini
-                            kemudian kita jalankan.</p>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <select class="form-select lang-list" aria-label="Default select example">
-                                        <option value="6 c_cpp">C (gcc)</option>
-                                    </select><button type="button" class="btn btn-success float-end" id="run"
-                                        onclick="run(0);"><i class="bi bi-play-fill"></i> RUN</button>
-                                    <pre id="editor" class="editor">#include &lt;stdio.h&gt;
-
-void coba() {
-     int A;
-     A = 20;
-     printf("Nilai A di dalam prosedur coba() : %d\n", A);
+                        <h5><li>Flowchart</li></h5>
+                        <p>Sama seperti fungsi, prosedur digambarkan dengan simbol <i>Predefined Process</i> atau dengan bentuk seperti berikut ini.</p>
+                        <center><img src="../images/simbol/predefined-process.png" width="15%" height="auto"></center><br>
+                        <p>Berikut contoh penggunaan prosedur pada flowchart.</p>
+                        <center><img src="../images/contoh-prosedur-flow.png" width="50%" height="auto"></center><br>
+                        <h5><li>Pseudocode</li></h5>
+                        <p>Untuk penulisan prosedur pada pseudocode, anda sudah mempelajarinya di materi <a class="link-offset-2 link-underline link-underline-opacity-0" href="./KrFssobGE6NzsOrgSMY5.php">Notasi Algoritmik</a>. Di dalam materi tersebut terdapat bagaimana cara penulisan prosedur pada <i>Pseudocode</i>.</p>
+                        <h5><li>Bahasa Pemrograman C</li></h5>
+                        <p>Sebuah prosedur sederhana terutama pada bahasa C memiliki struktur penulisan sebagai berikut.</p>
+                    <center><img src="../images/struktur-prosedur.png" width="40%" height="auto"></center><br>
+                    <u><b>Keterangan : </b></u>
+                    <ul>
+                        <li>Tipe data pada prosedur akan selalu <code>void</code> karena prosedur tidak akan mengembalikan nilai apapun didalamnya</li>
+                        <li><b>nama_prosedur</b>, boleh dituliskan secara bebas dengan ketentuan, tidak menggunakan spasi dan nama-nama prosedur yang mempunyai arti sendiri seperti printf, scanf, dll.</li>
+                        <li><b>parameter</b>, diletakan diantara kurung "()" yang terletak di belakang nama fungsi. Parameter dapat diisi oleh data-data atau variabel-variabel yang akan dibutuhkan di dalam prosedur ataupun boleh dibiarkan kosong.</li>
+                        <li><b>pernyataan / perintah</b>, diletakan diantara kurung "{}". Di dalam sini berisi semua kode program yang akan di jalankan di fungsi.</li>
+                    </ul><br>
+                    <p>Contoh :</p>
+                    <code>
+                        <pre>
+void cetakPesan() {
+    printf("Halo, ini adalah pesan dari prosedur!\n");
 }
-
-int main() {
-    printf("Nilai A di dalam fungsi main() : %d\n", A);
-
-    return 0;
-}
-
-								</pre>
-                                </div>
-                                <div class="col-lg-6">
-                                    <h3>Result</h3>
-                                    <div class="preview-code" id="preview-code0">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p>Program diatas akan menghasilkan error karena variabel A merupakan variabel lokal. Itu
-                            berarti variabel A hanya bisa diakses di dalam prosedur coba() saja dan tidak bisa diakses
-                            di program main().</p>
-                        <h5>
-                            <li>Variabel Global</li>
-                        </h5>
-                        <p>Variabel global adalah jenis variabel yang dapat diakses, dipanggil, dan dikenali oleh semua
-                            fungsi, prosedur, atau bagian program lainnya. Variabel global ini memungkinkan
-                            penggunaannya dalam beberapa fungsi atau prosedur, sehingga menghemat penulisan kode, karena
-                            tidak perlu lagi mengulangi penulisan variabel yang sama di beberapa fungsi atau prosedur.
-                        </p>
-                        <p>Dalam bahasa C sendiri kita telah mengetahui bahwa struktur program dalam bahasa C selalu ada
-                            fungsi utama dengan nama main() . Apabila kita mendeklarasikan sebuah variabel diluar fungsi
-                            main() / fungsi lain / prosedur lain, maka dengan sendirinya compiler akan menganggap
-                            variabel tersebut sebagai variabel global. Berikut contoh variabel global:</p>
-                        <div class="row">
-                            <div class="col-6">
-                                <b>Pseudocode : </b>
-                                <img src="../images/contoh-variabel-global.png" width="100%" height="auto">
-                            </div>
-                            <div class="col-6">
-                                <b>Bahasa C: </b>
-                                <img src="../images/contoh-variabel-global-c.png" width="100%" height="auto">
-                            </div>
-                        </div>
-                        <p>Untuk lebih memahami variabel global mari kita lihat kode program bahasa C di bawah ini
-                            kemudian kita jalankan.</p>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <select class="form-select lang-list" aria-label="Default select example">
-                                        <option value="6 c_cpp">C (gcc)</option>
-                                    </select><button type="button" class="btn btn-success float-end" id="run"
-                                        onclick="run(1);"><i class="bi bi-play-fill"></i> RUN</button>
-                                    <pre id="editor" class="editor">#include &lt;stdio.h&gt;
-
-int A = 20;
-
-void coba() {
-     printf("Nilai A di dalam prosedur coba() : %d\n", A);
-}
-
-int main() {
-    coba();
-    printf("Nilai A di dalam fungsi coba() : %d\n", A);
-
-    return 0;
-}
-
-								</pre>
-                                </div>
-                                <div class="col-lg-6">
-                                    <h3>Result</h3>
-                                    <div class="preview-code" id="preview-code1">
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Dari program diatas kita bisa lihat bahwa prosedur coba dan fungsi main dapat mengakses
-                                nilai A. Oleh karena itu variabel A merupakan variabel global.</p>
-                        </div>
+                        </pre>
+                    </code>
                     </ol>
-                    <p>Oke, cukup sudah pembahasan variabel lokal dan global ini. Apakah kalian sudah paham membedakan antara variabel lokal dan global?</p>
                     <div style="clear:both;"></div>
-                    <button class="btn btn-course" id="previous" data-prev="13">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="15"
+                    <button class="btn btn-course" id="previous" data-prev="14">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="16"
                         data-curr="<?php echo $currCourse ?>" data-reward='0'
                         data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>"
-                        data-materi="Variabel Lokal dan Global" data-artikel="1">Berikutnya</button>
+                        data-materi="Identifikasi Variabel Lokal dan Global" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>
@@ -888,6 +819,7 @@ int main() {
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
+<script type="text/javascript" src="../js/courses/game/game1.js"></script>
 <script type="text/javascript" src="../js/courses/ace-editor.js"></script>
 
 </html>

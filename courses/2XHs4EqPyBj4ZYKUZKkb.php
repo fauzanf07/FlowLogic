@@ -75,7 +75,7 @@
     </div>
     <nav class="navbar navbar-expand-lg bg-light sticky-top" style="top: 0; bottom: 0;" id="navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"> <i class="bi bi-code-square"></i> FunCode</a>
+            <a class="navbar-brand" href="#"> <i class="bi bi-code-square"></i> FlowLogic</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -272,9 +272,9 @@
                                                             data-curr="<?php echo $currCourse ?>">
                                                             <a>Quiz Singkat</a>
                                                             <div class="get-item">
-                                                                <span><i class="bi bi-diamond-fill"></i> Up to +25
+                                                                <span><i class="bi bi-diamond-fill"></i> Up to +100
                                                                     &nbsp;&nbsp;</span>
-                                                                <span><i class="bi bi-star-fill"></i> Up to +500</span>
+                                                                <span><i class="bi bi-star-fill"></i> Up to +300</span>
                                                             </div>
                                                         </div>
                                                         <div class="user-footprint" id="userFootprintC6"
@@ -423,9 +423,9 @@
                                                             data-curr="<?php echo $currCourse ?>">
                                                             <a>Quiz Singkat</a>
                                                             <div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> Up to +25
+																<span><i class="bi bi-diamond-fill"></i> Up to +100
 																	&nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> Up to +500</span>
+																<span><i class="bi bi-star-fill"></i> Up to +300</span>
 															</div>
                                                         </div>
                                                         <div class="user-footprint" id="userFootprintC12"
@@ -627,6 +627,50 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                <li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>21) echo 'check'; ?>"><?php if($currCourse>21) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="21"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Pengenalan Prosedur</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC21"
+                                                            data-course="21">
+                                                            <img class="user-img-footprint" id='userImgFootprintC21'>
+                                                            <span class="user-total" id="totalUserC21"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>22) echo 'check'; ?>"><?php if($currCourse>22) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="22"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Struktur Prosedur</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC22"
+                                                            data-course="22">
+                                                            <img class="user-img-footprint" id='userImgFootprintC22'>
+                                                            <span class="user-total" id="totalUserC22"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -639,6 +683,19 @@
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
                     <h4>Challenge: Studi Kasus</h4>
+                    <?php
+                        $sql = "SELECT * FROM tb_open_access WHERE id_user='$id_user' AND challenge='1'";
+                        $res = mysqli_query($con, $sql);
+                        $count = mysqli_num_rows($res);
+                        if($count==0){
+                    ?>
+                    <p>Challenge ini masih terkunci. Untuk membukanya, kamu perlu membayar dengan 300 XP. Setelah membayar, kamu akan dapat mengakses dan mengikuti Challenge ini. XP yang kamu bayarkan akan dikurangi dari total XP yang kamu miliki. Jika kamu memiliki cukup XP, silakan lanjutkan pembayaran untuk membuka Challenge dan menikmati tantangan yang ada.</p>
+                    <center><button class="btn btn-primary" id="bukaChall" onclick="openAccess(<?php echo $id_user; ?>,1,0,0)">Buka Challenge &nbsp;<i class="bi bi-key-fill"></i></button></center>
+                    <br><br>
+                    <?php
+                        }else{
+
+                    ?>
                     <p>Selamat Anda telah mencapai di akhir-akhir level ini!! Untuk menerapkan pengetahuan yang telah kamu
                         dapat di level 1 ini, saya tantang anda untuk mengikuti challenge ini. Tentunya terdapat
                         beberapa keuntungan jika anda mengikuti challenge ini yakni mendapatkan poin sampai 300 points, 300 XP, dan 1
@@ -813,6 +870,7 @@
 					</table>
                     <?php 
                         }
+                    }
                     ?>
                     <button class="btn btn-course" id="previous" data-prev="4">Sebelumnya</button>
                     <button class="btn btn-course f-right" id="next" data-next="6" data-curr="<?php echo $currCourse ?>"
@@ -841,7 +899,7 @@
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <i class="bi bi-code-square"></i>&nbsp;&nbsp;
-                <strong class="me-auto">FunCode</strong>
+                <strong class="me-auto">FlowLogic</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body" id="msgToast">

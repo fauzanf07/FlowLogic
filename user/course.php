@@ -36,7 +36,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg bg-light sticky-top" style="top: 0; bottom: 0;">
 		<div class="container-fluid">
-		    <a class="navbar-brand" href="#"> <i class="bi bi-code-square"></i> FunCode</a>
+		    <a class="navbar-brand" href="#"> <i class="bi bi-code-square"></i> FlowLogic</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>

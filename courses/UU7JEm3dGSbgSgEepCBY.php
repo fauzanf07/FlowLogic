@@ -63,7 +63,7 @@
 	</div>
 	<nav class="navbar navbar-expand-lg bg-light sticky-top" style="top: 0; bottom: 0;" id="navbar">
 		<div class="container-fluid">
-		    <a class="navbar-brand" href="#"> <i class="bi bi-code-square"></i> FunCode</a>
+		    <a class="navbar-brand" href="#"> <i class="bi bi-code-square"></i> FlowLogic</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -99,7 +99,7 @@
 						<div class="element-game">
 							<span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?> &nbsp;&nbsp;</span>
 							<span><i class="bi bi-star-fill"></i> <span id="xpUser"><?php echo $r['xp']; ?> XP</span> &nbsp;&nbsp;</span>
-							<span><i class="bi bi-diamond-fill"></i> <span id="pointsUser"><?php echo $r['point']; ?> </span>Points</span>
+							<span><i class="bi bi-diamond-fill"></i> <span id="pointsUser"><?php echo $r['point']; ?> </span> Points</span>
 						</div>
 						<span style="display:block;clear:both;"></span>
 						<hr>
@@ -241,9 +241,9 @@
 															data-curr="<?php echo $currCourse ?>">
 															<a>Quiz Singkat</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> Up to +25
+																<span><i class="bi bi-diamond-fill"></i> Up to +100
 																	&nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> Up to +500</span>
+																<span><i class="bi bi-star-fill"></i> Up to +300</span>
 															</div>
 														</div>
 														<div class="user-footprint" id="userFootprintC6"
@@ -389,9 +389,9 @@
 															data-curr="<?php echo $currCourse ?>">
 															<a>Quiz Singkat</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> Up to +25
+																<span><i class="bi bi-diamond-fill"></i> Up to +100
 																	&nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> Up to +500</span>
+																<span><i class="bi bi-star-fill"></i> Up to +300</span>
 															</div>
 														</div>
 														<div class="user-footprint" id="userFootprintC12"
@@ -594,6 +594,50 @@
                                                         </div>
                                                     </div>
                                                 </li>
+												<li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>21) echo 'check'; ?>"><?php if($currCourse>21) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="21"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Pengenalan Prosedur</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC21"
+                                                            data-course="21">
+                                                            <img class="user-img-footprint" id='userImgFootprintC21'>
+                                                            <span class="user-total" id="totalUserC21"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+												<li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>22) echo 'check'; ?>"><?php if($currCourse>22) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="22"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Struktur Prosedur</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC22"
+                                                            data-course="22">
+                                                            <img class="user-img-footprint" id='userImgFootprintC22'>
+                                                            <span class="user-total" id="totalUserC22"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -606,6 +650,19 @@
 			<div class="col-lg-8 side-right order-lg-2 corder-md-1">
 				<div class="right-content">
 				<h1>Quiz Singkat</h1>
+					<?php
+                        $sql = "SELECT * FROM tb_open_access WHERE id_user='$idUser' AND quiz='1'";
+                        $res = mysqli_query($con, $sql);
+                        $count = mysqli_num_rows($res);
+                        if($count==0){
+                    ?>
+                    <p>Quiz ini masih terkunci. Untuk membukanya, kamu perlu membayar dengan 200 XP. Setelah membayar, kamu akan dapat mengakses dan mengikuti Quiz ini. XP yang kamu bayarkan akan dikurangi dari total XP yang kamu miliki. Jika kamu memiliki cukup XP, silakan lanjutkan pembayaran untuk membuka Quiz.</p>
+                    <center><button class="btn btn-primary" onclick="openAccess(<?php echo $idUser; ?>,0,1,0)">Buka Quiz &nbsp;<i class="bi bi-key-fill"></i></button></center>
+                    <br><br>
+                    <?php
+                        }else{
+
+                    ?>
 					<?php 
 						$sql = "SELECT * FROM tb_quiz WHERE id_user='$idUser' AND quiz='1'";
 						$res = mysqli_query($con, $sql);
@@ -627,7 +684,7 @@
 									<h6>Mengenai Quiz:</h6>
 									<ol>
 										<li>Setiap soal akan diberikan waktu yang telah ditentukan untuk menjawab soal tersebut.</li>
-										<li>Setiap soal yang dijawab dengan benar, peserta didik akan mendapatkan xp dengan jumlah sesuai kecepatan anda menjawab soal dan 5 coin per soal yang benar.</li>
+										<li>Setiap soal yang dijawab dengan benar, peserta didik akan mendapatkan xp dan poin dengan jumlah sesuai kecepatan anda menjawab soal.</li>
 										<li>Setelah quiz selesai, peserta didik akan melihat peringkat pada quiz ini dari jumlah xp tertinggi sampai terendah.</li>
 									</ol>
 									<center><button class="btn-quiz" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(1,60);">Mulai Quiz</button></center>
@@ -900,6 +957,7 @@ Simbol flowchart yang tepat untuk menggambarkan langkah ke 5 yaitu...</pre>
 					</div>
 					<?php
 						}
+					}
 					?>
 					<button class="btn btn-course" id="previous" data-prev="5">Sebelumnya</button>
 					<button class="btn btn-course f-right" id="next" data-next="7" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Quiz Singkat 1" data-artikel="0">Berikutnya</button>
@@ -927,7 +985,7 @@ Simbol flowchart yang tepat untuk menggambarkan langkah ke 5 yaitu...</pre>
 	  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
 	    <div class="toast-header">
 	      <i class="bi bi-code-square"></i>&nbsp;&nbsp;
-	      <strong class="me-auto">FunCode</strong>
+	      <strong class="me-auto">FlowLogic</strong>
 	      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
 	    </div>
 	    <div class="toast-body" id="msgToast">

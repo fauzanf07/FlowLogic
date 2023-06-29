@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Variabel Lokal dan Global</title>
+    <title>Pengenalan Prosedur</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -475,7 +475,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item" id="current-li">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -629,7 +629,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -637,7 +637,7 @@
                                                         </div>
                                                         <div class="material-name" data-course="21"
                                                             data-curr="<?php echo $currCourse ?>">
-                                                            <a>Challange : Studi Kasus</a>
+                                                            <a>Pengenalan Prosedur</a>
                                                             <div class="get-item">
                                                                 <span><i class="bi bi-diamond-fill"></i> +0
                                                                     &nbsp;&nbsp;</span>
@@ -684,132 +684,26 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <p>Variabel merupakan alat penting dalam pemrograman untuk menyimpan dan mengelola data. Ada dua
-                        jenis variabel yang perlu kita ketahui: variabel lokal dan variabel global. Apa itu variabel
-                        lokal dan global? Dan apa perbedaannya? Yuk, mari kita mulai mempelajari variabel lokal dan
-                        global!</p>
-                    <h4>Pengenalan Pemrograman Modular</h4>
-                    <ol>
-                        <h5>
-                            <li>Variabel Lokal</li>
-                        </h5>
-                        <p>Dalam penggunaan fungsi atau prosedur, kita dapat mendeklarasikan variabel-variabel yang akan
-                            digunakan di dalamnya. Jenis variabel ini disebut sebagai variabel lokal atau variabel
-                            internal. Ini berarti variabel hanya dikenali di dalam subprogram itu sendiri, seperti
-                            fungsi atau prosedur tersebut. Variabel lokal tidak dapat diakses, dipanggil, atau diubah
-                            oleh fungsi atau prosedur lain, bahkan oleh program utama, karena hanya dikenali di dalam
-                            fungsi atau prosedur di mana variabel tersebut dideklarasikan. Berikut contoh variabel lokal
-                            : </p>
-                        <div class="row">
-                            <div class="col-6">
-                                <b>Pseudocode : </b>
-                                <img src="../images/contoh-variabel-lokal.png" width="100%" height="auto">
-                            </div>
-                            <div class="col-6">
-                                <b>Bahasa C: </b>
-                                <img src="../images/contoh-variabel-lokal-c.png" width="100%" height="auto">
-                            </div>
-                        </div>
-                        <p>Untuk lebih memahami variabel lokal mari kita lihat kode program bahasa C di bawah ini
-                            kemudian kita jalankan.</p>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <select class="form-select lang-list" aria-label="Default select example">
-                                        <option value="6 c_cpp">C (gcc)</option>
-                                    </select><button type="button" class="btn btn-success float-end" id="run"
-                                        onclick="run(0);"><i class="bi bi-play-fill"></i> RUN</button>
-                                    <pre id="editor" class="editor">#include &lt;stdio.h&gt;
-
-void coba() {
-     int A;
-     A = 20;
-     printf("Nilai A di dalam prosedur coba() : %d\n", A);
-}
-
-int main() {
-    printf("Nilai A di dalam fungsi main() : %d\n", A);
-
-    return 0;
-}
-
-								</pre>
-                                </div>
-                                <div class="col-lg-6">
-                                    <h3>Result</h3>
-                                    <div class="preview-code" id="preview-code0">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p>Program diatas akan menghasilkan error karena variabel A merupakan variabel lokal. Itu
-                            berarti variabel A hanya bisa diakses di dalam prosedur coba() saja dan tidak bisa diakses
-                            di program main().</p>
-                        <h5>
-                            <li>Variabel Global</li>
-                        </h5>
-                        <p>Variabel global adalah jenis variabel yang dapat diakses, dipanggil, dan dikenali oleh semua
-                            fungsi, prosedur, atau bagian program lainnya. Variabel global ini memungkinkan
-                            penggunaannya dalam beberapa fungsi atau prosedur, sehingga menghemat penulisan kode, karena
-                            tidak perlu lagi mengulangi penulisan variabel yang sama di beberapa fungsi atau prosedur.
-                        </p>
-                        <p>Dalam bahasa C sendiri kita telah mengetahui bahwa struktur program dalam bahasa C selalu ada
-                            fungsi utama dengan nama main() . Apabila kita mendeklarasikan sebuah variabel diluar fungsi
-                            main() / fungsi lain / prosedur lain, maka dengan sendirinya compiler akan menganggap
-                            variabel tersebut sebagai variabel global. Berikut contoh variabel global:</p>
-                        <div class="row">
-                            <div class="col-6">
-                                <b>Pseudocode : </b>
-                                <img src="../images/contoh-variabel-global.png" width="100%" height="auto">
-                            </div>
-                            <div class="col-6">
-                                <b>Bahasa C: </b>
-                                <img src="../images/contoh-variabel-global-c.png" width="100%" height="auto">
-                            </div>
-                        </div>
-                        <p>Untuk lebih memahami variabel global mari kita lihat kode program bahasa C di bawah ini
-                            kemudian kita jalankan.</p>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <select class="form-select lang-list" aria-label="Default select example">
-                                        <option value="6 c_cpp">C (gcc)</option>
-                                    </select><button type="button" class="btn btn-success float-end" id="run"
-                                        onclick="run(1);"><i class="bi bi-play-fill"></i> RUN</button>
-                                    <pre id="editor" class="editor">#include &lt;stdio.h&gt;
-
-int A = 20;
-
-void coba() {
-     printf("Nilai A di dalam prosedur coba() : %d\n", A);
-}
-
-int main() {
-    coba();
-    printf("Nilai A di dalam fungsi coba() : %d\n", A);
-
-    return 0;
-}
-
-								</pre>
-                                </div>
-                                <div class="col-lg-6">
-                                    <h3>Result</h3>
-                                    <div class="preview-code" id="preview-code1">
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Dari program diatas kita bisa lihat bahwa prosedur coba dan fungsi main dapat mengakses
-                                nilai A. Oleh karena itu variabel A merupakan variabel global.</p>
-                        </div>
-                    </ol>
-                    <p>Oke, cukup sudah pembahasan variabel lokal dan global ini. Apakah kalian sudah paham membedakan antara variabel lokal dan global?</p>
+                    <h4>Pengenalan Prosedur</h4>
+                    <center><img src="../images/contoh-prosedur.png" width="50%" height="auto"></center><br>
+                    <p>Cara lain memecah persoalan pemrograman ke dalam sub-sub persoalan pemrograman adalah dengan mendeklarasikan prosedur. Prosedur adalah sederetan instruksi yang diberi nama, dan melakukan tujuan tertentu.</p>
+                    <p>Seperti pada fungsi, prosedur beroperasi menggunakan mekanisme panggil-kembali (<i>call-return mechanism</i>) yang melibatkan langkah-langkah berikut ini :</p>
+                    <ul>
+                        <li>Kode pemanggil memanggil prosedur, baik itu dari program utama maupun prosedur lainnya.</li>
+                        <li>Serangkaian operasi yang terdapat dalam prosedur dieksekusi.</li>
+                        <li>Kontrol kembali dikembalikan ke kode pemanggil setelah prosedur selesai dieksekusi.</li>
+                    </ul>
+                    <p>Secara umum, fungsi dan prosedur memiliki beberapa kesamaan dalam hal penggunaan dan tujuan mereka. Keduanya digunakan untuk mengorganisir dan membagi kode program menjadi bagian-bagian yang lebih kecil dan terkelola. Keduanya juga digunakan untuk memperbaiki kesalahan dan meningkatkan keterbacaan dan kebersihan kode.</p>
+                    <p>Namun, terdapat perbedaan utama antara fungsi dan prosedur, yaitu pengembalian nilai. Fungsi memiliki kemampuan untuk mengembalikan nilai setelah eksekusi selesai, sedangkan prosedur tidak mengembalikan nilai apa pun. Fungsi dapat memberikan hasil perhitungan atau data yang diperlukan, sedangkan prosedur digunakan untuk menjalankan serangkaian instruksi tanpa memberikan nilai kembali.</p>
+                    <p>Dalam banyak bahasa pemrograman, fungsi sering digunakan ketika kita membutuhkan nilai yang dihasilkan untuk digunakan di bagian lain program, sedangkan prosedur digunakan ketika kita hanya ingin menjalankan serangkaian instruksi tanpa perlu mengembalikan nilai.</p>
+                    <b>Kesimpulan : </b>
+                    <p>Prosedur adalah cara lain untuk memecah persoalan pemrograman menjadi sub-sub persoalan yang lebih kecil. Seperti fungsi, prosedur menggunakan mekanisme panggil-kembali dan membantu dalam pengorganisasian dan peningkatan keterbacaan kode. Perbedaan utama antara keduanya adalah fungsi dapat mengembalikan nilai, sedangkan prosedur tidak.</p>
                     <div style="clear:both;"></div>
-                    <button class="btn btn-course" id="previous" data-prev="13">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="15"
+                    <button class="btn btn-course" id="previous" data-prev="20">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="22"
                         data-curr="<?php echo $currCourse ?>" data-reward='0'
                         data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>"
-                        data-materi="Variabel Lokal dan Global" data-artikel="1">Berikutnya</button>
+                        data-materi="Pengenalan Prosedur" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>
@@ -888,6 +782,7 @@ int main() {
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
+<script type="text/javascript" src="../js/courses/game/game1.js"></script>
 <script type="text/javascript" src="../js/courses/ace-editor.js"></script>
 
 </html>

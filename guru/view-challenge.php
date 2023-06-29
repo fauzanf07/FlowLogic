@@ -30,7 +30,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-3 left-content bg-light">
-				<a class="navbar-brand" href="#"> <i class="bi bi-code-square"></i> FunCode</a><br><br>
+				<a class="navbar-brand" href="#"> <i class="bi bi-code-square"></i> FlowLogic</a><br><br>
 				<img src="<?php echo $_SESSION["photo_profile"]; ?>" class="avatar" />
 				<div style="text-align: center;">
 					<span class="" id="profile-name"><?php echo $_SESSION["name"]; ?></span>&nbsp;&nbsp;<i

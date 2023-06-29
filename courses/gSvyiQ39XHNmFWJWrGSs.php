@@ -61,7 +61,7 @@
 	</div>
 	<nav class="navbar navbar-expand-lg bg-light sticky-top" style="top: 0; bottom: 0;" id="navbar">
 		<div class="container-fluid">
-		    <a class="navbar-brand" href="#"> <i class="bi bi-code-square"></i> FunCode</a>
+		    <a class="navbar-brand" href="#"> <i class="bi bi-code-square"></i> FlowLogic</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -218,8 +218,8 @@
 											  			<div class="material-name" data-course="6" data-curr="<?php echo $currCourse ?>">
 											  				<a>Quiz Singkat</a>
 															<div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> Up to +25 &nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> Up to +500</span>
+																<span><i class="bi bi-diamond-fill"></i> Up to +100 &nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> Up to +300</span>
 															</div>
 											  			</div>
 											  			<div class="user-footprint" id="userFootprintC6" data-course="6">
@@ -363,9 +363,9 @@
 																data-curr="<?php echo $currCourse ?>">
 																<a>Quiz Singkat</a>
 																<div class="get-item">
-																	<span><i class="bi bi-diamond-fill"></i> Up to +25
+																	<span><i class="bi bi-diamond-fill"></i> Up to +100
 																		&nbsp;&nbsp;</span>
-																	<span><i class="bi bi-star-fill"></i> Up to +500</span>
+																	<span><i class="bi bi-star-fill"></i> Up to +300</span>
 																</div>
 															</div>
 															<div class="user-footprint" id="userFootprintC12"
@@ -567,6 +567,50 @@
                                                         </div>
                                                     </div>
                                                 </li>
+												<li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>21) echo 'check'; ?>"><?php if($currCourse>21) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="21"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Pengenalan Prosedur</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC21"
+                                                            data-course="21">
+                                                            <img class="user-img-footprint" id='userImgFootprintC21'>
+                                                            <span class="user-total" id="totalUserC21"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+												<li class="list-group-item">
+                                                    <div style="width: 100%;">
+                                                        <div class="check-side ">
+                                                            <span
+                                                                class="checklist <?php if($currCourse>22) echo 'check'; ?>"><?php if($currCourse>22) echo '&#10003;'; ?></span>
+                                                        </div>
+                                                        <div class="material-name" data-course="22"
+                                                            data-curr="<?php echo $currCourse ?>">
+                                                            <a>Struktur Prosedur</a>
+                                                            <div class="get-item">
+                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-footprint" id="userFootprintC22"
+                                                            data-course="22">
+                                                            <img class="user-img-footprint" id='userImgFootprintC22'>
+                                                            <span class="user-total" id="totalUserC22"></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -672,7 +716,7 @@ namespace HelloWorld
 	  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
 	    <div class="toast-header">
 	      <i class="bi bi-code-square"></i>&nbsp;&nbsp;
-	      <strong class="me-auto">FunCode</strong>
+	      <strong class="me-auto">FlowLogic</strong>
 	      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
 	    </div>
 	    <div class="toast-body" id="msgToast">
