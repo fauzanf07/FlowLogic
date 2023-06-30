@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Challenge: Studi Kasus</title>
+    <title>Prototipe Prosedur</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,8 @@
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel"><i class="bi bi-trophy-fill"></i>&nbsp;&nbsp;Top Ranks
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="closeRanks"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                id="closeRanks"></button>
         </div>
         <div class="offcanvas-body">
             <div class="ranks">
@@ -66,10 +67,11 @@
                         </tr>
                     </thead>
                     <tbody id="tableRanks">
-                        
+
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore" onclick="getRanks(true, false);">Load More</button>
+                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore"
+                    onclick="getRanks(true, false);">Load More</button>
             </div>
         </div>
     </div>
@@ -102,8 +104,8 @@
                         </ul>
                     </div>
                     <button class="btn btn-light btn-nav" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks" onclick="getRanks(false, true);"><i
-                            class="bi bi-trophy-fill"></i></button>
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks"
+                        onclick="getRanks(false, true);"><i class="bi bi-trophy-fill"></i></button>
                 </ul>
             </div>
         </div>
@@ -116,9 +118,9 @@
                         <h5>Progress Kelas</h5>
                         <div class="progress" style="height: 30px; margin-top: 10px;">
                             <div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar"
-                                aria-label="Example with label"
-                                style="width: <?php echo $progress . "%"; ?>;" aria-valuenow=" 25" aria-valuemin="0"
-                                aria-valuemax="100"><?php echo $progress . "%"; ?></div>
+                                aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>;"
+                                aria-valuenow=" 25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?>
+                            </div>
                         </div>
                         <div class="element-game">
                             <span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?>
@@ -238,7 +240,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-												<li class="list-group-item">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -284,7 +286,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -300,7 +302,7 @@
                                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                        <ul class="list-group list-group-flush">
+                                            <ul class="list-group list-group-flush">
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -316,13 +318,13 @@
                                                                 <span><i class="bi bi-star-fill"></i> +100</span>
                                                             </div>
                                                         </div>
-                                                        <div class="user-footprint" id="userFootprintC1"
+                                                        <div class="user-footprint" id="userFootprintC7"
                                                             data-course="7">
                                                             <img class="user-img-footprint" id='userImgFootprintC7'>
                                                             <span class="user-total" id="totalUserC7"></span>
                                                         </div>
                                                     </div>
-                                                </li> 
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -366,7 +368,7 @@
                                                             <span class="user-total" id="totalUserC9"></span>
                                                         </div>
                                                     </div>
-                                                </li> 
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -389,7 +391,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item" id="current-li">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -423,10 +425,10 @@
                                                             data-curr="<?php echo $currCourse ?>">
                                                             <a>Quiz Singkat</a>
                                                             <div class="get-item">
-																<span><i class="bi bi-diamond-fill"></i> Up to +100
-																	&nbsp;&nbsp;</span>
-																<span><i class="bi bi-star-fill"></i> Up to +300</span>
-															</div>
+                                                                <span><i class="bi bi-diamond-fill"></i> Up to +100
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span><i class="bi bi-star-fill"></i> Up to +300</span>
+                                                            </div>
                                                         </div>
                                                         <div class="user-footprint" id="userFootprintC12"
                                                             data-course="12">
@@ -434,7 +436,7 @@
                                                             <span class="user-total" id="totalUserC12"></span>
                                                         </div>
                                                     </div>
-                                                </li>    
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -472,7 +474,7 @@
                                                             <span class="user-total" id="totalUserC13"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -494,7 +496,7 @@
                                                             <span class="user-total" id="totalUserC14"></span>
                                                         </div>
                                                     </div>
-                                                </li>  
+                                                </li>
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -649,7 +651,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" >
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -671,7 +673,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -726,197 +728,44 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <h4>Challenge: Studi Kasus</h4>
-                    <?php
-                        $sql = "SELECT * FROM tb_open_access WHERE id_user='$id_user' AND challenge='2'";
-                        $res = mysqli_query($con, $sql);
-                        $count = mysqli_num_rows($res);
-                        if($count==0){
-                    ?>
-                    <p>Challenge ini masih terkunci. Untuk membukanya, kamu perlu membayar dengan 400 XP. Setelah membayar, kamu akan dapat mengakses dan mengikuti Challenge ini. XP yang kamu bayarkan akan dikurangi dari total XP yang kamu miliki. Jika kamu memiliki cukup XP, silakan lanjutkan pembayaran untuk membuka Challenge dan menikmati tantangan yang ada.</p>
-                    <center><button class="btn btn-primary" id="bukaChall" onclick="openAccess(<?php echo $id_user; ?>,2,0,0)">Buka Challenge &nbsp;<i class="bi bi-key-fill"></i></button></center>
-                    <br><br>
-                    <?php
-                        }else{
-
-                    ?>
-                    <p>Selamat Anda telah mencapai di akhir-akhir level ini!! Untuk menerapkan pengetahuan yang telah kamu
-                        dapat di level 2 ini, kami tantang anda untuk mengikuti challenge ini. Tentunya terdapat
-                        beberapa keuntungan jika anda mengikuti challenge ini yakni mendapatkan poin sampai 300 points, 300 XP, dan 1
-                        Badge (Lencana). Ayo ikuti challenge ini! Semakin banyak points dan xp yang kamu dapat, semakin
-                        besar peluang anda memenangkan reward dari kami!</p>
-                    <b>
-                        <p>Ketentuan Challenge : </p>
-                    </b>
+                    <h4>Prototipe Prosedur</h4>
+                    <p>Sama seperti prototipe fungsi, Prototipe prosedur merupakan deklarasi awal dari prosedur yang mencakup tipe data yang dikembalikan oleh prosedur, nama prosedur, dan parameter yang diterima oleh prosedur itu sendiri.</p>
+                    <p>Tujuan dari prototipe prosedur ini untuk mengatur struktur program C dengan lebih baik dan memudahkan pengontrolan prosedur-prosedur yang ada dalam program, termasuk tipe data dan parameter yang digunakan. Biasanya prototipe prosedur ditempatkan sebelum fungsi main() pada bahasa pemrograman C. Prototipe fungsi ini berfungsi sebagai cara untuk memberitahu kompiler mengenai:</p>
                     <ol>
-                        <li>Cari atau temukan permasalahan di kehidupan sehari-hari.</li>
-                        <li>Buatlah langkah-langkah (algoritma) untuk menyelesaikan permasalahan tersebut. Anda bisa mengambil permasalahan dan algoritma dari challenge sebelumnya.</li>
-                        <li>Setelah itu, buatlah pseudocode dari algoritma tersebut.</li>
-                        <li>Share algoritma dan pseudocode anda di box share your knowledge di bawah ini.</li>
-                        <li>Konten yang dibagikan harus memuat seluruh ketentuan dan tidak mengandung SARA dan
-                            pornografi.</li>
+                        <li>Jumlah parameter yang diterima oleh fungsi.</li>
+                        <li>Tipe data dari masing-masing parameter.</li>
                     </ol>
-                    <?php
-                        $sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='2' ORDER BY created_at DESC";
-                        $res = mysqli_query($con, $sql);
-                        $count = mysqli_num_rows($res);
-                        if($count!=0){
-                            $row = mysqli_fetch_assoc($res);
-                            $status = $row['status'];
-                        }
-                        if($count== 0 || $status == 2){
-                    ?>
-                    <div class="share-wrapper">
-                        <textarea id="shareBox"></textarea>
-                        <center><button type="button" id="share" data-username="<?php echo $username; ?>" data-challenge='2'
-                                onclick="share(this);" class="btn btn-primary mt-4">SHARE YOUR KNOWLEDGE&nbsp; <i
-                                    class="bi bi-send-fill"></i></button></center>
-                    </div>
-                    <?php
-                        }if($count!=0){
-                    ?>
-                    <div class="your-post">
-                        <?php
+                    <p>Salah satu keuntungan menggunakan prototipe adalah bahwa kompiler akan melakukan konversi antara tipe data parameter dalam definisi prosedur dan parameter saat pemanggilan prosedur, dan akan menunjukkan kesalahan jika jumlah parameter dalam definisi dan pemanggilan prosedur tidak sesuai.</p>
+                    <center><img src="../images/contoh-prototipe-fungsi.png" width="50%" height="auto"></center>
+                    <p>Berikut ini contoh penerapan prototipe prosedur pada pemrograman bahasa C</p>
+                    <code>
+                        <pre>
+include &lt;stdio.h&gt;
 
-									$sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='2' ORDER BY created_at DESC";
-									$result = mysqli_query($con, $sql);
-									while($r_post = mysqli_fetch_assoc($result)){
-										$id_post = $r_post['id'];
-										echo '
-											<div class="post">
-												<div class="top">
-													<div class="top-photo">
-														<img src= '. $r['photo_profile'] .' class="avatar">
-													</div>
-													<div class="top-name">
-														<b><span><a class="no-undr" href="./profile.php?user='.$r['username'].'">'. $r['name'] .'</a></span></b><span>&nbsp;&nbsp;'. $r['username'] .'</span>
-														<div class="control">';
-														if($r_post['status']==0){
-															echo '
-																<span class="pending">Pending <i class="bi bi-clock"></i></span>
-															';
-														}else if($r_post['status']==1){
-															echo '
-																<span class="accepted">Diterima &#10003;</span>
-															';
-														}else{
-															echo '
-															<span class="rejected">Ditolak</span>
-															';
-														}
-														echo '
-														</div>
-														<br>
-														<span>'.$r_post['created_at'].'</span>
-													</div>
-												</div>
-												<div class="content-post fr-view">
-													'.$r_post['content'].'
-												</div>';
-										$curr_user_id = $_SESSION['user_id'];	
-										$curr_username = $_SESSION['username'];
-										$curr_photoProfile = $_SESSION['photo_profile'];
-										mysqli_query($con, "CALL like_comment('$curr_user_id','$id_post',@liked,@likes,@comments)");
-										$query_lico = "SELECT @liked,@likes,@comments";
-										$hasil_lico = mysqli_query($con, $query_lico);
-										$r_lico = mysqli_fetch_assoc($hasil_lico);
-										echo '
-												<div class="lico-section">
-												';
-												if($r_lico['@liked'] == 0){
-													echo '<span id="like'.$id_post.'" data-id="'.$id_post.'" data-user="'.$curr_user_id.'" data-liked="'.$r_lico['@liked'].'" class="lico-button like-btn" style="color:#adadad;" onclick="likeBtn(this);"><i class="bi bi-heart-fill"></i></span><span class="amount me-3 likes" data-id="'.$id_post.'" id="likeAmount'.$id_post.'">'.$r_lico['@likes'].'</span>';
-												}else{
-													echo '<span id="like'.$id_post.'" data-id="'.$id_post.'" data-user="'.$curr_user_id.'" data-liked="'.$r_lico['@liked'].'" class="lico-button like-btn" style="color:#f00;" onclick="likeBtn(this);"><i class="bi bi-heart-fill"></i></span><span class="amount me-3 likes" data-id="'.$id_post.'" id="likeAmount'.$id_post.'">'.$r_lico['@likes'].'</span>';
-												}
-												echo '
-													<span id="comment'.$id_post.'" data-id="'.$id_post.'" data-show="0" class="lico-button comment-btn" onclick="commBtn(this);"><i class="bi bi-chat-square-dots-fill"></i></span><span class="amount" id="commAmount'.$id_post.'">'.$r_lico['@comments'].'</span>
-												</div>
-												<div class="clear"></div>
-												<div class="comment-section" id="comSect'.$id_post.'">
-													<h6>Komentar &middot; <span id="commentAmount'.$id_post.'">'.$r_lico['@comments'].'</span></h6>
-													<div id="comments'.$id_post.'">';
+// Prototipe prosedur
+void greet();
 
-												$query_comments = "SELECT a.*, b.username, b.photo_profile FROM tb_comment_post AS a LEFT JOIN tb_user as b ON a.id_user = b.id WHERE a.id_post = '$id_post';";
-												$hasil_comments = mysqli_query($con, $query_comments);
-												while($r_comments = mysqli_fetch_array($hasil_comments)){
-													echo '
-														<div class="comment">
-															<div class="image-profile">
-																<img src="'.$r_comments['photo_profile'].'" class="avatar">
-															</div>
-															<div class="com-sect">
-																<b><span><a class="no-undr" href="./profile.php?user='.$r_comments['username'].'">'.$r_comments['username'].'</a></span></b><span>&nbsp;&nbsp;'.$r_comments['created_at'].'</span><br>
-																<p class="isi-comment">'.$r_comments['comment'].'</p>
-															</div>
-														</div>
-													';
-												}
-												echo'
-													</div>
-													<div class="comment-form">
-														<div class="input-comment">
-															<textarea class="form-control comment-control" placeholder="Tulis komentar di sini" id="commentBox'.$id_post.'" data-id="'.$id_post.'" oninput="onInput(this);"></textarea>
-														</div>
-														<div class="send-comment">
-															<div class="send" id="send'.$id_post.'" data-id="'.$id_post.'" data-username="'. $curr_username.'" data-profile="'. $curr_photoProfile .'" data-user="'. $curr_user_id.'" onclick="sendComment(this);">
-																<i class="bi bi-send-fill"></i>
-															</div>
-														</div>
-														<div class="clear"></div>
-													</div>
-												</div>
-											</div>
-										';
-									}
-								?>
+int main() {
+    // Memanggil prosedur greet
+    greet();
 
-                    </div>
-					<br>
-					
-                    <?php
-						}
-						$sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='2' AND `status`='1'";
-						$result = mysqli_query($con, $sql);
-						$cnt = mysqli_num_rows($result);
-						if($cnt !=0){
-							$row = mysqli_fetch_assoc($result);
-							$nilai = $row['grade'];
-							if($nilai=='A'){
-								$point = 300;
-							}else if($nilai=='B'){
-								$point = 200;
-							}else{
-								$point = 100;
-							}
-					?>
-                    <p><b>Selamat! Anda telah menyelesaikan Challenge ini. Reward yang kamu dapat :</b></p>
-					<table class="table" style="width: 50%;">
-						<tbody>
-							<tr>
-								<th>XP</th>
-								<td>300</td>
-							</tr>
-							<tr>
-								<th>Points</th>
-								<td><?php echo $point; ?></td>
-							</tr>
-							<tr>
-								<th>Nilai</th>
-								<td><?php echo $nilai; ?></td>
-							</tr>
-							<tr>
-								<th>Badges</th>
-								<td><img src="../images/badges/analis-logika.png" alt="" width="100%" height="auto"></td>
-							</tr>
-						</tbody>
-					</table>
-                    <?php
-                        }
-                    }
-                        ?>
-                    <button class="btn btn-course" id="previous" data-prev="10">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="12" data-curr="<?php echo $currCourse ?>"
-                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Challenge 1" data-artikel="0">Berikutnya</button>
+    return 0;
+}
+
+// Implementasi prosedur greet
+void greet() {
+    printf("Halo, selamat datang!\n");
+}
+
+
+                        </pre>
+                    </code>
+                    <div style="clear:both;"></div>
+                    <button class="btn btn-course" id="previous" data-prev="22">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="24"
+                        data-curr="<?php echo $currCourse ?>" data-reward='0'
+                        data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>"
+                        data-materi="Prototipe Prosedur" data-artikel="1">Berikutnya</button>
                 </div>
             </div>
         </div>
@@ -955,6 +804,8 @@
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Naik Level <i class="bi bi-capslock-fill"></i>
                     </h1>
+                    <button type="button" class="btn-close btn-close-levelUp" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body body-levelUp">
                     <center><img width="55%" height="auto" src="../images/level-up.gif" /></center>
@@ -963,7 +814,9 @@
                     </center>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary main-bg-color" onclick="getNextCourse(7,<?php echo $currCourse ?>,'<?php echo $_SESSION['username']; ?>')">Next Course</button>
+                    <button type="button" class="btn btn-secondary btn-close-levelUp"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary main-bg-color">Next Course</button>
                 </div>
             </div>
         </div>
@@ -991,5 +844,7 @@
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
+<script type="text/javascript" src="../js/courses/game/game1.js"></script>
+<script type="text/javascript" src="../js/courses/ace-editor.js"></script>
 
 </html>
