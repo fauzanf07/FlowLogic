@@ -379,7 +379,7 @@
                                                         </div>
                                                     </div>
                                                 </li>  
-                                                <li class="list-group-item" id="current-li">
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -704,7 +704,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-												<li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -739,20 +739,20 @@
 				<div class="right-content">
 				<h1>Quiz Singkat</h1>
 					<?php
-                        $sql = "SELECT * FROM tb_open_access WHERE id_user='$idUser' AND quiz='2'";
+                        $sql = "SELECT * FROM tb_open_access WHERE id_user='$idUser' AND quiz='3'";
                         $res = mysqli_query($con, $sql);
                         $count = mysqli_num_rows($res);
                         if($count==0){
                     ?>
-                    <p>Quiz ini masih terkunci. Untuk membukanya, kamu perlu membayar dengan 200 XP. Setelah membayar, kamu akan dapat mengakses dan mengikuti Quiz ini. XP yang kamu bayarkan akan dikurangi dari total XP yang kamu miliki. Jika kamu memiliki cukup XP, silakan lanjutkan pembayaran untuk membuka Quiz.</p>
-                    <center><button class="btn btn-primary" onclick="openAccess(<?php echo $idUser; ?>,0,2,0)">Buka Quiz &nbsp;<i class="bi bi-key-fill"></i></button></center>
+                    <p>Quiz ini masih terkunci. Untuk membukanya, kamu perlu membayar dengan 400 XP. Setelah membayar, kamu akan dapat mengakses dan mengikuti Quiz ini. XP yang kamu bayarkan akan dikurangi dari total XP yang kamu miliki. Jika kamu memiliki cukup XP, silakan lanjutkan pembayaran untuk membuka Quiz.</p>
+                    <center><button class="btn btn-primary" onclick="openAccess(<?php echo $idUser; ?>,0,3,0)">Buka Quiz &nbsp;<i class="bi bi-key-fill"></i></button></center>
                     <br><br>
                     <?php
                         }else{
 
                     ?>
 					<?php 
-						$sql = "SELECT * FROM tb_quiz WHERE id_user='$idUser' AND quiz='2'";
+						$sql = "SELECT * FROM tb_quiz WHERE id_user='$idUser' AND quiz='3'";
 						$res = mysqli_query($con, $sql);
 						$amount = mysqli_num_rows($res);
 						if($amount==0){
@@ -775,97 +775,207 @@
 										<li>Setiap soal yang dijawab dengan benar, peserta didik akan mendapatkan xp dan poin dengan jumlah sesuai kecepatan anda menjawab soal.</li>
 										<li>Setelah quiz selesai, peserta didik akan melihat peringkat pada quiz ini dari jumlah xp tertinggi sampai terendah.</li>
 									</ol>
-									<center><button class="btn-quiz" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(1,20);">Mulai Quiz</button></center>
+									<center><button class="btn-quiz" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(1,60);">Mulai Quiz</button></center>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher1"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining1"></span></span>
-									<p>Pemberian nilai kedalam sebuah variabel ditulis di bagian ... dalam Pseudocode</p>
+									<p>Perhatikan program menggunakan bahasa c ini!</p>
+                                    <center><img src="../images/quiz/quiz-soal-1-3.png" width="50%" height="auto"></center>
+                                    <p>Pada program tersebut, variabel yang tepat untuk mengisi kode yang rumpang dan hasil output yang tepat jika diisi dengan variabel tersebut ialah…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan11">Judul </div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan12">Deklarasi</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan13">Deksripsi / Algoritma</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan14">Fungsi</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan15">Manapun</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan11">x, Nilai variabel global = 10</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan12">x, Nilai variabel global = 15</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan13">y, Nilai variabel global = 20</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan14">y, Nilai variabel global = 25</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan15">y, Program tidak bisa dieksekusi karena memiliki error</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp1"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points1"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(2,20);" id="nextSoal1">Next</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(1,20,false);" id="btnEval1">Evaluasi</button>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(2,60);" id="nextSoal1">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(1,60,false);" id="btnEval1">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher2"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining2"></span></span>
-									<p>Notasi yang biasa digunakan untuk mengeluarkan output pada pseudocode adalah...</p>
+									<p>Perhatikan program menggunakan bahasa c ini!</p>
+                                    <center><img src="../images/quiz/quiz-soal-2-3.png" width="50%" height="auto"></center>
+                                    <p>Pada program tersebut, parameter aktual ditunjukan pada kotak berwarna…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21">Read</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22">Write</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23">Out</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24">Do</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25">Show</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21">Merah</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22">Kuning</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23">Oranye</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24">Hijau</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25">Biru</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp2"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points2"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(3,20);" id="nextSoal2">Next</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(2,20,false);" id="btnEval2">Evaluasi</button>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(3,60);" id="nextSoal2">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(2,60,false);" id="btnEval2">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher3"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining3"></span></span>
-									<p>Pada pseudocode, bagaimana penulisan sintaks yang benar untuk menjalankan tindakan jika kondisi terpenuhi?</p>
+									<p>Perhatikan pseudocode sebuah prosedur berikut!</p>
+                                    <center><img src="../images/quiz/quiz-soal-3-3.png" width="50%" height="auto"></center>
+                                    <p>Berdasarkan pseudocode diatas, jika kita memanggil prosedur tersebut sebagai berikut pro_ganjil_genap(101) di program utama, maka hasil output dari prosedur tersebut ialah…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31">IF condition THEN</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32">IF condition DO</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33">IF condition THEN DO</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34">IF condition EXECUTE</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35">IF condition PERFORM</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31">Ganjil</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32">Bilangan Ganjil</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33">Genap</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34">Bilangan Genap</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35">Tidak menghasilkan output apa-apa</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp3"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points3"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(4,20);" id="nextSoal3">Next</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(3,20,false);" id="btnEval3">Evaluasi</button>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(4,120);" id="nextSoal3">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(3,60,false);" id="btnEval3">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher4"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining4"></span></span>
-									<p>Mana yang merupakan notasi yang digunakan untuk melakukan perulangan terbatas dalam pseudocode? </p>
+									<p>Anti merupakan seseorang yang senang berolahraga. Setiap pagi anti selalu berlari jogging mengelilingi  sebuah lapangan dengan ukuran 10m x 15m. Anti ingin melihat jarak tempuh yang telah bisa dia lewati untuk mengetahui ketahanan dia berlari. Bantu anti membuat sebuah prosedur menampilkan jarak tempuh yang dia lewati berdasarkan nilai berapa kali dia mengelilingi lapangan yang dia input di program utama. Berikut ini manakah prosedur yang tepat untuk kasus diatas…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41">FOR</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42">WHILE</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43">IF</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44">ELSE IF</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45">SWITCH</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41" style="min-width:40%;"><img src="../images/quiz/pilgan-4-a-3.png" width="100%" height="auto"></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42" style="min-width:40%;"><img src="../images/quiz/pilgan-4-b-3.png" width="100%" height="auto"></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43" style="min-width:40%;"><img src="../images/quiz/pilgan-4-c-3.png" width="100%" height="auto"></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44" style="min-width:40%;"><img src="../images/quiz/pilgan-4-d-3.png" width="100%" height="auto"></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45" style="min-width:40%;"><img src="../images/quiz/pilgan-4-e-3.png" width="100%" height="auto"></div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp4"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points4"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(5,20);" id="nextSoal4">Next</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(4,20,false);" id="btnEval4">Evaluasi</button>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(5,120);" id="nextSoal4">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(4,120,false);" id="btnEval4">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher5"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining5"></span></span>
-									<p>Apa tujuan dari menggunakan indentasi dalam pseudocode?</p>
+									<p>Perhatikan program menggunakan bahasa C ini!</p>
+                                    <center><img src="../images/quiz/quiz-soal-5-3.png" width="50%" height="auto"></center>
+                                    <p>Pada program tersebut, jika kita inputkan huruf A maka hasil outputnya akan bernilai 65, jika D hasilnya 68, jika G hasilnya 71, dan seterusnya sampai Z membentuk pola tertentu. Jika kita menginputkan huruf J, maka output yang akan dihasilkan adalah…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51">Mempercantik tampilan pseudocode.</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52">Memudahkan dalam membaca notasi algoritmik.</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53">Membantu dalam menghemat ruang penyimpanan.</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54">Menambah keamanan pseudocode.</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55">Tidak ada manfaat dari indentasi dalam pseudocode.</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51">72</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52">73</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53">74</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54">75</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55">76</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp5"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points5"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"  onclick="result(5,<?php echo $idUser; ?>);"id="nextSoal5">Result</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(5,20,false);" id="btnEval5">Evaluasi</button>
+                                    <button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(6,120);" id="nextSoal5">Next</button>
+									
+                                    <button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(5,120,false);" id="btnEval5">Evaluasi</button>
+								</div>
+                                <div class="carousel-item">
+									<div class="auto-refresher" id="auto-refresher6"></div>
+									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining6"></span></span>
+									<p>Perhatikan prosedur-prosedur berikut ini!</p>
+                                    <center><img src="../images/quiz/quiz-soal-6-3.png" width="50%" height="auto"></center>
+                                    <p>Prosedur-prosedur tersebut merupakan prosedur untuk memudahkan penjual barang untuk menghitung diskon serta total harga setelah diskon yang didapat oleh seorang pembeli di toko tersebut.  Jika seorang pembeli membeli 5 buah barang dengan harga per barang Rp. 5000, maka diskon serta harga setelah diskon yang diperoleh pembeli tersebut berdasarkan prosedur-prosedur diatas ialah…</p>
+									<div class="pilgan-wrapper">
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan61">10%, Rp. 22500</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan62">1%, Rp. 24750</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan63">5%, Rp. 23750</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan64">50%, Rp. 12500</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan65">0%, Rp. 25000</div>
+									</div>
+									<div class="point-xp">
+										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp6"></span> &nbsp;&nbsp;</span>
+										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points6"></span></span>
+									</div>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(7,60);" id="nextSoal6">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(6,120,false);" id="btnEval6">Evaluasi</button>
+								</div>
+                                <div class="carousel-item">
+									<div class="auto-refresher" id="auto-refresher7"></div>
+									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining7"></span></span>
+									<p>Perhatikan prosedur serta fungsi pada kode program berikut ini!</p>
+                                    <center><img src="../images/quiz/quiz-soal-7-1-3.png" width="50%" height="auto"></center><br>
+                                    <center><img src="../images/quiz/quiz-soal-7-2-3.png" width="50%" height="auto"></center>
+                                    <p>Dari prosedur dan fungsi pada program diatas, apa perbedaan mendasar antara fungsi dan prosedur?</p>
+									<div class="pilgan-wrapper">
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan71">Prosedur tidak mengembalikan nilai, sedangkan fungsi mengembalikan nilai.</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan72">Fungsi tidak mengembalikan nilai, sedangkan prosedur mengembalikan nilai.</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan73">Prosedur dan fungsi sama-sama mengembalikan nilai.</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan74">Prosedur dan fungsi sama-sama tidak mengembalikan nilai.</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan75">Prosedur dan fungsi sama-sama digunakan untuk mencetak string ke layar.</div>
+									</div>
+									<div class="point-xp">
+										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp7"></span> &nbsp;&nbsp;</span>
+										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points7"></span></span>
+									</div>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(8,120);" id="nextSoal7">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(7,60,false);" id="btnEval7">Evaluasi</button>
+								</div>
+                                <div class="carousel-item">
+									<div class="auto-refresher" id="auto-refresher8"></div>
+									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining8"></span></span>
+									<p>Pak Eko adalah seorang guru sekaligus wali kelas di salah satu sekolah di kota Bandung. Di sekolah pak Eko, para murid telah menyelesaikan Ujian Akhir Semester dan akan diadakan pembagian rapor sekitar satu minggu lagi. Pak eko harus memasukan nilai dan predikat nilai ke dalam rapor siswa-siswa yang diwakilinya. Karena pak Eko kewalahan dalam memberikan predikat nilai-nilai siswanya, pak Eko membuat sebuah program dari bahasa C untuk memudahkannya memberikan predikat nilai siswa ketika nilai dimasukkan. Kode program tersebut sebagai berikut</p>
+                                    <center><img src="../images/quiz/quiz-soal-8-3.png" width="30%" height="auto"></center>
+                                    <p>Berdasarkan program tersebut, jika pak eko memasukan nilai 85, maka predikat yang dihasilkan adalah…</p>
+									<div class="pilgan-wrapper">
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan81">A</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan82">B</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan83">C</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan84">D</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan85">E</div>
+									</div>
+									<div class="point-xp">
+										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp8"></span> &nbsp;&nbsp;</span>
+										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points8"></span></span>
+									</div>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(9,120);" id="nextSoal8">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(8,120,false);" id="btnEval8">Evaluasi</button>
+								</div>
+                                <div class="carousel-item">
+									<div class="auto-refresher" id="auto-refresher9"></div>
+									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining9"></span></span>
+									<p>Perhatikan flowchart berikut ini!</p>
+                                    <center><img src="../images/quiz/quiz-soal-9-3.png" width="30%" height="auto"></center>
+                                    <p>Simbol warna merah pada flowchart tersebut untuk menjalankan sebuah sub-program. Jenis sub-program apa yang terdapat dalam flowchart tersebut dan kenapa?</p>
+									<div class="pilgan-wrapper">
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan91">Prosedur. Karena terdapat nilai yang dapat dikembalikan pada sub-program tersebut</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan92">Prosedur. Karena tidak terdapat nilai yang dapat dikembalikan pada sub-program tersebut</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan93">Fungsi. Karena terdapat nilai yang dapat dikembalikan pada sub-program tersebut</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan94">Fungsi. Karena tidak terdapat nilai yang dapat dikembalikan pada sub-program tersebut</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan95">Fungsi. Karena sub-program dapat dipanggil di program utama</div>
+									</div>
+									<div class="point-xp">
+										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp9"></span> &nbsp;&nbsp;</span>
+										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points9"></span></span>
+									</div>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(10,120);" id="nextSoal9">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(9,120,false);" id="btnEval9">Evaluasi</button>
+								</div>
+                                <div class="carousel-item">
+									<div class="auto-refresher" id="auto-refresher10"></div>
+									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining10"></span></span>
+									<p>Perhatikan kode program berikut ini!</p>
+                                    <center><img src="../images/quiz/quiz-soal-10-3.png" width="30%" height="auto"></center>
+                                    <p>Bagian program rumpang yang disorot menggunakan warna merah merupakan pemanggilan fungsi max pada program utama. Berikut ini cara pemanggilan fungsi max yang benar untuk mengisi bagian program yang rumpang tersebut dan hasil output yang tepat jika kode program rumpang tersebut diisi dengan pemanggilan fungsi max yang benar adalah…</p>
+									<div class="pilgan-wrapper">
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan101">int max(a,b); “Max = 20”</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan102">int max(a,b); “Max = “ </div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan103">max(a,b); “Max = 20”</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan104">max(a, b); “Max = “</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan105">max(int a, int b); “Max = 20”</div>
+									</div>
+									<div class="point-xp">
+										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp10"></span> &nbsp;&nbsp;</span>
+										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points10"></span></span>
+									</div>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"  onclick="result(10,<?php echo $idUser; ?>);"  id="nextSoal10">Result</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(10,120,false);" id="btnEval10">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="container">
@@ -946,7 +1056,7 @@
 										</thead>
 										<tbody id="rank-table">
 										<?php
-											$sql = "SELECT a.*, b.name FROM tb_quiz as a LEFT JOIN tb_user as b on a.id_user= b.id WHERE a.quiz='2' ORDER BY a.xp DESC, a.points DESC";
+											$sql = "SELECT a.*, b.name FROM tb_quiz as a LEFT JOIN tb_user as b on a.id_user= b.id WHERE a.quiz='3' ORDER BY a.xp DESC, a.points DESC";
 											$res = mysqli_query($con, $sql);
 											$i=1;
 											while($row =mysqli_fetch_assoc($res))
@@ -1084,5 +1194,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js" integrity="sha512-NSbvq6xPdfFIa2wwSh8vtsPL7AyYAYRAUWRDCqFH34kYIjQ4M7H2POiULf3CH11TRcq3Ww6FZDdLZ8msYhMxjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="../js/courses/autorefresher.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
-<script type="text/javascript" src="../js/courses/quiz/quiz2.js"></script>
+<script type="text/javascript" src="../js/courses/quiz/quiz3.js"></script>
 </html>

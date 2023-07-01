@@ -28,7 +28,7 @@
 <html>
 
 <head>
-    <title>Identifikasi Variabel Lokal dan Global</title>
+    <title>Challenge: Studi Kasus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,8 +52,7 @@
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel"><i class="bi bi-trophy-fill"></i>&nbsp;&nbsp;Top Ranks
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
-                id="closeRanks"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="closeRanks"></button>
         </div>
         <div class="offcanvas-body">
             <div class="ranks">
@@ -67,11 +66,10 @@
                         </tr>
                     </thead>
                     <tbody id="tableRanks">
-
+                        
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore"
-                    onclick="getRanks(true, false);">Load More</button>
+                <button type="button" class="btn btn-outline-secondary" id="loadRanksMore" onclick="getRanks(true, false);">Load More</button>
             </div>
         </div>
     </div>
@@ -104,8 +102,8 @@
                         </ul>
                     </div>
                     <button class="btn btn-light btn-nav" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks"
-                        onclick="getRanks(false, true);"><i class="bi bi-trophy-fill"></i></button>
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnRanks" onclick="getRanks(false, true);"><i
+                            class="bi bi-trophy-fill"></i></button>
                 </ul>
             </div>
         </div>
@@ -118,9 +116,9 @@
                         <h5>Progress Kelas</h5>
                         <div class="progress" style="height: 30px; margin-top: 10px;">
                             <div class="progress-bar <?php echo $progressBg; ?> progress-bar-striped" role="progressbar"
-                                aria-label="Example with label" style="width: <?php echo $progress . "%"; ?>;"
-                                aria-valuenow=" 25" aria-valuemin="0" aria-valuemax="100"><?php echo $progress . "%"; ?>
-                            </div>
+                                aria-label="Example with label"
+                                style="width: <?php echo $progress . "%"; ?>;" aria-valuenow=" 25" aria-valuemin="0"
+                                aria-valuemax="100"><?php echo $progress . "%"; ?></div>
                         </div>
                         <div class="element-game">
                             <span><i class="bi bi-capslock-fill"></i> Level <?php echo $r['level']; ?>
@@ -240,7 +238,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+												<li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -286,7 +284,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-
+                                                
                                             </ul>
                                         </div>
                                     </div>
@@ -302,7 +300,7 @@
                                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush">
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -318,13 +316,13 @@
                                                                 <span><i class="bi bi-star-fill"></i> +100</span>
                                                             </div>
                                                         </div>
-                                                        <div class="user-footprint" id="userFootprintC7"
+                                                        <div class="user-footprint" id="userFootprintC1"
                                                             data-course="7">
                                                             <img class="user-img-footprint" id='userImgFootprintC7'>
                                                             <span class="user-total" id="totalUserC7"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li> 
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -368,7 +366,7 @@
                                                             <span class="user-total" id="totalUserC9"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li> 
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -425,10 +423,10 @@
                                                             data-curr="<?php echo $currCourse ?>">
                                                             <a>Quiz Singkat</a>
                                                             <div class="get-item">
-                                                                <span><i class="bi bi-diamond-fill"></i> Up to +100
-                                                                    &nbsp;&nbsp;</span>
-                                                                <span><i class="bi bi-star-fill"></i> Up to +300</span>
-                                                            </div>
+																<span><i class="bi bi-diamond-fill"></i> Up to +100
+																	&nbsp;&nbsp;</span>
+																<span><i class="bi bi-star-fill"></i> Up to +300</span>
+															</div>
                                                         </div>
                                                         <div class="user-footprint" id="userFootprintC12"
                                                             data-course="12">
@@ -436,7 +434,7 @@
                                                             <span class="user-total" id="totalUserC12"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li>    
                                             </ul>
                                         </div>
                                     </div>
@@ -474,7 +472,7 @@
                                                             <span class="user-total" id="totalUserC13"></span>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li>  
                                                 <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
@@ -496,8 +494,8 @@
                                                             <span class="user-total" id="totalUserC14"></span>
                                                         </div>
                                                     </div>
-                                                </li>
-                                                <li class="list-group-item" id="current-li">
+                                                </li>  
+                                                <li class="list-group-item">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -717,7 +715,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" id="current-li">
                                                     <div style="width: 100%;">
                                                         <div class="check-side ">
                                                             <span
@@ -772,89 +770,42 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <h4>Identifikasi Variabel Lokal dan Global</h4>
+                    <h4>Challenge: Studi Kasus</h4>
                     <?php
-                        $sql = "SELECT * FROM tb_open_access WHERE id_user='$id_user' AND game='1'";
+                        $sql = "SELECT * FROM tb_open_access WHERE id_user='$id_user' AND challenge='3'";
                         $res = mysqli_query($con, $sql);
                         $count = mysqli_num_rows($res);
                         if($count==0){
                     ?>
-                    <p>Kelas ini masih terkunci. Untuk membukanya, kamu perlu membayar dengan 100 XP. Setelah membayar, kamu akan dapat mengakses kelas ini. XP yang kamu bayarkan akan dikurangi dari total XP yang kamu miliki. Jika kamu memiliki cukup XP, silakan lanjutkan pembayaran untuk membuka kelas ini.</p>
-                    <center><button class="btn btn-primary" id="bukaChall" onclick="openAccess(<?php echo $id_user; ?>,0,0,1)">Buka Kelas &nbsp;<i class="bi bi-key-fill"></i></button></center>
+                    <p>Challenge ini masih terkunci. Untuk membukanya, kamu perlu membayar dengan 600 XP. Setelah membayar, kamu akan dapat mengakses dan mengikuti Challenge ini. XP yang kamu bayarkan akan dikurangi dari total XP yang kamu miliki. Jika kamu memiliki cukup XP, silakan lanjutkan pembayaran untuk membuka Challenge dan menikmati tantangan yang ada.</p>
+                    <center><button class="btn btn-primary" id="bukaChall" onclick="openAccess(<?php echo $id_user; ?>,3,0,0)">Buka Challenge &nbsp;<i class="bi bi-key-fill"></i></button></center>
                     <br><br>
                     <?php
                         }else{
 
                     ?>
-                    <p>Sekarang kalian akan mengidentifikasi variabel lokal dan global dari program bahasa C yang disajikan. Tentunya terdapat rewards yang akan kalian dapatkan dari permainan sederhana ini. Anda akan mendapatkan poin maksimal 50 poin, namun poin tersebut akan berkurang -5 setiap kali anda mengecek jawaban anda dan jawaban tersebut salah. Jadi pastikan jawabanmu benar ya! Cara memainkan permainan ini cukup mudah :</p>
+                    <p>Selamat Anda telah mencapai di akhir-akhir level ini!! Untuk menerapkan pengetahuan yang telah kamu
+                        dapat di level 3 ini, kami tantang anda untuk mengikuti challenge ini. Tentunya terdapat
+                        beberapa keuntungan jika anda mengikuti challenge ini yakni mendapatkan poin sampai 300 points, 300 XP, dan 1
+                        Badge (Lencana). Ayo ikuti challenge ini! Semakin banyak points dan xp yang kamu dapat, semakin
+                        besar peluang anda memenangkan reward dari kami!</p>
+                    <b>
+                        <p>Ketentuan Challenge : </p>
+                    </b>
                     <ol>
-                        <li>identifikasi variabel-variabel yang ada di program yang disajikan.</li>
-                        <li>Terdapat box di bagian bawah yang berisi variabel-variable dalam program tersebut kemudian anda seret variabel-variabel tersebut dan jatuhkan ke kolom variabel lokal atau global yang menurut kamu benar.</li>
-                        <li>Jika semua variabel sudah semua dikelompokan menjadi variabel lokal dan global serta anda yakin dengan jawabannya. Anda bisa klik tombol check untuk mengetahui hasil jawaban tersebut apakah salah atau benar. </li>
-                        <li>Hasil dari jawaban tersebut akan muncul di kotak Result. Selamat mengerjakan!</li>
+                        <li>Cari atau temukan permasalahan di kehidupan sehari-hari.</li>
+                        <li>Buatlah langkah-langkah (algoritma) untuk menyelesaikan permasalahan tersebut. Anda bisa mengambil permasalahan dan algoritma dari challenge sebelumnya.</li>
+                        <li>Setelah itu, buatlah pseudocode dari algoritma tersebut.</li>
+                        <li>Share algoritma dan pseudocode anda di box share your knowledge di bawah ini.</li>
+                        <li>Konten yang dibagikan harus memuat seluruh ketentuan dan tidak mengandung SARA dan
+                            pornografi.</li>
                     </ol>
-                    <?php 
-						$sql = "SELECT * FROM tb_game WHERE id_user='$idUser' AND game='1'";
-						$res = mysqli_query($con, $sql);
-						$amount = mysqli_num_rows($res);
-						if($amount==0){
-					?>
-                    <b><p>Perhatikan program berikut ini!</p></b>
-                    <center><img src="../images/game/1/kode-program.png" width="60%" height="auto"></center>
-                    <div class="box-variabel" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <h5>Variabel - Variabel</h5>
-                        <img src="../images/game/1/var1.png" class="img-var" width="35%" height="auto" id="var1" data-id="1" draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var3.png" class="img-var" width="35%" height="auto" id="var3" data-id="3"draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var2.png" class="img-var" width="35%" height="auto" id="var2" data-id="2" draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var5.png" class="img-var" width="35%" height="auto" id="var5" data-id="5" draggable="true" ondragstart="drag(event)">
-                        <img src="../images/game/1/var4.png" class="img-var" width="35%" height="auto" id="var4" data-id="4" draggable="true" ondragstart="drag(event)">
-                    </div>
-                    <table class="table table-bordered">
-                        <tr>
-                            <th class="align-middle"><center>Variabel Lokal</center></th>
-                            <td>
-                                <center><p>Drop di kotak bawah ini!</p></center>
-                                <div class="drop" id="drop1" ondrop="drop(event)" ondragover="allowDrop(event)" >
-                                    
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="align-middle"><center>Variabel Global</center></th>
-                            <td>
-                                <center><p>Drop di kotak bawah ini!</p></center>
-                                <div class="drop" id="drop2" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <button type="button" class="btn btn-success" style="width:18%; float:right;" onclick="check(<?php echo $idUser ?>,1);" id="check">Check</button>
-                    <div style="clear:both;"></div>
-                    <div class="result-box">
-                        <h5>Result</h5>
-                        <p id="getPoin">Poin yang akan di dapat : <span id="poin">50</span></p>
-                        <p id="result"></p>
-                    </div>
-                    <?php 
-                        }else{
-                            $row= mysqli_fetch_assoc($res);
-                            $points = $row['points'];
-                    ?>
-                    <div class="result-box">
-                        <h5>Result</h5>
-                        <p id="result" class="right-res">Yeay, Anda benar dengan <?php echo $points; ?> poin yang didapatkan! Itu berarti anda sudah mengenal perbedaan antara variabel lokal dan global.</p>
-                    </div>
                     <?php
-                        }
                     }
-                    ?>
-                    <div style="clear:both;"></div>
-                    <button class="btn btn-course" id="previous" data-prev="14">Sebelumnya</button>
-                    <button class="btn btn-course f-right" id="next" data-next="16"
-                        data-curr="<?php echo $currCourse ?>" data-reward='0'
-                        data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>"
-                        data-materi="Identifikasi Variabel Lokal dan Global" data-artikel="1">Berikutnya</button>
+                        ?>
+                    <button class="btn btn-course" id="previous" data-prev="24">Sebelumnya</button>
+                    <button class="btn btn-course f-right" id="next" data-next="26" data-curr="<?php echo $currCourse ?>"
+                        data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Challenge 3" data-artikel="0">Berikutnya</button>
                 </div>
             </div>
         </div>
@@ -893,8 +844,6 @@
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Naik Level <i class="bi bi-capslock-fill"></i>
                     </h1>
-                    <button type="button" class="btn-close btn-close-levelUp" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body body-levelUp">
                     <center><img width="55%" height="auto" src="../images/level-up.gif" /></center>
@@ -903,9 +852,7 @@
                     </center>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-close-levelUp"
-                        data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary main-bg-color">Next Course</button>
+                    <button type="button" class="btn btn-primary main-bg-color" onclick="getNextCourse(7,<?php echo $currCourse ?>,'<?php echo $_SESSION['username']; ?>')">Next Course</button>
                 </div>
             </div>
         </div>
@@ -933,7 +880,5 @@
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
 <script type="text/javascript" src="../js/courses/courses.js"></script>
-<script type="text/javascript" src="../js/courses/game/game1.js"></script>
-<script type="text/javascript" src="../js/courses/ace-editor.js"></script>
 
 </html>

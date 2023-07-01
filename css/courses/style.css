@@ -315,12 +315,15 @@ body{
 
 .pilgan-box{
 	min-width: 20%;
+	max-width: 100%;
 	text-align: center;
 	padding: 10px;
 	font-size: 14px;
 	margin-right: 10px;
 	color: #000;
 	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
 	align-items: center;
 	justify-content: center;
 	background-color: #E9ECEF;

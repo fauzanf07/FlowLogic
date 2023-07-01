@@ -5,8 +5,8 @@
 	$chall = $_POST['chall'];
     $quiz = $_POST['quiz'];
     $game = $_POST['game'];
-    $minXpChall = [300,400];
-    $minXpQuiz = [200,200];
+    $minXpChall = [300,400,600];
+    $minXpQuiz = [200,200,400];
     $minXpGame = [100];
     if($chall!=0){
         $minXp = $minXpChall[$chall-1];
