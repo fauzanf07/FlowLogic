@@ -169,7 +169,7 @@
 		<div class="card materials" data-aos="zoom-in">
 			<div class="card-body" id="material2">
 			    <h5 class="material-titles">Level 2: Pseudocode</h5>
-			    <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu.</p>
+			    <p class="mt-15">Peserta didik akan belajar mengenai apa itu pseudocode, menelaah struktur pseudocode, mengenali notasi algoritmik, serta bagaimana cara menulis pseudocode.</p>
 			    <div class="card-flex">
 			    	<span><i class="bi bi-card-text"></i>&nbsp;&nbsp;6 Artikel &nbsp;&#10072;&nbsp; <i class="bi bi-card-checklist"></i>&nbsp;&nbsp;1 Quiz&nbsp;&#10072;&nbsp; <i class="bi bi-clipboard-check"></i>&nbsp;&nbsp;1 Challenge</span>
 			    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp;&nbsp; 40 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;325 points &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;1200 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge
@@ -207,104 +207,74 @@
 		</div>
 		<div class="card materials" data-aos="zoom-in">
 			<div class="card-body" id="material3">
-			    <h5 class="material-titles">Lorem Ipsum </h5>
-			    <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu.</p>
+			    <h5 class="material-titles">Level 3 : Fungsi dan Prosedur</h5>
+			    <p class="mt-15">Peserta didik akan belajar mengenai pengenalan pemrograman modular, mengenal variabel lokal dan global, mengidentifikasi variabel lokal dan global, mengenal apa itu fungsi dan prosedur, memahami struktur dan prototipe fungsi dan prosedur, memahami parameter pada fungsi dan prosedur, serta bagaimana cara memanggil fungsi dan prosedur itu sendiri.</p>
 			    <div class="card-flex">
-			    	<span><i class="bi bi-card-text"></i>&nbsp;&nbsp;5 Artikel &nbsp;&#10072;&nbsp; <i class="bi bi-card-checklist"></i>&nbsp;&nbsp;1 Ujian</span>
-			    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp;&nbsp; 5 Menit
+			    	<span><i class="bi bi-card-text"></i>&nbsp;&nbsp;12 Artikel &nbsp;&#10072;&nbsp; <i class="bi bi-card-checklist"></i>&nbsp;&nbsp;1 Quiz&nbsp;&#10072;&nbsp; <i class="bi bi-clipboard-check"></i>&nbsp;&nbsp;1 Challenge</span>
+			    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp;&nbsp; 73 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;1265 points &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;2300 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge
 			</div>
 			<div class="collapse collapse-materials" id="materialCollapse3">
 				<ul>
 					<li>
-						<div class="checklist check">&#10003;</div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
+						<div class="checklist <?php if($currCourse>13){ echo 'check';} ?>"><?php if($currCourse>13){ echo '&#10003;';} ?></div>
+						<span class="material-name">Pengenalan Pemrograman Modular&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
+						<div class="checklist <?php if($currCourse>14){ echo 'check';} ?>"><?php if($currCourse>14){ echo '&#10003;';} ?></div>
+						<span class="material-name">Variabel Lokal dan Global&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
+						<div class="checklist <?php if($currCourse>15){ echo 'check';} ?>"><?php if($currCourse>15){ echo '&#10003;';} ?></div>
+						<span class="material-name">Identifikasi Variabel Lokal dan Global&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;100 points</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
+						<div class="checklist <?php if($currCourse>16){ echo 'check';} ?>"><?php if($currCourse>16){ echo '&#10003;';} ?></div>
+						<span class="material-name">Pengenalan Fungsi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP</span>
 					</li>
 					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
+						<div class="checklist <?php if($currCourse>17){ echo 'check';} ?>"><?php if($currCourse>17){ echo '&#10003;';} ?></div>
+						<span class="material-name">Struktur Fungsi&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP &nbsp;&nbsp;&nbsp;</span>
+					</li>
+					<li>
+						<div class="checklist <?php if($currCourse>18){ echo 'check';} ?>"><?php if($currCourse>18){ echo '&#10003;';} ?></div>
+						<span class="material-name">Prototipe Fungsi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP &nbsp;&nbsp;&nbsp;</span>
+					</li>
+					<li>
+						<div class="checklist <?php if($currCourse>19){ echo 'check';} ?>"><?php if($currCourse>19){ echo '&#10003;';} ?></div>
+						<span class="material-name">Parameter Aktual dan Formal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP&nbsp;&nbsp;&nbsp;</span>
+					</li>
+					<li>
+						<div class="checklist <?php if($currCourse>20){ echo 'check';} ?>"><?php if($currCourse>20){ echo '&#10003;';} ?></div>
+						<span class="material-name">Pemanggilan Fungsi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP&nbsp;&nbsp;&nbsp;</span>
+					</li>
+					<li>
+						<div class="checklist <?php if($currCourse>21){ echo 'check';} ?>"><?php if($currCourse>21){ echo '&#10003;';} ?></div>
+						<span class="material-name">Pengenalan Prosedur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP&nbsp;&nbsp;&nbsp;</span>
+					</li>
+					<li>
+						<div class="checklist <?php if($currCourse>22){ echo 'check';} ?>"><?php if($currCourse>22){ echo '&#10003;';} ?></div>
+						<span class="material-name">Struktur Prosedur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP&nbsp;&nbsp;&nbsp;</span>
+					</li>
+					<li>
+						<div class="checklist <?php if($currCourse>23){ echo 'check';} ?>"><?php if($currCourse>23){ echo '&#10003;';} ?></div>
+						<span class="material-name">Prototipe Prosedur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP&nbsp;&nbsp;&nbsp;</span>
+					</li>
+					<li>
+						<div class="checklist <?php if($currCourse>24){ echo 'check';} ?>"><?php if($currCourse>24){ echo '&#10003;';} ?></div>
+						<span class="material-name">Pemanggilan Prosedur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 3 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;100 XP&nbsp;&nbsp;&nbsp;</span>
+					</li>
+					<li>
+						<div class="checklist <?php if($currCourse>25){ echo 'check';} ?>"><?php if($currCourse>25){ echo '&#10003;';} ?></div>
+						<span class="material-name"><b>Challenge :</b> Studi Kasus&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 20 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;200 XP &nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 165 points &nbsp;&nbsp;&nbsp;<i class="bi bi-award-fill"></i>&nbsp;&nbsp;1 Badge</span>
+					</li>
+					<li>
+						<div class="checklist <?php if($currCourse>26){ echo 'check';} ?>"><?php if($currCourse>26){ echo '&#10003;';} ?></div>
+						<span class="material-name">Quiz Singkat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 15 Menit &nbsp;&nbsp;&nbsp;<i class="bi bi-star-fill"></i>&nbsp;&nbsp;Up to 1000 XP&nbsp;&nbsp;&nbsp;<i class="bi bi-diamond-fill"></i>&nbsp;&nbsp;Up to 1000 points</span>
 					</li>
 				</ul>
 			</div>
 			
 		</div>
-		<div class="card materials" data-aos="zoom-in">
-			<div class="card-body" id="material4">
-			    <h5 class="material-titles">Lorem Ipsum </h5>
-			    <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu.</p>
-			    <div class="card-flex">
-			    	<span><i class="bi bi-card-text"></i>&nbsp;&nbsp;5 Artikel &nbsp;&#10072;&nbsp; <i class="bi bi-card-checklist"></i>&nbsp;&nbsp;1 Ujian</span>
-			    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp;&nbsp; 5 Menit
-			</div>
-			<div class="collapse collapse-materials" id="materialCollapse4">
-				<ul>
-					<li>
-						<div class="checklist check">&#10003;</div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
-					</li>
-					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
-					</li>
-					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
-					</li>
-					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
-					</li>
-					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
-					</li>
-				</ul>
-			</div>
-			
-		</div>
-		<div class="card materials" data-aos="zoom-in">
-			<div class="card-body" id="material5">
-			    <h5 class="material-titles">Lorem Ipsum </h5>
-			    <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum libero nibh, et ultricies velit pharetra eu.</p>
-			    <div class="card-flex">
-			    	<span><i class="bi bi-card-text"></i>&nbsp;&nbsp;5 Artikel &nbsp;&#10072;&nbsp; <i class="bi bi-card-checklist"></i>&nbsp;&nbsp;1 Ujian</span>
-			    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp;&nbsp; 5 Menit
-			</div>
-			<div class="collapse collapse-materials" id="materialCollapse5">
-				<ul>
-					<li>
-						<div class="checklist check">&#10003;</div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
-					</li>
-					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
-					</li>
-					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
-					</li>
-					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
-					</li>
-					<li>
-						<div class="checklist"></div>
-						<span class="material-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-clock-history"></i>&nbsp; 5 Menit</span>
-					</li>
-				</ul>
-			</div>
 			
 		</div>
 	</div>

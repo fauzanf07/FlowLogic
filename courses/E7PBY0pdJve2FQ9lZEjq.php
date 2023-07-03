@@ -778,7 +778,7 @@
                         jenis variabel yang perlu kita ketahui: variabel lokal dan variabel global. Apa itu variabel
                         lokal dan global? Dan apa perbedaannya? Yuk, mari kita mulai mempelajari variabel lokal dan
                         global!</p>
-                    <h4>Pengenalan Pemrograman Modular</h4>
+                    <h4>Variabel Lokal dan Global</h4>
                     <ol>
                         <h5>
                             <li>Variabel Lokal</li>

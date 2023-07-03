@@ -796,7 +796,7 @@
             </div>
             <div class="col-lg-8 side-right order-lg-2 corder-md-1">
                 <div class="right-content">
-                    <h4>Pengenalan Prosedur</h4>
+                    <h4>Struktur Prosedur</h4>
                     <p>Sebenarnya, struktur prosedur hampir sama dengan struktur pada fungsi namun terdapat sedikit perbedaan yang dapat kita lihat pada prosedur dan fungsi terutama pada bahasa pemrograman C. Berikut ini merupakan struktur prosedur dalam Flowchart, Pseudocode, dan Bahasa pemrograman C.</p>
                     <ol>
                         <h5><li>Flowchart</li></h5>
