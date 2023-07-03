@@ -3,12 +3,12 @@ let xp = 0;
 let points =0;
 let benar=0;
 let salah=0;
-function updateAward(soal){
+function updateReward(soal){
     $('#total-xp'+soal).html(xp);
     $('#total-points'+soal).html(points);
 }
 function startTimer(soal,time){
-    updateAward(soal);
+    updateReward(soal);
     $('#auto-refresher'+soal).autoRefresher({
         seconds: time,
         callback: function () {
@@ -66,7 +66,7 @@ function evaluasi(soal, time, timesUp){
             $('#add-xp').html(addXp);
             $('#add-points').html(addPoints);
             console.log('hello');
-            updateAward(soal);
+            updateReward(soal);
             popUp();
         }else{
             salah++;

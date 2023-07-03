@@ -1,6 +1,5 @@
 <?php
     include("../../db.php");
-
 	$idUser = $_POST['idUser'];
 	$chall = $_POST['chall'];
     $quiz = $_POST['quiz'];

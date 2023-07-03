@@ -12,7 +12,7 @@
         $id_user= $r['id'];
 
 		$currCourse = $_SESSION['curr_course'];
-		$progress = intval(($_SESSION['curr_course']/20)*100);
+		$progress = intval(($_SESSION['curr_course']/26)*100);
 		$progressBg = "";
 		if($progress <=30){
 			$progressBg = "bg-danger";
@@ -749,9 +749,11 @@
                                                             data-curr="<?php echo $currCourse ?>">
                                                             <a>Challenge : Studi Kasus</a>
                                                             <div class="get-item">
-                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                <span><i class="bi bi-diamond-fill"></i> Up to +200
                                                                     &nbsp;&nbsp;</span>
-                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                                <span><i class="bi bi-star-fill"></i> Up to +165
+                                                                    &nbsp;&nbsp;</span>
+                                                                <span<i class="bi bi-award-fill"></i> 1</span>
                                                             </div>
                                                         </div>
                                                         <div class="user-footprint" id="userFootprintC25"
@@ -771,9 +773,9 @@
                                                             data-curr="<?php echo $currCourse ?>">
                                                             <a>Quiz Singkat</a>
                                                             <div class="get-item">
-                                                                <span><i class="bi bi-diamond-fill"></i> +0
+                                                                <span><i class="bi bi-diamond-fill"></i> +Up to 1000
                                                                     &nbsp;&nbsp;</span>
-                                                                <span><i class="bi bi-star-fill"></i> +100</span>
+                                                                <span><i class="bi bi-star-fill"></i> +Up to 1000</span>
                                                             </div>
                                                         </div>
                                                         <div class="user-footprint" id="userFootprintC26"

@@ -605,6 +605,30 @@ body{
 	font-weight: bold;
 	color: #09bf67;
 }
+
+.challenge-box{
+	width: 100%;
+	padding: 3%;
+	background-color: #f8f9fa;
+	border-radius: 10px;
+	color: #000;
+	min-height: 50%;
+	position: relative;
+}
+
+.btn-challenge{
+	min-width: 30px;
+	padding: 5px 20px;
+	font-weight: 700;
+	background-color: #009bfc;
+	color: #fff;
+	border-radius: 10px;
+	border: 1px solid #adadad;
+}
+
+.next-chll{
+	float: right;
+}
 @keyframes fade-out {
 	from {
 	  opacity: 1;
