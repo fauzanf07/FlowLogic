@@ -59,19 +59,60 @@ $("#challenge-menu").click(function(){
 });
 
 const ctx = document.getElementById('myChart');
+var quiz1 = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('quiz1='))
+  .split('=')[1];
+var quiz2 = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('quiz2='))
+  .split('=')[1];
+var quiz3 = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('quiz3='))
+  .split('=')[1];
+console.log(quiz1+' '+quiz2+' '+quiz3);
 
-  new Chart(ctx, {
+var c1_a = document.cookie
+		.split('; ')
+		.find(row => row.startsWith('1_a='))
+		.split('=')[1];
+var c1_b = document.cookie
+		.split('; ')
+		.find(row => row.startsWith('1_b='))
+		.split('=')[1];
+var c1_c = document.cookie
+		.split('; ')
+		.find(row => row.startsWith('1_c='))
+		.split('=')[1];
+var c2_a = document.cookie
+		.split('; ')
+		.find(row => row.startsWith('2_a='))
+		.split('=')[1];
+var c2_b = document.cookie
+		.split('; ')
+		.find(row => row.startsWith('2_b='))
+		.split('=')[1];
+var c2_c = document.cookie
+		.split('; ')
+		.find(row => row.startsWith('2_c='))
+		.split('=')[1];
+
+new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Pengenalan Flowchart', 'Simbol-Simbol Flowchart', 'Pseudoode', 'Subrutin', 'Fungsi', 'Implementasi code'],
+      labels: ['Quiz 1', 'Quiz 2', 'Quiz 3'],
       datasets: [{
-        label: '# of Rata-rata nilai',
-        data: [90, 85, 83, 70, 75, 70],
+        label: '# of Rata-rata nilai Quiz',
+        data: [quiz1,quiz2,quiz3],
         borderWidth: 1
       }]
     },
     options: {
       scales: {
+		x:{
+			stacked: true,
+		},
         y: {
           beginAtZero: true,
 		  suggestedMin: 0,
@@ -80,9 +121,32 @@ const ctx = document.getElementById('myChart');
         }
       }
     }
-  });
-
-
+});
+const ctx1 = document.getElementById('myChart1');
+new Chart(ctx1, {
+    type: 'bar',
+    data: {
+      labels: ['Challenge 1 (A)', 'Challenge 1 (B)','Challenge 1 (C)','Challenge 2 (A)','Challenge 2 (B)', 'Challenge 2 (C)'],
+      datasets: [{
+        label: '# of Jumlah Siswa',
+        data: [c1_a,c1_b,c1_c,c2_a,c2_b,c2_c],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+		x:{
+			stacked: true,
+		},
+        y: {
+          beginAtZero: true,
+		  suggestedMin: 0,
+		  suggestedMax: 40,
+		  step: 10
+        }
+      }
+    }
+});
 
 function onInput(ini){
 	var id = $(ini).data('id');

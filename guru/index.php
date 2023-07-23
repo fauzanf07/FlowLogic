@@ -7,6 +7,35 @@
 	$user_id = $_SESSION['user_id'];
 	$username = $_SESSION['username'];
 	$photoProfile = $_SESSION['photo_profile'];
+	$quizAverages = [];
+
+	for ($quizNumber = 1; $quizNumber <= 3; $quizNumber++) {
+		$sql = "SELECT AVG(nilai) as avg FROM tb_quiz WHERE quiz = $quizNumber";
+		$query = mysqli_query($con, $sql);
+		$row = mysqli_fetch_assoc($query);
+		$average = $row['avg'] ?? 0;
+		$quizAverages[$quizNumber] = $average;
+	}
+
+	$avg_quiz1 = $quizAverages[1] ?? 0;
+	$avg_quiz2 = $quizAverages[2] ?? 0;
+	$avg_quiz3 = $quizAverages[3] ?? 0;
+
+	setcookie('quiz1',$avg_quiz1);
+	setcookie('quiz2',$avg_quiz2);
+	setcookie('quiz3',$avg_quiz3);
+
+	mysqli_query($con, "CALL `grade_challenge`(@p0, @p1, @p2, @p3, @p4, @p5)");
+	$query = "SELECT @p0 AS `1_a`, @p1 AS `1_b`, @p2 AS `1_c`, @p3 AS `2_a`, @p4 AS `2_b`, @p5 AS `2_c`";
+	$hasil = mysqli_query($con, $query);
+	$r_hasil = mysqli_fetch_assoc($hasil);
+	
+	setcookie('1_a',$r_hasil['1_a']);
+	setcookie('1_b',$r_hasil['1_b']);
+	setcookie('1_c',$r_hasil['1_c']);
+	setcookie('2_a',$r_hasil['2_a']);
+	setcookie('2_b',$r_hasil['2_b']);
+	setcookie('2_c',$r_hasil['2_c']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,8 +85,19 @@
 			<div class="col-lg-9 right-content">
 				<div class="content-1">
 					<h3 id="progress-title"><i class="bi bi-people-fill"></i> &nbsp;&nbsp; Hasil Belajar Siswa</h3>
-					<div class="chart">
-						<canvas id="myChart"></canvas>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="chart">
+									<canvas id="myChart"></canvas>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="chart">
+									<canvas id="myChart1"></canvas>
+								</div>
+							</div>
+						</div>
 					</div>
 					<button class="btn btn-primary download">Download</button>
 					<div class="user-list" id="progress-list">
@@ -77,16 +117,25 @@
 								$result = mysqli_query($con,$sql);
 				        		if (mysqli_num_rows($result) > 0) {
 									while($row = mysqli_fetch_array($result)) {
+										$id_user = $row['id'];
+										$query = mysqli_query($con,"SELECT AVG(`nilai`) AS avg FROM `tb_quiz` WHERE id_user='$id_user'");
+										$res = mysqli_fetch_assoc($query);
+										$avg = $res['avg'] ?? 0;
+
+										$query = mysqli_query($con,"SELECT COUNT(*) AS jml FROM `tb_users_badge` WHERE id_user='$id_user'");
+										$res = mysqli_fetch_assoc($query);
+										$bdg = $res['jml'] ?? 0;
+
 									  	echo "
 									  		<tr>
 								        		<td>".$row["name"]."</td>
 								        		<td><div class='progress' role='progressbar' aria-label='Default striped example' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100'>
-												<div class='progress-bar progress-bar-striped' style='width: ". ($row["curr_course"]*20)."%'>".($row["curr_course"]*20)."%</div>
+												<div class='progress-bar progress-bar-striped' style='width: ". ($row["curr_course"]*4)."%'>".($row["curr_course"]*4)."%</div>
 											  </div></td>
-											  	<td><center>0</center></td>
-												<td><center>0</center></td>
+											  	<td><center>".$avg."</center></td>
+												<td><center>".$bdg."</center></td>
 								        		<td>
-								        			<button class='btn btn-success admin btn-action' data-id='".$row["id"]."'>Detail</button>&nbsp;&nbsp;
+								        			<a class='btn btn-success admin btn-action' href=./detail-progress.php?user=".$id_user.">Detail</button>&nbsp;&nbsp;
 								        		</td>
 								        	</tr>
 									  	";

@@ -107,11 +107,16 @@ function submit(idUser, sk, code,xp, points){
             console.log(dataResult);
             updateHistory(idUser,2,xp,"Kamu telah menyelesaikan Studi Kasus "+sk);
              updateHistory(idUser,4,points,"Kamu telah menyelesaikan Studi Kasus "+sk);
+			let i =0;
 			dataResult.listUser.forEach(function(user) {
 				$('#rank-table'+(sk-1)).append("<tr><th scope='row'>"+(i+1)+"</th><td>"+user.name+"</td><td>"+user.submit_at+"</tr>");
+				i++;
 			});
             $('#table'+(sk-1)).css('display','block');
-			getBadge(idUser);
+			if(dataResult.finish ==1){
+				getBadge(idUser);
+			}
+			
         }
 });
 }
