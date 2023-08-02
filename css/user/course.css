@@ -21,7 +21,9 @@ html {
 .img-class{
 	width: 220px;
 	height: 220px;
-	background-color: #ff0;
+	background-image: url('../../images/img-class-1.jpg');
+	background-size: auto 220px;
+	background-position: center;
 	border-radius: 20px;
 }
 #class-desc{

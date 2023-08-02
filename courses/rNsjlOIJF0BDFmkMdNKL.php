@@ -747,7 +747,7 @@
 					<p>Untuk menginterpretasikan flowchart ke dalam bahasa pemrograman komputer dengan benar tentunya kalian harus memahami alur flowchart tersebut. Berikut merupakan beberapa cara efektif untuk memahami alur flowchart dengan lebih baik.</p>
 					<ol>
 						<h5><li>Pelajari simbol-simbol Flowchart</li></h5>
-						<p> Langkah pertama dalam memahami alur flowchart adalah mempelajari simbol-simbol yang digunakan. Setiap simbol mewakili tindakan atau keputusan tertentu dalam proses. Meskipun cukup banyak simbol-simbol yang terdapat pada flowchart, namun terdapat beberapa simbol yang sangat penting kamu ketahui yang mana simbol-simbol tersebut sering ditemukan di dalam flowchart. Berikut simbol-simbol tersebut.</p>
+						<p> Langkah pertama dalam memahami alur flowchart adalah mempelajari simbol-simbol yang digunakan. Setiap simbol mewakili tindakan atau keputusan tertentu dalam proses. Meskipun cukup banyak simbol-simbol yang terdapat pada flowchart, namun terdapat beberapa simbol yang sangat penting kamu ketahui yang mana simbol-simbol tersebut sering digunakan di dalam flowchart. Berikut simbol-simbol tersebut.</p>
 						<table class="table">
 							<tr>
 								<th>Simbol</th>

@@ -32,30 +32,36 @@ function logout(){
 }
 
 $("#progress-menu").click(function(){
-	$('.content-2').css('display', 'none');
-	$('.content-3').css('display', 'none');
+	$('.content').css('display', 'none');
 	$('.content-1').css('display','block');
-	$("#postingan-menu").removeClass("current");
-	$("#challenge-menu").removeClass("current");
+	$(".menu").removeClass("current");
 	$("#progress-menu").addClass("current");
 });
 
 $("#postingan-menu").click(function(){
-	$('.content-1').css('display', 'none');
-	$('.content-3').css('display', 'none');
+	$('.content').css('display', 'none');
 	$('.content-2').css('display','block');
-	$("#progress-menu").removeClass("current");
-	$("#challenge-menu").removeClass("current");
+	$(".menu").removeClass("current");
 	$("#postingan-menu").addClass("current");
 });
 
 $("#challenge-menu").click(function(){
-	$('.content-1').css('display', 'none');
-	$('.content-2').css('display','none');
+	$('.content').css('display', 'none');
 	$('.content-3').css('display','block');
-	$("#progress-menu").removeClass("current");
-	$("#postingan-menu").removeClass("current");
+	$(".menu").removeClass("current");
 	$("#challenge-menu").addClass("current");
+});
+$("#point-menu").click(function(){
+	$('.content').css('display', 'none');
+	$('.content-4').css('display','block');
+	$(".menu").removeClass("current");
+	$("#point-menu").addClass("current");
+});
+$("#rank-menu").click(function(){
+	$('.content').css('display', 'none');
+	$('.content-5').css('display','block');
+	$(".menu").removeClass("current");
+	$("#rank-menu").addClass("current");
 });
 
 const ctx = document.getElementById('myChart');
@@ -158,6 +164,7 @@ function onInput(ini){
 		$('#send'+id).css('color','#fff');
 	}
 }
+
 function commBtn(id){
 	var clicked = $(id).data('show');
 	var id = $(id).data('id');
@@ -219,3 +226,35 @@ function sendComment(id){
 	}
 }
 
+$("#kirim").click(function(){
+	var idUser =  $("#studentsName option:selected").val();
+	var jmlPoin = $('#jmlPoin').val();
+	var desc = $('#desc').val();
+	$.ajax({
+		url: "./backend/bonus-poin.php",
+		type: "POST",
+		data: {
+			idUser: idUser,
+			jmlPoin: jmlPoin,
+			desc: desc,	
+		},
+		cache: false,
+		success: function(dataResult){
+			var dataResult = JSON.parse(dataResult);
+			console.log(dataResult.statusCode);
+			if(dataResult.statusCode==200){
+				Swal.fire({
+					title: 'Good job!',
+					text: 'Berhasil dilakukan!',
+					icon: 'success'
+				});
+			}else{
+				Swal.fire({
+					title: 'Error!',
+					text: 'Theres something wrong with server',
+					icon: 'error',
+				});
+			}
+		}
+	});
+});

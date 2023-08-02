@@ -69,21 +69,27 @@
 					<span class="" id="profile-name"><?php echo $_SESSION["name"]; ?></span>&nbsp;&nbsp;<i
 						class="bi bi-check-circle"></i>
 				</div>
-				<div class="section current" id="progress-menu">
+				<div class="section current menu" id="progress-menu">
 					<span><i class="bi bi-people-fill"></i> &nbsp;&nbsp; Progress Siswa</span>
 				</div>
-				<div class="section" id="postingan-menu">
+				<div class="section menu" id="postingan-menu">
 					<i class="bi bi-file-earmark-richtext-fill"></i> &nbsp;&nbsp; Postingan Siswa</span>
 				</div>
-				<div class="section" id="challenge-menu">
+				<div class="section menu" id="challenge-menu">
 					<i class="bi bi-clipboard-check"></i> &nbsp;&nbsp; Challenges Siswa</span>
+				</div>
+				<div class="section menu" id="point-menu">
+					<i class="bi bi-diamond-fill"></i> &nbsp;&nbsp; Bonus Poin</span>
+				</div>
+				<div class="section menu" id="rank-menu">
+					<i class="bi bi-trophy-fill"></i>&nbsp;&nbsp;Current Rankings</span>
 				</div>
 				<br><br>
 				<button class="nav-link btn" id="sign-out" onclick="logout()">Sign out <i
 						class="bi bi-arrow-right"></i></button>
 			</div>
 			<div class="col-lg-9 right-content">
-				<div class="content-1">
+				<div class="content-1 content">
 					<h3 id="progress-title"><i class="bi bi-people-fill"></i> &nbsp;&nbsp; Hasil Belajar Siswa</h3>
 					<div class="container-fluid">
 						<div class="row">
@@ -147,7 +153,7 @@
 						</table>
 					</div>
 				</div>
-				<div class="content-2">
+				<div class="content-2 content">
 					<h3 id="post-title"><i class="bi bi-file-earmark-richtext-fill"></i> &nbsp;&nbsp; Postingan Siswa
 					</h3>
 					<?php
@@ -235,7 +241,7 @@
 						}
 					?>
 				</div>
-				<div class="content-3">
+				<div class="content-3 content">
 					<h3 id="chlg-title"><i class="bi bi-clipboard-check"></i> &nbsp;&nbsp; Challenges Siswa</h3>
 					<div class="user-list">
 						<table class="table table-striped" id="table-chall">
@@ -280,6 +286,68 @@
 							</tbody>
 						</table>
 					</div>
+				</div>
+				<div class="content-4 content">
+					<h3 id="poin-title"><i class="bi bi-diamond-fill"></i> &nbsp;&nbsp; Bonus Poin</h3>
+					<div class="user-list">
+						<h4>Poin diserahkan pada </h4><br>
+						<div class="input-group mb-3">
+							<label class="input-group-text" for="inputGroupSelect01">Nama Siswa</label>
+							<select class="form-select" id="studentsName">
+								<?php
+									$sql = "SELECT * FROM tb_user" ;
+									$result = mysqli_query($con,$sql);
+									if (mysqli_num_rows($result) > 0) {
+										while($row = mysqli_fetch_array($result)) {
+											echo "<option value=".$row['id'].">".$row['id']. ' - '. $row['name']."</option>";
+										}
+									}
+								?>
+							</select>
+						</div>
+						<div class="input-group flex-nowrap">
+							<span class="input-group-text" >Jumlah Poin</span>
+							<input type="number" class="form-control" placeholder="Jumlah Poin"  aria-describedby="addon-wrapping" id="jmlPoin">
+						</div>
+						<br>
+						<div class="input-group flex-nowrap">
+							<span class="input-group-text" >Deskripsi</span>
+							<input type="text" class="form-control" placeholder="Deskripsi" aria-label="Deskripsi" aria-describedby="addon-wrapping" id="desc">
+						</div>
+						<center><button type="button" class="btn btn-primary" style="width:100px; margin-top:20px;" id="kirim">Kirim</button></center>
+					</div>
+				</div>
+				<div class="content-5 content">
+					<h3 id="rank-title"><i class="bi bi-trophy-fill"></i>&nbsp;&nbsp;Current Rankings</span></h3>
+					<br>
+					<table class="table">
+					  <thead>
+					    <tr>
+					      <th scope="col">#</th>
+					      <th scope="col">Name</th>
+					      <th scope="col">Points</th>
+						  <th scope="col">Xp</th>
+					    </tr>
+					  </thead>
+					  <tbody id="tableRanks">
+						<?php
+							$sql = "SELECT * FROM tb_user WHERE admin='0' ORDER BY point DESC, xp DESC";
+							$result = mysqli_query($con, $sql);
+							$i=1;
+							while($row = mysqli_fetch_assoc($result)){
+								echo '
+									<tr>
+										<th scope="row">'.$i.'</th>
+										<td>'.$row['name'].'</td>
+										<td>'.$row['point'].'</td>
+										<td>'.$row['xp'].'</td>
+									</tr>
+								';
+								$i++;
+							}
+						?>
+					  </tbody>
+					</table>
 				</div>
 			</div>
 		</div>

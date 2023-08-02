@@ -37,19 +37,22 @@
 					<form>
 						<div class="form-group">
 							<label for="inputEmail">Email address</label>
-							<input type="email" id="inputEmail" class="form-control" id="inputEmail" placeholder="name@example.com">
+							<input type="email" id="inputEmail" class="form-control" placeholder="name@example.com">
 						</div>
                         <div class="form-group">
 							<label for="inputEmail">Username</label>
-							<input type="text" id="inputUsername" class="form-control" id="inputEmail" placeholder="User123">
+							<input type="text" id="inputUsername" class="form-control" placeholder="User123">
 						</div>
                         <div class="form-group w-48 d-inline-block input-split">
 							<label for="inputEmail">Nama Lengkap</label>
-							<input type="text" id="inputName" class="form-control" id="inputEmail" placeholder="Andi Muhammad Irfan">
+							<input type="text" id="inputName" class="form-control" placeholder="Masukkan Nama Lengkap">
 						</div>
                         <div class="form-group w-48 d-inline-block fl-right input-split">
 							<label for="inputEmail">Kelas</label>
-							<input type="text" id="inputKelas" class="form-control" id="inputEmail" placeholder="X RPL 2">
+							<select id="inputKelas" class="form-select" aria-label="Default select example">
+								<option value="XI RPL 1" selected>XI RPL 1</option>
+								<option value="XI RPL 2">XI RPL 2</option>
+							</select>
 						</div>
 						<div class="form-group w-48 d-inline-block input-split">
 							<label for="inputPassword">Password</label>

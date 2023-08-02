@@ -62,7 +62,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3">
-					<img src="../images/img-class.png" class="img-class" data-aos="zoom-in">
+					<div class="img-class" data-aos="zoom-in"></div>
 				</div>
 				<div class="col-lg-6" style="padding-top: 5px;">
 					<h3 id="class-title">Pemrograman Dasar</h3>

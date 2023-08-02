@@ -34,8 +34,8 @@
                     <div class="d-flex align-items-center" style="min-height: 100%">
                         <div class="box w-100 content">
                             <h1>FLOWLOGIC</h1>
-                            <h2>PEMROGRAMAN DASAR</h2>
-                            <p>Platform pembelajaran ini menyediakan kursus pemrograman dasar dengan pendekatan gamifikasi yang bertujuan untuk meningkatkan kemampuan berpikir komputasional siswa. Dengan menggunakan gamifikasi, platform ini menawarkan pengalaman belajar yang lebih interaktif dan menyenangkan bagi siswa.</p>
+                            <h2>DASAR PEMROGRAMAN</h2>
+                            <p>Platform pembelajaran ini menyediakan kursus dasar pemrograman dengan pendekatan gamifikasi yang bertujuan untuk meningkatkan kemampuan berpikir komputasional siswa. Dengan menggunakan gamifikasi, platform ini menawarkan pengalaman belajar yang lebih interaktif dan menyenangkan bagi siswa.</p>
                             <a href="sign-up" class="btn btn-primary register-btn">REGISTER</a>
                         </div>
                     </div>

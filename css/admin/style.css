@@ -106,7 +106,13 @@ body{
 .content-3{
 	display: none;
 }
+.content-4{
+	display: none;
+}
 
+.content-5{
+	display: none;
+}
 .btn-action{
 	margin-top: 10px;
 }

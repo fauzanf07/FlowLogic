@@ -786,21 +786,27 @@
                         }else{
 
                     ?>
-                    <p>Selamat Anda telah mencapai di akhir-akhir level ini!! Untuk menerapkan pengetahuan yang telah kamu
+                    <p> Selamat Anda telah mencapai di akhir-akhir level ini!! Untuk menerapkan pengetahuan yang telah kamu
                         dapat di level 1 ini, saya tantang anda untuk mengikuti challenge ini. Tentunya terdapat
                         beberapa keuntungan jika anda mengikuti challenge ini yakni mendapatkan poin sampai 300 points, 300 XP, dan 1
                         Badge (Lencana). Ayo ikuti challenge ini! Semakin banyak points dan xp yang kamu dapat, semakin
-                        besar peluang anda memenangkan reward dari saya!</p>
+                        besar peluang anda memenangkan reward!</p>
                     <b>
-                        <p>Ketentuan Challenge : </p>
+                        <p>Petunjuk Challenge : </p>
                     </b>
                     <ol>
-                        <li>Cari atau temukan permasalahan di kehidupan sehari-hari.</li>
-                        <li>Buatlah langkah-langkah (algoritma) untuk menyelesaikan permasalahan tersebut.</li>
-                        <li>Setelah itu, buatlah flowchat dari algoritma tersebut.</li>
-                        <li>Share algoritma dan flowchart anda di box share your knowledge di bawah ini.</li>
-                        <li>Konten yang dibagikan harus memuat seluruh ketentuan dan tidak mengandung SARA dan
-                            pornografi.</li>
+                        <li>Perhatikan studi kasus yang terdapat di seksi studi kasus di bawah ini.</li>
+                        <li>Kemudian jawab studi kasus tersebut dengan sebaik-baiknya di box share knowledge di bawah ini.</li>
+                        <li>Anda diperbolehkan untuk berkeliling mencari teman untuk dapat berdiskusi mengenai studi kasus tersebut.</li>
+                        <li>Jika studi kasus sudah terjawab sepenuhnya, anda dapat mengklik share your knowledge untuk mengumpulkannya.</li>
+                        <li>Konten yang dibagikan harus memuat jawaban seluruh studi kasus dan tidak mengandung SARA dan pornografi.</li>
+                        <li>Penilaian challenge ini berdasarkan kecepatan dan ketepatan anda dalam menyelesaikan studi kasus ini. Semakin cepat dan tepat anda menyelesaikannya semakin besar point yang akan anda terima.</li>
+                    </ol>
+                    <b>
+                        <p>Studi kasus :</p>
+                    </b>
+                    <ol>
+                        <li>Pagi hari, Ria bersiap-siap untuk pergi berangkat ke sekolah. Setiap hari, Ria selalu diantarkan oleh ayahnya menggunakan motor karena jarak antara rumah dan sekolahnya lumayan jauh. Namun, hari ini ayahnya tidak bisa mengantarkan Ria ke sekolah karena sakit. Ria memutuskan untuk pergi ke sekolah menggunakan aplikasi ojek online. Bantu ria membuat langkah-langkah (algoritma) dan flowchart untuk memesan ojek pada aplikasi tersebut.</li>
                     </ol>
                     <?php
                         $sql = "SELECT * FROM tb_post WHERE id_user='$id_user' AND challenge='1' ORDER BY created_at DESC";

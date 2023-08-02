@@ -2,7 +2,7 @@ $("#submit").click(function(){
     var email = $('#inputEmail').val();
     var username = $('#inputUsername').val();
     var name = $('#inputName').val();
-    var kelas = $('#inputKelas').val();
+    var kelas = $('#inputKelas option:selected').val();
     var password = $('#inputPassword').val();
     var konPassword = $('#inputKonPassword').val();
     if(email!="" && name!="" && username!="" && kelas!="" && password!=""&& konPassword!="" &&  $('#verif').is(":checked")){
