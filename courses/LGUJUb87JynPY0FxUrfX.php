@@ -774,6 +774,7 @@
 									<h6>Mengenai Quiz:</h6>
 									<ol>
 										<li>Setiap soal akan diberikan waktu yang telah ditentukan untuk menjawab soal tersebut.</li>
+										<li>Jika anda sudah yakin dengan jawaban Anda, segera mengklik tombol evaluasi untuk mengecek jawaban Anda apakah benar atau tidak.</li>
 										<li>Setiap soal yang dijawab dengan benar, peserta didik akan mendapatkan xp dan poin dengan jumlah sesuai kecepatan anda menjawab soal.</li>
 										<li>Setelah quiz selesai, peserta didik akan melihat peringkat pada quiz ini dari jumlah xp tertinggi sampai terendah.</li>
 									</ol>
@@ -1132,7 +1133,6 @@
 					}
 					?>
 					<button class="btn btn-course" id="previous" data-prev="11">Sebelumnya</button>
-					<button class="btn btn-course f-right" id="next" data-next="13" data-curr="<?php echo $currCourse ?>" data-reward='0' data-username="<?php echo $_SESSION['username']; ?>" data-user="<?php echo $idUser; ?>" data-materi="Quiz Singkat 2" data-artikel="0">Berikutnya</button>
 				</div>
 			</div>
 		</div>

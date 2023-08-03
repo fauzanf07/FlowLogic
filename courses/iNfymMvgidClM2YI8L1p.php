@@ -774,6 +774,7 @@
 									<h6>Mengenai Quiz:</h6>
 									<ol>
 										<li>Setiap soal akan diberikan waktu yang telah ditentukan untuk menjawab soal tersebut.</li>
+										<li>Jika anda sudah yakin dengan jawaban Anda, segera mengklik tombol evaluasi untuk mengecek jawaban Anda apakah benar atau tidak.</li>
 										<li>Setiap soal yang dijawab dengan benar, peserta didik akan mendapatkan xp dan poin dengan jumlah sesuai kecepatan anda menjawab soal.</li>
 										<li>Setelah quiz selesai, peserta didik akan melihat peringkat pada quiz ini dari jumlah xp tertinggi sampai terendah.</li>
 									</ol>
@@ -800,13 +801,13 @@
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher2"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining2"></span></span>
-									<p>Notasi yang biasa digunakan untuk mengeluarkan output pada pseudocode adalah...</p>
+									<p>Pada pseudocode, bagaimana penulisan sintaks yang benar untuk menjalankan tindakan jika kondisi terpenuhi?</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21">Read</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22">Write</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23">Out</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24">Do</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25">Show</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21">IF condition THEN</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22">IF condition DO</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23">IF condition THEN DO</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24">IF condition EXECUTE</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25">IF condition PERFORM</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp2"></span> &nbsp;&nbsp;</span>
@@ -818,56 +819,60 @@
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher3"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining3"></span></span>
-									<p>Pada pseudocode, bagaimana penulisan sintaks yang benar untuk menjalankan tindakan jika kondisi terpenuhi?</p>
+									<p>Mana yang merupakan notasi yang digunakan untuk melakukan perulangan terbatas dalam pseudocode?</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31">IF condition THEN</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32">IF condition DO</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33">IF condition THEN DO</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34">IF condition EXECUTE</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35">IF condition PERFORM</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31">FOR</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32">WHILE</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33">IF</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34">ELSE IF</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35">SWITCH</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp3"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points3"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(4,20);" id="nextSoal3">Next</button>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(4,60);" id="nextSoal3">Next</button>
 									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(3,20,false);" id="btnEval3">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher4"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining4"></span></span>
-									<p>Mana yang merupakan notasi yang digunakan untuk melakukan perulangan terbatas dalam pseudocode? </p>
+									<p>Perhatikan pseudocode sebuah prosedur berikut!</p>
+									<center>
+										<img src="../images/quiz/quiz-soal-4-2.png" width="40%" height="auto" alt="">
+									</center>
+									<p>Berdasarkan pseudocode diatas, jika kita memanggil prosedur tersebut sebagai berikut pro_ganjil_genap(101) di program utama, maka hasil output dari prosedur tersebut ialah…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41">FOR</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42">WHILE</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43">IF</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44">ELSE IF</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45">SWITCH</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41">Ganjil</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42">Bilangan Ganjil</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43">Genap</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44">Bilangan Genap</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45">Tidak menghasilkan output apa-apa</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp4"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points4"></span></span>
 									</div>
-									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(5,20);" id="nextSoal4">Next</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(4,20,false);" id="btnEval4">Evaluasi</button>
+									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(5,120);" id="nextSoal4">Next</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(4,60,false);" id="btnEval4">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher5"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining5"></span></span>
-									<p>Apa tujuan dari menggunakan indentasi dalam pseudocode?</p>
+									<p>Anti merupakan seseorang yang senang berolahraga. Setiap pagi anti selalu berlari jogging mengelilingi  sebuah lapangan berbentuk persegi panjang dengan ukuran 10m x 15m. Anti ingin melihat jarak tempuh yang telah bisa dia lewati untuk mengetahui ketahanan dia berlari. Bantu anti membuat sebuah prosedur menampilkan jarak tempuh yang dia lewati berdasarkan nilai berapa kali dia mengelilingi lapangan yang dia input di program utama. Berikut ini manakah prosedur yang tepat untuk kasus diatas…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51">Mempercantik tampilan pseudocode.</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52">Memudahkan dalam membaca notasi algoritmik.</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53">Membantu dalam menghemat ruang penyimpanan.</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54">Menambah keamanan pseudocode.</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55">Tidak ada manfaat dari indentasi dalam pseudocode.</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51" style="min-width:40%;"><img src="../images/quiz/pilgan-5-a-2.png" width="140%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52" style="min-width:40%;"><img src="../images/quiz/pilgan-5-b-2.png" width="140%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53" style="min-width:40%;"><img src="../images/quiz/pilgan-5-c-2.png" width="140%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54" style="min-width:40%;"><img src="../images/quiz/pilgan-5-d-2.png" width="140%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55" style="min-width:40%;"><img src="../images/quiz/pilgan-5-e-2.png" width="140%" height="auto" alt=""></div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp5"></span> &nbsp;&nbsp;</span>
 										<span><i class="bi bi-diamond-fill"></i> Points : <span id="total-points5"></span></span>
 									</div>
 									<button class="btn-quiz next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"  onclick="result(5,<?php echo $idUser; ?>);"id="nextSoal5">Result</button>
-									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(5,20,false);" id="btnEval5">Evaluasi</button>
+									<button class="btn-quiz evaluasi" type="button"  onclick="evaluasi(5,120,false);" id="btnEval5">Evaluasi</button>
 								</div>
 								<div class="carousel-item">
 									<div class="container">

@@ -1,5 +1,5 @@
 <?php 
-	$con = mysqli_connect('localhost', 'root', '','db_gamifikasi');
+	include("./db.php");
 
 	$txtUsername = $_POST['username'];
 	$txtNewPassword = $_POST['newPassword'];

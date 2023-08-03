@@ -774,32 +774,26 @@
 									<h6>Mengenai Quiz:</h6>
 									<ol>
 										<li>Setiap soal akan diberikan waktu yang telah ditentukan untuk menjawab soal tersebut.</li>
-										<li>Setiap soal yang dijawab dengan benar, peserta didik akan mendapatkan xp dan poin dengan jumlah sesuai kecepatan anda menjawab soal.</li>
-										<li>Setelah quiz selesai, peserta didik akan melihat peringkat pada quiz ini dari jumlah xp tertinggi sampai terendah.</li>
+										<li>Jika anda sudah yakin dengan jawaban Anda, segera mengklik tombol evaluasi untuk mengecek jawaban Anda apakah benar atau tidak.</li>
+										<li>Setiap soal yang dijawab dengan benar, Anda akan mendapatkan xp dan poin dengan jumlah sesuai kecepatan anda menjawab soal.</li>
+										<li>Setelah quiz selesai, Anda akan melihat peringkat pada quiz ini dari jumlah xp tertinggi sampai terendah.</li>
 									</ol>
 									<center><button class="btn-quiz" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="startTimer(1,60);">Mulai Quiz</button></center>
 								</div>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher1"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining1"></span></span>
-									<pre>
-
-Seorang ibu hendak berbelanja barang di sebuah toko online menggunakan aplikasi smartphone. 
-Terdapat beberapa tahapan untuk berbelanja di toko online tersebut, yaitu
-1) Mulai menjalankan aplikasi
-2) Memilih barang yang diinginkan.
-3) Memasukan alamat pengiriman.
-4) Memilih metode pembayaran
-5) Melakukan pembayaran
-6) Jika pembayaran berhasil, maka barang akan dikirim ke alamatnya. Dan jika gagal, proses pengiriman akan dibatalkan.
-
-Simbol flowchart yang tepat untuk menggambarkan langkah ke 3 yaitu...</pre>
+									<p>Perhatikan simbol-simbol flowchart di bawah ini!</p>
+									<center>
+										<img src="../images/quiz/quiz-soal-1-1.png" width="40%" height="auto" alt="">
+									</center>
+									<p>Dari simbol-simbol flowchart diatas, urutan simbol yang tepat untuk membentuk algoritma menghitung luas lingkaran adalah..</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan11"><img src="../images/simbol/decision.png" width="80%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan12"><img src="../images/simbol/input-output.png" width="90%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan13"><img src="../images/simbol/terminal.png" width="80%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan14"><img src="../images/simbol/preparation.png" width="80%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan15"><img src="../images/simbol/processing.png" width="80%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan11">1-2-3-4-5-6</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan12">1-2-4-3-5-6</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan13">1-3-2-4-5-6</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan14">1-3-4-2-5-6</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan15">1-4-3-2-5-6</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp1"></span> &nbsp;&nbsp;</span>
@@ -811,24 +805,17 @@ Simbol flowchart yang tepat untuk menggambarkan langkah ke 3 yaitu...</pre>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher2"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining2"></span></span>
-									<pre>
-
-Seorang ibu hendak berbelanja barang di sebuah toko online menggunakan aplikasi smartphone. 
-Terdapat beberapa tahapan untuk berbelanja di toko online tersebut, yaitu
-1) Mulai menjalankan aplikasi
-2) Memilih barang yang diinginkan.
-3) Memasukan alamat pengiriman.
-4) Memilih metode pembayaran
-5) Melakukan pembayaran
-6) Jika pembayaran berhasil, maka barang akan dikirim ke alamatnya. Dan jika gagal, proses pengiriman akan dibatalkan.
-
-Simbol flowchart yang tepat untuk menggambarkan langkah ke 5 yaitu...</pre>
+									<p>Perhatikan flowchart berikut ini!</p>
+									<center>
+										<img src="../images/quiz/quiz-soal-2-1.png" width="40%" height="auto" alt="">
+									</center>
+									<p>Simbol yang tepat untuk melengkapi simbol nomor 1 yang rumpang pada flowchart diatas adalah…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21"><img src="../images/simbol/decision.png" width="80%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22"><img src="../images/simbol/input-output.png" width="90%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23"><img src="../images/simbol/terminal.png" width="80%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24"><img src="../images/simbol/preparation.png" width="80%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25"><img src="../images/simbol/processing.png" width="80%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan21"><img src="../images/quiz/pilgan-2-a-1.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan22"><img src="../images/quiz/pilgan-2-b-1.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan23"><img src="../images/quiz/pilgan-2-c-1.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan24"><img src="../images/quiz/pilgan-2-d-1.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan25"><img src="../images/quiz/pilgan-2-e-1.png" width="100%" height="auto" alt=""></div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp2"></span> &nbsp;&nbsp;</span>
@@ -840,16 +827,17 @@ Simbol flowchart yang tepat untuk menggambarkan langkah ke 5 yaitu...</pre>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher3"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining3"></span></span>
+									<p>Perhatikan flowchart berikut ini!</p>
 									<center>
-										<img src="../images/quiz/quiz-soal-3.png" width="40%" height="auto" alt="">
+										<img src="../images/quiz/quiz-soal-3-1.png" width="40%" height="auto" alt="">
 									</center>
-									<p>Dari simbol-simbol flowchart diatas, urutan simbol yang tepat untuk membentuk algoritma menghitung luas lingkaran adalah..</p>
+									<p>Simbol yang tepat untuk melengkapi simbol nomor 2 yang rumpang pada flowchart diatas adalah…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31">1-2-3-4-5-6</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32">1-2-4-3-5-6</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33">1-3-2-4-5-6</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34">1-3-4-2-5-6</div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35">1-4-3-2-5-6</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan31"><img src="../images/quiz/pilgan-3-a-1.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan32"><img src="../images/quiz/pilgan-3-b-1.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan33"><img src="../images/quiz/pilgan-3-c-1.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan34"><img src="../images/quiz/pilgan-3-d-1.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan35"><img src="../images/quiz/pilgan-3-e-1.png" width="100%" height="auto" alt=""></div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp3"></span> &nbsp;&nbsp;</span>
@@ -861,14 +849,29 @@ Simbol flowchart yang tepat untuk menggambarkan langkah ke 5 yaitu...</pre>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher4"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining4"></span></span>
-									<center><img src="../images/quiz/quiz-soal-4.png" width="20%" height="auto" alt=""></center>
-									<p>Simbol yang tepat untuk melengkapi simbol nomor 1 yang rumpang pada flowchart diatas adalah…</p>
+									<pre>
+Rina baru membeli sebuah mie instan goreng di warung. Karena lapar setelah Rina tiba di rumah, 
+Rina langsung memasak mie instan tersebut untuk dimakan.Rina memasak mie instan tersebut dengan cara sebagai berikut.
+1)	Siapkan air, panci dan mangkok atau piring
+2)	Masukan air kedalam panci
+3)	Masak air tersebut hingga mendidih
+4)	Masukan mie instan
+5)	Tunggu hingga matang
+6)	Jika mie sudah matang, 
+7)	Angkat dan tuang ke dalam mangkok yang sudah kita siapkan. 
+8)	Jika belum, kembali ke langkah sebelumnya.
+9)	Isi bumbu mie instan kedalam mangkok.
+10)	Aduk mie rebus agar bumbu tercampur
+11)	Mie instan siap disajikan
+
+									</pre>
+									<p>Dari langkah-langkah yang Rina kerjakan untuk memasak mie instan, manakah langkah-langkah yang bisa digambarkan kedalam bentuk proses dalam flowchart?</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41"><img src="../images/quiz/pilgan-4-a.png" width="100%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42"><img src="../images/quiz/pilgan-4-b.png" width="100%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43"><img src="../images/quiz/pilgan-4-c.png" width="100%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44"><img src="../images/quiz/pilgan-4-d.png" width="100%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45"><img src="../images/quiz/pilgan-4-e.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan41">1, 3, 5, 7, dan 9</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan42">2, 3, 5, 7, dan 9</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan43">3, 5, 7. 9, dan 10</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan44">1, 3, 5, 7, 9, dan 10</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan45">3, 5, 7, 9, 10, dan 11</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp4"></span> &nbsp;&nbsp;</span>
@@ -880,14 +883,14 @@ Simbol flowchart yang tepat untuk menggambarkan langkah ke 5 yaitu...</pre>
 								<div class="carousel-item">
 									<div class="auto-refresher" id="auto-refresher5"></div>
 									<span class="timer">Time Remaining: <span id="auto-refresher-time-remaining5"></span></span>
-									<center><img src="../images/quiz/quiz-soal-4.png" width="20%" height="auto" alt=""></center>
-									<p>Simbol yang tepat untuk melengkapi simbol nomor 2 yang rumpang pada flowchart diatas adalah…</p>
+									<center><img src="../images/quiz/quiz-soal-5-1.png" width="40%" height="auto" alt=""></center>
+									<p>Flowchart diatas merupakan untuk menentukan predikat nilai uts pada mata pelajaran matematika di sekolah Roni. Roni mendapat nilai uts 80 pada pelajaran mata pelajaran tersebut. Predikat apa yang didapat Roni, berdasarkan flowchart diatas…</p>
 									<div class="pilgan-wrapper">
-										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51"><img src="../images/quiz/pilgan-5-a.png" width="100%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52"><img src="../images/quiz/pilgan-5-b.png" width="100%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53"><img src="../images/quiz/pilgan-5-c.png" width="100%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54"><img src="../images/quiz/pilgan-5-d.png" width="100%" height="auto" alt=""></div>
-										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55"><img src="../images/quiz/pilgan-5-e.png" width="100%" height="auto" alt=""></div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="1" id="pilgan51">A</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="2" id="pilgan52">B</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="3" id="pilgan53">C</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="4" id="pilgan54">D</div>
+										<div class="pilgan-box" onclick="choose(this);" data-id="5" id="pilgan55">Tidak ada predikat</div>
 									</div>
 									<div class="point-xp">
 										<span><i class="bi bi-star-fill"></i> XP : <span id="total-xp5"></span> &nbsp;&nbsp;</span>

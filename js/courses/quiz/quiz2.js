@@ -1,4 +1,4 @@
-let kj_id = [3,2,1,2,2];
+let kj_id = [3,1,2,2,3];
 let xp = 0;
 let points =0;
 let benar=0;
