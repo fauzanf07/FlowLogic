@@ -1,7 +1,8 @@
 <?php 
 	session_start();
+	include('../server.php');
 	if(!isset($_SESSION['name'])){
-		header("Location: http://localhost/skripsi/");
+		header("Location: ".$mainUrl);
 	}
 	$user_id = $_SESSION['user_id'];
 	$photoProfile = $_SESSION['photo_profile'];

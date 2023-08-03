@@ -1,7 +1,8 @@
 <?php 
 	session_start();
+	include('../server.php');
 	if(!isset($_SESSION['name'])){
-		header("Location: http://localhost/skripsi/");
+		header("Location: ".$mainUrl);
 	}
 	include("../db.php");
 	$username = $_GET['user'];

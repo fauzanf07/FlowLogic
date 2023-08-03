@@ -1,8 +1,9 @@
 <?php 
 	session_start();
 	include("../db.php");
+	include('../server.php');
 	if(!isset($_SESSION['name'])){
-		header("Location: http://localhost/skripsi/");
+		header("Location: ".$mainUrl);
 	}else{
 		$currCourse = $_SESSION['curr_course'];
 		$progress = intval(($_SESSION['curr_course']/26)*100);
