@@ -7,7 +7,7 @@
     if(in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
         $mainUrl = "http://localhost/skripsi/"; 
     }else{
-        $mainUrl = "https://studyy.my.id/FlowLogic"; 
+        $mainUrl = "https://flowlogic.studyy.my.id"; 
         
     }
 ?>

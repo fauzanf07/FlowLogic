@@ -50,8 +50,8 @@
                         <div class="form-group w-48 d-inline-block fl-right input-split">
 							<label for="inputEmail">Kelas</label>
 							<select id="inputKelas" class="form-select" aria-label="Default select example">
-								<option value="XI RPL 1" selected>XI RPL 1</option>
-								<option value="XI RPL 2">XI RPL 2</option>
+								<option value="XI PPLG 1" selected>XI PPLG 1</option>
+								<option value="XI PPLG 2">XI PPLG 2</option>
 							</select>
 						</div>
 						<div class="form-group w-48 d-inline-block input-split">
