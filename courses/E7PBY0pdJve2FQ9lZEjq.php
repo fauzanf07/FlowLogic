@@ -877,7 +877,7 @@ void coba() {
 
 int main() {
     coba();
-    printf("Nilai A di dalam fungsi coba() : %d\n", A);
+    printf("Nilai A di dalam fungsi main() : %d\n", A);
 
     return 0;
 }
